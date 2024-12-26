@@ -1,0 +1,323 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(slurmrestapi)
+
+set(CMAKE_AUTOMOC ON)
+
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Network Gui)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Network Gui)
+
+include(GNUInstallDirs)
+include(CMakePackageConfigHelpers)
+
+add_library(${PROJECT_NAME}
+  OAIDbv0_0_39_account_info.h
+  OAIDbv0_0_39_associations_info.h
+  OAIDbv0_0_39_clusters_info.h
+  OAIDbv0_0_39_config_info.h
+  OAIDbv0_0_39_diag.h
+  OAIDbv0_0_39_error.h
+  OAIDbv0_0_39_job_info.h
+  OAIDbv0_0_39_meta.h
+  OAIDbv0_0_39_qos_info.h
+  OAIDbv0_0_39_response_associations_delete.h
+  OAIDbv0_0_39_set_config.h
+  OAIDbv0_0_39_tres_info.h
+  OAIDbv0_0_39_tres_update.h
+  OAIDbv0_0_39_update_qos.h
+  OAIDbv0_0_39_update_users.h
+  OAIDbv0_0_39_user_info.h
+  OAIDbv0_0_39_warning.h
+  OAIDbv0_0_39_wckey_info.h
+  OAIStatus.h
+  OAIV0_0_39_account.h
+  OAIV0_0_39_accounting.h
+  OAIV0_0_39_accounting_allocated.h
+  OAIV0_0_39_acct_gather_energy.h
+  OAIV0_0_39_assoc.h
+  OAIV0_0_39_assoc_default.h
+  OAIV0_0_39_assoc_max.h
+  OAIV0_0_39_assoc_max_jobs.h
+  OAIV0_0_39_assoc_max_jobs_per.h
+  OAIV0_0_39_assoc_min.h
+  OAIV0_0_39_assoc_short.h
+  OAIV0_0_39_assoc_usage.h
+  OAIV0_0_39_cluster_rec.h
+  OAIV0_0_39_cluster_rec_associations.h
+  OAIV0_0_39_cluster_rec_controller.h
+  OAIV0_0_39_controller_ping.h
+  OAIV0_0_39_coord.h
+  OAIV0_0_39_cron_entry.h
+  OAIV0_0_39_cron_entry_line.h
+  OAIV0_0_39_diag.h
+  OAIV0_0_39_error.h
+  OAIV0_0_39_ext_sensors_data.h
+  OAIV0_0_39_float64_no_val.h
+  OAIV0_0_39_job.h
+  OAIV0_0_39_job_array.h
+  OAIV0_0_39_job_array_response_msg_inner.h
+  OAIV0_0_39_job_comment.h
+  OAIV0_0_39_job_desc_msg.h
+  OAIV0_0_39_job_exit_code.h
+  OAIV0_0_39_job_exit_code_signal.h
+  OAIV0_0_39_job_het.h
+  OAIV0_0_39_job_info.h
+  OAIV0_0_39_job_info_power.h
+  OAIV0_0_39_job_mcs.h
+  OAIV0_0_39_job_required.h
+  OAIV0_0_39_job_res.h
+  OAIV0_0_39_job_reservation.h
+  OAIV0_0_39_job_state.h
+  OAIV0_0_39_job_submission.h
+  OAIV0_0_39_job_submission_response.h
+  OAIV0_0_39_job_time.h
+  OAIV0_0_39_job_time_user.h
+  OAIV0_0_39_job_tres.h
+  OAIV0_0_39_job_update_response.h
+  OAIV0_0_39_jobs_response.h
+  OAIV0_0_39_license.h
+  OAIV0_0_39_licenses_info.h
+  OAIV0_0_39_meta.h
+  OAIV0_0_39_meta_Slurm.h
+  OAIV0_0_39_meta_Slurm_version.h
+  OAIV0_0_39_meta_plugin.h
+  OAIV0_0_39_node.h
+  OAIV0_0_39_nodes_response.h
+  OAIV0_0_39_partition_info.h
+  OAIV0_0_39_partition_info_accounts.h
+  OAIV0_0_39_partition_info_defaults.h
+  OAIV0_0_39_partition_info_groups.h
+  OAIV0_0_39_partition_info_maximums.h
+  OAIV0_0_39_partition_info_minimums.h
+  OAIV0_0_39_partition_info_nodes.h
+  OAIV0_0_39_partition_info_priority.h
+  OAIV0_0_39_partition_info_qos.h
+  OAIV0_0_39_partition_info_timeouts.h
+  OAIV0_0_39_partition_info_tres.h
+  OAIV0_0_39_partitions_response.h
+  OAIV0_0_39_pings.h
+  OAIV0_0_39_power_mgmt_data.h
+  OAIV0_0_39_qos.h
+  OAIV0_0_39_qos_limits.h
+  OAIV0_0_39_qos_limits_min.h
+  OAIV0_0_39_qos_limits_min_tres.h
+  OAIV0_0_39_qos_limits_min_tres_per.h
+  OAIV0_0_39_qos_preempt.h
+  OAIV0_0_39_reservation_core_spec.h
+  OAIV0_0_39_reservation_info.h
+  OAIV0_0_39_reservation_info_purge_completed.h
+  OAIV0_0_39_reservations_response.h
+  OAIV0_0_39_rollup_stats_inner.h
+  OAIV0_0_39_slurm_step_id.h
+  OAIV0_0_39_stats_msg.h
+  OAIV0_0_39_stats_msg_rpcs_by_type_inner.h
+  OAIV0_0_39_stats_msg_rpcs_by_user_inner.h
+  OAIV0_0_39_stats_rec.h
+  OAIV0_0_39_stats_rpc.h
+  OAIV0_0_39_stats_rpc_time.h
+  OAIV0_0_39_stats_user.h
+  OAIV0_0_39_step.h
+  OAIV0_0_39_step_CPU.h
+  OAIV0_0_39_step_nodes.h
+  OAIV0_0_39_step_statistics.h
+  OAIV0_0_39_step_statistics_energy.h
+  OAIV0_0_39_step_task.h
+  OAIV0_0_39_step_tasks.h
+  OAIV0_0_39_step_time.h
+  OAIV0_0_39_step_time_user.h
+  OAIV0_0_39_step_tres.h
+  OAIV0_0_39_tres.h
+  OAIV0_0_39_uint16_no_val.h
+  OAIV0_0_39_uint32_no_val.h
+  OAIV0_0_39_uint64_no_val.h
+  OAIV0_0_39_update_node_msg.h
+  OAIV0_0_39_user.h
+  OAIV0_0_39_user_default.h
+  OAIV0_0_39_warning.h
+  OAIV0_0_39_wckey.h
+  OAIV0_0_39_wckey_tag.h
+  OAIOpenapiApi.h
+  OAISlurmApi.h
+  OAIHelpers.h
+  OAIHttpRequest.h
+  OAIObject.h
+  OAIEnum.h
+  OAIHttpFileElement.h
+  OAIServerConfiguration.h
+  OAIServerVariable.h
+  OAIOauth.h
+  OAIDbv0_0_39_account_info.cpp
+  OAIDbv0_0_39_associations_info.cpp
+  OAIDbv0_0_39_clusters_info.cpp
+  OAIDbv0_0_39_config_info.cpp
+  OAIDbv0_0_39_diag.cpp
+  OAIDbv0_0_39_error.cpp
+  OAIDbv0_0_39_job_info.cpp
+  OAIDbv0_0_39_meta.cpp
+  OAIDbv0_0_39_qos_info.cpp
+  OAIDbv0_0_39_response_associations_delete.cpp
+  OAIDbv0_0_39_set_config.cpp
+  OAIDbv0_0_39_tres_info.cpp
+  OAIDbv0_0_39_tres_update.cpp
+  OAIDbv0_0_39_update_qos.cpp
+  OAIDbv0_0_39_update_users.cpp
+  OAIDbv0_0_39_user_info.cpp
+  OAIDbv0_0_39_warning.cpp
+  OAIDbv0_0_39_wckey_info.cpp
+  OAIStatus.cpp
+  OAIV0_0_39_account.cpp
+  OAIV0_0_39_accounting.cpp
+  OAIV0_0_39_accounting_allocated.cpp
+  OAIV0_0_39_acct_gather_energy.cpp
+  OAIV0_0_39_assoc.cpp
+  OAIV0_0_39_assoc_default.cpp
+  OAIV0_0_39_assoc_max.cpp
+  OAIV0_0_39_assoc_max_jobs.cpp
+  OAIV0_0_39_assoc_max_jobs_per.cpp
+  OAIV0_0_39_assoc_min.cpp
+  OAIV0_0_39_assoc_short.cpp
+  OAIV0_0_39_assoc_usage.cpp
+  OAIV0_0_39_cluster_rec.cpp
+  OAIV0_0_39_cluster_rec_associations.cpp
+  OAIV0_0_39_cluster_rec_controller.cpp
+  OAIV0_0_39_controller_ping.cpp
+  OAIV0_0_39_coord.cpp
+  OAIV0_0_39_cron_entry.cpp
+  OAIV0_0_39_cron_entry_line.cpp
+  OAIV0_0_39_diag.cpp
+  OAIV0_0_39_error.cpp
+  OAIV0_0_39_ext_sensors_data.cpp
+  OAIV0_0_39_float64_no_val.cpp
+  OAIV0_0_39_job.cpp
+  OAIV0_0_39_job_array.cpp
+  OAIV0_0_39_job_array_response_msg_inner.cpp
+  OAIV0_0_39_job_comment.cpp
+  OAIV0_0_39_job_desc_msg.cpp
+  OAIV0_0_39_job_exit_code.cpp
+  OAIV0_0_39_job_exit_code_signal.cpp
+  OAIV0_0_39_job_het.cpp
+  OAIV0_0_39_job_info.cpp
+  OAIV0_0_39_job_info_power.cpp
+  OAIV0_0_39_job_mcs.cpp
+  OAIV0_0_39_job_required.cpp
+  OAIV0_0_39_job_res.cpp
+  OAIV0_0_39_job_reservation.cpp
+  OAIV0_0_39_job_state.cpp
+  OAIV0_0_39_job_submission.cpp
+  OAIV0_0_39_job_submission_response.cpp
+  OAIV0_0_39_job_time.cpp
+  OAIV0_0_39_job_time_user.cpp
+  OAIV0_0_39_job_tres.cpp
+  OAIV0_0_39_job_update_response.cpp
+  OAIV0_0_39_jobs_response.cpp
+  OAIV0_0_39_license.cpp
+  OAIV0_0_39_licenses_info.cpp
+  OAIV0_0_39_meta.cpp
+  OAIV0_0_39_meta_Slurm.cpp
+  OAIV0_0_39_meta_Slurm_version.cpp
+  OAIV0_0_39_meta_plugin.cpp
+  OAIV0_0_39_node.cpp
+  OAIV0_0_39_nodes_response.cpp
+  OAIV0_0_39_partition_info.cpp
+  OAIV0_0_39_partition_info_accounts.cpp
+  OAIV0_0_39_partition_info_defaults.cpp
+  OAIV0_0_39_partition_info_groups.cpp
+  OAIV0_0_39_partition_info_maximums.cpp
+  OAIV0_0_39_partition_info_minimums.cpp
+  OAIV0_0_39_partition_info_nodes.cpp
+  OAIV0_0_39_partition_info_priority.cpp
+  OAIV0_0_39_partition_info_qos.cpp
+  OAIV0_0_39_partition_info_timeouts.cpp
+  OAIV0_0_39_partition_info_tres.cpp
+  OAIV0_0_39_partitions_response.cpp
+  OAIV0_0_39_pings.cpp
+  OAIV0_0_39_power_mgmt_data.cpp
+  OAIV0_0_39_qos.cpp
+  OAIV0_0_39_qos_limits.cpp
+  OAIV0_0_39_qos_limits_min.cpp
+  OAIV0_0_39_qos_limits_min_tres.cpp
+  OAIV0_0_39_qos_limits_min_tres_per.cpp
+  OAIV0_0_39_qos_preempt.cpp
+  OAIV0_0_39_reservation_core_spec.cpp
+  OAIV0_0_39_reservation_info.cpp
+  OAIV0_0_39_reservation_info_purge_completed.cpp
+  OAIV0_0_39_reservations_response.cpp
+  OAIV0_0_39_rollup_stats_inner.cpp
+  OAIV0_0_39_slurm_step_id.cpp
+  OAIV0_0_39_stats_msg.cpp
+  OAIV0_0_39_stats_msg_rpcs_by_type_inner.cpp
+  OAIV0_0_39_stats_msg_rpcs_by_user_inner.cpp
+  OAIV0_0_39_stats_rec.cpp
+  OAIV0_0_39_stats_rpc.cpp
+  OAIV0_0_39_stats_rpc_time.cpp
+  OAIV0_0_39_stats_user.cpp
+  OAIV0_0_39_step.cpp
+  OAIV0_0_39_step_CPU.cpp
+  OAIV0_0_39_step_nodes.cpp
+  OAIV0_0_39_step_statistics.cpp
+  OAIV0_0_39_step_statistics_energy.cpp
+  OAIV0_0_39_step_task.cpp
+  OAIV0_0_39_step_tasks.cpp
+  OAIV0_0_39_step_time.cpp
+  OAIV0_0_39_step_time_user.cpp
+  OAIV0_0_39_step_tres.cpp
+  OAIV0_0_39_tres.cpp
+  OAIV0_0_39_uint16_no_val.cpp
+  OAIV0_0_39_uint32_no_val.cpp
+  OAIV0_0_39_uint64_no_val.cpp
+  OAIV0_0_39_update_node_msg.cpp
+  OAIV0_0_39_user.cpp
+  OAIV0_0_39_user_default.cpp
+  OAIV0_0_39_warning.cpp
+  OAIV0_0_39_wckey.cpp
+  OAIV0_0_39_wckey_tag.cpp
+  OAIOpenapiApi.cpp
+  OAISlurmApi.cpp
+  OAIHelpers.cpp
+  OAIHttpRequest.cpp
+  OAIHttpFileElement.cpp
+  OAIOauth.cpp
+  )
+
+target_include_directories(${PROJECT_NAME}
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+)
+
+target_link_libraries(${PROJECT_NAME}
+    PUBLIC
+        Qt${QT_VERSION_MAJOR}::Core
+        Qt${QT_VERSION_MAJOR}::Network
+        Qt${QT_VERSION_MAJOR}::Gui
+
+)
+
+configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/Config.cmake.in
+    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+    INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}"
+)
+
+install(
+    TARGETS ${PROJECT_NAME}
+    EXPORT ${PROJECT_NAME}Targets
+    LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+    ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}"
+)
+
+install(
+    FILES ${HEADER_FILES}
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
+)
+
+install(
+    FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}
+)
+
+install(
+    EXPORT ${PROJECT_NAME}Targets
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}
+)
