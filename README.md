@@ -2,12 +2,12 @@
 
 # 
 
-Slurm Rest API
+Slurm REST API
 
-- API version: 0.0.39
+- API version: Slurm-24.05.5&amp;openapi/dbv0.0.39&amp;openapi/slurmctld&amp;openapi/slurmdbd&amp;openapi/v0.0.39
 - Generator version: 7.10.0
 
-API to access and control Slurm.
+API to access and control Slurm
 
   For more information, please visit [https://www.schedmd.com/](https://www.schedmd.com/)
 
@@ -28,12 +28,14 @@ example.h:
 ```c++
 
 #include <iostream>
-#include "../client/OAIOpenapiApi.h"
+#include "../client/OAISlurmApi.h"
 
 using namespace test_namespace;
 
 class Example : public QObject {
     Q_OBJECT
+    QString create();
+    QString create();
 public Q_SLOTS:
    void exampleFunction1();
 };
@@ -43,16 +45,20 @@ public Q_SLOTS:
 example.cpp:
 ```c++
 
-#include "../client/OAIOpenapiApi.h"
+#include "../client/OAISlurmApi.h"
 #include "example.h"
 #include <QTimer>
 #include <QEventLoop>
 
+QString Example::create(){
+    QString obj;
+QString Example::create(){
+    QString obj;
  return obj;
 }
 
 void Example::exampleFunction1(){
-     OAIOpenapiApi apiInstance;
+     OAISlurmApi apiInstance;
      
       // Configure API key authorization: user
       apiInstance.setApiKey("YOUR API KEY NAME","YOUR API KEY");
@@ -62,7 +68,29 @@ void Example::exampleFunction1(){
 
       // Configure API key authorization: token
       apiInstance.setApiKey("YOUR API KEY NAME","YOUR API KEY");
-      apiInstance.openapiGet();
+
+      QEventLoop loop;
+      connect(&apiInstance, &OAISlurmApi::slurmV0039CancelJobSignal, [&]() {
+          loop.quit();
+      });
+      connect(&apiInstance, &OAISlurmApi::slurmV0039CancelJobSignalE, [&](QNetworkReply::NetworkError, QString error_str) {
+          qDebug() << "Error happened while issuing request : " << error_str;
+          loop.quit();
+      });
+
+      QString job_id = create(); // QString | Slurm Job ID
+
+      QEventLoop loop;
+      connect(&apiInstance, &OAISlurmApi::slurmV0039CancelJobSignal, [&]() {
+          loop.quit();
+      });
+      connect(&apiInstance, &OAISlurmApi::slurmV0039CancelJobSignalE, [&](QNetworkReply::NetworkError, QString error_str) {
+          qDebug() << "Error happened while issuing request : " << error_str;
+          loop.quit();
+      });
+
+      QString signal = create(); // QString | signal to send to job
+      apiInstance.slurmV0039CancelJob(job_idsignal);
       QTimer::singleShot(5000, &loop, &QEventLoop::quit);
       loop.exec();
   }
