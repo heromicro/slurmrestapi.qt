@@ -1,3 +1,4 @@
 
-openapi-generator generate -i spec/openapi.v0.0.39.json  -g cpp-qt-client --package-name slurmrestapi -o ./
+
+openapi-generator generate -i spec/openapi.24.05.3.json  -g cpp-qt-client --additional-properties cppNamespace=hm:slurm:client --package-name slurmrestapi -o ./
 
