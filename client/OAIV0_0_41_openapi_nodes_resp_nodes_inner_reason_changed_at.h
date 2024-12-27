@@ -25,7 +25,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_41_openapi_nodes_resp_nodes_inner_reason_changed_at : public OAIObject {
 public:
@@ -72,8 +72,8 @@ private:
     bool m_number_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_nodes_resp_nodes_inner_reason_changed_at)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_nodes_resp_nodes_inner_reason_changed_at)
 
 #endif // OAIV0_0_41_openapi_nodes_resp_nodes_inner_reason_changed_at_H

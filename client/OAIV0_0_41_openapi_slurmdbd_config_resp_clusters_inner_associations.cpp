@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner_associations::OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner_associations(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner_associations::fromJs
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner_associations::fromJsonObject(QJsonObject json) {
 
-    m_root_isValid = ::OpenAPI::fromJsonValue(m_root, json[QString("root")]);
+    m_root_isValid = ::hm:slurm:client::fromJsonValue(m_root, json[QString("root")]);
     m_root_isSet = !json[QString("root")].isNull() && m_root_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner_associations::asJ
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner_associations::asJsonObject() const {
     QJsonObject obj;
     if (m_root.isSet()) {
-        obj.insert(QString("root"), ::OpenAPI::toJsonValue(m_root));
+        obj.insert(QString("root"), ::hm:slurm:client::toJsonValue(m_root));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner_associations::isVali
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

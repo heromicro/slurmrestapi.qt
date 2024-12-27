@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_job_required::OAIV0_0_39_job_required(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_39_job_required::fromJson(QString jsonString) {
 
 void OAIV0_0_39_job_required::fromJsonObject(QJsonObject json) {
 
-    m_cpus_isValid = ::OpenAPI::fromJsonValue(m_cpus, json[QString("CPUs")]);
+    m_cpus_isValid = ::hm:slurm:client::fromJsonValue(m_cpus, json[QString("CPUs")]);
     m_cpus_isSet = !json[QString("CPUs")].isNull() && m_cpus_isValid;
 
-    m_memory_per_cpu_isValid = ::OpenAPI::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
+    m_memory_per_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
     m_memory_per_cpu_isSet = !json[QString("memory_per_cpu")].isNull() && m_memory_per_cpu_isValid;
 
-    m_memory_per_node_isValid = ::OpenAPI::fromJsonValue(m_memory_per_node, json[QString("memory_per_node")]);
+    m_memory_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_memory_per_node, json[QString("memory_per_node")]);
     m_memory_per_node_isSet = !json[QString("memory_per_node")].isNull() && m_memory_per_node_isValid;
 
-    m_memory_isValid = ::OpenAPI::fromJsonValue(m_memory, json[QString("memory")]);
+    m_memory_isValid = ::hm:slurm:client::fromJsonValue(m_memory, json[QString("memory")]);
     m_memory_isSet = !json[QString("memory")].isNull() && m_memory_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_39_job_required::asJson() const {
 QJsonObject OAIV0_0_39_job_required::asJsonObject() const {
     QJsonObject obj;
     if (m_cpus_isSet) {
-        obj.insert(QString("CPUs"), ::OpenAPI::toJsonValue(m_cpus));
+        obj.insert(QString("CPUs"), ::hm:slurm:client::toJsonValue(m_cpus));
     }
     if (m_memory_per_cpu.isSet()) {
-        obj.insert(QString("memory_per_cpu"), ::OpenAPI::toJsonValue(m_memory_per_cpu));
+        obj.insert(QString("memory_per_cpu"), ::hm:slurm:client::toJsonValue(m_memory_per_cpu));
     }
     if (m_memory_per_node.isSet()) {
-        obj.insert(QString("memory_per_node"), ::OpenAPI::toJsonValue(m_memory_per_node));
+        obj.insert(QString("memory_per_node"), ::hm:slurm:client::toJsonValue(m_memory_per_node));
     }
     if (m_memory_isSet) {
-        obj.insert(QString("memory"), ::OpenAPI::toJsonValue(m_memory));
+        obj.insert(QString("memory"), ::hm:slurm:client::toJsonValue(m_memory));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_39_job_required::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

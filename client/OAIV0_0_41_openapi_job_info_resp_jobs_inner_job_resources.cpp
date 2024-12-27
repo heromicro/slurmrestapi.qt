@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources::OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources::fromJson(QString
 
 void OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources::fromJsonObject(QJsonObject json) {
 
-    m_select_type_isValid = ::OpenAPI::fromJsonValue(m_select_type, json[QString("select_type")]);
+    m_select_type_isValid = ::hm:slurm:client::fromJsonValue(m_select_type, json[QString("select_type")]);
     m_select_type_isSet = !json[QString("select_type")].isNull() && m_select_type_isValid;
 
-    m_nodes_isValid = ::OpenAPI::fromJsonValue(m_nodes, json[QString("nodes")]);
+    m_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_nodes, json[QString("nodes")]);
     m_nodes_isSet = !json[QString("nodes")].isNull() && m_nodes_isValid;
 
-    m_cpus_isValid = ::OpenAPI::fromJsonValue(m_cpus, json[QString("cpus")]);
+    m_cpus_isValid = ::hm:slurm:client::fromJsonValue(m_cpus, json[QString("cpus")]);
     m_cpus_isSet = !json[QString("cpus")].isNull() && m_cpus_isValid;
 
-    m_threads_per_core_isValid = ::OpenAPI::fromJsonValue(m_threads_per_core, json[QString("threads_per_core")]);
+    m_threads_per_core_isValid = ::hm:slurm:client::fromJsonValue(m_threads_per_core, json[QString("threads_per_core")]);
     m_threads_per_core_isSet = !json[QString("threads_per_core")].isNull() && m_threads_per_core_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources::asJson() cons
 QJsonObject OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources::asJsonObject() const {
     QJsonObject obj;
     if (m_select_type.size() > 0) {
-        obj.insert(QString("select_type"), ::OpenAPI::toJsonValue(m_select_type));
+        obj.insert(QString("select_type"), ::hm:slurm:client::toJsonValue(m_select_type));
     }
     if (m_nodes.isSet()) {
-        obj.insert(QString("nodes"), ::OpenAPI::toJsonValue(m_nodes));
+        obj.insert(QString("nodes"), ::hm:slurm:client::toJsonValue(m_nodes));
     }
     if (m_cpus_isSet) {
-        obj.insert(QString("cpus"), ::OpenAPI::toJsonValue(m_cpus));
+        obj.insert(QString("cpus"), ::hm:slurm:client::toJsonValue(m_cpus));
     }
     if (m_threads_per_core.isSet()) {
-        obj.insert(QString("threads_per_core"), ::OpenAPI::toJsonValue(m_threads_per_core));
+        obj.insert(QString("threads_per_core"), ::hm:slurm:client::toJsonValue(m_threads_per_core));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources::isValid() const 
     return m_select_type_isValid && m_cpus_isValid && m_threads_per_core_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

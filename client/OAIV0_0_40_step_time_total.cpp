@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_step_time_total::OAIV0_0_40_step_time_total(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_step_time_total::fromJson(QString jsonString) {
 
 void OAIV0_0_40_step_time_total::fromJsonObject(QJsonObject json) {
 
-    m_seconds_isValid = ::OpenAPI::fromJsonValue(m_seconds, json[QString("seconds")]);
+    m_seconds_isValid = ::hm:slurm:client::fromJsonValue(m_seconds, json[QString("seconds")]);
     m_seconds_isSet = !json[QString("seconds")].isNull() && m_seconds_isValid;
 
-    m_microseconds_isValid = ::OpenAPI::fromJsonValue(m_microseconds, json[QString("microseconds")]);
+    m_microseconds_isValid = ::hm:slurm:client::fromJsonValue(m_microseconds, json[QString("microseconds")]);
     m_microseconds_isSet = !json[QString("microseconds")].isNull() && m_microseconds_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_step_time_total::asJson() const {
 QJsonObject OAIV0_0_40_step_time_total::asJsonObject() const {
     QJsonObject obj;
     if (m_seconds_isSet) {
-        obj.insert(QString("seconds"), ::OpenAPI::toJsonValue(m_seconds));
+        obj.insert(QString("seconds"), ::hm:slurm:client::toJsonValue(m_seconds));
     }
     if (m_microseconds_isSet) {
-        obj.insert(QString("microseconds"), ::OpenAPI::toJsonValue(m_microseconds));
+        obj.insert(QString("microseconds"), ::hm:slurm:client::toJsonValue(m_microseconds));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_step_time_total::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

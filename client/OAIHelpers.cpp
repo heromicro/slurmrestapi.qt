@@ -14,7 +14,7 @@
 #include <QJsonParseError>
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAISerializerSettings {
 public:
@@ -433,4 +433,4 @@ bool fromJsonValue(QJsonValue &value, const QJsonValue &jval) {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

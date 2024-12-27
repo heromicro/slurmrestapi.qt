@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_qos_limits_min_tres_per::OAIV0_0_40_qos_limits_min_tres_per(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_40_qos_limits_min_tres_per::fromJson(QString jsonString) {
 
 void OAIV0_0_40_qos_limits_min_tres_per::fromJsonObject(QJsonObject json) {
 
-    m_job_isValid = ::OpenAPI::fromJsonValue(m_job, json[QString("job")]);
+    m_job_isValid = ::hm:slurm:client::fromJsonValue(m_job, json[QString("job")]);
     m_job_isSet = !json[QString("job")].isNull() && m_job_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_40_qos_limits_min_tres_per::asJson() const {
 QJsonObject OAIV0_0_40_qos_limits_min_tres_per::asJsonObject() const {
     QJsonObject obj;
     if (m_job.size() > 0) {
-        obj.insert(QString("job"), ::OpenAPI::toJsonValue(m_job));
+        obj.insert(QString("job"), ::hm:slurm:client::toJsonValue(m_job));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_40_qos_limits_min_tres_per::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

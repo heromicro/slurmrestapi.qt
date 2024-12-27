@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_rollup_stats_inner::OAIV0_0_40_rollup_stats_inner(QString json) {
     this->initializeModel();
@@ -62,22 +62,22 @@ void OAIV0_0_40_rollup_stats_inner::fromJson(QString jsonString) {
 
 void OAIV0_0_40_rollup_stats_inner::fromJsonObject(QJsonObject json) {
 
-    m_type_isValid = ::OpenAPI::fromJsonValue(m_type, json[QString("type")]);
+    m_type_isValid = ::hm:slurm:client::fromJsonValue(m_type, json[QString("type")]);
     m_type_isSet = !json[QString("type")].isNull() && m_type_isValid;
 
-    m_last_run_isValid = ::OpenAPI::fromJsonValue(m_last_run, json[QString("last run")]);
+    m_last_run_isValid = ::hm:slurm:client::fromJsonValue(m_last_run, json[QString("last run")]);
     m_last_run_isSet = !json[QString("last run")].isNull() && m_last_run_isValid;
 
-    m_max_cycle_isValid = ::OpenAPI::fromJsonValue(m_max_cycle, json[QString("max_cycle")]);
+    m_max_cycle_isValid = ::hm:slurm:client::fromJsonValue(m_max_cycle, json[QString("max_cycle")]);
     m_max_cycle_isSet = !json[QString("max_cycle")].isNull() && m_max_cycle_isValid;
 
-    m_total_time_isValid = ::OpenAPI::fromJsonValue(m_total_time, json[QString("total_time")]);
+    m_total_time_isValid = ::hm:slurm:client::fromJsonValue(m_total_time, json[QString("total_time")]);
     m_total_time_isSet = !json[QString("total_time")].isNull() && m_total_time_isValid;
 
-    m_total_cycles_isValid = ::OpenAPI::fromJsonValue(m_total_cycles, json[QString("total_cycles")]);
+    m_total_cycles_isValid = ::hm:slurm:client::fromJsonValue(m_total_cycles, json[QString("total_cycles")]);
     m_total_cycles_isSet = !json[QString("total_cycles")].isNull() && m_total_cycles_isValid;
 
-    m_mean_cycles_isValid = ::OpenAPI::fromJsonValue(m_mean_cycles, json[QString("mean_cycles")]);
+    m_mean_cycles_isValid = ::hm:slurm:client::fromJsonValue(m_mean_cycles, json[QString("mean_cycles")]);
     m_mean_cycles_isSet = !json[QString("mean_cycles")].isNull() && m_mean_cycles_isValid;
 }
 
@@ -91,22 +91,22 @@ QString OAIV0_0_40_rollup_stats_inner::asJson() const {
 QJsonObject OAIV0_0_40_rollup_stats_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_type_isSet) {
-        obj.insert(QString("type"), ::OpenAPI::toJsonValue(m_type));
+        obj.insert(QString("type"), ::hm:slurm:client::toJsonValue(m_type));
     }
     if (m_last_run_isSet) {
-        obj.insert(QString("last run"), ::OpenAPI::toJsonValue(m_last_run));
+        obj.insert(QString("last run"), ::hm:slurm:client::toJsonValue(m_last_run));
     }
     if (m_max_cycle_isSet) {
-        obj.insert(QString("max_cycle"), ::OpenAPI::toJsonValue(m_max_cycle));
+        obj.insert(QString("max_cycle"), ::hm:slurm:client::toJsonValue(m_max_cycle));
     }
     if (m_total_time_isSet) {
-        obj.insert(QString("total_time"), ::OpenAPI::toJsonValue(m_total_time));
+        obj.insert(QString("total_time"), ::hm:slurm:client::toJsonValue(m_total_time));
     }
     if (m_total_cycles_isSet) {
-        obj.insert(QString("total_cycles"), ::OpenAPI::toJsonValue(m_total_cycles));
+        obj.insert(QString("total_cycles"), ::hm:slurm:client::toJsonValue(m_total_cycles));
     }
     if (m_mean_cycles_isSet) {
-        obj.insert(QString("mean_cycles"), ::OpenAPI::toJsonValue(m_mean_cycles));
+        obj.insert(QString("mean_cycles"), ::hm:slurm:client::toJsonValue(m_mean_cycles));
     }
     return obj;
 }
@@ -248,4 +248,4 @@ bool OAIV0_0_40_rollup_stats_inner::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

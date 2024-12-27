@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_job_time_system;
 class OAIV0_0_39_uint32_no_val;
 
@@ -139,8 +139,8 @@ private:
     bool m_user_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_job_time)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_job_time)
 
 #endif // OAIV0_0_39_job_time_H

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIDbv0_0_39_meta_plugin::OAIDbv0_0_39_meta_plugin(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIDbv0_0_39_meta_plugin::fromJson(QString jsonString) {
 
 void OAIDbv0_0_39_meta_plugin::fromJsonObject(QJsonObject json) {
 
-    m_type_isValid = ::OpenAPI::fromJsonValue(m_type, json[QString("type")]);
+    m_type_isValid = ::hm:slurm:client::fromJsonValue(m_type, json[QString("type")]);
     m_type_isSet = !json[QString("type")].isNull() && m_type_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIDbv0_0_39_meta_plugin::asJson() const {
 QJsonObject OAIDbv0_0_39_meta_plugin::asJsonObject() const {
     QJsonObject obj;
     if (m_type_isSet) {
-        obj.insert(QString("type"), ::OpenAPI::toJsonValue(m_type));
+        obj.insert(QString("type"), ::hm:slurm:client::toJsonValue(m_type));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIDbv0_0_39_meta_plugin::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

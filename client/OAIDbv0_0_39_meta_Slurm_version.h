@@ -25,7 +25,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIDbv0_0_39_meta_Slurm_version : public OAIObject {
 public:
@@ -72,8 +72,8 @@ private:
     bool m_minor_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIDbv0_0_39_meta_Slurm_version)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIDbv0_0_39_meta_Slurm_version)
 
 #endif // OAIDbv0_0_39_meta_Slurm_version_H

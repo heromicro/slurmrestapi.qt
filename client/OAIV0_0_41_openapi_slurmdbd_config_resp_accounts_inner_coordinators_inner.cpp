@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_accounts_inner_coordinators_inner::OAIV0_0_41_openapi_slurmdbd_config_resp_accounts_inner_coordinators_inner(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_accounts_inner_coordinators_inner::
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_accounts_inner_coordinators_inner::fromJsonObject(QJsonObject json) {
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 
-    m_direct_isValid = ::OpenAPI::fromJsonValue(m_direct, json[QString("direct")]);
+    m_direct_isValid = ::hm:slurm:client::fromJsonValue(m_direct, json[QString("direct")]);
     m_direct_isSet = !json[QString("direct")].isNull() && m_direct_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_accounts_inner_coordinators_inne
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_accounts_inner_coordinators_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     if (m_direct_isSet) {
-        obj.insert(QString("direct"), ::OpenAPI::toJsonValue(m_direct));
+        obj.insert(QString("direct"), ::hm:slurm:client::toJsonValue(m_direct));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_accounts_inner_coordinators_inner::
     return m_name_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_job_alloc_req::OAIV0_0_41_job_alloc_req(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_job_alloc_req::fromJson(QString jsonString) {
 
 void OAIV0_0_41_job_alloc_req::fromJsonObject(QJsonObject json) {
 
-    m_hetjob_isValid = ::OpenAPI::fromJsonValue(m_hetjob, json[QString("hetjob")]);
+    m_hetjob_isValid = ::hm:slurm:client::fromJsonValue(m_hetjob, json[QString("hetjob")]);
     m_hetjob_isSet = !json[QString("hetjob")].isNull() && m_hetjob_isValid;
 
-    m_job_isValid = ::OpenAPI::fromJsonValue(m_job, json[QString("job")]);
+    m_job_isValid = ::hm:slurm:client::fromJsonValue(m_job, json[QString("job")]);
     m_job_isSet = !json[QString("job")].isNull() && m_job_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_job_alloc_req::asJson() const {
 QJsonObject OAIV0_0_41_job_alloc_req::asJsonObject() const {
     QJsonObject obj;
     if (m_hetjob.size() > 0) {
-        obj.insert(QString("hetjob"), ::OpenAPI::toJsonValue(m_hetjob));
+        obj.insert(QString("hetjob"), ::hm:slurm:client::toJsonValue(m_hetjob));
     }
     if (m_job.isSet()) {
-        obj.insert(QString("job"), ::OpenAPI::toJsonValue(m_job));
+        obj.insert(QString("job"), ::hm:slurm:client::toJsonValue(m_job));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_job_alloc_req::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

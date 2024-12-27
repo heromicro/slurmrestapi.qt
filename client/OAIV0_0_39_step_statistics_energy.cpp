@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_step_statistics_energy::OAIV0_0_39_step_statistics_energy(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_39_step_statistics_energy::fromJson(QString jsonString) {
 
 void OAIV0_0_39_step_statistics_energy::fromJsonObject(QJsonObject json) {
 
-    m_consumed_isValid = ::OpenAPI::fromJsonValue(m_consumed, json[QString("consumed")]);
+    m_consumed_isValid = ::hm:slurm:client::fromJsonValue(m_consumed, json[QString("consumed")]);
     m_consumed_isSet = !json[QString("consumed")].isNull() && m_consumed_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_39_step_statistics_energy::asJson() const {
 QJsonObject OAIV0_0_39_step_statistics_energy::asJsonObject() const {
     QJsonObject obj;
     if (m_consumed.isSet()) {
-        obj.insert(QString("consumed"), ::OpenAPI::toJsonValue(m_consumed));
+        obj.insert(QString("consumed"), ::hm:slurm:client::toJsonValue(m_consumed));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_39_step_statistics_energy::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

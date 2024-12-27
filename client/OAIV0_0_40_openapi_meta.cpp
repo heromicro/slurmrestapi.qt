@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_openapi_meta::OAIV0_0_40_openapi_meta(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_40_openapi_meta::fromJson(QString jsonString) {
 
 void OAIV0_0_40_openapi_meta::fromJsonObject(QJsonObject json) {
 
-    m_plugin_isValid = ::OpenAPI::fromJsonValue(m_plugin, json[QString("plugin")]);
+    m_plugin_isValid = ::hm:slurm:client::fromJsonValue(m_plugin, json[QString("plugin")]);
     m_plugin_isSet = !json[QString("plugin")].isNull() && m_plugin_isValid;
 
-    m_client_isValid = ::OpenAPI::fromJsonValue(m_client, json[QString("client")]);
+    m_client_isValid = ::hm:slurm:client::fromJsonValue(m_client, json[QString("client")]);
     m_client_isSet = !json[QString("client")].isNull() && m_client_isValid;
 
-    m_command_isValid = ::OpenAPI::fromJsonValue(m_command, json[QString("command")]);
+    m_command_isValid = ::hm:slurm:client::fromJsonValue(m_command, json[QString("command")]);
     m_command_isSet = !json[QString("command")].isNull() && m_command_isValid;
 
-    m_slurm_isValid = ::OpenAPI::fromJsonValue(m_slurm, json[QString("slurm")]);
+    m_slurm_isValid = ::hm:slurm:client::fromJsonValue(m_slurm, json[QString("slurm")]);
     m_slurm_isSet = !json[QString("slurm")].isNull() && m_slurm_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_40_openapi_meta::asJson() const {
 QJsonObject OAIV0_0_40_openapi_meta::asJsonObject() const {
     QJsonObject obj;
     if (m_plugin.isSet()) {
-        obj.insert(QString("plugin"), ::OpenAPI::toJsonValue(m_plugin));
+        obj.insert(QString("plugin"), ::hm:slurm:client::toJsonValue(m_plugin));
     }
     if (m_client.isSet()) {
-        obj.insert(QString("client"), ::OpenAPI::toJsonValue(m_client));
+        obj.insert(QString("client"), ::hm:slurm:client::toJsonValue(m_client));
     }
     if (m_command.size() > 0) {
-        obj.insert(QString("command"), ::OpenAPI::toJsonValue(m_command));
+        obj.insert(QString("command"), ::hm:slurm:client::toJsonValue(m_command));
     }
     if (m_slurm.isSet()) {
-        obj.insert(QString("slurm"), ::OpenAPI::toJsonValue(m_slurm));
+        obj.insert(QString("slurm"), ::hm:slurm:client::toJsonValue(m_slurm));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_40_openapi_meta::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

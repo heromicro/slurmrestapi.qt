@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_openapi_meta_slurm_version::OAIV0_0_40_openapi_meta_slurm_version(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_openapi_meta_slurm_version::fromJson(QString jsonString) {
 
 void OAIV0_0_40_openapi_meta_slurm_version::fromJsonObject(QJsonObject json) {
 
-    m_major_isValid = ::OpenAPI::fromJsonValue(m_major, json[QString("major")]);
+    m_major_isValid = ::hm:slurm:client::fromJsonValue(m_major, json[QString("major")]);
     m_major_isSet = !json[QString("major")].isNull() && m_major_isValid;
 
-    m_micro_isValid = ::OpenAPI::fromJsonValue(m_micro, json[QString("micro")]);
+    m_micro_isValid = ::hm:slurm:client::fromJsonValue(m_micro, json[QString("micro")]);
     m_micro_isSet = !json[QString("micro")].isNull() && m_micro_isValid;
 
-    m_minor_isValid = ::OpenAPI::fromJsonValue(m_minor, json[QString("minor")]);
+    m_minor_isValid = ::hm:slurm:client::fromJsonValue(m_minor, json[QString("minor")]);
     m_minor_isSet = !json[QString("minor")].isNull() && m_minor_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_openapi_meta_slurm_version::asJson() const {
 QJsonObject OAIV0_0_40_openapi_meta_slurm_version::asJsonObject() const {
     QJsonObject obj;
     if (m_major_isSet) {
-        obj.insert(QString("major"), ::OpenAPI::toJsonValue(m_major));
+        obj.insert(QString("major"), ::hm:slurm:client::toJsonValue(m_major));
     }
     if (m_micro_isSet) {
-        obj.insert(QString("micro"), ::OpenAPI::toJsonValue(m_micro));
+        obj.insert(QString("micro"), ::hm:slurm:client::toJsonValue(m_micro));
     }
     if (m_minor_isSet) {
-        obj.insert(QString("minor"), ::OpenAPI::toJsonValue(m_minor));
+        obj.insert(QString("minor"), ::hm:slurm:client::toJsonValue(m_minor));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_openapi_meta_slurm_version::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

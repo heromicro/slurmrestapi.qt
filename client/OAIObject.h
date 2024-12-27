@@ -17,7 +17,7 @@
 #include <QJsonObject>
 #include <QMetaType>
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIObject {
 public:
@@ -73,8 +73,8 @@ qHash(const OAIObject& obj, uint seed = 0) noexcept{
     return qHash(obj.asJsonObject(), seed);
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIObject)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIObject)
 
 #endif // OAI_OBJECT_H

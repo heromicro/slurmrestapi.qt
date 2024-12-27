@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_info_resp_jobs_inner_power::OAIV0_0_41_openapi_job_info_resp_jobs_inner_power(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_41_openapi_job_info_resp_jobs_inner_power::fromJson(QString jsonStr
 
 void OAIV0_0_41_openapi_job_info_resp_jobs_inner_power::fromJsonObject(QJsonObject json) {
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_41_openapi_job_info_resp_jobs_inner_power::asJson() const {
 QJsonObject OAIV0_0_41_openapi_job_info_resp_jobs_inner_power::asJsonObject() const {
     QJsonObject obj;
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_41_openapi_job_info_resp_jobs_inner_power::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

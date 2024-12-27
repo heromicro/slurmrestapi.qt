@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_instance_time;
 
 class OAIV0_0_40_instance : public OAIObject {
@@ -102,8 +102,8 @@ private:
     bool m_time_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_instance)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_instance)
 
 #endif // OAIV0_0_40_instance_H

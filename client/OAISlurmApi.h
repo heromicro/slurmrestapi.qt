@@ -88,7 +88,7 @@
 #include <QList>
 #include <QNetworkAccessManager>
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAISlurmApi : public QObject {
     Q_OBJECT
@@ -122,7 +122,7 @@ public:
     * @param[in]  job_id QString [required]
     * @param[in]  signal QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmV0039CancelJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &signal = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmV0039CancelJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &signal = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  node_name QString [required]
@@ -140,7 +140,7 @@ public:
     /**
     * @param[in]  update_time qint64 [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmV0039GetJobs(const ::OpenAPI::OptionalParam<qint64> &update_time = ::OpenAPI::OptionalParam<qint64>());
+    Q_DECL_DEPRECATED virtual void slurmV0039GetJobs(const ::hm:slurm:client::OptionalParam<qint64> &update_time = ::hm:slurm:client::OptionalParam<qint64>());
 
     /**
     * @param[in]  node_name QString [required]
@@ -150,29 +150,29 @@ public:
     /**
     * @param[in]  update_time qint64 [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmV0039GetNodes(const ::OpenAPI::OptionalParam<qint64> &update_time = ::OpenAPI::OptionalParam<qint64>());
+    Q_DECL_DEPRECATED virtual void slurmV0039GetNodes(const ::hm:slurm:client::OptionalParam<qint64> &update_time = ::hm:slurm:client::OptionalParam<qint64>());
 
     /**
     * @param[in]  partition_name QString [required]
     * @param[in]  update_time qint64 [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmV0039GetPartition(const QString &partition_name, const ::OpenAPI::OptionalParam<qint64> &update_time = ::OpenAPI::OptionalParam<qint64>());
+    Q_DECL_DEPRECATED virtual void slurmV0039GetPartition(const QString &partition_name, const ::hm:slurm:client::OptionalParam<qint64> &update_time = ::hm:slurm:client::OptionalParam<qint64>());
 
     /**
     * @param[in]  update_time qint64 [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmV0039GetPartitions(const ::OpenAPI::OptionalParam<qint64> &update_time = ::OpenAPI::OptionalParam<qint64>());
+    Q_DECL_DEPRECATED virtual void slurmV0039GetPartitions(const ::hm:slurm:client::OptionalParam<qint64> &update_time = ::hm:slurm:client::OptionalParam<qint64>());
 
     /**
     * @param[in]  reservation_name QString [required]
     * @param[in]  update_time qint64 [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmV0039GetReservation(const QString &reservation_name, const ::OpenAPI::OptionalParam<qint64> &update_time = ::OpenAPI::OptionalParam<qint64>());
+    Q_DECL_DEPRECATED virtual void slurmV0039GetReservation(const QString &reservation_name, const ::hm:slurm:client::OptionalParam<qint64> &update_time = ::hm:slurm:client::OptionalParam<qint64>());
 
     /**
     * @param[in]  update_time qint64 [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmV0039GetReservations(const ::OpenAPI::OptionalParam<qint64> &update_time = ::OpenAPI::OptionalParam<qint64>());
+    Q_DECL_DEPRECATED virtual void slurmV0039GetReservations(const ::hm:slurm:client::OptionalParam<qint64> &update_time = ::hm:slurm:client::OptionalParam<qint64>());
 
 
     Q_DECL_DEPRECATED virtual void slurmV0039Ping();
@@ -202,12 +202,12 @@ public:
     * @param[in]  signal QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0040DeleteJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &signal = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040DeleteJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &signal = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  oaiv0_0_40_kill_jobs_msg OAIV0_0_40_kill_jobs_msg [optional]
     */
-    virtual void slurmV0040DeleteJobs(const ::OpenAPI::OptionalParam<OAIV0_0_40_kill_jobs_msg> &oaiv0_0_40_kill_jobs_msg = ::OpenAPI::OptionalParam<OAIV0_0_40_kill_jobs_msg>());
+    virtual void slurmV0040DeleteJobs(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_kill_jobs_msg> &oaiv0_0_40_kill_jobs_msg = ::hm:slurm:client::OptionalParam<OAIV0_0_40_kill_jobs_msg>());
 
     /**
     * @param[in]  node_name QString [required]
@@ -222,19 +222,19 @@ public:
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0040GetJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0040GetJobs(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetJobs(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0040GetJobsState(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetJobsState(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
 
     virtual void slurmV0040GetLicenses();
@@ -244,26 +244,26 @@ public:
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0040GetNode(const QString &node_name, const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetNode(const QString &node_name, const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0040GetNodes(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetNodes(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  partition_name QString [required]
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0040GetPartition(const QString &partition_name, const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetPartition(const QString &partition_name, const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0040GetPartitions(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetPartitions(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
 
     virtual void slurmV0040GetPing();
@@ -275,47 +275,47 @@ public:
     * @param[in]  reservation_name QString [required]
     * @param[in]  update_time QString [optional]
     */
-    virtual void slurmV0040GetReservation(const QString &reservation_name, const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetReservation(const QString &reservation_name, const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     */
-    virtual void slurmV0040GetReservations(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetReservations(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  accounts QString [optional]
     * @param[in]  users QString [optional]
     */
-    virtual void slurmV0040GetShares(const ::OpenAPI::OptionalParam<QString> &accounts = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &users = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0040GetShares(const ::hm:slurm:client::OptionalParam<QString> &accounts = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &users = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  job_id QString [required]
     * @param[in]  oaiv0_0_40_job_desc_msg OAIV0_0_40_job_desc_msg [optional]
     */
-    virtual void slurmV0040PostJob(const QString &job_id, const ::OpenAPI::OptionalParam<OAIV0_0_40_job_desc_msg> &oaiv0_0_40_job_desc_msg = ::OpenAPI::OptionalParam<OAIV0_0_40_job_desc_msg>());
+    virtual void slurmV0040PostJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<OAIV0_0_40_job_desc_msg> &oaiv0_0_40_job_desc_msg = ::hm:slurm:client::OptionalParam<OAIV0_0_40_job_desc_msg>());
 
     /**
     * @param[in]  oaiv0_0_40_job_submit_req OAIV0_0_40_job_submit_req [optional]
     */
-    virtual void slurmV0040PostJobSubmit(const ::OpenAPI::OptionalParam<OAIV0_0_40_job_submit_req> &oaiv0_0_40_job_submit_req = ::OpenAPI::OptionalParam<OAIV0_0_40_job_submit_req>());
+    virtual void slurmV0040PostJobSubmit(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_job_submit_req> &oaiv0_0_40_job_submit_req = ::hm:slurm:client::OptionalParam<OAIV0_0_40_job_submit_req>());
 
     /**
     * @param[in]  node_name QString [required]
     * @param[in]  oaiv0_0_40_update_node_msg OAIV0_0_40_update_node_msg [optional]
     */
-    virtual void slurmV0040PostNode(const QString &node_name, const ::OpenAPI::OptionalParam<OAIV0_0_40_update_node_msg> &oaiv0_0_40_update_node_msg = ::OpenAPI::OptionalParam<OAIV0_0_40_update_node_msg>());
+    virtual void slurmV0040PostNode(const QString &node_name, const ::hm:slurm:client::OptionalParam<OAIV0_0_40_update_node_msg> &oaiv0_0_40_update_node_msg = ::hm:slurm:client::OptionalParam<OAIV0_0_40_update_node_msg>());
 
     /**
     * @param[in]  job_id QString [required]
     * @param[in]  signal QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0041DeleteJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &signal = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041DeleteJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &signal = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  oaiv0_0_41_kill_jobs_msg OAIV0_0_41_kill_jobs_msg [optional]
     */
-    virtual void slurmV0041DeleteJobs(const ::OpenAPI::OptionalParam<OAIV0_0_41_kill_jobs_msg> &oaiv0_0_41_kill_jobs_msg = ::OpenAPI::OptionalParam<OAIV0_0_41_kill_jobs_msg>());
+    virtual void slurmV0041DeleteJobs(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_kill_jobs_msg> &oaiv0_0_41_kill_jobs_msg = ::hm:slurm:client::OptionalParam<OAIV0_0_41_kill_jobs_msg>());
 
     /**
     * @param[in]  node_name QString [required]
@@ -330,19 +330,19 @@ public:
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0041GetJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0041GetJobs(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetJobs(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0041GetJobsState(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetJobsState(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
 
     virtual void slurmV0041GetLicenses();
@@ -352,26 +352,26 @@ public:
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0041GetNode(const QString &node_name, const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetNode(const QString &node_name, const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0041GetNodes(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetNodes(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  partition_name QString [required]
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0041GetPartition(const QString &partition_name, const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetPartition(const QString &partition_name, const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     * @param[in]  flags QString [optional]
     */
-    virtual void slurmV0041GetPartitions(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &flags = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetPartitions(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &flags = ::hm:slurm:client::OptionalParam<QString>());
 
 
     virtual void slurmV0041GetPing();
@@ -383,40 +383,40 @@ public:
     * @param[in]  reservation_name QString [required]
     * @param[in]  update_time QString [optional]
     */
-    virtual void slurmV0041GetReservation(const QString &reservation_name, const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetReservation(const QString &reservation_name, const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  update_time QString [optional]
     */
-    virtual void slurmV0041GetReservations(const ::OpenAPI::OptionalParam<QString> &update_time = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetReservations(const ::hm:slurm:client::OptionalParam<QString> &update_time = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  accounts QString [optional]
     * @param[in]  users QString [optional]
     */
-    virtual void slurmV0041GetShares(const ::OpenAPI::OptionalParam<QString> &accounts = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &users = ::OpenAPI::OptionalParam<QString>());
+    virtual void slurmV0041GetShares(const ::hm:slurm:client::OptionalParam<QString> &accounts = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &users = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  job_id QString [required]
     * @param[in]  oaiv0_0_41_job_desc_msg OAIV0_0_41_job_desc_msg [optional]
     */
-    virtual void slurmV0041PostJob(const QString &job_id, const ::OpenAPI::OptionalParam<OAIV0_0_41_job_desc_msg> &oaiv0_0_41_job_desc_msg = ::OpenAPI::OptionalParam<OAIV0_0_41_job_desc_msg>());
+    virtual void slurmV0041PostJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_desc_msg> &oaiv0_0_41_job_desc_msg = ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_desc_msg>());
 
     /**
     * @param[in]  oaiv0_0_41_job_alloc_req OAIV0_0_41_job_alloc_req [optional]
     */
-    virtual void slurmV0041PostJobAllocate(const ::OpenAPI::OptionalParam<OAIV0_0_41_job_alloc_req> &oaiv0_0_41_job_alloc_req = ::OpenAPI::OptionalParam<OAIV0_0_41_job_alloc_req>());
+    virtual void slurmV0041PostJobAllocate(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_alloc_req> &oaiv0_0_41_job_alloc_req = ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_alloc_req>());
 
     /**
     * @param[in]  oaiv0_0_41_job_submit_req OAIV0_0_41_job_submit_req [optional]
     */
-    virtual void slurmV0041PostJobSubmit(const ::OpenAPI::OptionalParam<OAIV0_0_41_job_submit_req> &oaiv0_0_41_job_submit_req = ::OpenAPI::OptionalParam<OAIV0_0_41_job_submit_req>());
+    virtual void slurmV0041PostJobSubmit(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_submit_req> &oaiv0_0_41_job_submit_req = ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_submit_req>());
 
     /**
     * @param[in]  node_name QString [required]
     * @param[in]  oaiv0_0_41_update_node_msg OAIV0_0_41_update_node_msg [optional]
     */
-    virtual void slurmV0041PostNode(const QString &node_name, const ::OpenAPI::OptionalParam<OAIV0_0_41_update_node_msg> &oaiv0_0_41_update_node_msg = ::OpenAPI::OptionalParam<OAIV0_0_41_update_node_msg>());
+    virtual void slurmV0041PostNode(const QString &node_name, const ::hm:slurm:client::OptionalParam<OAIV0_0_41_update_node_msg> &oaiv0_0_41_update_node_msg = ::hm:slurm:client::OptionalParam<OAIV0_0_41_update_node_msg>());
 
     /**
     * @param[in]  oai_dbv0_0_39_clusters_info OAIDbv0_0_39_clusters_info [required]
@@ -426,7 +426,7 @@ public:
     /**
     * @param[in]  oai_dbv0_0_39_wckey_info OAIDbv0_0_39_wckey_info [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039AddWckeys(const ::OpenAPI::OptionalParam<OAIDbv0_0_39_wckey_info> &oai_dbv0_0_39_wckey_info = ::OpenAPI::OptionalParam<OAIDbv0_0_39_wckey_info>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039AddWckeys(const ::hm:slurm:client::OptionalParam<OAIDbv0_0_39_wckey_info> &oai_dbv0_0_39_wckey_info = ::hm:slurm:client::OptionalParam<OAIDbv0_0_39_wckey_info>());
 
     /**
     * @param[in]  account_name QString [required]
@@ -439,7 +439,7 @@ public:
     * @param[in]  user QString [optional]
     * @param[in]  partition QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039DeleteAssociation(const ::OpenAPI::OptionalParam<QString> &cluster = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &account = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &user = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &partition = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039DeleteAssociation(const ::hm:slurm:client::OptionalParam<QString> &cluster = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &account = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &user = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &partition = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  cluster QString [optional]
@@ -447,7 +447,7 @@ public:
     * @param[in]  user QString [optional]
     * @param[in]  partition QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039DeleteAssociations(const ::OpenAPI::OptionalParam<QString> &cluster = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &account = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &user = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &partition = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039DeleteAssociations(const ::hm:slurm:client::OptionalParam<QString> &cluster = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &account = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &user = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &partition = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  cluster_name QString [required]
@@ -476,12 +476,12 @@ public:
     * @param[in]  account_name QString [required]
     * @param[in]  with_deleted QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetAccount(const QString &account_name, const ::OpenAPI::OptionalParam<QString> &with_deleted = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetAccount(const QString &account_name, const ::hm:slurm:client::OptionalParam<QString> &with_deleted = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  with_deleted QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetAccounts(const ::OpenAPI::OptionalParam<QString> &with_deleted = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetAccounts(const ::hm:slurm:client::OptionalParam<QString> &with_deleted = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  cluster QString [optional]
@@ -489,7 +489,7 @@ public:
     * @param[in]  user QString [optional]
     * @param[in]  partition QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetAssociation(const ::OpenAPI::OptionalParam<QString> &cluster = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &account = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &user = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &partition = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetAssociation(const ::hm:slurm:client::OptionalParam<QString> &cluster = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &account = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &user = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &partition = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  cluster QString [optional]
@@ -497,7 +497,7 @@ public:
     * @param[in]  user QString [optional]
     * @param[in]  partition QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetAssociations(const ::OpenAPI::OptionalParam<QString> &cluster = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &account = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &user = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &partition = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetAssociations(const ::hm:slurm:client::OptionalParam<QString> &cluster = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &account = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &user = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &partition = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  cluster_name QString [required]
@@ -543,18 +543,18 @@ public:
     * @param[in]  node QString [optional]
     * @param[in]  wckey QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &users = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &submit_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &start_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &end_time = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &account = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &association = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &cluster = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &constraints = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &cpus_max = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &cpus_min = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &skip_steps = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &disable_wait_for_result = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &exit_code = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &format = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &group = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &job_name = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &nodes_max = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &nodes_min = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &partition = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &qos = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &reason = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &reservation = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &state = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &step = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &node = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &wckey = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetJobs(const ::hm:slurm:client::OptionalParam<QString> &users = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &submit_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &start_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &end_time = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &account = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &association = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &cluster = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &constraints = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &cpus_max = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &cpus_min = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &skip_steps = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &disable_wait_for_result = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &exit_code = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &format = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &group = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &job_name = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &nodes_max = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &nodes_min = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &partition = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &qos = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &reason = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &reservation = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &state = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &step = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &node = ::hm:slurm:client::OptionalParam<QString>(), const ::hm:slurm:client::OptionalParam<QString> &wckey = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  with_deleted QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetQos(const ::OpenAPI::OptionalParam<QString> &with_deleted = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetQos(const ::hm:slurm:client::OptionalParam<QString> &with_deleted = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  qos_name QString [required]
     * @param[in]  with_deleted QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetSingleQos(const QString &qos_name, const ::OpenAPI::OptionalParam<QString> &with_deleted = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetSingleQos(const QString &qos_name, const ::hm:slurm:client::OptionalParam<QString> &with_deleted = ::hm:slurm:client::OptionalParam<QString>());
 
 
     Q_DECL_DEPRECATED virtual void slurmdbV0039GetTres();
@@ -563,12 +563,12 @@ public:
     * @param[in]  user_name QString [required]
     * @param[in]  with_deleted QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetUser(const QString &user_name, const ::OpenAPI::OptionalParam<QString> &with_deleted = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetUser(const QString &user_name, const ::hm:slurm:client::OptionalParam<QString> &with_deleted = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  with_deleted QString [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039GetUsers(const ::OpenAPI::OptionalParam<QString> &with_deleted = ::OpenAPI::OptionalParam<QString>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039GetUsers(const ::hm:slurm:client::OptionalParam<QString> &with_deleted = ::hm:slurm:client::OptionalParam<QString>());
 
     /**
     * @param[in]  wckey QString [required]
@@ -581,7 +581,7 @@ public:
     /**
     * @param[in]  oai_dbv0_0_39_set_config OAIDbv0_0_39_set_config [optional]
     */
-    Q_DECL_DEPRECATED virtual void slurmdbV0039SetConfig(const ::OpenAPI::OptionalParam<OAIDbv0_0_39_set_config> &oai_dbv0_0_39_set_config = ::OpenAPI::OptionalParam<OAIDbv0_0_39_set_config>());
+    Q_DECL_DEPRECATED virtual void slurmdbV0039SetConfig(const ::hm:slurm:client::OptionalParam<OAIDbv0_0_39_set_config> &oai_dbv0_0_39_set_config = ::hm:slurm:client::OptionalParam<OAIDbv0_0_39_set_config>());
 
     /**
     * @param[in]  oai_dbv0_0_39_account_info OAIDbv0_0_39_account_info [required]
@@ -1447,5 +1447,5 @@ public Q_SLOTS:
     void tokenAvailable();
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 #endif

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_job_desc_msg_rlimits::OAIV0_0_40_job_desc_msg_rlimits(QString json) {
     this->initializeModel();
@@ -74,34 +74,34 @@ void OAIV0_0_40_job_desc_msg_rlimits::fromJson(QString jsonString) {
 
 void OAIV0_0_40_job_desc_msg_rlimits::fromJsonObject(QJsonObject json) {
 
-    m_cpu_isValid = ::OpenAPI::fromJsonValue(m_cpu, json[QString("cpu")]);
+    m_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_cpu, json[QString("cpu")]);
     m_cpu_isSet = !json[QString("cpu")].isNull() && m_cpu_isValid;
 
-    m_fsize_isValid = ::OpenAPI::fromJsonValue(m_fsize, json[QString("fsize")]);
+    m_fsize_isValid = ::hm:slurm:client::fromJsonValue(m_fsize, json[QString("fsize")]);
     m_fsize_isSet = !json[QString("fsize")].isNull() && m_fsize_isValid;
 
-    m_data_isValid = ::OpenAPI::fromJsonValue(m_data, json[QString("data")]);
+    m_data_isValid = ::hm:slurm:client::fromJsonValue(m_data, json[QString("data")]);
     m_data_isSet = !json[QString("data")].isNull() && m_data_isValid;
 
-    m_stack_isValid = ::OpenAPI::fromJsonValue(m_stack, json[QString("stack")]);
+    m_stack_isValid = ::hm:slurm:client::fromJsonValue(m_stack, json[QString("stack")]);
     m_stack_isSet = !json[QString("stack")].isNull() && m_stack_isValid;
 
-    m_core_isValid = ::OpenAPI::fromJsonValue(m_core, json[QString("core")]);
+    m_core_isValid = ::hm:slurm:client::fromJsonValue(m_core, json[QString("core")]);
     m_core_isSet = !json[QString("core")].isNull() && m_core_isValid;
 
-    m_rss_isValid = ::OpenAPI::fromJsonValue(m_rss, json[QString("rss")]);
+    m_rss_isValid = ::hm:slurm:client::fromJsonValue(m_rss, json[QString("rss")]);
     m_rss_isSet = !json[QString("rss")].isNull() && m_rss_isValid;
 
-    m_nproc_isValid = ::OpenAPI::fromJsonValue(m_nproc, json[QString("nproc")]);
+    m_nproc_isValid = ::hm:slurm:client::fromJsonValue(m_nproc, json[QString("nproc")]);
     m_nproc_isSet = !json[QString("nproc")].isNull() && m_nproc_isValid;
 
-    m_nofile_isValid = ::OpenAPI::fromJsonValue(m_nofile, json[QString("nofile")]);
+    m_nofile_isValid = ::hm:slurm:client::fromJsonValue(m_nofile, json[QString("nofile")]);
     m_nofile_isSet = !json[QString("nofile")].isNull() && m_nofile_isValid;
 
-    m_memlock_isValid = ::OpenAPI::fromJsonValue(m_memlock, json[QString("memlock")]);
+    m_memlock_isValid = ::hm:slurm:client::fromJsonValue(m_memlock, json[QString("memlock")]);
     m_memlock_isSet = !json[QString("memlock")].isNull() && m_memlock_isValid;
 
-    m_as_isValid = ::OpenAPI::fromJsonValue(m_as, json[QString("as")]);
+    m_as_isValid = ::hm:slurm:client::fromJsonValue(m_as, json[QString("as")]);
     m_as_isSet = !json[QString("as")].isNull() && m_as_isValid;
 }
 
@@ -115,34 +115,34 @@ QString OAIV0_0_40_job_desc_msg_rlimits::asJson() const {
 QJsonObject OAIV0_0_40_job_desc_msg_rlimits::asJsonObject() const {
     QJsonObject obj;
     if (m_cpu.isSet()) {
-        obj.insert(QString("cpu"), ::OpenAPI::toJsonValue(m_cpu));
+        obj.insert(QString("cpu"), ::hm:slurm:client::toJsonValue(m_cpu));
     }
     if (m_fsize.isSet()) {
-        obj.insert(QString("fsize"), ::OpenAPI::toJsonValue(m_fsize));
+        obj.insert(QString("fsize"), ::hm:slurm:client::toJsonValue(m_fsize));
     }
     if (m_data.isSet()) {
-        obj.insert(QString("data"), ::OpenAPI::toJsonValue(m_data));
+        obj.insert(QString("data"), ::hm:slurm:client::toJsonValue(m_data));
     }
     if (m_stack.isSet()) {
-        obj.insert(QString("stack"), ::OpenAPI::toJsonValue(m_stack));
+        obj.insert(QString("stack"), ::hm:slurm:client::toJsonValue(m_stack));
     }
     if (m_core.isSet()) {
-        obj.insert(QString("core"), ::OpenAPI::toJsonValue(m_core));
+        obj.insert(QString("core"), ::hm:slurm:client::toJsonValue(m_core));
     }
     if (m_rss.isSet()) {
-        obj.insert(QString("rss"), ::OpenAPI::toJsonValue(m_rss));
+        obj.insert(QString("rss"), ::hm:slurm:client::toJsonValue(m_rss));
     }
     if (m_nproc.isSet()) {
-        obj.insert(QString("nproc"), ::OpenAPI::toJsonValue(m_nproc));
+        obj.insert(QString("nproc"), ::hm:slurm:client::toJsonValue(m_nproc));
     }
     if (m_nofile.isSet()) {
-        obj.insert(QString("nofile"), ::OpenAPI::toJsonValue(m_nofile));
+        obj.insert(QString("nofile"), ::hm:slurm:client::toJsonValue(m_nofile));
     }
     if (m_memlock.isSet()) {
-        obj.insert(QString("memlock"), ::OpenAPI::toJsonValue(m_memlock));
+        obj.insert(QString("memlock"), ::hm:slurm:client::toJsonValue(m_memlock));
     }
     if (m_as.isSet()) {
-        obj.insert(QString("as"), ::OpenAPI::toJsonValue(m_as));
+        obj.insert(QString("as"), ::hm:slurm:client::toJsonValue(m_as));
     }
     return obj;
 }
@@ -368,4 +368,4 @@ bool OAIV0_0_40_job_desc_msg_rlimits::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

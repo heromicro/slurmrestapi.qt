@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_partition_info_nodes::OAIV0_0_40_partition_info_nodes(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_partition_info_nodes::fromJson(QString jsonString) {
 
 void OAIV0_0_40_partition_info_nodes::fromJsonObject(QJsonObject json) {
 
-    m_allowed_allocation_isValid = ::OpenAPI::fromJsonValue(m_allowed_allocation, json[QString("allowed_allocation")]);
+    m_allowed_allocation_isValid = ::hm:slurm:client::fromJsonValue(m_allowed_allocation, json[QString("allowed_allocation")]);
     m_allowed_allocation_isSet = !json[QString("allowed_allocation")].isNull() && m_allowed_allocation_isValid;
 
-    m_configured_isValid = ::OpenAPI::fromJsonValue(m_configured, json[QString("configured")]);
+    m_configured_isValid = ::hm:slurm:client::fromJsonValue(m_configured, json[QString("configured")]);
     m_configured_isSet = !json[QString("configured")].isNull() && m_configured_isValid;
 
-    m_total_isValid = ::OpenAPI::fromJsonValue(m_total, json[QString("total")]);
+    m_total_isValid = ::hm:slurm:client::fromJsonValue(m_total, json[QString("total")]);
     m_total_isSet = !json[QString("total")].isNull() && m_total_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_partition_info_nodes::asJson() const {
 QJsonObject OAIV0_0_40_partition_info_nodes::asJsonObject() const {
     QJsonObject obj;
     if (m_allowed_allocation_isSet) {
-        obj.insert(QString("allowed_allocation"), ::OpenAPI::toJsonValue(m_allowed_allocation));
+        obj.insert(QString("allowed_allocation"), ::hm:slurm:client::toJsonValue(m_allowed_allocation));
     }
     if (m_configured_isSet) {
-        obj.insert(QString("configured"), ::OpenAPI::toJsonValue(m_configured));
+        obj.insert(QString("configured"), ::hm:slurm:client::toJsonValue(m_configured));
     }
     if (m_total_isSet) {
-        obj.insert(QString("total"), ::OpenAPI::toJsonValue(m_total));
+        obj.insert(QString("total"), ::hm:slurm:client::toJsonValue(m_total));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_partition_info_nodes::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

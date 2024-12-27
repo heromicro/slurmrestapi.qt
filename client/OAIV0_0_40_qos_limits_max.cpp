@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_qos_limits_max::OAIV0_0_40_qos_limits_max(QString json) {
     this->initializeModel();
@@ -59,19 +59,19 @@ void OAIV0_0_40_qos_limits_max::fromJson(QString jsonString) {
 
 void OAIV0_0_40_qos_limits_max::fromJsonObject(QJsonObject json) {
 
-    m_active_jobs_isValid = ::OpenAPI::fromJsonValue(m_active_jobs, json[QString("active_jobs")]);
+    m_active_jobs_isValid = ::hm:slurm:client::fromJsonValue(m_active_jobs, json[QString("active_jobs")]);
     m_active_jobs_isSet = !json[QString("active_jobs")].isNull() && m_active_jobs_isValid;
 
-    m_tres_isValid = ::OpenAPI::fromJsonValue(m_tres, json[QString("tres")]);
+    m_tres_isValid = ::hm:slurm:client::fromJsonValue(m_tres, json[QString("tres")]);
     m_tres_isSet = !json[QString("tres")].isNull() && m_tres_isValid;
 
-    m_wall_clock_isValid = ::OpenAPI::fromJsonValue(m_wall_clock, json[QString("wall_clock")]);
+    m_wall_clock_isValid = ::hm:slurm:client::fromJsonValue(m_wall_clock, json[QString("wall_clock")]);
     m_wall_clock_isSet = !json[QString("wall_clock")].isNull() && m_wall_clock_isValid;
 
-    m_jobs_isValid = ::OpenAPI::fromJsonValue(m_jobs, json[QString("jobs")]);
+    m_jobs_isValid = ::hm:slurm:client::fromJsonValue(m_jobs, json[QString("jobs")]);
     m_jobs_isSet = !json[QString("jobs")].isNull() && m_jobs_isValid;
 
-    m_accruing_isValid = ::OpenAPI::fromJsonValue(m_accruing, json[QString("accruing")]);
+    m_accruing_isValid = ::hm:slurm:client::fromJsonValue(m_accruing, json[QString("accruing")]);
     m_accruing_isSet = !json[QString("accruing")].isNull() && m_accruing_isValid;
 }
 
@@ -85,19 +85,19 @@ QString OAIV0_0_40_qos_limits_max::asJson() const {
 QJsonObject OAIV0_0_40_qos_limits_max::asJsonObject() const {
     QJsonObject obj;
     if (m_active_jobs.isSet()) {
-        obj.insert(QString("active_jobs"), ::OpenAPI::toJsonValue(m_active_jobs));
+        obj.insert(QString("active_jobs"), ::hm:slurm:client::toJsonValue(m_active_jobs));
     }
     if (m_tres.isSet()) {
-        obj.insert(QString("tres"), ::OpenAPI::toJsonValue(m_tres));
+        obj.insert(QString("tres"), ::hm:slurm:client::toJsonValue(m_tres));
     }
     if (m_wall_clock.isSet()) {
-        obj.insert(QString("wall_clock"), ::OpenAPI::toJsonValue(m_wall_clock));
+        obj.insert(QString("wall_clock"), ::hm:slurm:client::toJsonValue(m_wall_clock));
     }
     if (m_jobs.isSet()) {
-        obj.insert(QString("jobs"), ::OpenAPI::toJsonValue(m_jobs));
+        obj.insert(QString("jobs"), ::hm:slurm:client::toJsonValue(m_jobs));
     }
     if (m_accruing.isSet()) {
-        obj.insert(QString("accruing"), ::OpenAPI::toJsonValue(m_accruing));
+        obj.insert(QString("accruing"), ::hm:slurm:client::toJsonValue(m_accruing));
     }
     return obj;
 }
@@ -218,4 +218,4 @@ bool OAIV0_0_40_qos_limits_max::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

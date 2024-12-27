@@ -30,7 +30,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_reservation_core_spec;
 class OAIV0_0_39_reservation_info_purge_completed;
 class OAIV0_0_39_uint32_no_val;
@@ -224,8 +224,8 @@ private:
     bool m_users_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_reservation_info)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_reservation_info)
 
 #endif // OAIV0_0_39_reservation_info_H

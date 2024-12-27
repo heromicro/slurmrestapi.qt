@@ -34,7 +34,7 @@
 #include <QDateTime>
 #include <time.h>
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class oauthToken
 {
@@ -177,5 +177,5 @@ public Q_SLOTS:
 };
 
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 #endif // OAI_OAUTH2_H

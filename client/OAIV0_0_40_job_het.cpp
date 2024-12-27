@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_job_het::OAIV0_0_40_job_het(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_job_het::fromJson(QString jsonString) {
 
 void OAIV0_0_40_job_het::fromJsonObject(QJsonObject json) {
 
-    m_job_id_isValid = ::OpenAPI::fromJsonValue(m_job_id, json[QString("job_id")]);
+    m_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_job_id, json[QString("job_id")]);
     m_job_id_isSet = !json[QString("job_id")].isNull() && m_job_id_isValid;
 
-    m_job_offset_isValid = ::OpenAPI::fromJsonValue(m_job_offset, json[QString("job_offset")]);
+    m_job_offset_isValid = ::hm:slurm:client::fromJsonValue(m_job_offset, json[QString("job_offset")]);
     m_job_offset_isSet = !json[QString("job_offset")].isNull() && m_job_offset_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_job_het::asJson() const {
 QJsonObject OAIV0_0_40_job_het::asJsonObject() const {
     QJsonObject obj;
     if (m_job_id_isSet) {
-        obj.insert(QString("job_id"), ::OpenAPI::toJsonValue(m_job_id));
+        obj.insert(QString("job_id"), ::hm:slurm:client::toJsonValue(m_job_id));
     }
     if (m_job_offset.isSet()) {
-        obj.insert(QString("job_offset"), ::OpenAPI::toJsonValue(m_job_offset));
+        obj.insert(QString("job_offset"), ::hm:slurm:client::toJsonValue(m_job_offset));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_job_het::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

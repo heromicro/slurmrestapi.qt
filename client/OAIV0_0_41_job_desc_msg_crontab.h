@@ -28,7 +28,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_cron_entry_line;
 
 class OAIV0_0_41_job_desc_msg_crontab : public OAIObject {
@@ -130,8 +130,8 @@ private:
     bool m_line_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_job_desc_msg_crontab)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_job_desc_msg_crontab)
 
 #endif // OAIV0_0_41_job_desc_msg_crontab_H

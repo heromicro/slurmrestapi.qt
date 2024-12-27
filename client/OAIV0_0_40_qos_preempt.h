@@ -28,7 +28,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_uint32_no_val;
 
 class OAIV0_0_40_qos_preempt : public OAIObject {
@@ -76,8 +76,8 @@ private:
     bool m_exempt_time_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_qos_preempt)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_qos_preempt)
 
 #endif // OAIV0_0_40_qos_preempt_H

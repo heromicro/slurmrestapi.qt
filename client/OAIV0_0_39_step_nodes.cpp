@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_step_nodes::OAIV0_0_39_step_nodes(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_39_step_nodes::fromJson(QString jsonString) {
 
 void OAIV0_0_39_step_nodes::fromJsonObject(QJsonObject json) {
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 
-    m_range_isValid = ::OpenAPI::fromJsonValue(m_range, json[QString("range")]);
+    m_range_isValid = ::hm:slurm:client::fromJsonValue(m_range, json[QString("range")]);
     m_range_isSet = !json[QString("range")].isNull() && m_range_isValid;
 
-    m_list_isValid = ::OpenAPI::fromJsonValue(m_list, json[QString("list")]);
+    m_list_isValid = ::hm:slurm:client::fromJsonValue(m_list, json[QString("list")]);
     m_list_isSet = !json[QString("list")].isNull() && m_list_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_39_step_nodes::asJson() const {
 QJsonObject OAIV0_0_39_step_nodes::asJsonObject() const {
     QJsonObject obj;
     if (m_count_isSet) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     if (m_range_isSet) {
-        obj.insert(QString("range"), ::OpenAPI::toJsonValue(m_range));
+        obj.insert(QString("range"), ::hm:slurm:client::toJsonValue(m_range));
     }
     if (m_list.size() > 0) {
-        obj.insert(QString("list"), ::OpenAPI::toJsonValue(m_list));
+        obj.insert(QString("list"), ::hm:slurm:client::toJsonValue(m_list));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_39_step_nodes::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

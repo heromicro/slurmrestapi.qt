@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_job_desc_msg_memory_per_cpu;
 class OAIV0_0_41_openapi_job_info_resp_jobs_inner_memory_per_node;
 
@@ -76,8 +76,8 @@ private:
     bool m_memory_per_node_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_required)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_required)
 
 #endif // OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_required_H

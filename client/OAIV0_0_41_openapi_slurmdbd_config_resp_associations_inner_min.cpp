@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_min::OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_min(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_min::fromJson(QS
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_min::fromJsonObject(QJsonObject json) {
 
-    m_priority_threshold_isValid = ::OpenAPI::fromJsonValue(m_priority_threshold, json[QString("priority_threshold")]);
+    m_priority_threshold_isValid = ::hm:slurm:client::fromJsonValue(m_priority_threshold, json[QString("priority_threshold")]);
     m_priority_threshold_isSet = !json[QString("priority_threshold")].isNull() && m_priority_threshold_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_min::asJson()
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_min::asJsonObject() const {
     QJsonObject obj;
     if (m_priority_threshold.isSet()) {
-        obj.insert(QString("priority_threshold"), ::OpenAPI::toJsonValue(m_priority_threshold));
+        obj.insert(QString("priority_threshold"), ::hm:slurm:client::toJsonValue(m_priority_threshold));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_min::isValid() c
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

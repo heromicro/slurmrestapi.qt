@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups::OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups::fromJson(QString
 
 void OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups::fromJsonObject(QJsonObject json) {
 
-    m_hourly_isValid = ::OpenAPI::fromJsonValue(m_hourly, json[QString("hourly")]);
+    m_hourly_isValid = ::hm:slurm:client::fromJsonValue(m_hourly, json[QString("hourly")]);
     m_hourly_isSet = !json[QString("hourly")].isNull() && m_hourly_isValid;
 
-    m_daily_isValid = ::OpenAPI::fromJsonValue(m_daily, json[QString("daily")]);
+    m_daily_isValid = ::hm:slurm:client::fromJsonValue(m_daily, json[QString("daily")]);
     m_daily_isSet = !json[QString("daily")].isNull() && m_daily_isValid;
 
-    m_monthly_isValid = ::OpenAPI::fromJsonValue(m_monthly, json[QString("monthly")]);
+    m_monthly_isValid = ::hm:slurm:client::fromJsonValue(m_monthly, json[QString("monthly")]);
     m_monthly_isSet = !json[QString("monthly")].isNull() && m_monthly_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups::asJson() cons
 QJsonObject OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups::asJsonObject() const {
     QJsonObject obj;
     if (m_hourly.isSet()) {
-        obj.insert(QString("hourly"), ::OpenAPI::toJsonValue(m_hourly));
+        obj.insert(QString("hourly"), ::hm:slurm:client::toJsonValue(m_hourly));
     }
     if (m_daily.isSet()) {
-        obj.insert(QString("daily"), ::OpenAPI::toJsonValue(m_daily));
+        obj.insert(QString("daily"), ::hm:slurm:client::toJsonValue(m_daily));
     }
     if (m_monthly.isSet()) {
-        obj.insert(QString("monthly"), ::OpenAPI::toJsonValue(m_monthly));
+        obj.insert(QString("monthly"), ::hm:slurm:client::toJsonValue(m_monthly));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups::isValid() const 
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

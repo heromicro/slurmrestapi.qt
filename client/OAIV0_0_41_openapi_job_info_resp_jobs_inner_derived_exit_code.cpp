@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code::OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code::fromJson(QSt
 
 void OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code::fromJsonObject(QJsonObject json) {
 
-    m_status_isValid = ::OpenAPI::fromJsonValue(m_status, json[QString("status")]);
+    m_status_isValid = ::hm:slurm:client::fromJsonValue(m_status, json[QString("status")]);
     m_status_isSet = !json[QString("status")].isNull() && m_status_isValid;
 
-    m_return_code_isValid = ::OpenAPI::fromJsonValue(m_return_code, json[QString("return_code")]);
+    m_return_code_isValid = ::hm:slurm:client::fromJsonValue(m_return_code, json[QString("return_code")]);
     m_return_code_isSet = !json[QString("return_code")].isNull() && m_return_code_isValid;
 
-    m_signal_isValid = ::OpenAPI::fromJsonValue(m_signal, json[QString("signal")]);
+    m_signal_isValid = ::hm:slurm:client::fromJsonValue(m_signal, json[QString("signal")]);
     m_signal_isSet = !json[QString("signal")].isNull() && m_signal_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code::asJson() 
 QJsonObject OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code::asJsonObject() const {
     QJsonObject obj;
     if (m_status.size() > 0) {
-        obj.insert(QString("status"), ::OpenAPI::toJsonValue(m_status));
+        obj.insert(QString("status"), ::hm:slurm:client::toJsonValue(m_status));
     }
     if (m_return_code.isSet()) {
-        obj.insert(QString("return_code"), ::OpenAPI::toJsonValue(m_return_code));
+        obj.insert(QString("return_code"), ::hm:slurm:client::toJsonValue(m_return_code));
     }
     if (m_signal.isSet()) {
-        obj.insert(QString("signal"), ::OpenAPI::toJsonValue(m_signal));
+        obj.insert(QString("signal"), ::hm:slurm:client::toJsonValue(m_signal));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code::isValid() co
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

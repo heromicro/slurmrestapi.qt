@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_40_partition_info_maximums_oversubscribe : public OAIObject {
 public:
@@ -65,8 +65,8 @@ private:
     bool m_flags_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_partition_info_maximums_oversubscribe)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_partition_info_maximums_oversubscribe)
 
 #endif // OAIV0_0_40_partition_info_maximums_oversubscribe_H

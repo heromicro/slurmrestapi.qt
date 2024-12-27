@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_message_type_inner::OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_message_type_inner(QString json) {
     this->initializeModel();
@@ -71,31 +71,31 @@ void OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_message_type_inner::fromJso
 
 void OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_message_type_inner::fromJsonObject(QJsonObject json) {
 
-    m_type_id_isValid = ::OpenAPI::fromJsonValue(m_type_id, json[QString("type_id")]);
+    m_type_id_isValid = ::hm:slurm:client::fromJsonValue(m_type_id, json[QString("type_id")]);
     m_type_id_isSet = !json[QString("type_id")].isNull() && m_type_id_isValid;
 
-    m_message_type_isValid = ::OpenAPI::fromJsonValue(m_message_type, json[QString("message_type")]);
+    m_message_type_isValid = ::hm:slurm:client::fromJsonValue(m_message_type, json[QString("message_type")]);
     m_message_type_isSet = !json[QString("message_type")].isNull() && m_message_type_isValid;
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 
-    m_queued_isValid = ::OpenAPI::fromJsonValue(m_queued, json[QString("queued")]);
+    m_queued_isValid = ::hm:slurm:client::fromJsonValue(m_queued, json[QString("queued")]);
     m_queued_isSet = !json[QString("queued")].isNull() && m_queued_isValid;
 
-    m_dropped_isValid = ::OpenAPI::fromJsonValue(m_dropped, json[QString("dropped")]);
+    m_dropped_isValid = ::hm:slurm:client::fromJsonValue(m_dropped, json[QString("dropped")]);
     m_dropped_isSet = !json[QString("dropped")].isNull() && m_dropped_isValid;
 
-    m_cycle_last_isValid = ::OpenAPI::fromJsonValue(m_cycle_last, json[QString("cycle_last")]);
+    m_cycle_last_isValid = ::hm:slurm:client::fromJsonValue(m_cycle_last, json[QString("cycle_last")]);
     m_cycle_last_isSet = !json[QString("cycle_last")].isNull() && m_cycle_last_isValid;
 
-    m_cycle_max_isValid = ::OpenAPI::fromJsonValue(m_cycle_max, json[QString("cycle_max")]);
+    m_cycle_max_isValid = ::hm:slurm:client::fromJsonValue(m_cycle_max, json[QString("cycle_max")]);
     m_cycle_max_isSet = !json[QString("cycle_max")].isNull() && m_cycle_max_isValid;
 
-    m_total_time_isValid = ::OpenAPI::fromJsonValue(m_total_time, json[QString("total_time")]);
+    m_total_time_isValid = ::hm:slurm:client::fromJsonValue(m_total_time, json[QString("total_time")]);
     m_total_time_isSet = !json[QString("total_time")].isNull() && m_total_time_isValid;
 
-    m_average_time_isValid = ::OpenAPI::fromJsonValue(m_average_time, json[QString("average_time")]);
+    m_average_time_isValid = ::hm:slurm:client::fromJsonValue(m_average_time, json[QString("average_time")]);
     m_average_time_isSet = !json[QString("average_time")].isNull() && m_average_time_isValid;
 }
 
@@ -109,31 +109,31 @@ QString OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_message_type_inner::asJs
 QJsonObject OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_message_type_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_type_id_isSet) {
-        obj.insert(QString("type_id"), ::OpenAPI::toJsonValue(m_type_id));
+        obj.insert(QString("type_id"), ::hm:slurm:client::toJsonValue(m_type_id));
     }
     if (m_message_type_isSet) {
-        obj.insert(QString("message_type"), ::OpenAPI::toJsonValue(m_message_type));
+        obj.insert(QString("message_type"), ::hm:slurm:client::toJsonValue(m_message_type));
     }
     if (m_count_isSet) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     if (m_queued_isSet) {
-        obj.insert(QString("queued"), ::OpenAPI::toJsonValue(m_queued));
+        obj.insert(QString("queued"), ::hm:slurm:client::toJsonValue(m_queued));
     }
     if (m_dropped_isSet) {
-        obj.insert(QString("dropped"), ::OpenAPI::toJsonValue(m_dropped));
+        obj.insert(QString("dropped"), ::hm:slurm:client::toJsonValue(m_dropped));
     }
     if (m_cycle_last_isSet) {
-        obj.insert(QString("cycle_last"), ::OpenAPI::toJsonValue(m_cycle_last));
+        obj.insert(QString("cycle_last"), ::hm:slurm:client::toJsonValue(m_cycle_last));
     }
     if (m_cycle_max_isSet) {
-        obj.insert(QString("cycle_max"), ::OpenAPI::toJsonValue(m_cycle_max));
+        obj.insert(QString("cycle_max"), ::hm:slurm:client::toJsonValue(m_cycle_max));
     }
     if (m_total_time_isSet) {
-        obj.insert(QString("total_time"), ::OpenAPI::toJsonValue(m_total_time));
+        obj.insert(QString("total_time"), ::hm:slurm:client::toJsonValue(m_total_time));
     }
     if (m_average_time.isSet()) {
-        obj.insert(QString("average_time"), ::OpenAPI::toJsonValue(m_average_time));
+        obj.insert(QString("average_time"), ::hm:slurm:client::toJsonValue(m_average_time));
     }
     return obj;
 }
@@ -338,4 +338,4 @@ bool OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_message_type_inner::isValid
     return m_type_id_isValid && m_message_type_isValid && m_count_isValid && m_queued_isValid && m_dropped_isValid && m_cycle_last_isValid && m_cycle_max_isValid && m_total_time_isValid && m_average_time_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

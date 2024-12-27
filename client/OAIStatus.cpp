@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIStatus::OAIStatus(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIStatus::fromJson(QString jsonString) {
 
 void OAIStatus::fromJsonObject(QJsonObject json) {
 
-    m_meta_isValid = ::OpenAPI::fromJsonValue(m_meta, json[QString("meta")]);
+    m_meta_isValid = ::hm:slurm:client::fromJsonValue(m_meta, json[QString("meta")]);
     m_meta_isSet = !json[QString("meta")].isNull() && m_meta_isValid;
 
-    m_errors_isValid = ::OpenAPI::fromJsonValue(m_errors, json[QString("errors")]);
+    m_errors_isValid = ::hm:slurm:client::fromJsonValue(m_errors, json[QString("errors")]);
     m_errors_isSet = !json[QString("errors")].isNull() && m_errors_isValid;
 
-    m_warnings_isValid = ::OpenAPI::fromJsonValue(m_warnings, json[QString("warnings")]);
+    m_warnings_isValid = ::hm:slurm:client::fromJsonValue(m_warnings, json[QString("warnings")]);
     m_warnings_isSet = !json[QString("warnings")].isNull() && m_warnings_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIStatus::asJson() const {
 QJsonObject OAIStatus::asJsonObject() const {
     QJsonObject obj;
     if (m_meta.isSet()) {
-        obj.insert(QString("meta"), ::OpenAPI::toJsonValue(m_meta));
+        obj.insert(QString("meta"), ::hm:slurm:client::toJsonValue(m_meta));
     }
     if (m_errors.size() > 0) {
-        obj.insert(QString("errors"), ::OpenAPI::toJsonValue(m_errors));
+        obj.insert(QString("errors"), ::hm:slurm:client::toJsonValue(m_errors));
     }
     if (m_warnings.size() > 0) {
-        obj.insert(QString("warnings"), ::OpenAPI::toJsonValue(m_warnings));
+        obj.insert(QString("warnings"), ::hm:slurm:client::toJsonValue(m_warnings));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIStatus::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

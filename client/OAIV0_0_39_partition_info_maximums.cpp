@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_partition_info_maximums::OAIV0_0_39_partition_info_maximums(QString json) {
     this->initializeModel();
@@ -65,25 +65,25 @@ void OAIV0_0_39_partition_info_maximums::fromJson(QString jsonString) {
 
 void OAIV0_0_39_partition_info_maximums::fromJsonObject(QJsonObject json) {
 
-    m_cpus_per_node_isValid = ::OpenAPI::fromJsonValue(m_cpus_per_node, json[QString("cpus_per_node")]);
+    m_cpus_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_cpus_per_node, json[QString("cpus_per_node")]);
     m_cpus_per_node_isSet = !json[QString("cpus_per_node")].isNull() && m_cpus_per_node_isValid;
 
-    m_cpus_per_socket_isValid = ::OpenAPI::fromJsonValue(m_cpus_per_socket, json[QString("cpus_per_socket")]);
+    m_cpus_per_socket_isValid = ::hm:slurm:client::fromJsonValue(m_cpus_per_socket, json[QString("cpus_per_socket")]);
     m_cpus_per_socket_isSet = !json[QString("cpus_per_socket")].isNull() && m_cpus_per_socket_isValid;
 
-    m_memory_per_cpu_isValid = ::OpenAPI::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
+    m_memory_per_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
     m_memory_per_cpu_isSet = !json[QString("memory_per_cpu")].isNull() && m_memory_per_cpu_isValid;
 
-    m_nodes_isValid = ::OpenAPI::fromJsonValue(m_nodes, json[QString("nodes")]);
+    m_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_nodes, json[QString("nodes")]);
     m_nodes_isSet = !json[QString("nodes")].isNull() && m_nodes_isValid;
 
-    m_shares_isValid = ::OpenAPI::fromJsonValue(m_shares, json[QString("shares")]);
+    m_shares_isValid = ::hm:slurm:client::fromJsonValue(m_shares, json[QString("shares")]);
     m_shares_isSet = !json[QString("shares")].isNull() && m_shares_isValid;
 
-    m_time_isValid = ::OpenAPI::fromJsonValue(m_time, json[QString("time")]);
+    m_time_isValid = ::hm:slurm:client::fromJsonValue(m_time, json[QString("time")]);
     m_time_isSet = !json[QString("time")].isNull() && m_time_isValid;
 
-    m_over_time_limit_isValid = ::OpenAPI::fromJsonValue(m_over_time_limit, json[QString("over_time_limit")]);
+    m_over_time_limit_isValid = ::hm:slurm:client::fromJsonValue(m_over_time_limit, json[QString("over_time_limit")]);
     m_over_time_limit_isSet = !json[QString("over_time_limit")].isNull() && m_over_time_limit_isValid;
 }
 
@@ -97,25 +97,25 @@ QString OAIV0_0_39_partition_info_maximums::asJson() const {
 QJsonObject OAIV0_0_39_partition_info_maximums::asJsonObject() const {
     QJsonObject obj;
     if (m_cpus_per_node.isSet()) {
-        obj.insert(QString("cpus_per_node"), ::OpenAPI::toJsonValue(m_cpus_per_node));
+        obj.insert(QString("cpus_per_node"), ::hm:slurm:client::toJsonValue(m_cpus_per_node));
     }
     if (m_cpus_per_socket.isSet()) {
-        obj.insert(QString("cpus_per_socket"), ::OpenAPI::toJsonValue(m_cpus_per_socket));
+        obj.insert(QString("cpus_per_socket"), ::hm:slurm:client::toJsonValue(m_cpus_per_socket));
     }
     if (m_memory_per_cpu_isSet) {
-        obj.insert(QString("memory_per_cpu"), ::OpenAPI::toJsonValue(m_memory_per_cpu));
+        obj.insert(QString("memory_per_cpu"), ::hm:slurm:client::toJsonValue(m_memory_per_cpu));
     }
     if (m_nodes.isSet()) {
-        obj.insert(QString("nodes"), ::OpenAPI::toJsonValue(m_nodes));
+        obj.insert(QString("nodes"), ::hm:slurm:client::toJsonValue(m_nodes));
     }
     if (m_shares_isSet) {
-        obj.insert(QString("shares"), ::OpenAPI::toJsonValue(m_shares));
+        obj.insert(QString("shares"), ::hm:slurm:client::toJsonValue(m_shares));
     }
     if (m_time.isSet()) {
-        obj.insert(QString("time"), ::OpenAPI::toJsonValue(m_time));
+        obj.insert(QString("time"), ::hm:slurm:client::toJsonValue(m_time));
     }
     if (m_over_time_limit.isSet()) {
-        obj.insert(QString("over_time_limit"), ::OpenAPI::toJsonValue(m_over_time_limit));
+        obj.insert(QString("over_time_limit"), ::hm:slurm:client::toJsonValue(m_over_time_limit));
     }
     return obj;
 }
@@ -278,4 +278,4 @@ bool OAIV0_0_39_partition_info_maximums::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

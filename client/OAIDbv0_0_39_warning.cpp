@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIDbv0_0_39_warning::OAIDbv0_0_39_warning(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIDbv0_0_39_warning::fromJson(QString jsonString) {
 
 void OAIDbv0_0_39_warning::fromJsonObject(QJsonObject json) {
 
-    m_warning_isValid = ::OpenAPI::fromJsonValue(m_warning, json[QString("warning")]);
+    m_warning_isValid = ::hm:slurm:client::fromJsonValue(m_warning, json[QString("warning")]);
     m_warning_isSet = !json[QString("warning")].isNull() && m_warning_isValid;
 
-    m_source_isValid = ::OpenAPI::fromJsonValue(m_source, json[QString("source")]);
+    m_source_isValid = ::hm:slurm:client::fromJsonValue(m_source, json[QString("source")]);
     m_source_isSet = !json[QString("source")].isNull() && m_source_isValid;
 
-    m_description_isValid = ::OpenAPI::fromJsonValue(m_description, json[QString("description")]);
+    m_description_isValid = ::hm:slurm:client::fromJsonValue(m_description, json[QString("description")]);
     m_description_isSet = !json[QString("description")].isNull() && m_description_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIDbv0_0_39_warning::asJson() const {
 QJsonObject OAIDbv0_0_39_warning::asJsonObject() const {
     QJsonObject obj;
     if (m_warning_isSet) {
-        obj.insert(QString("warning"), ::OpenAPI::toJsonValue(m_warning));
+        obj.insert(QString("warning"), ::hm:slurm:client::toJsonValue(m_warning));
     }
     if (m_source_isSet) {
-        obj.insert(QString("source"), ::OpenAPI::toJsonValue(m_source));
+        obj.insert(QString("source"), ::hm:slurm:client::toJsonValue(m_source));
     }
     if (m_description_isSet) {
-        obj.insert(QString("description"), ::OpenAPI::toJsonValue(m_description));
+        obj.insert(QString("description"), ::hm:slurm:client::toJsonValue(m_description));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIDbv0_0_39_warning::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

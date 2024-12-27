@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_uint16_no_val;
 
 class OAIV0_0_40_partition_info_timeouts : public OAIObject {
@@ -65,8 +65,8 @@ private:
     bool m_suspend_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_partition_info_timeouts)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_partition_info_timeouts)
 
 #endif // OAIV0_0_40_partition_info_timeouts_H

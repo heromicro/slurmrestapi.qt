@@ -30,7 +30,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_cluster_rec_controller;
 class OAIV0_0_39_cluster_rec_associations;
 class OAIV0_0_39_tres;
@@ -125,8 +125,8 @@ private:
     bool m_tres_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_cluster_rec)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_cluster_rec)
 
 #endif // OAIV0_0_39_cluster_rec_H

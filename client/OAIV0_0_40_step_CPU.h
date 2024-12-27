@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_step_CPU_requested_frequency;
 
 class OAIV0_0_40_step_CPU : public OAIObject {
@@ -66,8 +66,8 @@ private:
     bool m_governor_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_step_CPU)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_step_CPU)
 
 #endif // OAIV0_0_40_step_CPU_H

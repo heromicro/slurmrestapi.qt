@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_inner::OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_inner(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_inner::fromJson(QStrin
 
 void OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_inner::fromJsonObject(QJsonObject json) {
 
-    m_type_id_isValid = ::OpenAPI::fromJsonValue(m_type_id, json[QString("type_id")]);
+    m_type_id_isValid = ::hm:slurm:client::fromJsonValue(m_type_id, json[QString("type_id")]);
     m_type_id_isSet = !json[QString("type_id")].isNull() && m_type_id_isValid;
 
-    m_message_type_isValid = ::OpenAPI::fromJsonValue(m_message_type, json[QString("message_type")]);
+    m_message_type_isValid = ::hm:slurm:client::fromJsonValue(m_message_type, json[QString("message_type")]);
     m_message_type_isSet = !json[QString("message_type")].isNull() && m_message_type_isValid;
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_inner::asJson() con
 QJsonObject OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_type_id_isSet) {
-        obj.insert(QString("type_id"), ::OpenAPI::toJsonValue(m_type_id));
+        obj.insert(QString("type_id"), ::hm:slurm:client::toJsonValue(m_type_id));
     }
     if (m_message_type_isSet) {
-        obj.insert(QString("message_type"), ::OpenAPI::toJsonValue(m_message_type));
+        obj.insert(QString("message_type"), ::hm:slurm:client::toJsonValue(m_message_type));
     }
     if (m_count_isSet) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_inner::isValid() const
     return m_type_id_isValid && m_message_type_isValid && m_count_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

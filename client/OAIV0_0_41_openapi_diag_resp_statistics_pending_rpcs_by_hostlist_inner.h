@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_by_hostlist_inner : public OAIObject {
 public:
@@ -74,8 +74,8 @@ private:
     bool m_count_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_by_hostlist_inner)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_by_hostlist_inner)
 
 #endif // OAIV0_0_41_openapi_diag_resp_statistics_pending_rpcs_by_hostlist_inner_H

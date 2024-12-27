@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_kill_jobs_resp_status_inner::OAIV0_0_41_openapi_kill_jobs_resp_status_inner(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_41_openapi_kill_jobs_resp_status_inner::fromJson(QString jsonString
 
 void OAIV0_0_41_openapi_kill_jobs_resp_status_inner::fromJsonObject(QJsonObject json) {
 
-    m_error_isValid = ::OpenAPI::fromJsonValue(m_error, json[QString("error")]);
+    m_error_isValid = ::hm:slurm:client::fromJsonValue(m_error, json[QString("error")]);
     m_error_isSet = !json[QString("error")].isNull() && m_error_isValid;
 
-    m_step_id_isValid = ::OpenAPI::fromJsonValue(m_step_id, json[QString("step_id")]);
+    m_step_id_isValid = ::hm:slurm:client::fromJsonValue(m_step_id, json[QString("step_id")]);
     m_step_id_isSet = !json[QString("step_id")].isNull() && m_step_id_isValid;
 
-    m_job_id_isValid = ::OpenAPI::fromJsonValue(m_job_id, json[QString("job_id")]);
+    m_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_job_id, json[QString("job_id")]);
     m_job_id_isSet = !json[QString("job_id")].isNull() && m_job_id_isValid;
 
-    m_federation_isValid = ::OpenAPI::fromJsonValue(m_federation, json[QString("federation")]);
+    m_federation_isValid = ::hm:slurm:client::fromJsonValue(m_federation, json[QString("federation")]);
     m_federation_isSet = !json[QString("federation")].isNull() && m_federation_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_41_openapi_kill_jobs_resp_status_inner::asJson() const {
 QJsonObject OAIV0_0_41_openapi_kill_jobs_resp_status_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_error.isSet()) {
-        obj.insert(QString("error"), ::OpenAPI::toJsonValue(m_error));
+        obj.insert(QString("error"), ::hm:slurm:client::toJsonValue(m_error));
     }
     if (m_step_id_isSet) {
-        obj.insert(QString("step_id"), ::OpenAPI::toJsonValue(m_step_id));
+        obj.insert(QString("step_id"), ::hm:slurm:client::toJsonValue(m_step_id));
     }
     if (m_job_id.isSet()) {
-        obj.insert(QString("job_id"), ::OpenAPI::toJsonValue(m_job_id));
+        obj.insert(QString("job_id"), ::hm:slurm:client::toJsonValue(m_job_id));
     }
     if (m_federation.isSet()) {
-        obj.insert(QString("federation"), ::OpenAPI::toJsonValue(m_federation));
+        obj.insert(QString("federation"), ::hm:slurm:client::toJsonValue(m_federation));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_41_openapi_kill_jobs_resp_status_inner::isValid() const {
     return m_step_id_isValid && m_job_id_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

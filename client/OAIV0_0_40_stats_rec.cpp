@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_stats_rec::OAIV0_0_40_stats_rec(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_40_stats_rec::fromJson(QString jsonString) {
 
 void OAIV0_0_40_stats_rec::fromJsonObject(QJsonObject json) {
 
-    m_time_start_isValid = ::OpenAPI::fromJsonValue(m_time_start, json[QString("time_start")]);
+    m_time_start_isValid = ::hm:slurm:client::fromJsonValue(m_time_start, json[QString("time_start")]);
     m_time_start_isSet = !json[QString("time_start")].isNull() && m_time_start_isValid;
 
-    m_rollups_isValid = ::OpenAPI::fromJsonValue(m_rollups, json[QString("rollups")]);
+    m_rollups_isValid = ::hm:slurm:client::fromJsonValue(m_rollups, json[QString("rollups")]);
     m_rollups_isSet = !json[QString("rollups")].isNull() && m_rollups_isValid;
 
-    m_rpcs_isValid = ::OpenAPI::fromJsonValue(m_rpcs, json[QString("RPCs")]);
+    m_rpcs_isValid = ::hm:slurm:client::fromJsonValue(m_rpcs, json[QString("RPCs")]);
     m_rpcs_isSet = !json[QString("RPCs")].isNull() && m_rpcs_isValid;
 
-    m_users_isValid = ::OpenAPI::fromJsonValue(m_users, json[QString("users")]);
+    m_users_isValid = ::hm:slurm:client::fromJsonValue(m_users, json[QString("users")]);
     m_users_isSet = !json[QString("users")].isNull() && m_users_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_40_stats_rec::asJson() const {
 QJsonObject OAIV0_0_40_stats_rec::asJsonObject() const {
     QJsonObject obj;
     if (m_time_start_isSet) {
-        obj.insert(QString("time_start"), ::OpenAPI::toJsonValue(m_time_start));
+        obj.insert(QString("time_start"), ::hm:slurm:client::toJsonValue(m_time_start));
     }
     if (m_rollups.size() > 0) {
-        obj.insert(QString("rollups"), ::OpenAPI::toJsonValue(m_rollups));
+        obj.insert(QString("rollups"), ::hm:slurm:client::toJsonValue(m_rollups));
     }
     if (m_rpcs.size() > 0) {
-        obj.insert(QString("RPCs"), ::OpenAPI::toJsonValue(m_rpcs));
+        obj.insert(QString("RPCs"), ::hm:slurm:client::toJsonValue(m_rpcs));
     }
     if (m_users.size() > 0) {
-        obj.insert(QString("users"), ::OpenAPI::toJsonValue(m_users));
+        obj.insert(QString("users"), ::hm:slurm:client::toJsonValue(m_users));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_40_stats_rec::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

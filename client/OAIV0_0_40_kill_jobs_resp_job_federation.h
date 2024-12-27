@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_40_kill_jobs_resp_job_federation : public OAIObject {
 public:
@@ -55,8 +55,8 @@ private:
     bool m_sibling_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_kill_jobs_resp_job_federation)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_kill_jobs_resp_job_federation)
 
 #endif // OAIV0_0_40_kill_jobs_resp_job_federation_H

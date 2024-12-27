@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_openapi_meta_client::OAIV0_0_40_openapi_meta_client(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_openapi_meta_client::fromJson(QString jsonString) {
 
 void OAIV0_0_40_openapi_meta_client::fromJsonObject(QJsonObject json) {
 
-    m_source_isValid = ::OpenAPI::fromJsonValue(m_source, json[QString("source")]);
+    m_source_isValid = ::hm:slurm:client::fromJsonValue(m_source, json[QString("source")]);
     m_source_isSet = !json[QString("source")].isNull() && m_source_isValid;
 
-    m_user_isValid = ::OpenAPI::fromJsonValue(m_user, json[QString("user")]);
+    m_user_isValid = ::hm:slurm:client::fromJsonValue(m_user, json[QString("user")]);
     m_user_isSet = !json[QString("user")].isNull() && m_user_isValid;
 
-    m_group_isValid = ::OpenAPI::fromJsonValue(m_group, json[QString("group")]);
+    m_group_isValid = ::hm:slurm:client::fromJsonValue(m_group, json[QString("group")]);
     m_group_isSet = !json[QString("group")].isNull() && m_group_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_openapi_meta_client::asJson() const {
 QJsonObject OAIV0_0_40_openapi_meta_client::asJsonObject() const {
     QJsonObject obj;
     if (m_source_isSet) {
-        obj.insert(QString("source"), ::OpenAPI::toJsonValue(m_source));
+        obj.insert(QString("source"), ::hm:slurm:client::toJsonValue(m_source));
     }
     if (m_user_isSet) {
-        obj.insert(QString("user"), ::OpenAPI::toJsonValue(m_user));
+        obj.insert(QString("user"), ::hm:slurm:client::toJsonValue(m_user));
     }
     if (m_group_isSet) {
-        obj.insert(QString("group"), ::OpenAPI::toJsonValue(m_group));
+        obj.insert(QString("group"), ::hm:slurm:client::toJsonValue(m_group));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_openapi_meta_client::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

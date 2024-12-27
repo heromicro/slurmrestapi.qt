@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_update_node_msg::OAIV0_0_40_update_node_msg(QString json) {
     this->initializeModel();
@@ -86,46 +86,46 @@ void OAIV0_0_40_update_node_msg::fromJson(QString jsonString) {
 
 void OAIV0_0_40_update_node_msg::fromJsonObject(QJsonObject json) {
 
-    m_comment_isValid = ::OpenAPI::fromJsonValue(m_comment, json[QString("comment")]);
+    m_comment_isValid = ::hm:slurm:client::fromJsonValue(m_comment, json[QString("comment")]);
     m_comment_isSet = !json[QString("comment")].isNull() && m_comment_isValid;
 
-    m_cpu_bind_isValid = ::OpenAPI::fromJsonValue(m_cpu_bind, json[QString("cpu_bind")]);
+    m_cpu_bind_isValid = ::hm:slurm:client::fromJsonValue(m_cpu_bind, json[QString("cpu_bind")]);
     m_cpu_bind_isSet = !json[QString("cpu_bind")].isNull() && m_cpu_bind_isValid;
 
-    m_extra_isValid = ::OpenAPI::fromJsonValue(m_extra, json[QString("extra")]);
+    m_extra_isValid = ::hm:slurm:client::fromJsonValue(m_extra, json[QString("extra")]);
     m_extra_isSet = !json[QString("extra")].isNull() && m_extra_isValid;
 
-    m_features_isValid = ::OpenAPI::fromJsonValue(m_features, json[QString("features")]);
+    m_features_isValid = ::hm:slurm:client::fromJsonValue(m_features, json[QString("features")]);
     m_features_isSet = !json[QString("features")].isNull() && m_features_isValid;
 
-    m_features_act_isValid = ::OpenAPI::fromJsonValue(m_features_act, json[QString("features_act")]);
+    m_features_act_isValid = ::hm:slurm:client::fromJsonValue(m_features_act, json[QString("features_act")]);
     m_features_act_isSet = !json[QString("features_act")].isNull() && m_features_act_isValid;
 
-    m_gres_isValid = ::OpenAPI::fromJsonValue(m_gres, json[QString("gres")]);
+    m_gres_isValid = ::hm:slurm:client::fromJsonValue(m_gres, json[QString("gres")]);
     m_gres_isSet = !json[QString("gres")].isNull() && m_gres_isValid;
 
-    m_address_isValid = ::OpenAPI::fromJsonValue(m_address, json[QString("address")]);
+    m_address_isValid = ::hm:slurm:client::fromJsonValue(m_address, json[QString("address")]);
     m_address_isSet = !json[QString("address")].isNull() && m_address_isValid;
 
-    m_hostname_isValid = ::OpenAPI::fromJsonValue(m_hostname, json[QString("hostname")]);
+    m_hostname_isValid = ::hm:slurm:client::fromJsonValue(m_hostname, json[QString("hostname")]);
     m_hostname_isSet = !json[QString("hostname")].isNull() && m_hostname_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 
-    m_state_isValid = ::OpenAPI::fromJsonValue(m_state, json[QString("state")]);
+    m_state_isValid = ::hm:slurm:client::fromJsonValue(m_state, json[QString("state")]);
     m_state_isSet = !json[QString("state")].isNull() && m_state_isValid;
 
-    m_reason_isValid = ::OpenAPI::fromJsonValue(m_reason, json[QString("reason")]);
+    m_reason_isValid = ::hm:slurm:client::fromJsonValue(m_reason, json[QString("reason")]);
     m_reason_isSet = !json[QString("reason")].isNull() && m_reason_isValid;
 
-    m_reason_uid_isValid = ::OpenAPI::fromJsonValue(m_reason_uid, json[QString("reason_uid")]);
+    m_reason_uid_isValid = ::hm:slurm:client::fromJsonValue(m_reason_uid, json[QString("reason_uid")]);
     m_reason_uid_isSet = !json[QString("reason_uid")].isNull() && m_reason_uid_isValid;
 
-    m_resume_after_isValid = ::OpenAPI::fromJsonValue(m_resume_after, json[QString("resume_after")]);
+    m_resume_after_isValid = ::hm:slurm:client::fromJsonValue(m_resume_after, json[QString("resume_after")]);
     m_resume_after_isSet = !json[QString("resume_after")].isNull() && m_resume_after_isValid;
 
-    m_weight_isValid = ::OpenAPI::fromJsonValue(m_weight, json[QString("weight")]);
+    m_weight_isValid = ::hm:slurm:client::fromJsonValue(m_weight, json[QString("weight")]);
     m_weight_isSet = !json[QString("weight")].isNull() && m_weight_isValid;
 }
 
@@ -139,46 +139,46 @@ QString OAIV0_0_40_update_node_msg::asJson() const {
 QJsonObject OAIV0_0_40_update_node_msg::asJsonObject() const {
     QJsonObject obj;
     if (m_comment_isSet) {
-        obj.insert(QString("comment"), ::OpenAPI::toJsonValue(m_comment));
+        obj.insert(QString("comment"), ::hm:slurm:client::toJsonValue(m_comment));
     }
     if (m_cpu_bind_isSet) {
-        obj.insert(QString("cpu_bind"), ::OpenAPI::toJsonValue(m_cpu_bind));
+        obj.insert(QString("cpu_bind"), ::hm:slurm:client::toJsonValue(m_cpu_bind));
     }
     if (m_extra_isSet) {
-        obj.insert(QString("extra"), ::OpenAPI::toJsonValue(m_extra));
+        obj.insert(QString("extra"), ::hm:slurm:client::toJsonValue(m_extra));
     }
     if (m_features.size() > 0) {
-        obj.insert(QString("features"), ::OpenAPI::toJsonValue(m_features));
+        obj.insert(QString("features"), ::hm:slurm:client::toJsonValue(m_features));
     }
     if (m_features_act.size() > 0) {
-        obj.insert(QString("features_act"), ::OpenAPI::toJsonValue(m_features_act));
+        obj.insert(QString("features_act"), ::hm:slurm:client::toJsonValue(m_features_act));
     }
     if (m_gres_isSet) {
-        obj.insert(QString("gres"), ::OpenAPI::toJsonValue(m_gres));
+        obj.insert(QString("gres"), ::hm:slurm:client::toJsonValue(m_gres));
     }
     if (m_address.size() > 0) {
-        obj.insert(QString("address"), ::OpenAPI::toJsonValue(m_address));
+        obj.insert(QString("address"), ::hm:slurm:client::toJsonValue(m_address));
     }
     if (m_hostname.size() > 0) {
-        obj.insert(QString("hostname"), ::OpenAPI::toJsonValue(m_hostname));
+        obj.insert(QString("hostname"), ::hm:slurm:client::toJsonValue(m_hostname));
     }
     if (m_name.size() > 0) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     if (m_state.size() > 0) {
-        obj.insert(QString("state"), ::OpenAPI::toJsonValue(m_state));
+        obj.insert(QString("state"), ::hm:slurm:client::toJsonValue(m_state));
     }
     if (m_reason_isSet) {
-        obj.insert(QString("reason"), ::OpenAPI::toJsonValue(m_reason));
+        obj.insert(QString("reason"), ::hm:slurm:client::toJsonValue(m_reason));
     }
     if (m_reason_uid_isSet) {
-        obj.insert(QString("reason_uid"), ::OpenAPI::toJsonValue(m_reason_uid));
+        obj.insert(QString("reason_uid"), ::hm:slurm:client::toJsonValue(m_reason_uid));
     }
     if (m_resume_after.isSet()) {
-        obj.insert(QString("resume_after"), ::OpenAPI::toJsonValue(m_resume_after));
+        obj.insert(QString("resume_after"), ::hm:slurm:client::toJsonValue(m_resume_after));
     }
     if (m_weight.isSet()) {
-        obj.insert(QString("weight"), ::OpenAPI::toJsonValue(m_weight));
+        obj.insert(QString("weight"), ::hm:slurm:client::toJsonValue(m_weight));
     }
     return obj;
 }
@@ -488,4 +488,4 @@ bool OAIV0_0_40_update_node_msg::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

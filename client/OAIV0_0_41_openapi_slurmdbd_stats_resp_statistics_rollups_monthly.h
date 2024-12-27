@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_monthly_duration;
 
 class OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_monthly : public OAIObject {
@@ -74,8 +74,8 @@ private:
     bool m_duration_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_monthly)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_monthly)
 
 #endif // OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_monthly_H

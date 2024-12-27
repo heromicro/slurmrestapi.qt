@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_instance::OAIV0_0_40_instance(QString json) {
     this->initializeModel();
@@ -62,22 +62,22 @@ void OAIV0_0_40_instance::fromJson(QString jsonString) {
 
 void OAIV0_0_40_instance::fromJsonObject(QJsonObject json) {
 
-    m_cluster_isValid = ::OpenAPI::fromJsonValue(m_cluster, json[QString("cluster")]);
+    m_cluster_isValid = ::hm:slurm:client::fromJsonValue(m_cluster, json[QString("cluster")]);
     m_cluster_isSet = !json[QString("cluster")].isNull() && m_cluster_isValid;
 
-    m_extra_isValid = ::OpenAPI::fromJsonValue(m_extra, json[QString("extra")]);
+    m_extra_isValid = ::hm:slurm:client::fromJsonValue(m_extra, json[QString("extra")]);
     m_extra_isSet = !json[QString("extra")].isNull() && m_extra_isValid;
 
-    m_instance_id_isValid = ::OpenAPI::fromJsonValue(m_instance_id, json[QString("instance_id")]);
+    m_instance_id_isValid = ::hm:slurm:client::fromJsonValue(m_instance_id, json[QString("instance_id")]);
     m_instance_id_isSet = !json[QString("instance_id")].isNull() && m_instance_id_isValid;
 
-    m_instance_type_isValid = ::OpenAPI::fromJsonValue(m_instance_type, json[QString("instance_type")]);
+    m_instance_type_isValid = ::hm:slurm:client::fromJsonValue(m_instance_type, json[QString("instance_type")]);
     m_instance_type_isSet = !json[QString("instance_type")].isNull() && m_instance_type_isValid;
 
-    m_node_name_isValid = ::OpenAPI::fromJsonValue(m_node_name, json[QString("node_name")]);
+    m_node_name_isValid = ::hm:slurm:client::fromJsonValue(m_node_name, json[QString("node_name")]);
     m_node_name_isSet = !json[QString("node_name")].isNull() && m_node_name_isValid;
 
-    m_time_isValid = ::OpenAPI::fromJsonValue(m_time, json[QString("time")]);
+    m_time_isValid = ::hm:slurm:client::fromJsonValue(m_time, json[QString("time")]);
     m_time_isSet = !json[QString("time")].isNull() && m_time_isValid;
 }
 
@@ -91,22 +91,22 @@ QString OAIV0_0_40_instance::asJson() const {
 QJsonObject OAIV0_0_40_instance::asJsonObject() const {
     QJsonObject obj;
     if (m_cluster_isSet) {
-        obj.insert(QString("cluster"), ::OpenAPI::toJsonValue(m_cluster));
+        obj.insert(QString("cluster"), ::hm:slurm:client::toJsonValue(m_cluster));
     }
     if (m_extra_isSet) {
-        obj.insert(QString("extra"), ::OpenAPI::toJsonValue(m_extra));
+        obj.insert(QString("extra"), ::hm:slurm:client::toJsonValue(m_extra));
     }
     if (m_instance_id_isSet) {
-        obj.insert(QString("instance_id"), ::OpenAPI::toJsonValue(m_instance_id));
+        obj.insert(QString("instance_id"), ::hm:slurm:client::toJsonValue(m_instance_id));
     }
     if (m_instance_type_isSet) {
-        obj.insert(QString("instance_type"), ::OpenAPI::toJsonValue(m_instance_type));
+        obj.insert(QString("instance_type"), ::hm:slurm:client::toJsonValue(m_instance_type));
     }
     if (m_node_name_isSet) {
-        obj.insert(QString("node_name"), ::OpenAPI::toJsonValue(m_node_name));
+        obj.insert(QString("node_name"), ::hm:slurm:client::toJsonValue(m_node_name));
     }
     if (m_time.isSet()) {
-        obj.insert(QString("time"), ::OpenAPI::toJsonValue(m_time));
+        obj.insert(QString("time"), ::hm:slurm:client::toJsonValue(m_time));
     }
     return obj;
 }
@@ -248,4 +248,4 @@ bool OAIV0_0_40_instance::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

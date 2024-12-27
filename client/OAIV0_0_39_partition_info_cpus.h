@@ -25,7 +25,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_39_partition_info_cpus : public OAIObject {
 public:
@@ -63,8 +63,8 @@ private:
     bool m_total_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_partition_info_cpus)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_partition_info_cpus)
 
 #endif // OAIV0_0_39_partition_info_cpus_H

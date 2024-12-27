@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_step_CPU_requested_frequency::OAIV0_0_39_step_CPU_requested_frequency(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_39_step_CPU_requested_frequency::fromJson(QString jsonString) {
 
 void OAIV0_0_39_step_CPU_requested_frequency::fromJsonObject(QJsonObject json) {
 
-    m_min_isValid = ::OpenAPI::fromJsonValue(m_min, json[QString("min")]);
+    m_min_isValid = ::hm:slurm:client::fromJsonValue(m_min, json[QString("min")]);
     m_min_isSet = !json[QString("min")].isNull() && m_min_isValid;
 
-    m_max_isValid = ::OpenAPI::fromJsonValue(m_max, json[QString("max")]);
+    m_max_isValid = ::hm:slurm:client::fromJsonValue(m_max, json[QString("max")]);
     m_max_isSet = !json[QString("max")].isNull() && m_max_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_39_step_CPU_requested_frequency::asJson() const {
 QJsonObject OAIV0_0_39_step_CPU_requested_frequency::asJsonObject() const {
     QJsonObject obj;
     if (m_min.isSet()) {
-        obj.insert(QString("min"), ::OpenAPI::toJsonValue(m_min));
+        obj.insert(QString("min"), ::hm:slurm:client::toJsonValue(m_min));
     }
     if (m_max.isSet()) {
-        obj.insert(QString("max"), ::OpenAPI::toJsonValue(m_max));
+        obj.insert(QString("max"), ::hm:slurm:client::toJsonValue(m_max));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_39_step_CPU_requested_frequency::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_step_time::OAIV0_0_40_step_time(QString json) {
     this->initializeModel();
@@ -65,25 +65,25 @@ void OAIV0_0_40_step_time::fromJson(QString jsonString) {
 
 void OAIV0_0_40_step_time::fromJsonObject(QJsonObject json) {
 
-    m_elapsed_isValid = ::OpenAPI::fromJsonValue(m_elapsed, json[QString("elapsed")]);
+    m_elapsed_isValid = ::hm:slurm:client::fromJsonValue(m_elapsed, json[QString("elapsed")]);
     m_elapsed_isSet = !json[QString("elapsed")].isNull() && m_elapsed_isValid;
 
-    m_end_isValid = ::OpenAPI::fromJsonValue(m_end, json[QString("end")]);
+    m_end_isValid = ::hm:slurm:client::fromJsonValue(m_end, json[QString("end")]);
     m_end_isSet = !json[QString("end")].isNull() && m_end_isValid;
 
-    m_start_isValid = ::OpenAPI::fromJsonValue(m_start, json[QString("start")]);
+    m_start_isValid = ::hm:slurm:client::fromJsonValue(m_start, json[QString("start")]);
     m_start_isSet = !json[QString("start")].isNull() && m_start_isValid;
 
-    m_suspended_isValid = ::OpenAPI::fromJsonValue(m_suspended, json[QString("suspended")]);
+    m_suspended_isValid = ::hm:slurm:client::fromJsonValue(m_suspended, json[QString("suspended")]);
     m_suspended_isSet = !json[QString("suspended")].isNull() && m_suspended_isValid;
 
-    m_system_isValid = ::OpenAPI::fromJsonValue(m_system, json[QString("system")]);
+    m_system_isValid = ::hm:slurm:client::fromJsonValue(m_system, json[QString("system")]);
     m_system_isSet = !json[QString("system")].isNull() && m_system_isValid;
 
-    m_total_isValid = ::OpenAPI::fromJsonValue(m_total, json[QString("total")]);
+    m_total_isValid = ::hm:slurm:client::fromJsonValue(m_total, json[QString("total")]);
     m_total_isSet = !json[QString("total")].isNull() && m_total_isValid;
 
-    m_user_isValid = ::OpenAPI::fromJsonValue(m_user, json[QString("user")]);
+    m_user_isValid = ::hm:slurm:client::fromJsonValue(m_user, json[QString("user")]);
     m_user_isSet = !json[QString("user")].isNull() && m_user_isValid;
 }
 
@@ -97,25 +97,25 @@ QString OAIV0_0_40_step_time::asJson() const {
 QJsonObject OAIV0_0_40_step_time::asJsonObject() const {
     QJsonObject obj;
     if (m_elapsed_isSet) {
-        obj.insert(QString("elapsed"), ::OpenAPI::toJsonValue(m_elapsed));
+        obj.insert(QString("elapsed"), ::hm:slurm:client::toJsonValue(m_elapsed));
     }
     if (m_end.isSet()) {
-        obj.insert(QString("end"), ::OpenAPI::toJsonValue(m_end));
+        obj.insert(QString("end"), ::hm:slurm:client::toJsonValue(m_end));
     }
     if (m_start.isSet()) {
-        obj.insert(QString("start"), ::OpenAPI::toJsonValue(m_start));
+        obj.insert(QString("start"), ::hm:slurm:client::toJsonValue(m_start));
     }
     if (m_suspended_isSet) {
-        obj.insert(QString("suspended"), ::OpenAPI::toJsonValue(m_suspended));
+        obj.insert(QString("suspended"), ::hm:slurm:client::toJsonValue(m_suspended));
     }
     if (m_system.isSet()) {
-        obj.insert(QString("system"), ::OpenAPI::toJsonValue(m_system));
+        obj.insert(QString("system"), ::hm:slurm:client::toJsonValue(m_system));
     }
     if (m_total.isSet()) {
-        obj.insert(QString("total"), ::OpenAPI::toJsonValue(m_total));
+        obj.insert(QString("total"), ::hm:slurm:client::toJsonValue(m_total));
     }
     if (m_user.isSet()) {
-        obj.insert(QString("user"), ::OpenAPI::toJsonValue(m_user));
+        obj.insert(QString("user"), ::hm:slurm:client::toJsonValue(m_user));
     }
     return obj;
 }
@@ -278,4 +278,4 @@ bool OAIV0_0_40_step_time::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

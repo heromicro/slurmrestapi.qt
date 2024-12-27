@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIDbv0_0_39_meta_plugin;
 class OAIDbv0_0_39_meta_Slurm;
 
@@ -67,8 +67,8 @@ private:
     bool m_slurm_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIDbv0_0_39_meta)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIDbv0_0_39_meta)
 
 #endif // OAIDbv0_0_39_meta_H

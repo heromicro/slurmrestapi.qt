@@ -25,7 +25,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_40_bf_exit_fields : public OAIObject {
 public:
@@ -99,8 +99,8 @@ private:
     bool m_state_changed_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_bf_exit_fields)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_bf_exit_fields)
 
 #endif // OAIV0_0_40_bf_exit_fields_H

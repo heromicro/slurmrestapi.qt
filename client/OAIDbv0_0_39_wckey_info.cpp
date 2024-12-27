@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIDbv0_0_39_wckey_info::OAIDbv0_0_39_wckey_info(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIDbv0_0_39_wckey_info::fromJson(QString jsonString) {
 
 void OAIDbv0_0_39_wckey_info::fromJsonObject(QJsonObject json) {
 
-    m_meta_isValid = ::OpenAPI::fromJsonValue(m_meta, json[QString("meta")]);
+    m_meta_isValid = ::hm:slurm:client::fromJsonValue(m_meta, json[QString("meta")]);
     m_meta_isSet = !json[QString("meta")].isNull() && m_meta_isValid;
 
-    m_errors_isValid = ::OpenAPI::fromJsonValue(m_errors, json[QString("errors")]);
+    m_errors_isValid = ::hm:slurm:client::fromJsonValue(m_errors, json[QString("errors")]);
     m_errors_isSet = !json[QString("errors")].isNull() && m_errors_isValid;
 
-    m_wckeys_isValid = ::OpenAPI::fromJsonValue(m_wckeys, json[QString("wckeys")]);
+    m_wckeys_isValid = ::hm:slurm:client::fromJsonValue(m_wckeys, json[QString("wckeys")]);
     m_wckeys_isSet = !json[QString("wckeys")].isNull() && m_wckeys_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIDbv0_0_39_wckey_info::asJson() const {
 QJsonObject OAIDbv0_0_39_wckey_info::asJsonObject() const {
     QJsonObject obj;
     if (m_meta.isSet()) {
-        obj.insert(QString("meta"), ::OpenAPI::toJsonValue(m_meta));
+        obj.insert(QString("meta"), ::hm:slurm:client::toJsonValue(m_meta));
     }
     if (m_errors.size() > 0) {
-        obj.insert(QString("errors"), ::OpenAPI::toJsonValue(m_errors));
+        obj.insert(QString("errors"), ::hm:slurm:client::toJsonValue(m_errors));
     }
     if (m_wckeys.size() > 0) {
-        obj.insert(QString("wckeys"), ::OpenAPI::toJsonValue(m_wckeys));
+        obj.insert(QString("wckeys"), ::hm:slurm:client::toJsonValue(m_wckeys));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIDbv0_0_39_wckey_info::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

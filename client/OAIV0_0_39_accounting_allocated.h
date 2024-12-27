@@ -25,7 +25,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_39_accounting_allocated : public OAIObject {
 public:
@@ -54,8 +54,8 @@ private:
     bool m_seconds_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_accounting_allocated)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_accounting_allocated)
 
 #endif // OAIV0_0_39_accounting_allocated_H

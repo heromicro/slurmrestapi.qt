@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_reservation_resp_reservations_inner_core_specializations_inner::OAIV0_0_41_openapi_reservation_resp_reservations_inner_core_specializations_inner(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_reservation_resp_reservations_inner_core_specializations
 
 void OAIV0_0_41_openapi_reservation_resp_reservations_inner_core_specializations_inner::fromJsonObject(QJsonObject json) {
 
-    m_node_isValid = ::OpenAPI::fromJsonValue(m_node, json[QString("node")]);
+    m_node_isValid = ::hm:slurm:client::fromJsonValue(m_node, json[QString("node")]);
     m_node_isSet = !json[QString("node")].isNull() && m_node_isValid;
 
-    m_core_isValid = ::OpenAPI::fromJsonValue(m_core, json[QString("core")]);
+    m_core_isValid = ::hm:slurm:client::fromJsonValue(m_core, json[QString("core")]);
     m_core_isSet = !json[QString("core")].isNull() && m_core_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_reservation_resp_reservations_inner_core_specializati
 QJsonObject OAIV0_0_41_openapi_reservation_resp_reservations_inner_core_specializations_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_node_isSet) {
-        obj.insert(QString("node"), ::OpenAPI::toJsonValue(m_node));
+        obj.insert(QString("node"), ::hm:slurm:client::toJsonValue(m_node));
     }
     if (m_core_isSet) {
-        obj.insert(QString("core"), ::OpenAPI::toJsonValue(m_core));
+        obj.insert(QString("core"), ::hm:slurm:client::toJsonValue(m_core));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_reservation_resp_reservations_inner_core_specializations
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

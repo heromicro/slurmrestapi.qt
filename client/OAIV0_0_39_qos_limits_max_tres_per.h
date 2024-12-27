@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_tres;
 
 class OAIV0_0_39_qos_limits_max_tres_per : public OAIObject {
@@ -84,8 +84,8 @@ private:
     bool m_user_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_qos_limits_max_tres_per)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_qos_limits_max_tres_per)
 
 #endif // OAIV0_0_39_qos_limits_max_tres_per_H

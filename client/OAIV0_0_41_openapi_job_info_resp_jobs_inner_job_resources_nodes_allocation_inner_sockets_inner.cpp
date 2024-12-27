@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_inner_sockets_inner::OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_inner_sockets_inner(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_
 
 void OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_inner_sockets_inner::fromJsonObject(QJsonObject json) {
 
-    m_index_isValid = ::OpenAPI::fromJsonValue(m_index, json[QString("index")]);
+    m_index_isValid = ::hm:slurm:client::fromJsonValue(m_index, json[QString("index")]);
     m_index_isSet = !json[QString("index")].isNull() && m_index_isValid;
 
-    m_cores_isValid = ::OpenAPI::fromJsonValue(m_cores, json[QString("cores")]);
+    m_cores_isValid = ::hm:slurm:client::fromJsonValue(m_cores, json[QString("cores")]);
     m_cores_isSet = !json[QString("cores")].isNull() && m_cores_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocati
 QJsonObject OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_inner_sockets_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_index_isSet) {
-        obj.insert(QString("index"), ::OpenAPI::toJsonValue(m_index));
+        obj.insert(QString("index"), ::hm:slurm:client::toJsonValue(m_index));
     }
     if (m_cores.size() > 0) {
-        obj.insert(QString("cores"), ::OpenAPI::toJsonValue(m_cores));
+        obj.insert(QString("cores"), ::hm:slurm:client::toJsonValue(m_cores));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_
     return m_index_isValid && m_cores_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

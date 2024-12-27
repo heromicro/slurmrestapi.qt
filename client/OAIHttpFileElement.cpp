@@ -17,7 +17,7 @@
 
 #include "OAIHttpFileElement.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 void OAIHttpFileElement::setMimeType(const QString &mime) {
     mime_type = mime;
@@ -145,4 +145,4 @@ QByteArray OAIHttpFileElement::loadFromFile(const QString &varName, const QStrin
     return asByteArray();
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

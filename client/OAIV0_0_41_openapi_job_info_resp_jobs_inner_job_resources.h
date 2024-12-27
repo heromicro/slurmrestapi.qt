@@ -29,7 +29,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes;
 class OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_threads_per_core;
 
@@ -87,8 +87,8 @@ private:
     bool m_threads_per_core_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources)
 
 #endif // OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_H

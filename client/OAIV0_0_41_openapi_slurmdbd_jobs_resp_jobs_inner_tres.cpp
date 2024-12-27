@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_tres::OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_tres(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_tres::fromJson(QString jso
 
 void OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_tres::fromJsonObject(QJsonObject json) {
 
-    m_allocated_isValid = ::OpenAPI::fromJsonValue(m_allocated, json[QString("allocated")]);
+    m_allocated_isValid = ::hm:slurm:client::fromJsonValue(m_allocated, json[QString("allocated")]);
     m_allocated_isSet = !json[QString("allocated")].isNull() && m_allocated_isValid;
 
-    m_requested_isValid = ::OpenAPI::fromJsonValue(m_requested, json[QString("requested")]);
+    m_requested_isValid = ::hm:slurm:client::fromJsonValue(m_requested, json[QString("requested")]);
     m_requested_isSet = !json[QString("requested")].isNull() && m_requested_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_tres::asJson() const {
 QJsonObject OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_tres::asJsonObject() const {
     QJsonObject obj;
     if (m_allocated.size() > 0) {
-        obj.insert(QString("allocated"), ::OpenAPI::toJsonValue(m_allocated));
+        obj.insert(QString("allocated"), ::hm:slurm:client::toJsonValue(m_allocated));
     }
     if (m_requested.size() > 0) {
-        obj.insert(QString("requested"), ::OpenAPI::toJsonValue(m_requested));
+        obj.insert(QString("requested"), ::hm:slurm:client::toJsonValue(m_requested));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_tres::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

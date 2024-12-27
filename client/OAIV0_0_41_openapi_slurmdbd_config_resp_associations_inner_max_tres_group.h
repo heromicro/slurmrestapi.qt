@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_tres_requested_max_inner;
 
 class OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group : public OAIObject {
@@ -66,8 +66,8 @@ private:
     bool m_active_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group)
 
 #endif // OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group_H

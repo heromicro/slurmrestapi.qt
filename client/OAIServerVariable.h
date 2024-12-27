@@ -18,7 +18,7 @@
 #include <QString>
 #include <QSet>
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIServerVariable {
 public:
@@ -54,6 +54,6 @@ public:
 
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
 #endif // OAI_SERVERVARIABLE_H

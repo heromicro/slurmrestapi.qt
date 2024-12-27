@@ -36,7 +36,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_step_time;
 class OAIV0_0_40_process_exit_code_verbose;
 class OAIV0_0_40_step_nodes;
@@ -173,8 +173,8 @@ private:
     bool m_tres_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_step)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_step)
 
 #endif // OAIV0_0_40_step_H

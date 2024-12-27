@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_qos::OAIV0_0_39_qos(QString json) {
     this->initializeModel();
@@ -71,31 +71,31 @@ void OAIV0_0_39_qos::fromJson(QString jsonString) {
 
 void OAIV0_0_39_qos::fromJsonObject(QJsonObject json) {
 
-    m_description_isValid = ::OpenAPI::fromJsonValue(m_description, json[QString("description")]);
+    m_description_isValid = ::hm:slurm:client::fromJsonValue(m_description, json[QString("description")]);
     m_description_isSet = !json[QString("description")].isNull() && m_description_isValid;
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 
-    m_id_isValid = ::OpenAPI::fromJsonValue(m_id, json[QString("id")]);
+    m_id_isValid = ::hm:slurm:client::fromJsonValue(m_id, json[QString("id")]);
     m_id_isSet = !json[QString("id")].isNull() && m_id_isValid;
 
-    m_limits_isValid = ::OpenAPI::fromJsonValue(m_limits, json[QString("limits")]);
+    m_limits_isValid = ::hm:slurm:client::fromJsonValue(m_limits, json[QString("limits")]);
     m_limits_isSet = !json[QString("limits")].isNull() && m_limits_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 
-    m_preempt_isValid = ::OpenAPI::fromJsonValue(m_preempt, json[QString("preempt")]);
+    m_preempt_isValid = ::hm:slurm:client::fromJsonValue(m_preempt, json[QString("preempt")]);
     m_preempt_isSet = !json[QString("preempt")].isNull() && m_preempt_isValid;
 
-    m_priority_isValid = ::OpenAPI::fromJsonValue(m_priority, json[QString("priority")]);
+    m_priority_isValid = ::hm:slurm:client::fromJsonValue(m_priority, json[QString("priority")]);
     m_priority_isSet = !json[QString("priority")].isNull() && m_priority_isValid;
 
-    m_usage_factor_isValid = ::OpenAPI::fromJsonValue(m_usage_factor, json[QString("usage_factor")]);
+    m_usage_factor_isValid = ::hm:slurm:client::fromJsonValue(m_usage_factor, json[QString("usage_factor")]);
     m_usage_factor_isSet = !json[QString("usage_factor")].isNull() && m_usage_factor_isValid;
 
-    m_usage_threshold_isValid = ::OpenAPI::fromJsonValue(m_usage_threshold, json[QString("usage_threshold")]);
+    m_usage_threshold_isValid = ::hm:slurm:client::fromJsonValue(m_usage_threshold, json[QString("usage_threshold")]);
     m_usage_threshold_isSet = !json[QString("usage_threshold")].isNull() && m_usage_threshold_isValid;
 }
 
@@ -109,31 +109,31 @@ QString OAIV0_0_39_qos::asJson() const {
 QJsonObject OAIV0_0_39_qos::asJsonObject() const {
     QJsonObject obj;
     if (m_description_isSet) {
-        obj.insert(QString("description"), ::OpenAPI::toJsonValue(m_description));
+        obj.insert(QString("description"), ::hm:slurm:client::toJsonValue(m_description));
     }
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     if (m_id_isSet) {
-        obj.insert(QString("id"), ::OpenAPI::toJsonValue(m_id));
+        obj.insert(QString("id"), ::hm:slurm:client::toJsonValue(m_id));
     }
     if (m_limits.isSet()) {
-        obj.insert(QString("limits"), ::OpenAPI::toJsonValue(m_limits));
+        obj.insert(QString("limits"), ::hm:slurm:client::toJsonValue(m_limits));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     if (m_preempt.isSet()) {
-        obj.insert(QString("preempt"), ::OpenAPI::toJsonValue(m_preempt));
+        obj.insert(QString("preempt"), ::hm:slurm:client::toJsonValue(m_preempt));
     }
     if (m_priority.isSet()) {
-        obj.insert(QString("priority"), ::OpenAPI::toJsonValue(m_priority));
+        obj.insert(QString("priority"), ::hm:slurm:client::toJsonValue(m_priority));
     }
     if (m_usage_factor.isSet()) {
-        obj.insert(QString("usage_factor"), ::OpenAPI::toJsonValue(m_usage_factor));
+        obj.insert(QString("usage_factor"), ::hm:slurm:client::toJsonValue(m_usage_factor));
     }
     if (m_usage_threshold.isSet()) {
-        obj.insert(QString("usage_threshold"), ::OpenAPI::toJsonValue(m_usage_threshold));
+        obj.insert(QString("usage_threshold"), ::hm:slurm:client::toJsonValue(m_usage_threshold));
     }
     return obj;
 }
@@ -338,4 +338,4 @@ bool OAIV0_0_39_qos::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

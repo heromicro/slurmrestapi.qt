@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_assoc_rec_set::OAIV0_0_40_assoc_rec_set(QString json) {
     this->initializeModel();
@@ -110,70 +110,70 @@ void OAIV0_0_40_assoc_rec_set::fromJson(QString jsonString) {
 
 void OAIV0_0_40_assoc_rec_set::fromJsonObject(QJsonObject json) {
 
-    m_comment_isValid = ::OpenAPI::fromJsonValue(m_comment, json[QString("comment")]);
+    m_comment_isValid = ::hm:slurm:client::fromJsonValue(m_comment, json[QString("comment")]);
     m_comment_isSet = !json[QString("comment")].isNull() && m_comment_isValid;
 
-    m_defaultqos_isValid = ::OpenAPI::fromJsonValue(m_defaultqos, json[QString("defaultqos")]);
+    m_defaultqos_isValid = ::hm:slurm:client::fromJsonValue(m_defaultqos, json[QString("defaultqos")]);
     m_defaultqos_isSet = !json[QString("defaultqos")].isNull() && m_defaultqos_isValid;
 
-    m_grpjobs_isValid = ::OpenAPI::fromJsonValue(m_grpjobs, json[QString("grpjobs")]);
+    m_grpjobs_isValid = ::hm:slurm:client::fromJsonValue(m_grpjobs, json[QString("grpjobs")]);
     m_grpjobs_isSet = !json[QString("grpjobs")].isNull() && m_grpjobs_isValid;
 
-    m_grpjobsaccrue_isValid = ::OpenAPI::fromJsonValue(m_grpjobsaccrue, json[QString("grpjobsaccrue")]);
+    m_grpjobsaccrue_isValid = ::hm:slurm:client::fromJsonValue(m_grpjobsaccrue, json[QString("grpjobsaccrue")]);
     m_grpjobsaccrue_isSet = !json[QString("grpjobsaccrue")].isNull() && m_grpjobsaccrue_isValid;
 
-    m_grpsubmitjobs_isValid = ::OpenAPI::fromJsonValue(m_grpsubmitjobs, json[QString("grpsubmitjobs")]);
+    m_grpsubmitjobs_isValid = ::hm:slurm:client::fromJsonValue(m_grpsubmitjobs, json[QString("grpsubmitjobs")]);
     m_grpsubmitjobs_isSet = !json[QString("grpsubmitjobs")].isNull() && m_grpsubmitjobs_isValid;
 
-    m_grptres_isValid = ::OpenAPI::fromJsonValue(m_grptres, json[QString("grptres")]);
+    m_grptres_isValid = ::hm:slurm:client::fromJsonValue(m_grptres, json[QString("grptres")]);
     m_grptres_isSet = !json[QString("grptres")].isNull() && m_grptres_isValid;
 
-    m_grptresmins_isValid = ::OpenAPI::fromJsonValue(m_grptresmins, json[QString("grptresmins")]);
+    m_grptresmins_isValid = ::hm:slurm:client::fromJsonValue(m_grptresmins, json[QString("grptresmins")]);
     m_grptresmins_isSet = !json[QString("grptresmins")].isNull() && m_grptresmins_isValid;
 
-    m_grptresrunmins_isValid = ::OpenAPI::fromJsonValue(m_grptresrunmins, json[QString("grptresrunmins")]);
+    m_grptresrunmins_isValid = ::hm:slurm:client::fromJsonValue(m_grptresrunmins, json[QString("grptresrunmins")]);
     m_grptresrunmins_isSet = !json[QString("grptresrunmins")].isNull() && m_grptresrunmins_isValid;
 
-    m_grpwall_isValid = ::OpenAPI::fromJsonValue(m_grpwall, json[QString("grpwall")]);
+    m_grpwall_isValid = ::hm:slurm:client::fromJsonValue(m_grpwall, json[QString("grpwall")]);
     m_grpwall_isSet = !json[QString("grpwall")].isNull() && m_grpwall_isValid;
 
-    m_maxjobs_isValid = ::OpenAPI::fromJsonValue(m_maxjobs, json[QString("maxjobs")]);
+    m_maxjobs_isValid = ::hm:slurm:client::fromJsonValue(m_maxjobs, json[QString("maxjobs")]);
     m_maxjobs_isSet = !json[QString("maxjobs")].isNull() && m_maxjobs_isValid;
 
-    m_maxjobsaccrue_isValid = ::OpenAPI::fromJsonValue(m_maxjobsaccrue, json[QString("maxjobsaccrue")]);
+    m_maxjobsaccrue_isValid = ::hm:slurm:client::fromJsonValue(m_maxjobsaccrue, json[QString("maxjobsaccrue")]);
     m_maxjobsaccrue_isSet = !json[QString("maxjobsaccrue")].isNull() && m_maxjobsaccrue_isValid;
 
-    m_maxsubmitjobs_isValid = ::OpenAPI::fromJsonValue(m_maxsubmitjobs, json[QString("maxsubmitjobs")]);
+    m_maxsubmitjobs_isValid = ::hm:slurm:client::fromJsonValue(m_maxsubmitjobs, json[QString("maxsubmitjobs")]);
     m_maxsubmitjobs_isSet = !json[QString("maxsubmitjobs")].isNull() && m_maxsubmitjobs_isValid;
 
-    m_maxtresminsperjob_isValid = ::OpenAPI::fromJsonValue(m_maxtresminsperjob, json[QString("maxtresminsperjob")]);
+    m_maxtresminsperjob_isValid = ::hm:slurm:client::fromJsonValue(m_maxtresminsperjob, json[QString("maxtresminsperjob")]);
     m_maxtresminsperjob_isSet = !json[QString("maxtresminsperjob")].isNull() && m_maxtresminsperjob_isValid;
 
-    m_maxtresrunmins_isValid = ::OpenAPI::fromJsonValue(m_maxtresrunmins, json[QString("maxtresrunmins")]);
+    m_maxtresrunmins_isValid = ::hm:slurm:client::fromJsonValue(m_maxtresrunmins, json[QString("maxtresrunmins")]);
     m_maxtresrunmins_isSet = !json[QString("maxtresrunmins")].isNull() && m_maxtresrunmins_isValid;
 
-    m_maxtresperjob_isValid = ::OpenAPI::fromJsonValue(m_maxtresperjob, json[QString("maxtresperjob")]);
+    m_maxtresperjob_isValid = ::hm:slurm:client::fromJsonValue(m_maxtresperjob, json[QString("maxtresperjob")]);
     m_maxtresperjob_isSet = !json[QString("maxtresperjob")].isNull() && m_maxtresperjob_isValid;
 
-    m_maxtrespernode_isValid = ::OpenAPI::fromJsonValue(m_maxtrespernode, json[QString("maxtrespernode")]);
+    m_maxtrespernode_isValid = ::hm:slurm:client::fromJsonValue(m_maxtrespernode, json[QString("maxtrespernode")]);
     m_maxtrespernode_isSet = !json[QString("maxtrespernode")].isNull() && m_maxtrespernode_isValid;
 
-    m_maxwalldurationperjob_isValid = ::OpenAPI::fromJsonValue(m_maxwalldurationperjob, json[QString("maxwalldurationperjob")]);
+    m_maxwalldurationperjob_isValid = ::hm:slurm:client::fromJsonValue(m_maxwalldurationperjob, json[QString("maxwalldurationperjob")]);
     m_maxwalldurationperjob_isSet = !json[QString("maxwalldurationperjob")].isNull() && m_maxwalldurationperjob_isValid;
 
-    m_minpriothresh_isValid = ::OpenAPI::fromJsonValue(m_minpriothresh, json[QString("minpriothresh")]);
+    m_minpriothresh_isValid = ::hm:slurm:client::fromJsonValue(m_minpriothresh, json[QString("minpriothresh")]);
     m_minpriothresh_isSet = !json[QString("minpriothresh")].isNull() && m_minpriothresh_isValid;
 
-    m_parent_isValid = ::OpenAPI::fromJsonValue(m_parent, json[QString("parent")]);
+    m_parent_isValid = ::hm:slurm:client::fromJsonValue(m_parent, json[QString("parent")]);
     m_parent_isSet = !json[QString("parent")].isNull() && m_parent_isValid;
 
-    m_priority_isValid = ::OpenAPI::fromJsonValue(m_priority, json[QString("priority")]);
+    m_priority_isValid = ::hm:slurm:client::fromJsonValue(m_priority, json[QString("priority")]);
     m_priority_isSet = !json[QString("priority")].isNull() && m_priority_isValid;
 
-    m_qoslevel_isValid = ::OpenAPI::fromJsonValue(m_qoslevel, json[QString("qoslevel")]);
+    m_qoslevel_isValid = ::hm:slurm:client::fromJsonValue(m_qoslevel, json[QString("qoslevel")]);
     m_qoslevel_isSet = !json[QString("qoslevel")].isNull() && m_qoslevel_isValid;
 
-    m_fairshare_isValid = ::OpenAPI::fromJsonValue(m_fairshare, json[QString("fairshare")]);
+    m_fairshare_isValid = ::hm:slurm:client::fromJsonValue(m_fairshare, json[QString("fairshare")]);
     m_fairshare_isSet = !json[QString("fairshare")].isNull() && m_fairshare_isValid;
 }
 
@@ -187,70 +187,70 @@ QString OAIV0_0_40_assoc_rec_set::asJson() const {
 QJsonObject OAIV0_0_40_assoc_rec_set::asJsonObject() const {
     QJsonObject obj;
     if (m_comment_isSet) {
-        obj.insert(QString("comment"), ::OpenAPI::toJsonValue(m_comment));
+        obj.insert(QString("comment"), ::hm:slurm:client::toJsonValue(m_comment));
     }
     if (m_defaultqos_isSet) {
-        obj.insert(QString("defaultqos"), ::OpenAPI::toJsonValue(m_defaultqos));
+        obj.insert(QString("defaultqos"), ::hm:slurm:client::toJsonValue(m_defaultqos));
     }
     if (m_grpjobs.isSet()) {
-        obj.insert(QString("grpjobs"), ::OpenAPI::toJsonValue(m_grpjobs));
+        obj.insert(QString("grpjobs"), ::hm:slurm:client::toJsonValue(m_grpjobs));
     }
     if (m_grpjobsaccrue.isSet()) {
-        obj.insert(QString("grpjobsaccrue"), ::OpenAPI::toJsonValue(m_grpjobsaccrue));
+        obj.insert(QString("grpjobsaccrue"), ::hm:slurm:client::toJsonValue(m_grpjobsaccrue));
     }
     if (m_grpsubmitjobs.isSet()) {
-        obj.insert(QString("grpsubmitjobs"), ::OpenAPI::toJsonValue(m_grpsubmitjobs));
+        obj.insert(QString("grpsubmitjobs"), ::hm:slurm:client::toJsonValue(m_grpsubmitjobs));
     }
     if (m_grptres.size() > 0) {
-        obj.insert(QString("grptres"), ::OpenAPI::toJsonValue(m_grptres));
+        obj.insert(QString("grptres"), ::hm:slurm:client::toJsonValue(m_grptres));
     }
     if (m_grptresmins.size() > 0) {
-        obj.insert(QString("grptresmins"), ::OpenAPI::toJsonValue(m_grptresmins));
+        obj.insert(QString("grptresmins"), ::hm:slurm:client::toJsonValue(m_grptresmins));
     }
     if (m_grptresrunmins.size() > 0) {
-        obj.insert(QString("grptresrunmins"), ::OpenAPI::toJsonValue(m_grptresrunmins));
+        obj.insert(QString("grptresrunmins"), ::hm:slurm:client::toJsonValue(m_grptresrunmins));
     }
     if (m_grpwall.isSet()) {
-        obj.insert(QString("grpwall"), ::OpenAPI::toJsonValue(m_grpwall));
+        obj.insert(QString("grpwall"), ::hm:slurm:client::toJsonValue(m_grpwall));
     }
     if (m_maxjobs.isSet()) {
-        obj.insert(QString("maxjobs"), ::OpenAPI::toJsonValue(m_maxjobs));
+        obj.insert(QString("maxjobs"), ::hm:slurm:client::toJsonValue(m_maxjobs));
     }
     if (m_maxjobsaccrue.isSet()) {
-        obj.insert(QString("maxjobsaccrue"), ::OpenAPI::toJsonValue(m_maxjobsaccrue));
+        obj.insert(QString("maxjobsaccrue"), ::hm:slurm:client::toJsonValue(m_maxjobsaccrue));
     }
     if (m_maxsubmitjobs.isSet()) {
-        obj.insert(QString("maxsubmitjobs"), ::OpenAPI::toJsonValue(m_maxsubmitjobs));
+        obj.insert(QString("maxsubmitjobs"), ::hm:slurm:client::toJsonValue(m_maxsubmitjobs));
     }
     if (m_maxtresminsperjob.size() > 0) {
-        obj.insert(QString("maxtresminsperjob"), ::OpenAPI::toJsonValue(m_maxtresminsperjob));
+        obj.insert(QString("maxtresminsperjob"), ::hm:slurm:client::toJsonValue(m_maxtresminsperjob));
     }
     if (m_maxtresrunmins.size() > 0) {
-        obj.insert(QString("maxtresrunmins"), ::OpenAPI::toJsonValue(m_maxtresrunmins));
+        obj.insert(QString("maxtresrunmins"), ::hm:slurm:client::toJsonValue(m_maxtresrunmins));
     }
     if (m_maxtresperjob.size() > 0) {
-        obj.insert(QString("maxtresperjob"), ::OpenAPI::toJsonValue(m_maxtresperjob));
+        obj.insert(QString("maxtresperjob"), ::hm:slurm:client::toJsonValue(m_maxtresperjob));
     }
     if (m_maxtrespernode.size() > 0) {
-        obj.insert(QString("maxtrespernode"), ::OpenAPI::toJsonValue(m_maxtrespernode));
+        obj.insert(QString("maxtrespernode"), ::hm:slurm:client::toJsonValue(m_maxtrespernode));
     }
     if (m_maxwalldurationperjob.isSet()) {
-        obj.insert(QString("maxwalldurationperjob"), ::OpenAPI::toJsonValue(m_maxwalldurationperjob));
+        obj.insert(QString("maxwalldurationperjob"), ::hm:slurm:client::toJsonValue(m_maxwalldurationperjob));
     }
     if (m_minpriothresh.isSet()) {
-        obj.insert(QString("minpriothresh"), ::OpenAPI::toJsonValue(m_minpriothresh));
+        obj.insert(QString("minpriothresh"), ::hm:slurm:client::toJsonValue(m_minpriothresh));
     }
     if (m_parent_isSet) {
-        obj.insert(QString("parent"), ::OpenAPI::toJsonValue(m_parent));
+        obj.insert(QString("parent"), ::hm:slurm:client::toJsonValue(m_parent));
     }
     if (m_priority.isSet()) {
-        obj.insert(QString("priority"), ::OpenAPI::toJsonValue(m_priority));
+        obj.insert(QString("priority"), ::hm:slurm:client::toJsonValue(m_priority));
     }
     if (m_qoslevel.size() > 0) {
-        obj.insert(QString("qoslevel"), ::OpenAPI::toJsonValue(m_qoslevel));
+        obj.insert(QString("qoslevel"), ::hm:slurm:client::toJsonValue(m_qoslevel));
     }
     if (m_fairshare_isSet) {
-        obj.insert(QString("fairshare"), ::OpenAPI::toJsonValue(m_fairshare));
+        obj.insert(QString("fairshare"), ::hm:slurm:client::toJsonValue(m_fairshare));
     }
     return obj;
 }
@@ -728,4 +728,4 @@ bool OAIV0_0_40_assoc_rec_set::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -31,7 +31,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_qos_limits;
 class OAIV0_0_40_qos_preempt;
 class OAIV0_0_40_uint32_no_val;
@@ -136,8 +136,8 @@ private:
     bool m_usage_threshold_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_qos)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_qos)
 
 #endif // OAIV0_0_40_qos_H

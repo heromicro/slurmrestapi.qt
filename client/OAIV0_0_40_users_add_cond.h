@@ -28,7 +28,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_assoc_rec_set;
 
 class OAIV0_0_40_users_add_cond : public OAIObject {
@@ -103,8 +103,8 @@ private:
     bool m_wckeys_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_users_add_cond)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_users_add_cond)
 
 #endif // OAIV0_0_40_users_add_cond_H

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code_signal::OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code_signal(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code_signal::fromJ
 
 void OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code_signal::fromJsonObject(QJsonObject json) {
 
-    m_id_isValid = ::OpenAPI::fromJsonValue(m_id, json[QString("id")]);
+    m_id_isValid = ::hm:slurm:client::fromJsonValue(m_id, json[QString("id")]);
     m_id_isSet = !json[QString("id")].isNull() && m_id_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code_signal::as
 QJsonObject OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code_signal::asJsonObject() const {
     QJsonObject obj;
     if (m_id.isSet()) {
-        obj.insert(QString("id"), ::OpenAPI::toJsonValue(m_id));
+        obj.insert(QString("id"), ::hm:slurm:client::toJsonValue(m_id));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_job_info_resp_jobs_inner_derived_exit_code_signal::isVal
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

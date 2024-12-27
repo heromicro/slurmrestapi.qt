@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner::OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner(QString json) {
     this->initializeModel();
@@ -68,28 +68,28 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner::fromJson(QString js
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner::fromJsonObject(QJsonObject json) {
 
-    m_controller_isValid = ::OpenAPI::fromJsonValue(m_controller, json[QString("controller")]);
+    m_controller_isValid = ::hm:slurm:client::fromJsonValue(m_controller, json[QString("controller")]);
     m_controller_isSet = !json[QString("controller")].isNull() && m_controller_isValid;
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 
-    m_nodes_isValid = ::OpenAPI::fromJsonValue(m_nodes, json[QString("nodes")]);
+    m_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_nodes, json[QString("nodes")]);
     m_nodes_isSet = !json[QString("nodes")].isNull() && m_nodes_isValid;
 
-    m_select_plugin_isValid = ::OpenAPI::fromJsonValue(m_select_plugin, json[QString("select_plugin")]);
+    m_select_plugin_isValid = ::hm:slurm:client::fromJsonValue(m_select_plugin, json[QString("select_plugin")]);
     m_select_plugin_isSet = !json[QString("select_plugin")].isNull() && m_select_plugin_isValid;
 
-    m_associations_isValid = ::OpenAPI::fromJsonValue(m_associations, json[QString("associations")]);
+    m_associations_isValid = ::hm:slurm:client::fromJsonValue(m_associations, json[QString("associations")]);
     m_associations_isSet = !json[QString("associations")].isNull() && m_associations_isValid;
 
-    m_rpc_version_isValid = ::OpenAPI::fromJsonValue(m_rpc_version, json[QString("rpc_version")]);
+    m_rpc_version_isValid = ::hm:slurm:client::fromJsonValue(m_rpc_version, json[QString("rpc_version")]);
     m_rpc_version_isSet = !json[QString("rpc_version")].isNull() && m_rpc_version_isValid;
 
-    m_tres_isValid = ::OpenAPI::fromJsonValue(m_tres, json[QString("tres")]);
+    m_tres_isValid = ::hm:slurm:client::fromJsonValue(m_tres, json[QString("tres")]);
     m_tres_isSet = !json[QString("tres")].isNull() && m_tres_isValid;
 }
 
@@ -103,28 +103,28 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner::asJson() const {
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_controller.isSet()) {
-        obj.insert(QString("controller"), ::OpenAPI::toJsonValue(m_controller));
+        obj.insert(QString("controller"), ::hm:slurm:client::toJsonValue(m_controller));
     }
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     if (m_nodes_isSet) {
-        obj.insert(QString("nodes"), ::OpenAPI::toJsonValue(m_nodes));
+        obj.insert(QString("nodes"), ::hm:slurm:client::toJsonValue(m_nodes));
     }
     if (m_select_plugin_isSet) {
-        obj.insert(QString("select_plugin"), ::OpenAPI::toJsonValue(m_select_plugin));
+        obj.insert(QString("select_plugin"), ::hm:slurm:client::toJsonValue(m_select_plugin));
     }
     if (m_associations.isSet()) {
-        obj.insert(QString("associations"), ::OpenAPI::toJsonValue(m_associations));
+        obj.insert(QString("associations"), ::hm:slurm:client::toJsonValue(m_associations));
     }
     if (m_rpc_version_isSet) {
-        obj.insert(QString("rpc_version"), ::OpenAPI::toJsonValue(m_rpc_version));
+        obj.insert(QString("rpc_version"), ::hm:slurm:client::toJsonValue(m_rpc_version));
     }
     if (m_tres.size() > 0) {
-        obj.insert(QString("tres"), ::OpenAPI::toJsonValue(m_tres));
+        obj.insert(QString("tres"), ::hm:slurm:client::toJsonValue(m_tres));
     }
     return obj;
 }
@@ -308,4 +308,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_clusters_inner::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

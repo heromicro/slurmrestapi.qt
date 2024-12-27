@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_tres;
 
 class OAIV0_0_40_step_tres_requested : public OAIObject {
@@ -84,8 +84,8 @@ private:
     bool m_total_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_step_tres_requested)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_step_tres_requested)
 
 #endif // OAIV0_0_40_step_tres_requested_H

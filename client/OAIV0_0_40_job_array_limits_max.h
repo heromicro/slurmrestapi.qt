@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_job_array_limits_max_running;
 
 class OAIV0_0_40_job_array_limits_max : public OAIObject {
@@ -56,8 +56,8 @@ private:
     bool m_running_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_job_array_limits_max)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_job_array_limits_max)
 
 #endif // OAIV0_0_40_job_array_limits_max_H

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_openapi_meta_plugin::OAIV0_0_40_openapi_meta_plugin(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_40_openapi_meta_plugin::fromJson(QString jsonString) {
 
 void OAIV0_0_40_openapi_meta_plugin::fromJsonObject(QJsonObject json) {
 
-    m_type_isValid = ::OpenAPI::fromJsonValue(m_type, json[QString("type")]);
+    m_type_isValid = ::hm:slurm:client::fromJsonValue(m_type, json[QString("type")]);
     m_type_isSet = !json[QString("type")].isNull() && m_type_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 
-    m_data_parser_isValid = ::OpenAPI::fromJsonValue(m_data_parser, json[QString("data_parser")]);
+    m_data_parser_isValid = ::hm:slurm:client::fromJsonValue(m_data_parser, json[QString("data_parser")]);
     m_data_parser_isSet = !json[QString("data_parser")].isNull() && m_data_parser_isValid;
 
-    m_accounting_storage_isValid = ::OpenAPI::fromJsonValue(m_accounting_storage, json[QString("accounting_storage")]);
+    m_accounting_storage_isValid = ::hm:slurm:client::fromJsonValue(m_accounting_storage, json[QString("accounting_storage")]);
     m_accounting_storage_isSet = !json[QString("accounting_storage")].isNull() && m_accounting_storage_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_40_openapi_meta_plugin::asJson() const {
 QJsonObject OAIV0_0_40_openapi_meta_plugin::asJsonObject() const {
     QJsonObject obj;
     if (m_type_isSet) {
-        obj.insert(QString("type"), ::OpenAPI::toJsonValue(m_type));
+        obj.insert(QString("type"), ::hm:slurm:client::toJsonValue(m_type));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     if (m_data_parser_isSet) {
-        obj.insert(QString("data_parser"), ::OpenAPI::toJsonValue(m_data_parser));
+        obj.insert(QString("data_parser"), ::hm:slurm:client::toJsonValue(m_data_parser));
     }
     if (m_accounting_storage_isSet) {
-        obj.insert(QString("accounting_storage"), ::OpenAPI::toJsonValue(m_accounting_storage));
+        obj.insert(QString("accounting_storage"), ::hm:slurm:client::toJsonValue(m_accounting_storage));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_40_openapi_meta_plugin::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

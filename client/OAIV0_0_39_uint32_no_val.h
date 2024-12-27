@@ -25,7 +25,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_39_uint32_no_val : public OAIObject {
 public:
@@ -72,8 +72,8 @@ private:
     bool m_number_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_uint32_no_val)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_uint32_no_val)
 
 #endif // OAIV0_0_39_uint32_no_val_H

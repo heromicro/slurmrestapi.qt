@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_slurm_step_id::OAIV0_0_39_slurm_step_id(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_39_slurm_step_id::fromJson(QString jsonString) {
 
 void OAIV0_0_39_slurm_step_id::fromJsonObject(QJsonObject json) {
 
-    m_job_id_isValid = ::OpenAPI::fromJsonValue(m_job_id, json[QString("job_id")]);
+    m_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_job_id, json[QString("job_id")]);
     m_job_id_isSet = !json[QString("job_id")].isNull() && m_job_id_isValid;
 
-    m_step_het_component_isValid = ::OpenAPI::fromJsonValue(m_step_het_component, json[QString("step_het_component")]);
+    m_step_het_component_isValid = ::hm:slurm:client::fromJsonValue(m_step_het_component, json[QString("step_het_component")]);
     m_step_het_component_isSet = !json[QString("step_het_component")].isNull() && m_step_het_component_isValid;
 
-    m_step_id_isValid = ::OpenAPI::fromJsonValue(m_step_id, json[QString("step_id")]);
+    m_step_id_isValid = ::hm:slurm:client::fromJsonValue(m_step_id, json[QString("step_id")]);
     m_step_id_isSet = !json[QString("step_id")].isNull() && m_step_id_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_39_slurm_step_id::asJson() const {
 QJsonObject OAIV0_0_39_slurm_step_id::asJsonObject() const {
     QJsonObject obj;
     if (m_job_id_isSet) {
-        obj.insert(QString("job_id"), ::OpenAPI::toJsonValue(m_job_id));
+        obj.insert(QString("job_id"), ::hm:slurm:client::toJsonValue(m_job_id));
     }
     if (m_step_het_component_isSet) {
-        obj.insert(QString("step_het_component"), ::OpenAPI::toJsonValue(m_step_het_component));
+        obj.insert(QString("step_het_component"), ::hm:slurm:client::toJsonValue(m_step_het_component));
     }
     if (m_step_id_isSet) {
-        obj.insert(QString("step_id"), ::OpenAPI::toJsonValue(m_step_id));
+        obj.insert(QString("step_id"), ::hm:slurm:client::toJsonValue(m_step_id));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_39_slurm_step_id::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

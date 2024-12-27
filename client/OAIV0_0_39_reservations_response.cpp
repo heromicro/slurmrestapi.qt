@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_reservations_response::OAIV0_0_39_reservations_response(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_39_reservations_response::fromJson(QString jsonString) {
 
 void OAIV0_0_39_reservations_response::fromJsonObject(QJsonObject json) {
 
-    m_meta_isValid = ::OpenAPI::fromJsonValue(m_meta, json[QString("meta")]);
+    m_meta_isValid = ::hm:slurm:client::fromJsonValue(m_meta, json[QString("meta")]);
     m_meta_isSet = !json[QString("meta")].isNull() && m_meta_isValid;
 
-    m_errors_isValid = ::OpenAPI::fromJsonValue(m_errors, json[QString("errors")]);
+    m_errors_isValid = ::hm:slurm:client::fromJsonValue(m_errors, json[QString("errors")]);
     m_errors_isSet = !json[QString("errors")].isNull() && m_errors_isValid;
 
-    m_warnings_isValid = ::OpenAPI::fromJsonValue(m_warnings, json[QString("warnings")]);
+    m_warnings_isValid = ::hm:slurm:client::fromJsonValue(m_warnings, json[QString("warnings")]);
     m_warnings_isSet = !json[QString("warnings")].isNull() && m_warnings_isValid;
 
-    m_reservations_isValid = ::OpenAPI::fromJsonValue(m_reservations, json[QString("reservations")]);
+    m_reservations_isValid = ::hm:slurm:client::fromJsonValue(m_reservations, json[QString("reservations")]);
     m_reservations_isSet = !json[QString("reservations")].isNull() && m_reservations_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_39_reservations_response::asJson() const {
 QJsonObject OAIV0_0_39_reservations_response::asJsonObject() const {
     QJsonObject obj;
     if (m_meta.isSet()) {
-        obj.insert(QString("meta"), ::OpenAPI::toJsonValue(m_meta));
+        obj.insert(QString("meta"), ::hm:slurm:client::toJsonValue(m_meta));
     }
     if (m_errors.size() > 0) {
-        obj.insert(QString("errors"), ::OpenAPI::toJsonValue(m_errors));
+        obj.insert(QString("errors"), ::hm:slurm:client::toJsonValue(m_errors));
     }
     if (m_warnings.size() > 0) {
-        obj.insert(QString("warnings"), ::OpenAPI::toJsonValue(m_warnings));
+        obj.insert(QString("warnings"), ::hm:slurm:client::toJsonValue(m_warnings));
     }
     if (m_reservations.size() > 0) {
-        obj.insert(QString("reservations"), ::OpenAPI::toJsonValue(m_reservations));
+        obj.insert(QString("reservations"), ::hm:slurm:client::toJsonValue(m_reservations));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_39_reservations_response::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

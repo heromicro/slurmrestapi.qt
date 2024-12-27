@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_uint32_no_val;
 
 class OAIV0_0_40_assoc_min : public OAIObject {
@@ -56,8 +56,8 @@ private:
     bool m_priority_threshold_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_assoc_min)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_assoc_min)
 
 #endif // OAIV0_0_40_assoc_min_H

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_partition_resp_partitions_inner_defaults::OAIV0_0_41_openapi_partition_resp_partitions_inner_defaults(QString json) {
     this->initializeModel();
@@ -59,19 +59,19 @@ void OAIV0_0_41_openapi_partition_resp_partitions_inner_defaults::fromJson(QStri
 
 void OAIV0_0_41_openapi_partition_resp_partitions_inner_defaults::fromJsonObject(QJsonObject json) {
 
-    m_memory_per_cpu_isValid = ::OpenAPI::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
+    m_memory_per_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
     m_memory_per_cpu_isSet = !json[QString("memory_per_cpu")].isNull() && m_memory_per_cpu_isValid;
 
-    m_partition_memory_per_cpu_isValid = ::OpenAPI::fromJsonValue(m_partition_memory_per_cpu, json[QString("partition_memory_per_cpu")]);
+    m_partition_memory_per_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_partition_memory_per_cpu, json[QString("partition_memory_per_cpu")]);
     m_partition_memory_per_cpu_isSet = !json[QString("partition_memory_per_cpu")].isNull() && m_partition_memory_per_cpu_isValid;
 
-    m_partition_memory_per_node_isValid = ::OpenAPI::fromJsonValue(m_partition_memory_per_node, json[QString("partition_memory_per_node")]);
+    m_partition_memory_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_partition_memory_per_node, json[QString("partition_memory_per_node")]);
     m_partition_memory_per_node_isSet = !json[QString("partition_memory_per_node")].isNull() && m_partition_memory_per_node_isValid;
 
-    m_time_isValid = ::OpenAPI::fromJsonValue(m_time, json[QString("time")]);
+    m_time_isValid = ::hm:slurm:client::fromJsonValue(m_time, json[QString("time")]);
     m_time_isSet = !json[QString("time")].isNull() && m_time_isValid;
 
-    m_job_isValid = ::OpenAPI::fromJsonValue(m_job, json[QString("job")]);
+    m_job_isValid = ::hm:slurm:client::fromJsonValue(m_job, json[QString("job")]);
     m_job_isSet = !json[QString("job")].isNull() && m_job_isValid;
 }
 
@@ -85,19 +85,19 @@ QString OAIV0_0_41_openapi_partition_resp_partitions_inner_defaults::asJson() co
 QJsonObject OAIV0_0_41_openapi_partition_resp_partitions_inner_defaults::asJsonObject() const {
     QJsonObject obj;
     if (m_memory_per_cpu_isSet) {
-        obj.insert(QString("memory_per_cpu"), ::OpenAPI::toJsonValue(m_memory_per_cpu));
+        obj.insert(QString("memory_per_cpu"), ::hm:slurm:client::toJsonValue(m_memory_per_cpu));
     }
     if (m_partition_memory_per_cpu.isSet()) {
-        obj.insert(QString("partition_memory_per_cpu"), ::OpenAPI::toJsonValue(m_partition_memory_per_cpu));
+        obj.insert(QString("partition_memory_per_cpu"), ::hm:slurm:client::toJsonValue(m_partition_memory_per_cpu));
     }
     if (m_partition_memory_per_node.isSet()) {
-        obj.insert(QString("partition_memory_per_node"), ::OpenAPI::toJsonValue(m_partition_memory_per_node));
+        obj.insert(QString("partition_memory_per_node"), ::hm:slurm:client::toJsonValue(m_partition_memory_per_node));
     }
     if (m_time.isSet()) {
-        obj.insert(QString("time"), ::OpenAPI::toJsonValue(m_time));
+        obj.insert(QString("time"), ::hm:slurm:client::toJsonValue(m_time));
     }
     if (m_job_isSet) {
-        obj.insert(QString("job"), ::OpenAPI::toJsonValue(m_job));
+        obj.insert(QString("job"), ::hm:slurm:client::toJsonValue(m_job));
     }
     return obj;
 }
@@ -218,4 +218,4 @@ bool OAIV0_0_41_openapi_partition_resp_partitions_inner_defaults::isValid() cons
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

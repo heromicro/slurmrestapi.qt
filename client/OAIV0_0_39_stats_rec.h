@@ -29,7 +29,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_rollup_stats_inner;
 class OAIV0_0_39_stats_rpc;
 class OAIV0_0_39_stats_user;
@@ -88,8 +88,8 @@ private:
     bool m_users_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_stats_rec)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_stats_rec)
 
 #endif // OAIV0_0_39_stats_rec_H

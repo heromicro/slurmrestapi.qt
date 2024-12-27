@@ -32,7 +32,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_reservation_resp_reservations_inner_core_specializations_inner;
 class OAIV0_0_41_openapi_reservation_resp_reservations_inner_end_time;
 class OAIV0_0_41_openapi_reservation_resp_reservations_inner_purge_completed;
@@ -228,8 +228,8 @@ private:
     bool m_users_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_reservation_resp_reservations_inner)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_reservation_resp_reservations_inner)
 
 #endif // OAIV0_0_41_openapi_reservation_resp_reservations_inner_H

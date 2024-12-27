@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_accounts_add_cond::OAIV0_0_40_accounts_add_cond(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_accounts_add_cond::fromJson(QString jsonString) {
 
 void OAIV0_0_40_accounts_add_cond::fromJsonObject(QJsonObject json) {
 
-    m_accounts_isValid = ::OpenAPI::fromJsonValue(m_accounts, json[QString("accounts")]);
+    m_accounts_isValid = ::hm:slurm:client::fromJsonValue(m_accounts, json[QString("accounts")]);
     m_accounts_isSet = !json[QString("accounts")].isNull() && m_accounts_isValid;
 
-    m_association_isValid = ::OpenAPI::fromJsonValue(m_association, json[QString("association")]);
+    m_association_isValid = ::hm:slurm:client::fromJsonValue(m_association, json[QString("association")]);
     m_association_isSet = !json[QString("association")].isNull() && m_association_isValid;
 
-    m_clusters_isValid = ::OpenAPI::fromJsonValue(m_clusters, json[QString("clusters")]);
+    m_clusters_isValid = ::hm:slurm:client::fromJsonValue(m_clusters, json[QString("clusters")]);
     m_clusters_isSet = !json[QString("clusters")].isNull() && m_clusters_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_accounts_add_cond::asJson() const {
 QJsonObject OAIV0_0_40_accounts_add_cond::asJsonObject() const {
     QJsonObject obj;
     if (m_accounts.size() > 0) {
-        obj.insert(QString("accounts"), ::OpenAPI::toJsonValue(m_accounts));
+        obj.insert(QString("accounts"), ::hm:slurm:client::toJsonValue(m_accounts));
     }
     if (m_association.isSet()) {
-        obj.insert(QString("association"), ::OpenAPI::toJsonValue(m_association));
+        obj.insert(QString("association"), ::hm:slurm:client::toJsonValue(m_association));
     }
     if (m_clusters.size() > 0) {
-        obj.insert(QString("clusters"), ::OpenAPI::toJsonValue(m_clusters));
+        obj.insert(QString("clusters"), ::hm:slurm:client::toJsonValue(m_clusters));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_accounts_add_cond::isValid() const {
     return m_accounts_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_accounting_allocated::OAIV0_0_39_accounting_allocated(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_39_accounting_allocated::fromJson(QString jsonString) {
 
 void OAIV0_0_39_accounting_allocated::fromJsonObject(QJsonObject json) {
 
-    m_seconds_isValid = ::OpenAPI::fromJsonValue(m_seconds, json[QString("seconds")]);
+    m_seconds_isValid = ::hm:slurm:client::fromJsonValue(m_seconds, json[QString("seconds")]);
     m_seconds_isSet = !json[QString("seconds")].isNull() && m_seconds_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_39_accounting_allocated::asJson() const {
 QJsonObject OAIV0_0_39_accounting_allocated::asJsonObject() const {
     QJsonObject obj;
     if (m_seconds_isSet) {
-        obj.insert(QString("seconds"), ::OpenAPI::toJsonValue(m_seconds));
+        obj.insert(QString("seconds"), ::hm:slurm:client::toJsonValue(m_seconds));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_39_accounting_allocated::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

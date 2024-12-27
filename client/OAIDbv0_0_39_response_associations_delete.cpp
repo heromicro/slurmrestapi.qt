@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIDbv0_0_39_response_associations_delete::OAIDbv0_0_39_response_associations_delete(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIDbv0_0_39_response_associations_delete::fromJson(QString jsonString) {
 
 void OAIDbv0_0_39_response_associations_delete::fromJsonObject(QJsonObject json) {
 
-    m_meta_isValid = ::OpenAPI::fromJsonValue(m_meta, json[QString("meta")]);
+    m_meta_isValid = ::hm:slurm:client::fromJsonValue(m_meta, json[QString("meta")]);
     m_meta_isSet = !json[QString("meta")].isNull() && m_meta_isValid;
 
-    m_errors_isValid = ::OpenAPI::fromJsonValue(m_errors, json[QString("errors")]);
+    m_errors_isValid = ::hm:slurm:client::fromJsonValue(m_errors, json[QString("errors")]);
     m_errors_isSet = !json[QString("errors")].isNull() && m_errors_isValid;
 
-    m_warnings_isValid = ::OpenAPI::fromJsonValue(m_warnings, json[QString("warnings")]);
+    m_warnings_isValid = ::hm:slurm:client::fromJsonValue(m_warnings, json[QString("warnings")]);
     m_warnings_isSet = !json[QString("warnings")].isNull() && m_warnings_isValid;
 
-    m_removed_associations_isValid = ::OpenAPI::fromJsonValue(m_removed_associations, json[QString("removed_associations")]);
+    m_removed_associations_isValid = ::hm:slurm:client::fromJsonValue(m_removed_associations, json[QString("removed_associations")]);
     m_removed_associations_isSet = !json[QString("removed_associations")].isNull() && m_removed_associations_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIDbv0_0_39_response_associations_delete::asJson() const {
 QJsonObject OAIDbv0_0_39_response_associations_delete::asJsonObject() const {
     QJsonObject obj;
     if (m_meta.isSet()) {
-        obj.insert(QString("meta"), ::OpenAPI::toJsonValue(m_meta));
+        obj.insert(QString("meta"), ::hm:slurm:client::toJsonValue(m_meta));
     }
     if (m_errors.size() > 0) {
-        obj.insert(QString("errors"), ::OpenAPI::toJsonValue(m_errors));
+        obj.insert(QString("errors"), ::hm:slurm:client::toJsonValue(m_errors));
     }
     if (m_warnings.size() > 0) {
-        obj.insert(QString("warnings"), ::OpenAPI::toJsonValue(m_warnings));
+        obj.insert(QString("warnings"), ::hm:slurm:client::toJsonValue(m_warnings));
     }
     if (m_removed_associations.size() > 0) {
-        obj.insert(QString("removed_associations"), ::OpenAPI::toJsonValue(m_removed_associations));
+        obj.insert(QString("removed_associations"), ::hm:slurm:client::toJsonValue(m_removed_associations));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIDbv0_0_39_response_associations_delete::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

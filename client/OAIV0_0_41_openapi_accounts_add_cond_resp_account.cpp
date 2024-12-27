@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_accounts_add_cond_resp_account::OAIV0_0_41_openapi_accounts_add_cond_resp_account(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_accounts_add_cond_resp_account::fromJson(QString jsonStr
 
 void OAIV0_0_41_openapi_accounts_add_cond_resp_account::fromJsonObject(QJsonObject json) {
 
-    m_description_isValid = ::OpenAPI::fromJsonValue(m_description, json[QString("description")]);
+    m_description_isValid = ::hm:slurm:client::fromJsonValue(m_description, json[QString("description")]);
     m_description_isSet = !json[QString("description")].isNull() && m_description_isValid;
 
-    m_organization_isValid = ::OpenAPI::fromJsonValue(m_organization, json[QString("organization")]);
+    m_organization_isValid = ::hm:slurm:client::fromJsonValue(m_organization, json[QString("organization")]);
     m_organization_isSet = !json[QString("organization")].isNull() && m_organization_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_accounts_add_cond_resp_account::asJson() const {
 QJsonObject OAIV0_0_41_openapi_accounts_add_cond_resp_account::asJsonObject() const {
     QJsonObject obj;
     if (m_description_isSet) {
-        obj.insert(QString("description"), ::OpenAPI::toJsonValue(m_description));
+        obj.insert(QString("description"), ::hm:slurm:client::toJsonValue(m_description));
     }
     if (m_organization_isSet) {
-        obj.insert(QString("organization"), ::OpenAPI::toJsonValue(m_organization));
+        obj.insert(QString("organization"), ::hm:slurm:client::toJsonValue(m_organization));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_accounts_add_cond_resp_account::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

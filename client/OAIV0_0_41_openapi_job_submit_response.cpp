@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_submit_response::OAIV0_0_41_openapi_job_submit_response(QString json) {
     this->initializeModel();
@@ -65,25 +65,25 @@ void OAIV0_0_41_openapi_job_submit_response::fromJson(QString jsonString) {
 
 void OAIV0_0_41_openapi_job_submit_response::fromJsonObject(QJsonObject json) {
 
-    m_result_isValid = ::OpenAPI::fromJsonValue(m_result, json[QString("result")]);
+    m_result_isValid = ::hm:slurm:client::fromJsonValue(m_result, json[QString("result")]);
     m_result_isSet = !json[QString("result")].isNull() && m_result_isValid;
 
-    m_job_id_isValid = ::OpenAPI::fromJsonValue(m_job_id, json[QString("job_id")]);
+    m_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_job_id, json[QString("job_id")]);
     m_job_id_isSet = !json[QString("job_id")].isNull() && m_job_id_isValid;
 
-    m_step_id_isValid = ::OpenAPI::fromJsonValue(m_step_id, json[QString("step_id")]);
+    m_step_id_isValid = ::hm:slurm:client::fromJsonValue(m_step_id, json[QString("step_id")]);
     m_step_id_isSet = !json[QString("step_id")].isNull() && m_step_id_isValid;
 
-    m_job_submit_user_msg_isValid = ::OpenAPI::fromJsonValue(m_job_submit_user_msg, json[QString("job_submit_user_msg")]);
+    m_job_submit_user_msg_isValid = ::hm:slurm:client::fromJsonValue(m_job_submit_user_msg, json[QString("job_submit_user_msg")]);
     m_job_submit_user_msg_isSet = !json[QString("job_submit_user_msg")].isNull() && m_job_submit_user_msg_isValid;
 
-    m_meta_isValid = ::OpenAPI::fromJsonValue(m_meta, json[QString("meta")]);
+    m_meta_isValid = ::hm:slurm:client::fromJsonValue(m_meta, json[QString("meta")]);
     m_meta_isSet = !json[QString("meta")].isNull() && m_meta_isValid;
 
-    m_errors_isValid = ::OpenAPI::fromJsonValue(m_errors, json[QString("errors")]);
+    m_errors_isValid = ::hm:slurm:client::fromJsonValue(m_errors, json[QString("errors")]);
     m_errors_isSet = !json[QString("errors")].isNull() && m_errors_isValid;
 
-    m_warnings_isValid = ::OpenAPI::fromJsonValue(m_warnings, json[QString("warnings")]);
+    m_warnings_isValid = ::hm:slurm:client::fromJsonValue(m_warnings, json[QString("warnings")]);
     m_warnings_isSet = !json[QString("warnings")].isNull() && m_warnings_isValid;
 }
 
@@ -97,25 +97,25 @@ QString OAIV0_0_41_openapi_job_submit_response::asJson() const {
 QJsonObject OAIV0_0_41_openapi_job_submit_response::asJsonObject() const {
     QJsonObject obj;
     if (m_result.isSet()) {
-        obj.insert(QString("result"), ::OpenAPI::toJsonValue(m_result));
+        obj.insert(QString("result"), ::hm:slurm:client::toJsonValue(m_result));
     }
     if (m_job_id_isSet) {
-        obj.insert(QString("job_id"), ::OpenAPI::toJsonValue(m_job_id));
+        obj.insert(QString("job_id"), ::hm:slurm:client::toJsonValue(m_job_id));
     }
     if (m_step_id_isSet) {
-        obj.insert(QString("step_id"), ::OpenAPI::toJsonValue(m_step_id));
+        obj.insert(QString("step_id"), ::hm:slurm:client::toJsonValue(m_step_id));
     }
     if (m_job_submit_user_msg_isSet) {
-        obj.insert(QString("job_submit_user_msg"), ::OpenAPI::toJsonValue(m_job_submit_user_msg));
+        obj.insert(QString("job_submit_user_msg"), ::hm:slurm:client::toJsonValue(m_job_submit_user_msg));
     }
     if (m_meta.isSet()) {
-        obj.insert(QString("meta"), ::OpenAPI::toJsonValue(m_meta));
+        obj.insert(QString("meta"), ::hm:slurm:client::toJsonValue(m_meta));
     }
     if (m_errors.size() > 0) {
-        obj.insert(QString("errors"), ::OpenAPI::toJsonValue(m_errors));
+        obj.insert(QString("errors"), ::hm:slurm:client::toJsonValue(m_errors));
     }
     if (m_warnings.size() > 0) {
-        obj.insert(QString("warnings"), ::OpenAPI::toJsonValue(m_warnings));
+        obj.insert(QString("warnings"), ::hm:slurm:client::toJsonValue(m_warnings));
     }
     return obj;
 }
@@ -278,4 +278,4 @@ bool OAIV0_0_41_openapi_job_submit_response::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

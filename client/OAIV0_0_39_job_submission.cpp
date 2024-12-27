@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_job_submission::OAIV0_0_39_job_submission(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_39_job_submission::fromJson(QString jsonString) {
 
 void OAIV0_0_39_job_submission::fromJsonObject(QJsonObject json) {
 
-    m_script_isValid = ::OpenAPI::fromJsonValue(m_script, json[QString("script")]);
+    m_script_isValid = ::hm:slurm:client::fromJsonValue(m_script, json[QString("script")]);
     m_script_isSet = !json[QString("script")].isNull() && m_script_isValid;
 
-    m_job_isValid = ::OpenAPI::fromJsonValue(m_job, json[QString("job")]);
+    m_job_isValid = ::hm:slurm:client::fromJsonValue(m_job, json[QString("job")]);
     m_job_isSet = !json[QString("job")].isNull() && m_job_isValid;
 
-    m_jobs_isValid = ::OpenAPI::fromJsonValue(m_jobs, json[QString("jobs")]);
+    m_jobs_isValid = ::hm:slurm:client::fromJsonValue(m_jobs, json[QString("jobs")]);
     m_jobs_isSet = !json[QString("jobs")].isNull() && m_jobs_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_39_job_submission::asJson() const {
 QJsonObject OAIV0_0_39_job_submission::asJsonObject() const {
     QJsonObject obj;
     if (m_script_isSet) {
-        obj.insert(QString("script"), ::OpenAPI::toJsonValue(m_script));
+        obj.insert(QString("script"), ::hm:slurm:client::toJsonValue(m_script));
     }
     if (m_job.isSet()) {
-        obj.insert(QString("job"), ::OpenAPI::toJsonValue(m_job));
+        obj.insert(QString("job"), ::hm:slurm:client::toJsonValue(m_job));
     }
     if (m_jobs.size() > 0) {
-        obj.insert(QString("jobs"), ::OpenAPI::toJsonValue(m_jobs));
+        obj.insert(QString("jobs"), ::hm:slurm:client::toJsonValue(m_jobs));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_39_job_submission::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

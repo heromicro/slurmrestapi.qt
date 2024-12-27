@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_user_default::OAIV0_0_40_user_default(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_user_default::fromJson(QString jsonString) {
 
 void OAIV0_0_40_user_default::fromJsonObject(QJsonObject json) {
 
-    m_account_isValid = ::OpenAPI::fromJsonValue(m_account, json[QString("account")]);
+    m_account_isValid = ::hm:slurm:client::fromJsonValue(m_account, json[QString("account")]);
     m_account_isSet = !json[QString("account")].isNull() && m_account_isValid;
 
-    m_wckey_isValid = ::OpenAPI::fromJsonValue(m_wckey, json[QString("wckey")]);
+    m_wckey_isValid = ::hm:slurm:client::fromJsonValue(m_wckey, json[QString("wckey")]);
     m_wckey_isSet = !json[QString("wckey")].isNull() && m_wckey_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_user_default::asJson() const {
 QJsonObject OAIV0_0_40_user_default::asJsonObject() const {
     QJsonObject obj;
     if (m_account_isSet) {
-        obj.insert(QString("account"), ::OpenAPI::toJsonValue(m_account));
+        obj.insert(QString("account"), ::hm:slurm:client::toJsonValue(m_account));
     }
     if (m_wckey_isSet) {
-        obj.insert(QString("wckey"), ::OpenAPI::toJsonValue(m_wckey));
+        obj.insert(QString("wckey"), ::hm:slurm:client::toJsonValue(m_wckey));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_user_default::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

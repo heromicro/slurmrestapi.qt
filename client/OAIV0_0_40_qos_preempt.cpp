@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_qos_preempt::OAIV0_0_40_qos_preempt(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_qos_preempt::fromJson(QString jsonString) {
 
 void OAIV0_0_40_qos_preempt::fromJsonObject(QJsonObject json) {
 
-    m_list_isValid = ::OpenAPI::fromJsonValue(m_list, json[QString("list")]);
+    m_list_isValid = ::hm:slurm:client::fromJsonValue(m_list, json[QString("list")]);
     m_list_isSet = !json[QString("list")].isNull() && m_list_isValid;
 
-    m_mode_isValid = ::OpenAPI::fromJsonValue(m_mode, json[QString("mode")]);
+    m_mode_isValid = ::hm:slurm:client::fromJsonValue(m_mode, json[QString("mode")]);
     m_mode_isSet = !json[QString("mode")].isNull() && m_mode_isValid;
 
-    m_exempt_time_isValid = ::OpenAPI::fromJsonValue(m_exempt_time, json[QString("exempt_time")]);
+    m_exempt_time_isValid = ::hm:slurm:client::fromJsonValue(m_exempt_time, json[QString("exempt_time")]);
     m_exempt_time_isSet = !json[QString("exempt_time")].isNull() && m_exempt_time_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_qos_preempt::asJson() const {
 QJsonObject OAIV0_0_40_qos_preempt::asJsonObject() const {
     QJsonObject obj;
     if (m_list.size() > 0) {
-        obj.insert(QString("list"), ::OpenAPI::toJsonValue(m_list));
+        obj.insert(QString("list"), ::hm:slurm:client::toJsonValue(m_list));
     }
     if (m_mode.size() > 0) {
-        obj.insert(QString("mode"), ::OpenAPI::toJsonValue(m_mode));
+        obj.insert(QString("mode"), ::hm:slurm:client::toJsonValue(m_mode));
     }
     if (m_exempt_time.isSet()) {
-        obj.insert(QString("exempt_time"), ::OpenAPI::toJsonValue(m_exempt_time));
+        obj.insert(QString("exempt_time"), ::hm:slurm:client::toJsonValue(m_exempt_time));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_qos_preempt::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

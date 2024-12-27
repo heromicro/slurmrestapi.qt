@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_tres::OAIV0_0_40_tres(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_40_tres::fromJson(QString jsonString) {
 
 void OAIV0_0_40_tres::fromJsonObject(QJsonObject json) {
 
-    m_type_isValid = ::OpenAPI::fromJsonValue(m_type, json[QString("type")]);
+    m_type_isValid = ::hm:slurm:client::fromJsonValue(m_type, json[QString("type")]);
     m_type_isSet = !json[QString("type")].isNull() && m_type_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 
-    m_id_isValid = ::OpenAPI::fromJsonValue(m_id, json[QString("id")]);
+    m_id_isValid = ::hm:slurm:client::fromJsonValue(m_id, json[QString("id")]);
     m_id_isSet = !json[QString("id")].isNull() && m_id_isValid;
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_40_tres::asJson() const {
 QJsonObject OAIV0_0_40_tres::asJsonObject() const {
     QJsonObject obj;
     if (m_type_isSet) {
-        obj.insert(QString("type"), ::OpenAPI::toJsonValue(m_type));
+        obj.insert(QString("type"), ::hm:slurm:client::toJsonValue(m_type));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     if (m_id_isSet) {
-        obj.insert(QString("id"), ::OpenAPI::toJsonValue(m_id));
+        obj.insert(QString("id"), ::hm:slurm:client::toJsonValue(m_id));
     }
     if (m_count_isSet) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_40_tres::isValid() const {
     return m_type_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

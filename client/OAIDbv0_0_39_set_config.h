@@ -33,7 +33,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_cluster_rec;
 class OAIV0_0_39_tres;
 class OAIV0_0_39_account;
@@ -123,8 +123,8 @@ private:
     bool m_associations_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIDbv0_0_39_set_config)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIDbv0_0_39_set_config)
 
 #endif // OAIDbv0_0_39_set_config_H

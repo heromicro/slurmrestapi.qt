@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_uint16_no_val;
 
 class OAIV0_0_40_process_exit_code_verbose_signal : public OAIObject {
@@ -66,8 +66,8 @@ private:
     bool m_name_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_process_exit_code_verbose_signal)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_process_exit_code_verbose_signal)
 
 #endif // OAIV0_0_40_process_exit_code_verbose_signal_H

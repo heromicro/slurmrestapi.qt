@@ -30,7 +30,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIDbv0_0_39_meta;
 class OAIDbv0_0_39_error;
 class OAIDbv0_0_39_warning;
@@ -90,8 +90,8 @@ private:
     bool m_accounts_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIDbv0_0_39_account_info)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIDbv0_0_39_account_info)
 
 #endif // OAIDbv0_0_39_account_info_H

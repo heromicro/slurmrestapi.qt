@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_job_array_limits_max_running::OAIV0_0_40_job_array_limits_max_running(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_40_job_array_limits_max_running::fromJson(QString jsonString) {
 
 void OAIV0_0_40_job_array_limits_max_running::fromJsonObject(QJsonObject json) {
 
-    m_tasks_isValid = ::OpenAPI::fromJsonValue(m_tasks, json[QString("tasks")]);
+    m_tasks_isValid = ::hm:slurm:client::fromJsonValue(m_tasks, json[QString("tasks")]);
     m_tasks_isSet = !json[QString("tasks")].isNull() && m_tasks_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_40_job_array_limits_max_running::asJson() const {
 QJsonObject OAIV0_0_40_job_array_limits_max_running::asJsonObject() const {
     QJsonObject obj;
     if (m_tasks_isSet) {
-        obj.insert(QString("tasks"), ::OpenAPI::toJsonValue(m_tasks));
+        obj.insert(QString("tasks"), ::hm:slurm:client::toJsonValue(m_tasks));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_40_job_array_limits_max_running::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

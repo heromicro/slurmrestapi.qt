@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_accruing_per::OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_accruing_per(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_accruing_per::
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_accruing_per::fromJsonObject(QJsonObject json) {
 
-    m_account_isValid = ::OpenAPI::fromJsonValue(m_account, json[QString("account")]);
+    m_account_isValid = ::hm:slurm:client::fromJsonValue(m_account, json[QString("account")]);
     m_account_isSet = !json[QString("account")].isNull() && m_account_isValid;
 
-    m_user_isValid = ::OpenAPI::fromJsonValue(m_user, json[QString("user")]);
+    m_user_isValid = ::hm:slurm:client::fromJsonValue(m_user, json[QString("user")]);
     m_user_isSet = !json[QString("user")].isNull() && m_user_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_accruing_pe
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_accruing_per::asJsonObject() const {
     QJsonObject obj;
     if (m_account.isSet()) {
-        obj.insert(QString("account"), ::OpenAPI::toJsonValue(m_account));
+        obj.insert(QString("account"), ::hm:slurm:client::toJsonValue(m_account));
     }
     if (m_user.isSet()) {
-        obj.insert(QString("user"), ::OpenAPI::toJsonValue(m_user));
+        obj.insert(QString("user"), ::hm:slurm:client::toJsonValue(m_user));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_accruing_per::
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

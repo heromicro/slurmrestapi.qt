@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_kill_jobs_msg::OAIV0_0_40_kill_jobs_msg(QString json) {
     this->initializeModel();
@@ -83,43 +83,43 @@ void OAIV0_0_40_kill_jobs_msg::fromJson(QString jsonString) {
 
 void OAIV0_0_40_kill_jobs_msg::fromJsonObject(QJsonObject json) {
 
-    m_account_isValid = ::OpenAPI::fromJsonValue(m_account, json[QString("account")]);
+    m_account_isValid = ::hm:slurm:client::fromJsonValue(m_account, json[QString("account")]);
     m_account_isSet = !json[QString("account")].isNull() && m_account_isValid;
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 
-    m_job_name_isValid = ::OpenAPI::fromJsonValue(m_job_name, json[QString("job_name")]);
+    m_job_name_isValid = ::hm:slurm:client::fromJsonValue(m_job_name, json[QString("job_name")]);
     m_job_name_isSet = !json[QString("job_name")].isNull() && m_job_name_isValid;
 
-    m_jobs_isValid = ::OpenAPI::fromJsonValue(m_jobs, json[QString("jobs")]);
+    m_jobs_isValid = ::hm:slurm:client::fromJsonValue(m_jobs, json[QString("jobs")]);
     m_jobs_isSet = !json[QString("jobs")].isNull() && m_jobs_isValid;
 
-    m_partition_isValid = ::OpenAPI::fromJsonValue(m_partition, json[QString("partition")]);
+    m_partition_isValid = ::hm:slurm:client::fromJsonValue(m_partition, json[QString("partition")]);
     m_partition_isSet = !json[QString("partition")].isNull() && m_partition_isValid;
 
-    m_qos_isValid = ::OpenAPI::fromJsonValue(m_qos, json[QString("qos")]);
+    m_qos_isValid = ::hm:slurm:client::fromJsonValue(m_qos, json[QString("qos")]);
     m_qos_isSet = !json[QString("qos")].isNull() && m_qos_isValid;
 
-    m_reservation_isValid = ::OpenAPI::fromJsonValue(m_reservation, json[QString("reservation")]);
+    m_reservation_isValid = ::hm:slurm:client::fromJsonValue(m_reservation, json[QString("reservation")]);
     m_reservation_isSet = !json[QString("reservation")].isNull() && m_reservation_isValid;
 
-    m_signal_isValid = ::OpenAPI::fromJsonValue(m_signal, json[QString("signal")]);
+    m_signal_isValid = ::hm:slurm:client::fromJsonValue(m_signal, json[QString("signal")]);
     m_signal_isSet = !json[QString("signal")].isNull() && m_signal_isValid;
 
-    m_job_state_isValid = ::OpenAPI::fromJsonValue(m_job_state, json[QString("job_state")]);
+    m_job_state_isValid = ::hm:slurm:client::fromJsonValue(m_job_state, json[QString("job_state")]);
     m_job_state_isSet = !json[QString("job_state")].isNull() && m_job_state_isValid;
 
-    m_user_id_isValid = ::OpenAPI::fromJsonValue(m_user_id, json[QString("user_id")]);
+    m_user_id_isValid = ::hm:slurm:client::fromJsonValue(m_user_id, json[QString("user_id")]);
     m_user_id_isSet = !json[QString("user_id")].isNull() && m_user_id_isValid;
 
-    m_user_name_isValid = ::OpenAPI::fromJsonValue(m_user_name, json[QString("user_name")]);
+    m_user_name_isValid = ::hm:slurm:client::fromJsonValue(m_user_name, json[QString("user_name")]);
     m_user_name_isSet = !json[QString("user_name")].isNull() && m_user_name_isValid;
 
-    m_wckey_isValid = ::OpenAPI::fromJsonValue(m_wckey, json[QString("wckey")]);
+    m_wckey_isValid = ::hm:slurm:client::fromJsonValue(m_wckey, json[QString("wckey")]);
     m_wckey_isSet = !json[QString("wckey")].isNull() && m_wckey_isValid;
 
-    m_nodes_isValid = ::OpenAPI::fromJsonValue(m_nodes, json[QString("nodes")]);
+    m_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_nodes, json[QString("nodes")]);
     m_nodes_isSet = !json[QString("nodes")].isNull() && m_nodes_isValid;
 }
 
@@ -133,43 +133,43 @@ QString OAIV0_0_40_kill_jobs_msg::asJson() const {
 QJsonObject OAIV0_0_40_kill_jobs_msg::asJsonObject() const {
     QJsonObject obj;
     if (m_account_isSet) {
-        obj.insert(QString("account"), ::OpenAPI::toJsonValue(m_account));
+        obj.insert(QString("account"), ::hm:slurm:client::toJsonValue(m_account));
     }
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     if (m_job_name_isSet) {
-        obj.insert(QString("job_name"), ::OpenAPI::toJsonValue(m_job_name));
+        obj.insert(QString("job_name"), ::hm:slurm:client::toJsonValue(m_job_name));
     }
     if (m_jobs.size() > 0) {
-        obj.insert(QString("jobs"), ::OpenAPI::toJsonValue(m_jobs));
+        obj.insert(QString("jobs"), ::hm:slurm:client::toJsonValue(m_jobs));
     }
     if (m_partition_isSet) {
-        obj.insert(QString("partition"), ::OpenAPI::toJsonValue(m_partition));
+        obj.insert(QString("partition"), ::hm:slurm:client::toJsonValue(m_partition));
     }
     if (m_qos_isSet) {
-        obj.insert(QString("qos"), ::OpenAPI::toJsonValue(m_qos));
+        obj.insert(QString("qos"), ::hm:slurm:client::toJsonValue(m_qos));
     }
     if (m_reservation_isSet) {
-        obj.insert(QString("reservation"), ::OpenAPI::toJsonValue(m_reservation));
+        obj.insert(QString("reservation"), ::hm:slurm:client::toJsonValue(m_reservation));
     }
     if (m_signal_isSet) {
-        obj.insert(QString("signal"), ::OpenAPI::toJsonValue(m_signal));
+        obj.insert(QString("signal"), ::hm:slurm:client::toJsonValue(m_signal));
     }
     if (m_job_state.size() > 0) {
-        obj.insert(QString("job_state"), ::OpenAPI::toJsonValue(m_job_state));
+        obj.insert(QString("job_state"), ::hm:slurm:client::toJsonValue(m_job_state));
     }
     if (m_user_id_isSet) {
-        obj.insert(QString("user_id"), ::OpenAPI::toJsonValue(m_user_id));
+        obj.insert(QString("user_id"), ::hm:slurm:client::toJsonValue(m_user_id));
     }
     if (m_user_name_isSet) {
-        obj.insert(QString("user_name"), ::OpenAPI::toJsonValue(m_user_name));
+        obj.insert(QString("user_name"), ::hm:slurm:client::toJsonValue(m_user_name));
     }
     if (m_wckey_isSet) {
-        obj.insert(QString("wckey"), ::OpenAPI::toJsonValue(m_wckey));
+        obj.insert(QString("wckey"), ::hm:slurm:client::toJsonValue(m_wckey));
     }
     if (m_nodes.size() > 0) {
-        obj.insert(QString("nodes"), ::OpenAPI::toJsonValue(m_nodes));
+        obj.insert(QString("nodes"), ::hm:slurm:client::toJsonValue(m_nodes));
     }
     return obj;
 }
@@ -458,4 +458,4 @@ bool OAIV0_0_40_kill_jobs_msg::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

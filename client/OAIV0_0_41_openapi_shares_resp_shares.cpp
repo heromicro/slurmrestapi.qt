@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_shares_resp_shares::OAIV0_0_41_openapi_shares_resp_shares(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_shares_resp_shares::fromJson(QString jsonString) {
 
 void OAIV0_0_41_openapi_shares_resp_shares::fromJsonObject(QJsonObject json) {
 
-    m_shares_isValid = ::OpenAPI::fromJsonValue(m_shares, json[QString("shares")]);
+    m_shares_isValid = ::hm:slurm:client::fromJsonValue(m_shares, json[QString("shares")]);
     m_shares_isSet = !json[QString("shares")].isNull() && m_shares_isValid;
 
-    m_total_shares_isValid = ::OpenAPI::fromJsonValue(m_total_shares, json[QString("total_shares")]);
+    m_total_shares_isValid = ::hm:slurm:client::fromJsonValue(m_total_shares, json[QString("total_shares")]);
     m_total_shares_isSet = !json[QString("total_shares")].isNull() && m_total_shares_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_shares_resp_shares::asJson() const {
 QJsonObject OAIV0_0_41_openapi_shares_resp_shares::asJsonObject() const {
     QJsonObject obj;
     if (m_shares.size() > 0) {
-        obj.insert(QString("shares"), ::OpenAPI::toJsonValue(m_shares));
+        obj.insert(QString("shares"), ::hm:slurm:client::toJsonValue(m_shares));
     }
     if (m_total_shares_isSet) {
-        obj.insert(QString("total_shares"), ::OpenAPI::toJsonValue(m_total_shares));
+        obj.insert(QString("total_shares"), ::hm:slurm:client::toJsonValue(m_total_shares));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_shares_resp_shares::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

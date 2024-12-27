@@ -30,7 +30,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_time_end;
 class OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_time_start;
 class OAIV0_0_40_step_time_system;
@@ -118,8 +118,8 @@ private:
     bool m_user_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_time)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_time)
 
 #endif // OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_time_H

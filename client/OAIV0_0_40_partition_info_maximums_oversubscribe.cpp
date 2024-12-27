@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_partition_info_maximums_oversubscribe::OAIV0_0_40_partition_info_maximums_oversubscribe(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_partition_info_maximums_oversubscribe::fromJson(QString jsonStri
 
 void OAIV0_0_40_partition_info_maximums_oversubscribe::fromJsonObject(QJsonObject json) {
 
-    m_jobs_isValid = ::OpenAPI::fromJsonValue(m_jobs, json[QString("jobs")]);
+    m_jobs_isValid = ::hm:slurm:client::fromJsonValue(m_jobs, json[QString("jobs")]);
     m_jobs_isSet = !json[QString("jobs")].isNull() && m_jobs_isValid;
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_partition_info_maximums_oversubscribe::asJson() const {
 QJsonObject OAIV0_0_40_partition_info_maximums_oversubscribe::asJsonObject() const {
     QJsonObject obj;
     if (m_jobs_isSet) {
-        obj.insert(QString("jobs"), ::OpenAPI::toJsonValue(m_jobs));
+        obj.insert(QString("jobs"), ::hm:slurm:client::toJsonValue(m_jobs));
     }
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_partition_info_maximums_oversubscribe::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

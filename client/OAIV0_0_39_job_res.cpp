@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_job_res::OAIV0_0_39_job_res(QString json) {
     this->initializeModel();
@@ -59,19 +59,19 @@ void OAIV0_0_39_job_res::fromJson(QString jsonString) {
 
 void OAIV0_0_39_job_res::fromJsonObject(QJsonObject json) {
 
-    m_nodes_isValid = ::OpenAPI::fromJsonValue(m_nodes, json[QString("nodes")]);
+    m_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_nodes, json[QString("nodes")]);
     m_nodes_isSet = !json[QString("nodes")].isNull() && m_nodes_isValid;
 
-    m_allocated_cores_isValid = ::OpenAPI::fromJsonValue(m_allocated_cores, json[QString("allocated_cores")]);
+    m_allocated_cores_isValid = ::hm:slurm:client::fromJsonValue(m_allocated_cores, json[QString("allocated_cores")]);
     m_allocated_cores_isSet = !json[QString("allocated_cores")].isNull() && m_allocated_cores_isValid;
 
-    m_allocated_cpus_isValid = ::OpenAPI::fromJsonValue(m_allocated_cpus, json[QString("allocated_cpus")]);
+    m_allocated_cpus_isValid = ::hm:slurm:client::fromJsonValue(m_allocated_cpus, json[QString("allocated_cpus")]);
     m_allocated_cpus_isSet = !json[QString("allocated_cpus")].isNull() && m_allocated_cpus_isValid;
 
-    m_allocated_hosts_isValid = ::OpenAPI::fromJsonValue(m_allocated_hosts, json[QString("allocated_hosts")]);
+    m_allocated_hosts_isValid = ::hm:slurm:client::fromJsonValue(m_allocated_hosts, json[QString("allocated_hosts")]);
     m_allocated_hosts_isSet = !json[QString("allocated_hosts")].isNull() && m_allocated_hosts_isValid;
 
-    m_allocated_nodes_isValid = ::OpenAPI::fromJsonValue(m_allocated_nodes, json[QString("allocated_nodes")]);
+    m_allocated_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_allocated_nodes, json[QString("allocated_nodes")]);
     m_allocated_nodes_isSet = !json[QString("allocated_nodes")].isNull() && m_allocated_nodes_isValid;
 }
 
@@ -85,19 +85,19 @@ QString OAIV0_0_39_job_res::asJson() const {
 QJsonObject OAIV0_0_39_job_res::asJsonObject() const {
     QJsonObject obj;
     if (m_nodes_isSet) {
-        obj.insert(QString("nodes"), ::OpenAPI::toJsonValue(m_nodes));
+        obj.insert(QString("nodes"), ::hm:slurm:client::toJsonValue(m_nodes));
     }
     if (m_allocated_cores_isSet) {
-        obj.insert(QString("allocated_cores"), ::OpenAPI::toJsonValue(m_allocated_cores));
+        obj.insert(QString("allocated_cores"), ::hm:slurm:client::toJsonValue(m_allocated_cores));
     }
     if (m_allocated_cpus_isSet) {
-        obj.insert(QString("allocated_cpus"), ::OpenAPI::toJsonValue(m_allocated_cpus));
+        obj.insert(QString("allocated_cpus"), ::hm:slurm:client::toJsonValue(m_allocated_cpus));
     }
     if (m_allocated_hosts_isSet) {
-        obj.insert(QString("allocated_hosts"), ::OpenAPI::toJsonValue(m_allocated_hosts));
+        obj.insert(QString("allocated_hosts"), ::hm:slurm:client::toJsonValue(m_allocated_hosts));
     }
     if (m_allocated_nodes.size() > 0) {
-        obj.insert(QString("allocated_nodes"), ::OpenAPI::toJsonValue(m_allocated_nodes));
+        obj.insert(QString("allocated_nodes"), ::hm:slurm:client::toJsonValue(m_allocated_nodes));
     }
     return obj;
 }
@@ -218,4 +218,4 @@ bool OAIV0_0_39_job_res::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

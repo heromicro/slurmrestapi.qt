@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_partition_info_accounts::OAIV0_0_39_partition_info_accounts(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_39_partition_info_accounts::fromJson(QString jsonString) {
 
 void OAIV0_0_39_partition_info_accounts::fromJsonObject(QJsonObject json) {
 
-    m_allowed_isValid = ::OpenAPI::fromJsonValue(m_allowed, json[QString("allowed")]);
+    m_allowed_isValid = ::hm:slurm:client::fromJsonValue(m_allowed, json[QString("allowed")]);
     m_allowed_isSet = !json[QString("allowed")].isNull() && m_allowed_isValid;
 
-    m_deny_isValid = ::OpenAPI::fromJsonValue(m_deny, json[QString("deny")]);
+    m_deny_isValid = ::hm:slurm:client::fromJsonValue(m_deny, json[QString("deny")]);
     m_deny_isSet = !json[QString("deny")].isNull() && m_deny_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_39_partition_info_accounts::asJson() const {
 QJsonObject OAIV0_0_39_partition_info_accounts::asJsonObject() const {
     QJsonObject obj;
     if (m_allowed_isSet) {
-        obj.insert(QString("allowed"), ::OpenAPI::toJsonValue(m_allowed));
+        obj.insert(QString("allowed"), ::hm:slurm:client::toJsonValue(m_allowed));
     }
     if (m_deny_isSet) {
-        obj.insert(QString("deny"), ::OpenAPI::toJsonValue(m_deny));
+        obj.insert(QString("deny"), ::hm:slurm:client::toJsonValue(m_deny));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_39_partition_info_accounts::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

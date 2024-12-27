@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_shares_resp_shares_shares_inner_tres_run_seconds_inner_value;
 
 class OAIV0_0_41_openapi_shares_resp_shares_shares_inner_tres_run_seconds_inner : public OAIObject {
@@ -66,8 +66,8 @@ private:
     bool m_value_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_shares_resp_shares_shares_inner_tres_run_seconds_inner)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_shares_resp_shares_shares_inner_tres_run_seconds_inner)
 
 #endif // OAIV0_0_41_openapi_shares_resp_shares_shares_inner_tres_run_seconds_inner_H

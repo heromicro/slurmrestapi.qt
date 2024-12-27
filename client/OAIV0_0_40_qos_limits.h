@@ -28,7 +28,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_qos_limits_max;
 class OAIV0_0_40_float64_no_val;
 class OAIV0_0_40_qos_limits_min;
@@ -87,8 +87,8 @@ private:
     bool m_min_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_qos_limits)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_qos_limits)
 
 #endif // OAIV0_0_40_qos_limits_H

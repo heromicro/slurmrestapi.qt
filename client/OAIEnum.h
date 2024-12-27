@@ -17,7 +17,7 @@
 #include <QMetaType>
 #include <QString>
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIEnum {
 public:
@@ -57,8 +57,8 @@ private:
     QString jstr;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIEnum)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIEnum)
 
 #endif // OAI_ENUM_H

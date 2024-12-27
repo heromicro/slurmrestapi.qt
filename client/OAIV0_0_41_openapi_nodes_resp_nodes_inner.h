@@ -35,7 +35,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_nodes_resp_nodes_inner_boot_time;
 class OAIV0_0_41_openapi_nodes_resp_nodes_inner_free_mem;
 class OAIV0_0_41_openapi_nodes_resp_nodes_inner_energy;
@@ -575,8 +575,8 @@ private:
     bool m_version_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_nodes_resp_nodes_inner)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_nodes_resp_nodes_inner)
 
 #endif // OAIV0_0_41_openapi_nodes_resp_nodes_inner_H

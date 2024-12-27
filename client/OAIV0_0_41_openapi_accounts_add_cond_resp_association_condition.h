@@ -28,7 +28,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_users_add_cond_resp_association_condition_association;
 
 class OAIV0_0_41_openapi_accounts_add_cond_resp_association_condition : public OAIObject {
@@ -76,8 +76,8 @@ private:
     bool m_clusters_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_accounts_add_cond_resp_association_condition)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_accounts_add_cond_resp_association_condition)
 
 #endif // OAIV0_0_41_openapi_accounts_add_cond_resp_association_condition_H

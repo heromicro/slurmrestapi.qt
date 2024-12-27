@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_reservation_resp_reservations_inner_purge_completed::OAIV0_0_41_openapi_reservation_resp_reservations_inner_purge_completed(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_41_openapi_reservation_resp_reservations_inner_purge_completed::fro
 
 void OAIV0_0_41_openapi_reservation_resp_reservations_inner_purge_completed::fromJsonObject(QJsonObject json) {
 
-    m_time_isValid = ::OpenAPI::fromJsonValue(m_time, json[QString("time")]);
+    m_time_isValid = ::hm:slurm:client::fromJsonValue(m_time, json[QString("time")]);
     m_time_isSet = !json[QString("time")].isNull() && m_time_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_41_openapi_reservation_resp_reservations_inner_purge_completed::
 QJsonObject OAIV0_0_41_openapi_reservation_resp_reservations_inner_purge_completed::asJsonObject() const {
     QJsonObject obj;
     if (m_time.isSet()) {
-        obj.insert(QString("time"), ::OpenAPI::toJsonValue(m_time));
+        obj.insert(QString("time"), ::hm:slurm:client::toJsonValue(m_time));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_41_openapi_reservation_resp_reservations_inner_purge_completed::isV
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

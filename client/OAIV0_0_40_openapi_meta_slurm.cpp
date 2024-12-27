@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_openapi_meta_slurm::OAIV0_0_40_openapi_meta_slurm(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_openapi_meta_slurm::fromJson(QString jsonString) {
 
 void OAIV0_0_40_openapi_meta_slurm::fromJsonObject(QJsonObject json) {
 
-    m_version_isValid = ::OpenAPI::fromJsonValue(m_version, json[QString("version")]);
+    m_version_isValid = ::hm:slurm:client::fromJsonValue(m_version, json[QString("version")]);
     m_version_isSet = !json[QString("version")].isNull() && m_version_isValid;
 
-    m_release_isValid = ::OpenAPI::fromJsonValue(m_release, json[QString("release")]);
+    m_release_isValid = ::hm:slurm:client::fromJsonValue(m_release, json[QString("release")]);
     m_release_isSet = !json[QString("release")].isNull() && m_release_isValid;
 
-    m_cluster_isValid = ::OpenAPI::fromJsonValue(m_cluster, json[QString("cluster")]);
+    m_cluster_isValid = ::hm:slurm:client::fromJsonValue(m_cluster, json[QString("cluster")]);
     m_cluster_isSet = !json[QString("cluster")].isNull() && m_cluster_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_openapi_meta_slurm::asJson() const {
 QJsonObject OAIV0_0_40_openapi_meta_slurm::asJsonObject() const {
     QJsonObject obj;
     if (m_version.isSet()) {
-        obj.insert(QString("version"), ::OpenAPI::toJsonValue(m_version));
+        obj.insert(QString("version"), ::hm:slurm:client::toJsonValue(m_version));
     }
     if (m_release_isSet) {
-        obj.insert(QString("release"), ::OpenAPI::toJsonValue(m_release));
+        obj.insert(QString("release"), ::hm:slurm:client::toJsonValue(m_release));
     }
     if (m_cluster_isSet) {
-        obj.insert(QString("cluster"), ::OpenAPI::toJsonValue(m_cluster));
+        obj.insert(QString("cluster"), ::hm:slurm:client::toJsonValue(m_cluster));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_openapi_meta_slurm::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

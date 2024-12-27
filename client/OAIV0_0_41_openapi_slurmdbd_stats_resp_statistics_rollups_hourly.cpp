@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_hourly::OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_hourly(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_hourly::fromJson(
 
 void OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_hourly::fromJsonObject(QJsonObject json) {
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 
-    m_last_run_isValid = ::OpenAPI::fromJsonValue(m_last_run, json[QString("last_run")]);
+    m_last_run_isValid = ::hm:slurm:client::fromJsonValue(m_last_run, json[QString("last_run")]);
     m_last_run_isSet = !json[QString("last_run")].isNull() && m_last_run_isValid;
 
-    m_duration_isValid = ::OpenAPI::fromJsonValue(m_duration, json[QString("duration")]);
+    m_duration_isValid = ::hm:slurm:client::fromJsonValue(m_duration, json[QString("duration")]);
     m_duration_isSet = !json[QString("duration")].isNull() && m_duration_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_hourly::asJson
 QJsonObject OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_hourly::asJsonObject() const {
     QJsonObject obj;
     if (m_count_isSet) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     if (m_last_run_isSet) {
-        obj.insert(QString("last_run"), ::OpenAPI::toJsonValue(m_last_run));
+        obj.insert(QString("last_run"), ::hm:slurm:client::toJsonValue(m_last_run));
     }
     if (m_duration.isSet()) {
-        obj.insert(QString("duration"), ::OpenAPI::toJsonValue(m_duration));
+        obj.insert(QString("duration"), ::hm:slurm:client::toJsonValue(m_duration));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_hourly::isValid()
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

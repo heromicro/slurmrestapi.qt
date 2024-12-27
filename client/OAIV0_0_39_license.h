@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_39_license : public OAIObject {
 public:
@@ -127,8 +127,8 @@ private:
     bool m_last_update_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_license)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_license)
 
 #endif // OAIV0_0_39_license_H

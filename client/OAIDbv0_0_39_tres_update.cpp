@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIDbv0_0_39_tres_update::OAIDbv0_0_39_tres_update(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIDbv0_0_39_tres_update::fromJson(QString jsonString) {
 
 void OAIDbv0_0_39_tres_update::fromJsonObject(QJsonObject json) {
 
-    m_tres_isValid = ::OpenAPI::fromJsonValue(m_tres, json[QString("tres")]);
+    m_tres_isValid = ::hm:slurm:client::fromJsonValue(m_tres, json[QString("tres")]);
     m_tres_isSet = !json[QString("tres")].isNull() && m_tres_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIDbv0_0_39_tres_update::asJson() const {
 QJsonObject OAIDbv0_0_39_tres_update::asJsonObject() const {
     QJsonObject obj;
     if (m_tres.size() > 0) {
-        obj.insert(QString("tres"), ::OpenAPI::toJsonValue(m_tres));
+        obj.insert(QString("tres"), ::hm:slurm:client::toJsonValue(m_tres));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIDbv0_0_39_tres_update::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

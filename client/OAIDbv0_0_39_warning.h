@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIDbv0_0_39_warning : public OAIObject {
 public:
@@ -73,8 +73,8 @@ private:
     bool m_description_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIDbv0_0_39_warning)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIDbv0_0_39_warning)
 
 #endif // OAIDbv0_0_39_warning_H

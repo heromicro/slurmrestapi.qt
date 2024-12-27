@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_diag_resp_statistics_schedule_exit::OAIV0_0_41_openapi_diag_resp_statistics_schedule_exit(QString json) {
     this->initializeModel();
@@ -62,22 +62,22 @@ void OAIV0_0_41_openapi_diag_resp_statistics_schedule_exit::fromJson(QString jso
 
 void OAIV0_0_41_openapi_diag_resp_statistics_schedule_exit::fromJsonObject(QJsonObject json) {
 
-    m_end_job_queue_isValid = ::OpenAPI::fromJsonValue(m_end_job_queue, json[QString("end_job_queue")]);
+    m_end_job_queue_isValid = ::hm:slurm:client::fromJsonValue(m_end_job_queue, json[QString("end_job_queue")]);
     m_end_job_queue_isSet = !json[QString("end_job_queue")].isNull() && m_end_job_queue_isValid;
 
-    m_default_queue_depth_isValid = ::OpenAPI::fromJsonValue(m_default_queue_depth, json[QString("default_queue_depth")]);
+    m_default_queue_depth_isValid = ::hm:slurm:client::fromJsonValue(m_default_queue_depth, json[QString("default_queue_depth")]);
     m_default_queue_depth_isSet = !json[QString("default_queue_depth")].isNull() && m_default_queue_depth_isValid;
 
-    m_max_job_start_isValid = ::OpenAPI::fromJsonValue(m_max_job_start, json[QString("max_job_start")]);
+    m_max_job_start_isValid = ::hm:slurm:client::fromJsonValue(m_max_job_start, json[QString("max_job_start")]);
     m_max_job_start_isSet = !json[QString("max_job_start")].isNull() && m_max_job_start_isValid;
 
-    m_max_rpc_cnt_isValid = ::OpenAPI::fromJsonValue(m_max_rpc_cnt, json[QString("max_rpc_cnt")]);
+    m_max_rpc_cnt_isValid = ::hm:slurm:client::fromJsonValue(m_max_rpc_cnt, json[QString("max_rpc_cnt")]);
     m_max_rpc_cnt_isSet = !json[QString("max_rpc_cnt")].isNull() && m_max_rpc_cnt_isValid;
 
-    m_max_sched_time_isValid = ::OpenAPI::fromJsonValue(m_max_sched_time, json[QString("max_sched_time")]);
+    m_max_sched_time_isValid = ::hm:slurm:client::fromJsonValue(m_max_sched_time, json[QString("max_sched_time")]);
     m_max_sched_time_isSet = !json[QString("max_sched_time")].isNull() && m_max_sched_time_isValid;
 
-    m_licenses_isValid = ::OpenAPI::fromJsonValue(m_licenses, json[QString("licenses")]);
+    m_licenses_isValid = ::hm:slurm:client::fromJsonValue(m_licenses, json[QString("licenses")]);
     m_licenses_isSet = !json[QString("licenses")].isNull() && m_licenses_isValid;
 }
 
@@ -91,22 +91,22 @@ QString OAIV0_0_41_openapi_diag_resp_statistics_schedule_exit::asJson() const {
 QJsonObject OAIV0_0_41_openapi_diag_resp_statistics_schedule_exit::asJsonObject() const {
     QJsonObject obj;
     if (m_end_job_queue_isSet) {
-        obj.insert(QString("end_job_queue"), ::OpenAPI::toJsonValue(m_end_job_queue));
+        obj.insert(QString("end_job_queue"), ::hm:slurm:client::toJsonValue(m_end_job_queue));
     }
     if (m_default_queue_depth_isSet) {
-        obj.insert(QString("default_queue_depth"), ::OpenAPI::toJsonValue(m_default_queue_depth));
+        obj.insert(QString("default_queue_depth"), ::hm:slurm:client::toJsonValue(m_default_queue_depth));
     }
     if (m_max_job_start_isSet) {
-        obj.insert(QString("max_job_start"), ::OpenAPI::toJsonValue(m_max_job_start));
+        obj.insert(QString("max_job_start"), ::hm:slurm:client::toJsonValue(m_max_job_start));
     }
     if (m_max_rpc_cnt_isSet) {
-        obj.insert(QString("max_rpc_cnt"), ::OpenAPI::toJsonValue(m_max_rpc_cnt));
+        obj.insert(QString("max_rpc_cnt"), ::hm:slurm:client::toJsonValue(m_max_rpc_cnt));
     }
     if (m_max_sched_time_isSet) {
-        obj.insert(QString("max_sched_time"), ::OpenAPI::toJsonValue(m_max_sched_time));
+        obj.insert(QString("max_sched_time"), ::hm:slurm:client::toJsonValue(m_max_sched_time));
     }
     if (m_licenses_isSet) {
-        obj.insert(QString("licenses"), ::OpenAPI::toJsonValue(m_licenses));
+        obj.insert(QString("licenses"), ::hm:slurm:client::toJsonValue(m_licenses));
     }
     return obj;
 }
@@ -248,4 +248,4 @@ bool OAIV0_0_41_openapi_diag_resp_statistics_schedule_exit::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

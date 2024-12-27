@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_job_mcs::OAIV0_0_40_job_mcs(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_40_job_mcs::fromJson(QString jsonString) {
 
 void OAIV0_0_40_job_mcs::fromJsonObject(QJsonObject json) {
 
-    m_label_isValid = ::OpenAPI::fromJsonValue(m_label, json[QString("label")]);
+    m_label_isValid = ::hm:slurm:client::fromJsonValue(m_label, json[QString("label")]);
     m_label_isSet = !json[QString("label")].isNull() && m_label_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_40_job_mcs::asJson() const {
 QJsonObject OAIV0_0_40_job_mcs::asJsonObject() const {
     QJsonObject obj;
     if (m_label_isSet) {
-        obj.insert(QString("label"), ::OpenAPI::toJsonValue(m_label));
+        obj.insert(QString("label"), ::hm:slurm:client::toJsonValue(m_label));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_40_job_mcs::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

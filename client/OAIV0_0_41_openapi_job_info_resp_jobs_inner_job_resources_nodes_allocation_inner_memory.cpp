@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_inner_memory::OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_inner_memory(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_
 
 void OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_inner_memory::fromJsonObject(QJsonObject json) {
 
-    m_used_isValid = ::OpenAPI::fromJsonValue(m_used, json[QString("used")]);
+    m_used_isValid = ::hm:slurm:client::fromJsonValue(m_used, json[QString("used")]);
     m_used_isSet = !json[QString("used")].isNull() && m_used_isValid;
 
-    m_allocated_isValid = ::OpenAPI::fromJsonValue(m_allocated, json[QString("allocated")]);
+    m_allocated_isValid = ::hm:slurm:client::fromJsonValue(m_allocated, json[QString("allocated")]);
     m_allocated_isSet = !json[QString("allocated")].isNull() && m_allocated_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocati
 QJsonObject OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_inner_memory::asJsonObject() const {
     QJsonObject obj;
     if (m_used_isSet) {
-        obj.insert(QString("used"), ::OpenAPI::toJsonValue(m_used));
+        obj.insert(QString("used"), ::hm:slurm:client::toJsonValue(m_used));
     }
     if (m_allocated_isSet) {
-        obj.insert(QString("allocated"), ::OpenAPI::toJsonValue(m_allocated));
+        obj.insert(QString("allocated"), ::hm:slurm:client::toJsonValue(m_allocated));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes_allocation_
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

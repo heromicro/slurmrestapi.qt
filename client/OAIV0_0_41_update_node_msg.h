@@ -29,7 +29,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_update_node_msg_resume_after;
 class OAIV0_0_41_update_node_msg_weight;
 
@@ -177,8 +177,8 @@ private:
     bool m_weight_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_update_node_msg)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_update_node_msg)
 
 #endif // OAIV0_0_41_update_node_msg_H

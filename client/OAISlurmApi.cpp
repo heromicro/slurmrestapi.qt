@@ -15,7 +15,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAISlurmApi::OAISlurmApi(const int timeOut)
     : _timeOut(timeOut),
@@ -383,7 +383,7 @@ QString OAISlurmApi::getParamStyleDelimiter(const QString &style, const QString 
     }
 }
 
-void OAISlurmApi::slurmV0039CancelJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &signal) {
+void OAISlurmApi::slurmV0039CancelJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &signal) {
     QString fullPath = QString(_serverConfigs["slurmV0039CancelJob"][_serverIndices.value("slurmV0039CancelJob")].URL()+"/slurm/v0.0.39/job/{job_id}");
     
     if (_apiKeys.contains("user")) {
@@ -409,7 +409,7 @@ void OAISlurmApi::slurmV0039CancelJob(const QString &job_id, const ::OpenAPI::Op
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (signal.hasValue())
@@ -425,7 +425,7 @@ void OAISlurmApi::slurmV0039CancelJob(const QString &job_id, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("signal")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(signal.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("signal")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(signal.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -520,7 +520,7 @@ void OAISlurmApi::slurmV0039DeleteNode(const QString &node_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -696,7 +696,7 @@ void OAISlurmApi::slurmV0039GetJob(const QString &job_id) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -765,7 +765,7 @@ void OAISlurmApi::slurmV0039GetJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0039GetJobs(const ::OpenAPI::OptionalParam<qint64> &update_time) {
+void OAISlurmApi::slurmV0039GetJobs(const ::hm:slurm:client::OptionalParam<qint64> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0039GetJobs"][_serverIndices.value("slurmV0039GetJobs")].URL()+"/slurm/v0.0.39/jobs");
     
     if (_apiKeys.contains("user")) {
@@ -793,7 +793,7 @@ void OAISlurmApi::slurmV0039GetJobs(const ::OpenAPI::OptionalParam<qint64> &upda
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -888,7 +888,7 @@ void OAISlurmApi::slurmV0039GetNode(const QString &node_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -957,7 +957,7 @@ void OAISlurmApi::slurmV0039GetNodeCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0039GetNodes(const ::OpenAPI::OptionalParam<qint64> &update_time) {
+void OAISlurmApi::slurmV0039GetNodes(const ::hm:slurm:client::OptionalParam<qint64> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0039GetNodes"][_serverIndices.value("slurmV0039GetNodes")].URL()+"/slurm/v0.0.39/nodes");
     
     if (_apiKeys.contains("user")) {
@@ -985,7 +985,7 @@ void OAISlurmApi::slurmV0039GetNodes(const ::OpenAPI::OptionalParam<qint64> &upd
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1054,7 +1054,7 @@ void OAISlurmApi::slurmV0039GetNodesCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0039GetPartition(const QString &partition_name, const ::OpenAPI::OptionalParam<qint64> &update_time) {
+void OAISlurmApi::slurmV0039GetPartition(const QString &partition_name, const ::hm:slurm:client::OptionalParam<qint64> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0039GetPartition"][_serverIndices.value("slurmV0039GetPartition")].URL()+"/slurm/v0.0.39/partition/{partition_name}");
     
     if (_apiKeys.contains("user")) {
@@ -1080,7 +1080,7 @@ void OAISlurmApi::slurmV0039GetPartition(const QString &partition_name, const ::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "partition_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"partition_name"+pathSuffix : pathPrefix;
-        fullPath.replace(partition_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition_name)));
+        fullPath.replace(partition_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -1096,7 +1096,7 @@ void OAISlurmApi::slurmV0039GetPartition(const QString &partition_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1165,7 +1165,7 @@ void OAISlurmApi::slurmV0039GetPartitionCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0039GetPartitions(const ::OpenAPI::OptionalParam<qint64> &update_time) {
+void OAISlurmApi::slurmV0039GetPartitions(const ::hm:slurm:client::OptionalParam<qint64> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0039GetPartitions"][_serverIndices.value("slurmV0039GetPartitions")].URL()+"/slurm/v0.0.39/partitions");
     
     if (_apiKeys.contains("user")) {
@@ -1193,7 +1193,7 @@ void OAISlurmApi::slurmV0039GetPartitions(const ::OpenAPI::OptionalParam<qint64>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1262,7 +1262,7 @@ void OAISlurmApi::slurmV0039GetPartitionsCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmApi::slurmV0039GetReservation(const QString &reservation_name, const ::OpenAPI::OptionalParam<qint64> &update_time) {
+void OAISlurmApi::slurmV0039GetReservation(const QString &reservation_name, const ::hm:slurm:client::OptionalParam<qint64> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0039GetReservation"][_serverIndices.value("slurmV0039GetReservation")].URL()+"/slurm/v0.0.39/reservation/{reservation_name}");
     
     if (_apiKeys.contains("user")) {
@@ -1288,7 +1288,7 @@ void OAISlurmApi::slurmV0039GetReservation(const QString &reservation_name, cons
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "reservation_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"reservation_name"+pathSuffix : pathPrefix;
-        fullPath.replace(reservation_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(reservation_name)));
+        fullPath.replace(reservation_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reservation_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -1304,7 +1304,7 @@ void OAISlurmApi::slurmV0039GetReservation(const QString &reservation_name, cons
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1373,7 +1373,7 @@ void OAISlurmApi::slurmV0039GetReservationCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmApi::slurmV0039GetReservations(const ::OpenAPI::OptionalParam<qint64> &update_time) {
+void OAISlurmApi::slurmV0039GetReservations(const ::hm:slurm:client::OptionalParam<qint64> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0039GetReservations"][_serverIndices.value("slurmV0039GetReservations")].URL()+"/slurm/v0.0.39/reservations");
     
     if (_apiKeys.contains("user")) {
@@ -1401,7 +1401,7 @@ void OAISlurmApi::slurmV0039GetReservations(const ::OpenAPI::OptionalParam<qint6
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1744,7 +1744,7 @@ void OAISlurmApi::slurmV0039UpdateJob(const QString &job_id, const OAIV0_0_39_jo
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1844,7 +1844,7 @@ void OAISlurmApi::slurmV0039UpdateNode(const QString &node_name, const OAIV0_0_3
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1918,7 +1918,7 @@ void OAISlurmApi::slurmV0039UpdateNodeCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040DeleteJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &signal, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0040DeleteJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &signal, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0040DeleteJob"][_serverIndices.value("slurmV0040DeleteJob")].URL()+"/slurm/v0.0.40/job/{job_id}");
     
     if (_apiKeys.contains("user")) {
@@ -1944,7 +1944,7 @@ void OAISlurmApi::slurmV0040DeleteJob(const QString &job_id, const ::OpenAPI::Op
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (signal.hasValue())
@@ -1960,7 +1960,7 @@ void OAISlurmApi::slurmV0040DeleteJob(const QString &job_id, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("signal")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(signal.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("signal")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(signal.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -1975,7 +1975,7 @@ void OAISlurmApi::slurmV0040DeleteJob(const QString &job_id, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2044,7 +2044,7 @@ void OAISlurmApi::slurmV0040DeleteJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040DeleteJobs(const ::OpenAPI::OptionalParam<OAIV0_0_40_kill_jobs_msg> &oaiv0_0_40_kill_jobs_msg) {
+void OAISlurmApi::slurmV0040DeleteJobs(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_kill_jobs_msg> &oaiv0_0_40_kill_jobs_msg) {
     QString fullPath = QString(_serverConfigs["slurmV0040DeleteJobs"][_serverIndices.value("slurmV0040DeleteJobs")].URL()+"/slurm/v0.0.40/jobs/");
     
     if (_apiKeys.contains("user")) {
@@ -2156,7 +2156,7 @@ void OAISlurmApi::slurmV0040DeleteNode(const QString &node_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2306,7 +2306,7 @@ void OAISlurmApi::slurmV0040GetDiagCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040GetJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0040GetJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetJob"][_serverIndices.value("slurmV0040GetJob")].URL()+"/slurm/v0.0.40/job/{job_id}");
     
     if (_apiKeys.contains("user")) {
@@ -2332,7 +2332,7 @@ void OAISlurmApi::slurmV0040GetJob(const QString &job_id, const ::OpenAPI::Optio
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -2348,7 +2348,7 @@ void OAISlurmApi::slurmV0040GetJob(const QString &job_id, const ::OpenAPI::Optio
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -2363,7 +2363,7 @@ void OAISlurmApi::slurmV0040GetJob(const QString &job_id, const ::OpenAPI::Optio
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2432,7 +2432,7 @@ void OAISlurmApi::slurmV0040GetJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040GetJobs(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0040GetJobs(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetJobs"][_serverIndices.value("slurmV0040GetJobs")].URL()+"/slurm/v0.0.40/jobs/");
     
     if (_apiKeys.contains("user")) {
@@ -2460,7 +2460,7 @@ void OAISlurmApi::slurmV0040GetJobs(const ::OpenAPI::OptionalParam<QString> &upd
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -2475,7 +2475,7 @@ void OAISlurmApi::slurmV0040GetJobs(const ::OpenAPI::OptionalParam<QString> &upd
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2544,7 +2544,7 @@ void OAISlurmApi::slurmV0040GetJobsCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040GetJobsState(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0040GetJobsState(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetJobsState"][_serverIndices.value("slurmV0040GetJobsState")].URL()+"/slurm/v0.0.40/jobs/state/");
     
     if (_apiKeys.contains("user")) {
@@ -2572,7 +2572,7 @@ void OAISlurmApi::slurmV0040GetJobsState(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -2587,7 +2587,7 @@ void OAISlurmApi::slurmV0040GetJobsState(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2737,7 +2737,7 @@ void OAISlurmApi::slurmV0040GetLicensesCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040GetNode(const QString &node_name, const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0040GetNode(const QString &node_name, const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetNode"][_serverIndices.value("slurmV0040GetNode")].URL()+"/slurm/v0.0.40/node/{node_name}");
     
     if (_apiKeys.contains("user")) {
@@ -2763,7 +2763,7 @@ void OAISlurmApi::slurmV0040GetNode(const QString &node_name, const ::OpenAPI::O
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -2779,7 +2779,7 @@ void OAISlurmApi::slurmV0040GetNode(const QString &node_name, const ::OpenAPI::O
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -2794,7 +2794,7 @@ void OAISlurmApi::slurmV0040GetNode(const QString &node_name, const ::OpenAPI::O
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2863,7 +2863,7 @@ void OAISlurmApi::slurmV0040GetNodeCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040GetNodes(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0040GetNodes(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetNodes"][_serverIndices.value("slurmV0040GetNodes")].URL()+"/slurm/v0.0.40/nodes/");
     
     if (_apiKeys.contains("user")) {
@@ -2891,7 +2891,7 @@ void OAISlurmApi::slurmV0040GetNodes(const ::OpenAPI::OptionalParam<QString> &up
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -2906,7 +2906,7 @@ void OAISlurmApi::slurmV0040GetNodes(const ::OpenAPI::OptionalParam<QString> &up
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2975,7 +2975,7 @@ void OAISlurmApi::slurmV0040GetNodesCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040GetPartition(const QString &partition_name, const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0040GetPartition(const QString &partition_name, const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetPartition"][_serverIndices.value("slurmV0040GetPartition")].URL()+"/slurm/v0.0.40/partition/{partition_name}");
     
     if (_apiKeys.contains("user")) {
@@ -3001,7 +3001,7 @@ void OAISlurmApi::slurmV0040GetPartition(const QString &partition_name, const ::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "partition_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"partition_name"+pathSuffix : pathPrefix;
-        fullPath.replace(partition_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition_name)));
+        fullPath.replace(partition_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -3017,7 +3017,7 @@ void OAISlurmApi::slurmV0040GetPartition(const QString &partition_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -3032,7 +3032,7 @@ void OAISlurmApi::slurmV0040GetPartition(const QString &partition_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3101,7 +3101,7 @@ void OAISlurmApi::slurmV0040GetPartitionCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040GetPartitions(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0040GetPartitions(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetPartitions"][_serverIndices.value("slurmV0040GetPartitions")].URL()+"/slurm/v0.0.40/partitions/");
     
     if (_apiKeys.contains("user")) {
@@ -3129,7 +3129,7 @@ void OAISlurmApi::slurmV0040GetPartitions(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -3144,7 +3144,7 @@ void OAISlurmApi::slurmV0040GetPartitions(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3375,7 +3375,7 @@ void OAISlurmApi::slurmV0040GetReconfigureCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmApi::slurmV0040GetReservation(const QString &reservation_name, const ::OpenAPI::OptionalParam<QString> &update_time) {
+void OAISlurmApi::slurmV0040GetReservation(const QString &reservation_name, const ::hm:slurm:client::OptionalParam<QString> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetReservation"][_serverIndices.value("slurmV0040GetReservation")].URL()+"/slurm/v0.0.40/reservation/{reservation_name}");
     
     if (_apiKeys.contains("user")) {
@@ -3401,7 +3401,7 @@ void OAISlurmApi::slurmV0040GetReservation(const QString &reservation_name, cons
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "reservation_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"reservation_name"+pathSuffix : pathPrefix;
-        fullPath.replace(reservation_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(reservation_name)));
+        fullPath.replace(reservation_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reservation_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -3417,7 +3417,7 @@ void OAISlurmApi::slurmV0040GetReservation(const QString &reservation_name, cons
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3486,7 +3486,7 @@ void OAISlurmApi::slurmV0040GetReservationCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmApi::slurmV0040GetReservations(const ::OpenAPI::OptionalParam<QString> &update_time) {
+void OAISlurmApi::slurmV0040GetReservations(const ::hm:slurm:client::OptionalParam<QString> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetReservations"][_serverIndices.value("slurmV0040GetReservations")].URL()+"/slurm/v0.0.40/reservations/");
     
     if (_apiKeys.contains("user")) {
@@ -3514,7 +3514,7 @@ void OAISlurmApi::slurmV0040GetReservations(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3583,7 +3583,7 @@ void OAISlurmApi::slurmV0040GetReservationsCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmApi::slurmV0040GetShares(const ::OpenAPI::OptionalParam<QString> &accounts, const ::OpenAPI::OptionalParam<QString> &users) {
+void OAISlurmApi::slurmV0040GetShares(const ::hm:slurm:client::OptionalParam<QString> &accounts, const ::hm:slurm:client::OptionalParam<QString> &users) {
     QString fullPath = QString(_serverConfigs["slurmV0040GetShares"][_serverIndices.value("slurmV0040GetShares")].URL()+"/slurm/v0.0.40/shares");
     
     if (_apiKeys.contains("user")) {
@@ -3611,7 +3611,7 @@ void OAISlurmApi::slurmV0040GetShares(const ::OpenAPI::OptionalParam<QString> &a
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("accounts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(accounts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("accounts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(accounts.stringValue())));
     }
     if (users.hasValue())
     {
@@ -3626,7 +3626,7 @@ void OAISlurmApi::slurmV0040GetShares(const ::OpenAPI::OptionalParam<QString> &a
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(users.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(users.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3695,7 +3695,7 @@ void OAISlurmApi::slurmV0040GetSharesCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040PostJob(const QString &job_id, const ::OpenAPI::OptionalParam<OAIV0_0_40_job_desc_msg> &oaiv0_0_40_job_desc_msg) {
+void OAISlurmApi::slurmV0040PostJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<OAIV0_0_40_job_desc_msg> &oaiv0_0_40_job_desc_msg) {
     QString fullPath = QString(_serverConfigs["slurmV0040PostJob"][_serverIndices.value("slurmV0040PostJob")].URL()+"/slurm/v0.0.40/job/{job_id}");
     
     if (_apiKeys.contains("user")) {
@@ -3721,7 +3721,7 @@ void OAISlurmApi::slurmV0040PostJob(const QString &job_id, const ::OpenAPI::Opti
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3795,7 +3795,7 @@ void OAISlurmApi::slurmV0040PostJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0040PostJobSubmit(const ::OpenAPI::OptionalParam<OAIV0_0_40_job_submit_req> &oaiv0_0_40_job_submit_req) {
+void OAISlurmApi::slurmV0040PostJobSubmit(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_job_submit_req> &oaiv0_0_40_job_submit_req) {
     QString fullPath = QString(_serverConfigs["slurmV0040PostJobSubmit"][_serverIndices.value("slurmV0040PostJobSubmit")].URL()+"/slurm/v0.0.40/job/submit");
     
     if (_apiKeys.contains("user")) {
@@ -3881,7 +3881,7 @@ void OAISlurmApi::slurmV0040PostJobSubmitCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmApi::slurmV0040PostNode(const QString &node_name, const ::OpenAPI::OptionalParam<OAIV0_0_40_update_node_msg> &oaiv0_0_40_update_node_msg) {
+void OAISlurmApi::slurmV0040PostNode(const QString &node_name, const ::hm:slurm:client::OptionalParam<OAIV0_0_40_update_node_msg> &oaiv0_0_40_update_node_msg) {
     QString fullPath = QString(_serverConfigs["slurmV0040PostNode"][_serverIndices.value("slurmV0040PostNode")].URL()+"/slurm/v0.0.40/node/{node_name}");
     
     if (_apiKeys.contains("user")) {
@@ -3907,7 +3907,7 @@ void OAISlurmApi::slurmV0040PostNode(const QString &node_name, const ::OpenAPI::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3981,7 +3981,7 @@ void OAISlurmApi::slurmV0040PostNodeCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041DeleteJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &signal, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0041DeleteJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &signal, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0041DeleteJob"][_serverIndices.value("slurmV0041DeleteJob")].URL()+"/slurm/v0.0.41/job/{job_id}");
     
     if (_apiKeys.contains("user")) {
@@ -4007,7 +4007,7 @@ void OAISlurmApi::slurmV0041DeleteJob(const QString &job_id, const ::OpenAPI::Op
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (signal.hasValue())
@@ -4023,7 +4023,7 @@ void OAISlurmApi::slurmV0041DeleteJob(const QString &job_id, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("signal")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(signal.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("signal")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(signal.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -4038,7 +4038,7 @@ void OAISlurmApi::slurmV0041DeleteJob(const QString &job_id, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4107,7 +4107,7 @@ void OAISlurmApi::slurmV0041DeleteJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041DeleteJobs(const ::OpenAPI::OptionalParam<OAIV0_0_41_kill_jobs_msg> &oaiv0_0_41_kill_jobs_msg) {
+void OAISlurmApi::slurmV0041DeleteJobs(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_kill_jobs_msg> &oaiv0_0_41_kill_jobs_msg) {
     QString fullPath = QString(_serverConfigs["slurmV0041DeleteJobs"][_serverIndices.value("slurmV0041DeleteJobs")].URL()+"/slurm/v0.0.41/jobs/");
     
     if (_apiKeys.contains("user")) {
@@ -4219,7 +4219,7 @@ void OAISlurmApi::slurmV0041DeleteNode(const QString &node_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4369,7 +4369,7 @@ void OAISlurmApi::slurmV0041GetDiagCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041GetJob(const QString &job_id, const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0041GetJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetJob"][_serverIndices.value("slurmV0041GetJob")].URL()+"/slurm/v0.0.41/job/{job_id}");
     
     if (_apiKeys.contains("user")) {
@@ -4395,7 +4395,7 @@ void OAISlurmApi::slurmV0041GetJob(const QString &job_id, const ::OpenAPI::Optio
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -4411,7 +4411,7 @@ void OAISlurmApi::slurmV0041GetJob(const QString &job_id, const ::OpenAPI::Optio
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -4426,7 +4426,7 @@ void OAISlurmApi::slurmV0041GetJob(const QString &job_id, const ::OpenAPI::Optio
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4495,7 +4495,7 @@ void OAISlurmApi::slurmV0041GetJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041GetJobs(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0041GetJobs(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetJobs"][_serverIndices.value("slurmV0041GetJobs")].URL()+"/slurm/v0.0.41/jobs/");
     
     if (_apiKeys.contains("user")) {
@@ -4523,7 +4523,7 @@ void OAISlurmApi::slurmV0041GetJobs(const ::OpenAPI::OptionalParam<QString> &upd
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -4538,7 +4538,7 @@ void OAISlurmApi::slurmV0041GetJobs(const ::OpenAPI::OptionalParam<QString> &upd
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4607,7 +4607,7 @@ void OAISlurmApi::slurmV0041GetJobsCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041GetJobsState(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0041GetJobsState(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetJobsState"][_serverIndices.value("slurmV0041GetJobsState")].URL()+"/slurm/v0.0.41/jobs/state/");
     
     if (_apiKeys.contains("user")) {
@@ -4635,7 +4635,7 @@ void OAISlurmApi::slurmV0041GetJobsState(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -4650,7 +4650,7 @@ void OAISlurmApi::slurmV0041GetJobsState(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4800,7 +4800,7 @@ void OAISlurmApi::slurmV0041GetLicensesCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041GetNode(const QString &node_name, const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0041GetNode(const QString &node_name, const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetNode"][_serverIndices.value("slurmV0041GetNode")].URL()+"/slurm/v0.0.41/node/{node_name}");
     
     if (_apiKeys.contains("user")) {
@@ -4826,7 +4826,7 @@ void OAISlurmApi::slurmV0041GetNode(const QString &node_name, const ::OpenAPI::O
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -4842,7 +4842,7 @@ void OAISlurmApi::slurmV0041GetNode(const QString &node_name, const ::OpenAPI::O
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -4857,7 +4857,7 @@ void OAISlurmApi::slurmV0041GetNode(const QString &node_name, const ::OpenAPI::O
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4926,7 +4926,7 @@ void OAISlurmApi::slurmV0041GetNodeCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041GetNodes(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0041GetNodes(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetNodes"][_serverIndices.value("slurmV0041GetNodes")].URL()+"/slurm/v0.0.41/nodes/");
     
     if (_apiKeys.contains("user")) {
@@ -4954,7 +4954,7 @@ void OAISlurmApi::slurmV0041GetNodes(const ::OpenAPI::OptionalParam<QString> &up
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -4969,7 +4969,7 @@ void OAISlurmApi::slurmV0041GetNodes(const ::OpenAPI::OptionalParam<QString> &up
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5038,7 +5038,7 @@ void OAISlurmApi::slurmV0041GetNodesCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041GetPartition(const QString &partition_name, const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0041GetPartition(const QString &partition_name, const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetPartition"][_serverIndices.value("slurmV0041GetPartition")].URL()+"/slurm/v0.0.41/partition/{partition_name}");
     
     if (_apiKeys.contains("user")) {
@@ -5064,7 +5064,7 @@ void OAISlurmApi::slurmV0041GetPartition(const QString &partition_name, const ::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "partition_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"partition_name"+pathSuffix : pathPrefix;
-        fullPath.replace(partition_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition_name)));
+        fullPath.replace(partition_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -5080,7 +5080,7 @@ void OAISlurmApi::slurmV0041GetPartition(const QString &partition_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -5095,7 +5095,7 @@ void OAISlurmApi::slurmV0041GetPartition(const QString &partition_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5164,7 +5164,7 @@ void OAISlurmApi::slurmV0041GetPartitionCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041GetPartitions(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags) {
+void OAISlurmApi::slurmV0041GetPartitions(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetPartitions"][_serverIndices.value("slurmV0041GetPartitions")].URL()+"/slurm/v0.0.41/partitions/");
     
     if (_apiKeys.contains("user")) {
@@ -5192,7 +5192,7 @@ void OAISlurmApi::slurmV0041GetPartitions(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -5207,7 +5207,7 @@ void OAISlurmApi::slurmV0041GetPartitions(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5438,7 +5438,7 @@ void OAISlurmApi::slurmV0041GetReconfigureCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmApi::slurmV0041GetReservation(const QString &reservation_name, const ::OpenAPI::OptionalParam<QString> &update_time) {
+void OAISlurmApi::slurmV0041GetReservation(const QString &reservation_name, const ::hm:slurm:client::OptionalParam<QString> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetReservation"][_serverIndices.value("slurmV0041GetReservation")].URL()+"/slurm/v0.0.41/reservation/{reservation_name}");
     
     if (_apiKeys.contains("user")) {
@@ -5464,7 +5464,7 @@ void OAISlurmApi::slurmV0041GetReservation(const QString &reservation_name, cons
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "reservation_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"reservation_name"+pathSuffix : pathPrefix;
-        fullPath.replace(reservation_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(reservation_name)));
+        fullPath.replace(reservation_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reservation_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (update_time.hasValue())
@@ -5480,7 +5480,7 @@ void OAISlurmApi::slurmV0041GetReservation(const QString &reservation_name, cons
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5549,7 +5549,7 @@ void OAISlurmApi::slurmV0041GetReservationCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmApi::slurmV0041GetReservations(const ::OpenAPI::OptionalParam<QString> &update_time) {
+void OAISlurmApi::slurmV0041GetReservations(const ::hm:slurm:client::OptionalParam<QString> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetReservations"][_serverIndices.value("slurmV0041GetReservations")].URL()+"/slurm/v0.0.41/reservations/");
     
     if (_apiKeys.contains("user")) {
@@ -5577,7 +5577,7 @@ void OAISlurmApi::slurmV0041GetReservations(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5646,7 +5646,7 @@ void OAISlurmApi::slurmV0041GetReservationsCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmApi::slurmV0041GetShares(const ::OpenAPI::OptionalParam<QString> &accounts, const ::OpenAPI::OptionalParam<QString> &users) {
+void OAISlurmApi::slurmV0041GetShares(const ::hm:slurm:client::OptionalParam<QString> &accounts, const ::hm:slurm:client::OptionalParam<QString> &users) {
     QString fullPath = QString(_serverConfigs["slurmV0041GetShares"][_serverIndices.value("slurmV0041GetShares")].URL()+"/slurm/v0.0.41/shares");
     
     if (_apiKeys.contains("user")) {
@@ -5674,7 +5674,7 @@ void OAISlurmApi::slurmV0041GetShares(const ::OpenAPI::OptionalParam<QString> &a
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("accounts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(accounts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("accounts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(accounts.stringValue())));
     }
     if (users.hasValue())
     {
@@ -5689,7 +5689,7 @@ void OAISlurmApi::slurmV0041GetShares(const ::OpenAPI::OptionalParam<QString> &a
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(users.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(users.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5758,7 +5758,7 @@ void OAISlurmApi::slurmV0041GetSharesCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041PostJob(const QString &job_id, const ::OpenAPI::OptionalParam<OAIV0_0_41_job_desc_msg> &oaiv0_0_41_job_desc_msg) {
+void OAISlurmApi::slurmV0041PostJob(const QString &job_id, const ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_desc_msg> &oaiv0_0_41_job_desc_msg) {
     QString fullPath = QString(_serverConfigs["slurmV0041PostJob"][_serverIndices.value("slurmV0041PostJob")].URL()+"/slurm/v0.0.41/job/{job_id}");
     
     if (_apiKeys.contains("user")) {
@@ -5784,7 +5784,7 @@ void OAISlurmApi::slurmV0041PostJob(const QString &job_id, const ::OpenAPI::Opti
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5858,7 +5858,7 @@ void OAISlurmApi::slurmV0041PostJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmV0041PostJobAllocate(const ::OpenAPI::OptionalParam<OAIV0_0_41_job_alloc_req> &oaiv0_0_41_job_alloc_req) {
+void OAISlurmApi::slurmV0041PostJobAllocate(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_alloc_req> &oaiv0_0_41_job_alloc_req) {
     QString fullPath = QString(_serverConfigs["slurmV0041PostJobAllocate"][_serverIndices.value("slurmV0041PostJobAllocate")].URL()+"/slurm/v0.0.41/job/allocate");
     
     if (_apiKeys.contains("user")) {
@@ -5944,7 +5944,7 @@ void OAISlurmApi::slurmV0041PostJobAllocateCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmApi::slurmV0041PostJobSubmit(const ::OpenAPI::OptionalParam<OAIV0_0_41_job_submit_req> &oaiv0_0_41_job_submit_req) {
+void OAISlurmApi::slurmV0041PostJobSubmit(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_job_submit_req> &oaiv0_0_41_job_submit_req) {
     QString fullPath = QString(_serverConfigs["slurmV0041PostJobSubmit"][_serverIndices.value("slurmV0041PostJobSubmit")].URL()+"/slurm/v0.0.41/job/submit");
     
     if (_apiKeys.contains("user")) {
@@ -6030,7 +6030,7 @@ void OAISlurmApi::slurmV0041PostJobSubmitCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmApi::slurmV0041PostNode(const QString &node_name, const ::OpenAPI::OptionalParam<OAIV0_0_41_update_node_msg> &oaiv0_0_41_update_node_msg) {
+void OAISlurmApi::slurmV0041PostNode(const QString &node_name, const ::hm:slurm:client::OptionalParam<OAIV0_0_41_update_node_msg> &oaiv0_0_41_update_node_msg) {
     QString fullPath = QString(_serverConfigs["slurmV0041PostNode"][_serverIndices.value("slurmV0041PostNode")].URL()+"/slurm/v0.0.41/node/{node_name}");
     
     if (_apiKeys.contains("user")) {
@@ -6056,7 +6056,7 @@ void OAISlurmApi::slurmV0041PostNode(const QString &node_name, const ::OpenAPI::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "node_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"node_name"+pathSuffix : pathPrefix;
-        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_name)));
+        fullPath.replace(node_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6216,7 +6216,7 @@ void OAISlurmApi::slurmdbV0039AddClustersCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmApi::slurmdbV0039AddWckeys(const ::OpenAPI::OptionalParam<OAIDbv0_0_39_wckey_info> &oai_dbv0_0_39_wckey_info) {
+void OAISlurmApi::slurmdbV0039AddWckeys(const ::hm:slurm:client::OptionalParam<OAIDbv0_0_39_wckey_info> &oai_dbv0_0_39_wckey_info) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039AddWckeys"][_serverIndices.value("slurmdbV0039AddWckeys")].URL()+"/slurmdb/v0.0.39/wckeys");
     
     if (_apiKeys.contains("user")) {
@@ -6328,7 +6328,7 @@ void OAISlurmApi::slurmdbV0039DeleteAccount(const QString &account_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "account_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"account_name"+pathSuffix : pathPrefix;
-        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(account_name)));
+        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6397,7 +6397,7 @@ void OAISlurmApi::slurmdbV0039DeleteAccountCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmApi::slurmdbV0039DeleteAssociation(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &partition) {
+void OAISlurmApi::slurmdbV0039DeleteAssociation(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &partition) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039DeleteAssociation"][_serverIndices.value("slurmdbV0039DeleteAssociation")].URL()+"/slurmdb/v0.0.39/association");
     
     if (_apiKeys.contains("user")) {
@@ -6425,7 +6425,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociation(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (account.hasValue())
     {
@@ -6440,7 +6440,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociation(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (user.hasValue())
     {
@@ -6455,7 +6455,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociation(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -6470,7 +6470,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociation(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6539,7 +6539,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociationCallback(OAIHttpRequestWorker *wo
     }
 }
 
-void OAISlurmApi::slurmdbV0039DeleteAssociations(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &partition) {
+void OAISlurmApi::slurmdbV0039DeleteAssociations(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &partition) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039DeleteAssociations"][_serverIndices.value("slurmdbV0039DeleteAssociations")].URL()+"/slurmdb/v0.0.39/associations");
     
     if (_apiKeys.contains("user")) {
@@ -6567,7 +6567,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociations(const ::OpenAPI::OptionalParam<
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (account.hasValue())
     {
@@ -6582,7 +6582,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociations(const ::OpenAPI::OptionalParam<
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (user.hasValue())
     {
@@ -6597,7 +6597,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociations(const ::OpenAPI::OptionalParam<
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -6612,7 +6612,7 @@ void OAISlurmApi::slurmdbV0039DeleteAssociations(const ::OpenAPI::OptionalParam<
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6707,7 +6707,7 @@ void OAISlurmApi::slurmdbV0039DeleteCluster(const QString &cluster_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "cluster_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"cluster_name"+pathSuffix : pathPrefix;
-        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster_name)));
+        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6802,7 +6802,7 @@ void OAISlurmApi::slurmdbV0039DeleteQos(const QString &qos_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "qos_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"qos_name"+pathSuffix : pathPrefix;
-        fullPath.replace(qos_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos_name)));
+        fullPath.replace(qos_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6897,7 +6897,7 @@ void OAISlurmApi::slurmdbV0039DeleteUser(const QString &user_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "user_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"user_name"+pathSuffix : pathPrefix;
-        fullPath.replace(user_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(user_name)));
+        fullPath.replace(user_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6992,7 +6992,7 @@ void OAISlurmApi::slurmdbV0039DeleteWckey(const QString &wckey) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "wckey", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"wckey"+pathSuffix : pathPrefix;
-        fullPath.replace(wckeyPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(wckey)));
+        fullPath.replace(wckeyPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(wckey)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7142,7 +7142,7 @@ void OAISlurmApi::slurmdbV0039DiagCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetAccount(const QString &account_name, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmApi::slurmdbV0039GetAccount(const QString &account_name, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetAccount"][_serverIndices.value("slurmdbV0039GetAccount")].URL()+"/slurmdb/v0.0.39/account/{account_name}");
     
     if (_apiKeys.contains("user")) {
@@ -7168,7 +7168,7 @@ void OAISlurmApi::slurmdbV0039GetAccount(const QString &account_name, const ::Op
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "account_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"account_name"+pathSuffix : pathPrefix;
-        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(account_name)));
+        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_deleted.hasValue())
@@ -7184,7 +7184,7 @@ void OAISlurmApi::slurmdbV0039GetAccount(const QString &account_name, const ::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7253,7 +7253,7 @@ void OAISlurmApi::slurmdbV0039GetAccountCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetAccounts(const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmApi::slurmdbV0039GetAccounts(const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetAccounts"][_serverIndices.value("slurmdbV0039GetAccounts")].URL()+"/slurmdb/v0.0.39/accounts");
     
     if (_apiKeys.contains("user")) {
@@ -7281,7 +7281,7 @@ void OAISlurmApi::slurmdbV0039GetAccounts(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7350,7 +7350,7 @@ void OAISlurmApi::slurmdbV0039GetAccountsCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetAssociation(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &partition) {
+void OAISlurmApi::slurmdbV0039GetAssociation(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &partition) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetAssociation"][_serverIndices.value("slurmdbV0039GetAssociation")].URL()+"/slurmdb/v0.0.39/association");
     
     if (_apiKeys.contains("user")) {
@@ -7378,7 +7378,7 @@ void OAISlurmApi::slurmdbV0039GetAssociation(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (account.hasValue())
     {
@@ -7393,7 +7393,7 @@ void OAISlurmApi::slurmdbV0039GetAssociation(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (user.hasValue())
     {
@@ -7408,7 +7408,7 @@ void OAISlurmApi::slurmdbV0039GetAssociation(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -7423,7 +7423,7 @@ void OAISlurmApi::slurmdbV0039GetAssociation(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7492,7 +7492,7 @@ void OAISlurmApi::slurmdbV0039GetAssociationCallback(OAIHttpRequestWorker *worke
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetAssociations(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &partition) {
+void OAISlurmApi::slurmdbV0039GetAssociations(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &partition) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetAssociations"][_serverIndices.value("slurmdbV0039GetAssociations")].URL()+"/slurmdb/v0.0.39/associations");
     
     if (_apiKeys.contains("user")) {
@@ -7520,7 +7520,7 @@ void OAISlurmApi::slurmdbV0039GetAssociations(const ::OpenAPI::OptionalParam<QSt
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (account.hasValue())
     {
@@ -7535,7 +7535,7 @@ void OAISlurmApi::slurmdbV0039GetAssociations(const ::OpenAPI::OptionalParam<QSt
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (user.hasValue())
     {
@@ -7550,7 +7550,7 @@ void OAISlurmApi::slurmdbV0039GetAssociations(const ::OpenAPI::OptionalParam<QSt
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -7565,7 +7565,7 @@ void OAISlurmApi::slurmdbV0039GetAssociations(const ::OpenAPI::OptionalParam<QSt
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7660,7 +7660,7 @@ void OAISlurmApi::slurmdbV0039GetCluster(const QString &cluster_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "cluster_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"cluster_name"+pathSuffix : pathPrefix;
-        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster_name)));
+        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7917,7 +7917,7 @@ void OAISlurmApi::slurmdbV0039GetJob(const QString &job_id) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7986,7 +7986,7 @@ void OAISlurmApi::slurmdbV0039GetJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &users, const ::OpenAPI::OptionalParam<QString> &submit_time, const ::OpenAPI::OptionalParam<QString> &start_time, const ::OpenAPI::OptionalParam<QString> &end_time, const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &association, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &constraints, const ::OpenAPI::OptionalParam<QString> &cpus_max, const ::OpenAPI::OptionalParam<QString> &cpus_min, const ::OpenAPI::OptionalParam<QString> &skip_steps, const ::OpenAPI::OptionalParam<QString> &disable_wait_for_result, const ::OpenAPI::OptionalParam<QString> &exit_code, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &group, const ::OpenAPI::OptionalParam<QString> &job_name, const ::OpenAPI::OptionalParam<QString> &nodes_max, const ::OpenAPI::OptionalParam<QString> &nodes_min, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &reason, const ::OpenAPI::OptionalParam<QString> &reservation, const ::OpenAPI::OptionalParam<QString> &state, const ::OpenAPI::OptionalParam<QString> &step, const ::OpenAPI::OptionalParam<QString> &node, const ::OpenAPI::OptionalParam<QString> &wckey) {
+void OAISlurmApi::slurmdbV0039GetJobs(const ::hm:slurm:client::OptionalParam<QString> &users, const ::hm:slurm:client::OptionalParam<QString> &submit_time, const ::hm:slurm:client::OptionalParam<QString> &start_time, const ::hm:slurm:client::OptionalParam<QString> &end_time, const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &association, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &constraints, const ::hm:slurm:client::OptionalParam<QString> &cpus_max, const ::hm:slurm:client::OptionalParam<QString> &cpus_min, const ::hm:slurm:client::OptionalParam<QString> &skip_steps, const ::hm:slurm:client::OptionalParam<QString> &disable_wait_for_result, const ::hm:slurm:client::OptionalParam<QString> &exit_code, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &group, const ::hm:slurm:client::OptionalParam<QString> &job_name, const ::hm:slurm:client::OptionalParam<QString> &nodes_max, const ::hm:slurm:client::OptionalParam<QString> &nodes_min, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &reason, const ::hm:slurm:client::OptionalParam<QString> &reservation, const ::hm:slurm:client::OptionalParam<QString> &state, const ::hm:slurm:client::OptionalParam<QString> &step, const ::hm:slurm:client::OptionalParam<QString> &node, const ::hm:slurm:client::OptionalParam<QString> &wckey) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetJobs"][_serverIndices.value("slurmdbV0039GetJobs")].URL()+"/slurmdb/v0.0.39/jobs");
     
     if (_apiKeys.contains("user")) {
@@ -8014,7 +8014,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(users.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(users.stringValue())));
     }
     if (submit_time.hasValue())
     {
@@ -8029,7 +8029,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("submit_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(submit_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("submit_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(submit_time.stringValue())));
     }
     if (start_time.hasValue())
     {
@@ -8044,7 +8044,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("start_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(start_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("start_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(start_time.stringValue())));
     }
     if (end_time.hasValue())
     {
@@ -8059,7 +8059,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("end_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(end_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("end_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(end_time.stringValue())));
     }
     if (account.hasValue())
     {
@@ -8074,7 +8074,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (association.hasValue())
     {
@@ -8089,7 +8089,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("association")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(association.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("association")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(association.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -8104,7 +8104,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (constraints.hasValue())
     {
@@ -8119,7 +8119,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("constraints")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(constraints.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("constraints")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(constraints.stringValue())));
     }
     if (cpus_max.hasValue())
     {
@@ -8134,7 +8134,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cpus_max")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cpus_max.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cpus_max")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cpus_max.stringValue())));
     }
     if (cpus_min.hasValue())
     {
@@ -8149,7 +8149,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cpus_min")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cpus_min.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cpus_min")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cpus_min.stringValue())));
     }
     if (skip_steps.hasValue())
     {
@@ -8164,7 +8164,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("skip_steps")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(skip_steps.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("skip_steps")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(skip_steps.stringValue())));
     }
     if (disable_wait_for_result.hasValue())
     {
@@ -8179,7 +8179,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("disable_wait_for_result")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(disable_wait_for_result.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("disable_wait_for_result")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(disable_wait_for_result.stringValue())));
     }
     if (exit_code.hasValue())
     {
@@ -8194,7 +8194,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("exit_code")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(exit_code.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("exit_code")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(exit_code.stringValue())));
     }
     if (format.hasValue())
     {
@@ -8209,7 +8209,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (group.hasValue())
     {
@@ -8224,7 +8224,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("group")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(group.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("group")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(group.stringValue())));
     }
     if (job_name.hasValue())
     {
@@ -8239,7 +8239,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("job_name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("job_name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_name.stringValue())));
     }
     if (nodes_max.hasValue())
     {
@@ -8254,7 +8254,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("nodes_max")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(nodes_max.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("nodes_max")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(nodes_max.stringValue())));
     }
     if (nodes_min.hasValue())
     {
@@ -8269,7 +8269,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("nodes_min")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(nodes_min.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("nodes_min")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(nodes_min.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -8284,7 +8284,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -8299,7 +8299,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (reason.hasValue())
     {
@@ -8314,7 +8314,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("reason")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(reason.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("reason")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reason.stringValue())));
     }
     if (reservation.hasValue())
     {
@@ -8329,7 +8329,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("reservation")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(reservation.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("reservation")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reservation.stringValue())));
     }
     if (state.hasValue())
     {
@@ -8344,7 +8344,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("state")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(state.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("state")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(state.stringValue())));
     }
     if (step.hasValue())
     {
@@ -8359,7 +8359,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("step")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(step.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("step")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(step.stringValue())));
     }
     if (node.hasValue())
     {
@@ -8374,7 +8374,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("node")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(node.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("node")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node.stringValue())));
     }
     if (wckey.hasValue())
     {
@@ -8389,7 +8389,7 @@ void OAISlurmApi::slurmdbV0039GetJobs(const ::OpenAPI::OptionalParam<QString> &u
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(wckey.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(wckey.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8458,7 +8458,7 @@ void OAISlurmApi::slurmdbV0039GetJobsCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetQos(const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmApi::slurmdbV0039GetQos(const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetQos"][_serverIndices.value("slurmdbV0039GetQos")].URL()+"/slurmdb/v0.0.39/qos");
     
     if (_apiKeys.contains("user")) {
@@ -8486,7 +8486,7 @@ void OAISlurmApi::slurmdbV0039GetQos(const ::OpenAPI::OptionalParam<QString> &wi
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8555,7 +8555,7 @@ void OAISlurmApi::slurmdbV0039GetQosCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetSingleQos(const QString &qos_name, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmApi::slurmdbV0039GetSingleQos(const QString &qos_name, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetSingleQos"][_serverIndices.value("slurmdbV0039GetSingleQos")].URL()+"/slurmdb/v0.0.39/qos/{qos_name}");
     
     if (_apiKeys.contains("user")) {
@@ -8581,7 +8581,7 @@ void OAISlurmApi::slurmdbV0039GetSingleQos(const QString &qos_name, const ::Open
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "qos_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"qos_name"+pathSuffix : pathPrefix;
-        fullPath.replace(qos_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos_name)));
+        fullPath.replace(qos_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_deleted.hasValue())
@@ -8597,7 +8597,7 @@ void OAISlurmApi::slurmdbV0039GetSingleQos(const QString &qos_name, const ::Open
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8747,7 +8747,7 @@ void OAISlurmApi::slurmdbV0039GetTresCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetUser(const QString &user_name, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmApi::slurmdbV0039GetUser(const QString &user_name, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetUser"][_serverIndices.value("slurmdbV0039GetUser")].URL()+"/slurmdb/v0.0.39/user/{user_name}");
     
     if (_apiKeys.contains("user")) {
@@ -8773,7 +8773,7 @@ void OAISlurmApi::slurmdbV0039GetUser(const QString &user_name, const ::OpenAPI:
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "user_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"user_name"+pathSuffix : pathPrefix;
-        fullPath.replace(user_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(user_name)));
+        fullPath.replace(user_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_deleted.hasValue())
@@ -8789,7 +8789,7 @@ void OAISlurmApi::slurmdbV0039GetUser(const QString &user_name, const ::OpenAPI:
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8858,7 +8858,7 @@ void OAISlurmApi::slurmdbV0039GetUserCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmdbV0039GetUsers(const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmApi::slurmdbV0039GetUsers(const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039GetUsers"][_serverIndices.value("slurmdbV0039GetUsers")].URL()+"/slurmdb/v0.0.39/users");
     
     if (_apiKeys.contains("user")) {
@@ -8886,7 +8886,7 @@ void OAISlurmApi::slurmdbV0039GetUsers(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8981,7 +8981,7 @@ void OAISlurmApi::slurmdbV0039GetWckey(const QString &wckey) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "wckey", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"wckey"+pathSuffix : pathPrefix;
-        fullPath.replace(wckeyPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(wckey)));
+        fullPath.replace(wckeyPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(wckey)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -9131,7 +9131,7 @@ void OAISlurmApi::slurmdbV0039GetWckeysCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmApi::slurmdbV0039SetConfig(const ::OpenAPI::OptionalParam<OAIDbv0_0_39_set_config> &oai_dbv0_0_39_set_config) {
+void OAISlurmApi::slurmdbV0039SetConfig(const ::hm:slurm:client::OptionalParam<OAIDbv0_0_39_set_config> &oai_dbv0_0_39_set_config) {
     QString fullPath = QString(_serverConfigs["slurmdbV0039SetConfig"][_serverIndices.value("slurmdbV0039SetConfig")].URL()+"/slurmdb/v0.0.39/config");
     
     if (_apiKeys.contains("user")) {
@@ -9696,4 +9696,4 @@ void OAISlurmApi::tokenAvailable(){
         break;
     }
 }
-} // namespace OpenAPI
+} // namespace hm:slurm:client

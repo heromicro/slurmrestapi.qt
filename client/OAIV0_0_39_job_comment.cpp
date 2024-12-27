@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_job_comment::OAIV0_0_39_job_comment(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_39_job_comment::fromJson(QString jsonString) {
 
 void OAIV0_0_39_job_comment::fromJsonObject(QJsonObject json) {
 
-    m_administrator_isValid = ::OpenAPI::fromJsonValue(m_administrator, json[QString("administrator")]);
+    m_administrator_isValid = ::hm:slurm:client::fromJsonValue(m_administrator, json[QString("administrator")]);
     m_administrator_isSet = !json[QString("administrator")].isNull() && m_administrator_isValid;
 
-    m_job_isValid = ::OpenAPI::fromJsonValue(m_job, json[QString("job")]);
+    m_job_isValid = ::hm:slurm:client::fromJsonValue(m_job, json[QString("job")]);
     m_job_isSet = !json[QString("job")].isNull() && m_job_isValid;
 
-    m_system_isValid = ::OpenAPI::fromJsonValue(m_system, json[QString("system")]);
+    m_system_isValid = ::hm:slurm:client::fromJsonValue(m_system, json[QString("system")]);
     m_system_isSet = !json[QString("system")].isNull() && m_system_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_39_job_comment::asJson() const {
 QJsonObject OAIV0_0_39_job_comment::asJsonObject() const {
     QJsonObject obj;
     if (m_administrator_isSet) {
-        obj.insert(QString("administrator"), ::OpenAPI::toJsonValue(m_administrator));
+        obj.insert(QString("administrator"), ::hm:slurm:client::toJsonValue(m_administrator));
     }
     if (m_job_isSet) {
-        obj.insert(QString("job"), ::OpenAPI::toJsonValue(m_job));
+        obj.insert(QString("job"), ::hm:slurm:client::toJsonValue(m_job));
     }
     if (m_system_isSet) {
-        obj.insert(QString("system"), ::OpenAPI::toJsonValue(m_system));
+        obj.insert(QString("system"), ::hm:slurm:client::toJsonValue(m_system));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_39_job_comment::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

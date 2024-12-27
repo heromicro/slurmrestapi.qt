@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group::OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group::
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group::fromJsonObject(QJsonObject json) {
 
-    m_minutes_isValid = ::OpenAPI::fromJsonValue(m_minutes, json[QString("minutes")]);
+    m_minutes_isValid = ::hm:slurm:client::fromJsonValue(m_minutes, json[QString("minutes")]);
     m_minutes_isSet = !json[QString("minutes")].isNull() && m_minutes_isValid;
 
-    m_active_isValid = ::OpenAPI::fromJsonValue(m_active, json[QString("active")]);
+    m_active_isValid = ::hm:slurm:client::fromJsonValue(m_active, json[QString("active")]);
     m_active_isSet = !json[QString("active")].isNull() && m_active_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_grou
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group::asJsonObject() const {
     QJsonObject obj;
     if (m_minutes.size() > 0) {
-        obj.insert(QString("minutes"), ::OpenAPI::toJsonValue(m_minutes));
+        obj.insert(QString("minutes"), ::hm:slurm:client::toJsonValue(m_minutes));
     }
     if (m_active.size() > 0) {
-        obj.insert(QString("active"), ::OpenAPI::toJsonValue(m_active));
+        obj.insert(QString("active"), ::hm:slurm:client::toJsonValue(m_active));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_group::
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_qos_limits_max_tres_minutes::OAIV0_0_39_qos_limits_max_tres_minutes(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_39_qos_limits_max_tres_minutes::fromJson(QString jsonString) {
 
 void OAIV0_0_39_qos_limits_max_tres_minutes::fromJsonObject(QJsonObject json) {
 
-    m_per_isValid = ::OpenAPI::fromJsonValue(m_per, json[QString("per")]);
+    m_per_isValid = ::hm:slurm:client::fromJsonValue(m_per, json[QString("per")]);
     m_per_isSet = !json[QString("per")].isNull() && m_per_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_39_qos_limits_max_tres_minutes::asJson() const {
 QJsonObject OAIV0_0_39_qos_limits_max_tres_minutes::asJsonObject() const {
     QJsonObject obj;
     if (m_per.isSet()) {
-        obj.insert(QString("per"), ::OpenAPI::toJsonValue(m_per));
+        obj.insert(QString("per"), ::hm:slurm:client::toJsonValue(m_per));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_39_qos_limits_max_tres_minutes::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_partition_info_cpus::OAIV0_0_40_partition_info_cpus(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_partition_info_cpus::fromJson(QString jsonString) {
 
 void OAIV0_0_40_partition_info_cpus::fromJsonObject(QJsonObject json) {
 
-    m_task_binding_isValid = ::OpenAPI::fromJsonValue(m_task_binding, json[QString("task_binding")]);
+    m_task_binding_isValid = ::hm:slurm:client::fromJsonValue(m_task_binding, json[QString("task_binding")]);
     m_task_binding_isSet = !json[QString("task_binding")].isNull() && m_task_binding_isValid;
 
-    m_total_isValid = ::OpenAPI::fromJsonValue(m_total, json[QString("total")]);
+    m_total_isValid = ::hm:slurm:client::fromJsonValue(m_total, json[QString("total")]);
     m_total_isSet = !json[QString("total")].isNull() && m_total_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_partition_info_cpus::asJson() const {
 QJsonObject OAIV0_0_40_partition_info_cpus::asJsonObject() const {
     QJsonObject obj;
     if (m_task_binding_isSet) {
-        obj.insert(QString("task_binding"), ::OpenAPI::toJsonValue(m_task_binding));
+        obj.insert(QString("task_binding"), ::hm:slurm:client::toJsonValue(m_task_binding));
     }
     if (m_total_isSet) {
-        obj.insert(QString("total"), ::OpenAPI::toJsonValue(m_total));
+        obj.insert(QString("total"), ::hm:slurm:client::toJsonValue(m_total));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_partition_info_cpus::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

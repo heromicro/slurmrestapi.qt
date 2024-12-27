@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_users_add_cond_resp_user::OAIV0_0_41_openapi_users_add_cond_resp_user(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_41_openapi_users_add_cond_resp_user::fromJson(QString jsonString) {
 
 void OAIV0_0_41_openapi_users_add_cond_resp_user::fromJsonObject(QJsonObject json) {
 
-    m_adminlevel_isValid = ::OpenAPI::fromJsonValue(m_adminlevel, json[QString("adminlevel")]);
+    m_adminlevel_isValid = ::hm:slurm:client::fromJsonValue(m_adminlevel, json[QString("adminlevel")]);
     m_adminlevel_isSet = !json[QString("adminlevel")].isNull() && m_adminlevel_isValid;
 
-    m_defaultaccount_isValid = ::OpenAPI::fromJsonValue(m_defaultaccount, json[QString("defaultaccount")]);
+    m_defaultaccount_isValid = ::hm:slurm:client::fromJsonValue(m_defaultaccount, json[QString("defaultaccount")]);
     m_defaultaccount_isSet = !json[QString("defaultaccount")].isNull() && m_defaultaccount_isValid;
 
-    m_defaultwckey_isValid = ::OpenAPI::fromJsonValue(m_defaultwckey, json[QString("defaultwckey")]);
+    m_defaultwckey_isValid = ::hm:slurm:client::fromJsonValue(m_defaultwckey, json[QString("defaultwckey")]);
     m_defaultwckey_isSet = !json[QString("defaultwckey")].isNull() && m_defaultwckey_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_41_openapi_users_add_cond_resp_user::asJson() const {
 QJsonObject OAIV0_0_41_openapi_users_add_cond_resp_user::asJsonObject() const {
     QJsonObject obj;
     if (m_adminlevel.size() > 0) {
-        obj.insert(QString("adminlevel"), ::OpenAPI::toJsonValue(m_adminlevel));
+        obj.insert(QString("adminlevel"), ::hm:slurm:client::toJsonValue(m_adminlevel));
     }
     if (m_defaultaccount_isSet) {
-        obj.insert(QString("defaultaccount"), ::OpenAPI::toJsonValue(m_defaultaccount));
+        obj.insert(QString("defaultaccount"), ::hm:slurm:client::toJsonValue(m_defaultaccount));
     }
     if (m_defaultwckey_isSet) {
-        obj.insert(QString("defaultwckey"), ::OpenAPI::toJsonValue(m_defaultwckey));
+        obj.insert(QString("defaultwckey"), ::hm:slurm:client::toJsonValue(m_defaultwckey));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_41_openapi_users_add_cond_resp_user::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

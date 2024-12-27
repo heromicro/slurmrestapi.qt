@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_partition_info_tres::OAIV0_0_40_partition_info_tres(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_partition_info_tres::fromJson(QString jsonString) {
 
 void OAIV0_0_40_partition_info_tres::fromJsonObject(QJsonObject json) {
 
-    m_billing_weights_isValid = ::OpenAPI::fromJsonValue(m_billing_weights, json[QString("billing_weights")]);
+    m_billing_weights_isValid = ::hm:slurm:client::fromJsonValue(m_billing_weights, json[QString("billing_weights")]);
     m_billing_weights_isSet = !json[QString("billing_weights")].isNull() && m_billing_weights_isValid;
 
-    m_configured_isValid = ::OpenAPI::fromJsonValue(m_configured, json[QString("configured")]);
+    m_configured_isValid = ::hm:slurm:client::fromJsonValue(m_configured, json[QString("configured")]);
     m_configured_isSet = !json[QString("configured")].isNull() && m_configured_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_partition_info_tres::asJson() const {
 QJsonObject OAIV0_0_40_partition_info_tres::asJsonObject() const {
     QJsonObject obj;
     if (m_billing_weights_isSet) {
-        obj.insert(QString("billing_weights"), ::OpenAPI::toJsonValue(m_billing_weights));
+        obj.insert(QString("billing_weights"), ::hm:slurm:client::toJsonValue(m_billing_weights));
     }
     if (m_configured_isSet) {
-        obj.insert(QString("configured"), ::OpenAPI::toJsonValue(m_configured));
+        obj.insert(QString("configured"), ::hm:slurm:client::toJsonValue(m_configured));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_partition_info_tres::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

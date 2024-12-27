@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_step_statistics_CPU::OAIV0_0_40_step_statistics_CPU(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_40_step_statistics_CPU::fromJson(QString jsonString) {
 
 void OAIV0_0_40_step_statistics_CPU::fromJsonObject(QJsonObject json) {
 
-    m_actual_frequency_isValid = ::OpenAPI::fromJsonValue(m_actual_frequency, json[QString("actual_frequency")]);
+    m_actual_frequency_isValid = ::hm:slurm:client::fromJsonValue(m_actual_frequency, json[QString("actual_frequency")]);
     m_actual_frequency_isSet = !json[QString("actual_frequency")].isNull() && m_actual_frequency_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_40_step_statistics_CPU::asJson() const {
 QJsonObject OAIV0_0_40_step_statistics_CPU::asJsonObject() const {
     QJsonObject obj;
     if (m_actual_frequency_isSet) {
-        obj.insert(QString("actual_frequency"), ::OpenAPI::toJsonValue(m_actual_frequency));
+        obj.insert(QString("actual_frequency"), ::hm:slurm:client::toJsonValue(m_actual_frequency));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_40_step_statistics_CPU::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

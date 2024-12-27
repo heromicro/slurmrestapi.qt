@@ -28,7 +28,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_shares_uint64_tres;
 class OAIV0_0_40_shares_float128_tres;
 
@@ -77,8 +77,8 @@ private:
     bool m_usage_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_assoc_shares_obj_wrap_tres)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_assoc_shares_obj_wrap_tres)
 
 #endif // OAIV0_0_40_assoc_shares_obj_wrap_tres_H

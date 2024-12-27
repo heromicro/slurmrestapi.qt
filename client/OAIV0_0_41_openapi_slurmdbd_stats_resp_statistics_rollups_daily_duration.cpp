@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_daily_duration::OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_daily_duration(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_daily_duration::f
 
 void OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_daily_duration::fromJsonObject(QJsonObject json) {
 
-    m_last_isValid = ::OpenAPI::fromJsonValue(m_last, json[QString("last")]);
+    m_last_isValid = ::hm:slurm:client::fromJsonValue(m_last, json[QString("last")]);
     m_last_isSet = !json[QString("last")].isNull() && m_last_isValid;
 
-    m_max_isValid = ::OpenAPI::fromJsonValue(m_max, json[QString("max")]);
+    m_max_isValid = ::hm:slurm:client::fromJsonValue(m_max, json[QString("max")]);
     m_max_isSet = !json[QString("max")].isNull() && m_max_isValid;
 
-    m_time_isValid = ::OpenAPI::fromJsonValue(m_time, json[QString("time")]);
+    m_time_isValid = ::hm:slurm:client::fromJsonValue(m_time, json[QString("time")]);
     m_time_isSet = !json[QString("time")].isNull() && m_time_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_daily_duration
 QJsonObject OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_daily_duration::asJsonObject() const {
     QJsonObject obj;
     if (m_last_isSet) {
-        obj.insert(QString("last"), ::OpenAPI::toJsonValue(m_last));
+        obj.insert(QString("last"), ::hm:slurm:client::toJsonValue(m_last));
     }
     if (m_max_isSet) {
-        obj.insert(QString("max"), ::OpenAPI::toJsonValue(m_max));
+        obj.insert(QString("max"), ::hm:slurm:client::toJsonValue(m_max));
     }
     if (m_time_isSet) {
-        obj.insert(QString("time"), ::OpenAPI::toJsonValue(m_time));
+        obj.insert(QString("time"), ::hm:slurm:client::toJsonValue(m_time));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_41_openapi_slurmdbd_stats_resp_statistics_rollups_daily_duration::i
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_licenses_resp_licenses_inner::OAIV0_0_41_openapi_licenses_resp_licenses_inner(QString json) {
     this->initializeModel();
@@ -71,31 +71,31 @@ void OAIV0_0_41_openapi_licenses_resp_licenses_inner::fromJson(QString jsonStrin
 
 void OAIV0_0_41_openapi_licenses_resp_licenses_inner::fromJsonObject(QJsonObject json) {
 
-    m_license_name_isValid = ::OpenAPI::fromJsonValue(m_license_name, json[QString("LicenseName")]);
+    m_license_name_isValid = ::hm:slurm:client::fromJsonValue(m_license_name, json[QString("LicenseName")]);
     m_license_name_isSet = !json[QString("LicenseName")].isNull() && m_license_name_isValid;
 
-    m_total_isValid = ::OpenAPI::fromJsonValue(m_total, json[QString("Total")]);
+    m_total_isValid = ::hm:slurm:client::fromJsonValue(m_total, json[QString("Total")]);
     m_total_isSet = !json[QString("Total")].isNull() && m_total_isValid;
 
-    m_used_isValid = ::OpenAPI::fromJsonValue(m_used, json[QString("Used")]);
+    m_used_isValid = ::hm:slurm:client::fromJsonValue(m_used, json[QString("Used")]);
     m_used_isSet = !json[QString("Used")].isNull() && m_used_isValid;
 
-    m_free_isValid = ::OpenAPI::fromJsonValue(m_free, json[QString("Free")]);
+    m_free_isValid = ::hm:slurm:client::fromJsonValue(m_free, json[QString("Free")]);
     m_free_isSet = !json[QString("Free")].isNull() && m_free_isValid;
 
-    m_remote_isValid = ::OpenAPI::fromJsonValue(m_remote, json[QString("Remote")]);
+    m_remote_isValid = ::hm:slurm:client::fromJsonValue(m_remote, json[QString("Remote")]);
     m_remote_isSet = !json[QString("Remote")].isNull() && m_remote_isValid;
 
-    m_reserved_isValid = ::OpenAPI::fromJsonValue(m_reserved, json[QString("Reserved")]);
+    m_reserved_isValid = ::hm:slurm:client::fromJsonValue(m_reserved, json[QString("Reserved")]);
     m_reserved_isSet = !json[QString("Reserved")].isNull() && m_reserved_isValid;
 
-    m_last_consumed_isValid = ::OpenAPI::fromJsonValue(m_last_consumed, json[QString("LastConsumed")]);
+    m_last_consumed_isValid = ::hm:slurm:client::fromJsonValue(m_last_consumed, json[QString("LastConsumed")]);
     m_last_consumed_isSet = !json[QString("LastConsumed")].isNull() && m_last_consumed_isValid;
 
-    m_last_deficit_isValid = ::OpenAPI::fromJsonValue(m_last_deficit, json[QString("LastDeficit")]);
+    m_last_deficit_isValid = ::hm:slurm:client::fromJsonValue(m_last_deficit, json[QString("LastDeficit")]);
     m_last_deficit_isSet = !json[QString("LastDeficit")].isNull() && m_last_deficit_isValid;
 
-    m_last_update_isValid = ::OpenAPI::fromJsonValue(m_last_update, json[QString("LastUpdate")]);
+    m_last_update_isValid = ::hm:slurm:client::fromJsonValue(m_last_update, json[QString("LastUpdate")]);
     m_last_update_isSet = !json[QString("LastUpdate")].isNull() && m_last_update_isValid;
 }
 
@@ -109,31 +109,31 @@ QString OAIV0_0_41_openapi_licenses_resp_licenses_inner::asJson() const {
 QJsonObject OAIV0_0_41_openapi_licenses_resp_licenses_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_license_name_isSet) {
-        obj.insert(QString("LicenseName"), ::OpenAPI::toJsonValue(m_license_name));
+        obj.insert(QString("LicenseName"), ::hm:slurm:client::toJsonValue(m_license_name));
     }
     if (m_total_isSet) {
-        obj.insert(QString("Total"), ::OpenAPI::toJsonValue(m_total));
+        obj.insert(QString("Total"), ::hm:slurm:client::toJsonValue(m_total));
     }
     if (m_used_isSet) {
-        obj.insert(QString("Used"), ::OpenAPI::toJsonValue(m_used));
+        obj.insert(QString("Used"), ::hm:slurm:client::toJsonValue(m_used));
     }
     if (m_free_isSet) {
-        obj.insert(QString("Free"), ::OpenAPI::toJsonValue(m_free));
+        obj.insert(QString("Free"), ::hm:slurm:client::toJsonValue(m_free));
     }
     if (m_remote_isSet) {
-        obj.insert(QString("Remote"), ::OpenAPI::toJsonValue(m_remote));
+        obj.insert(QString("Remote"), ::hm:slurm:client::toJsonValue(m_remote));
     }
     if (m_reserved_isSet) {
-        obj.insert(QString("Reserved"), ::OpenAPI::toJsonValue(m_reserved));
+        obj.insert(QString("Reserved"), ::hm:slurm:client::toJsonValue(m_reserved));
     }
     if (m_last_consumed_isSet) {
-        obj.insert(QString("LastConsumed"), ::OpenAPI::toJsonValue(m_last_consumed));
+        obj.insert(QString("LastConsumed"), ::hm:slurm:client::toJsonValue(m_last_consumed));
     }
     if (m_last_deficit_isSet) {
-        obj.insert(QString("LastDeficit"), ::OpenAPI::toJsonValue(m_last_deficit));
+        obj.insert(QString("LastDeficit"), ::hm:slurm:client::toJsonValue(m_last_deficit));
     }
     if (m_last_update_isSet) {
-        obj.insert(QString("LastUpdate"), ::OpenAPI::toJsonValue(m_last_update));
+        obj.insert(QString("LastUpdate"), ::hm:slurm:client::toJsonValue(m_last_update));
     }
     return obj;
 }
@@ -338,4 +338,4 @@ bool OAIV0_0_41_openapi_licenses_resp_licenses_inner::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

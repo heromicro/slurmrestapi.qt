@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_partition_info_qos::OAIV0_0_39_partition_info_qos(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_39_partition_info_qos::fromJson(QString jsonString) {
 
 void OAIV0_0_39_partition_info_qos::fromJsonObject(QJsonObject json) {
 
-    m_allowed_isValid = ::OpenAPI::fromJsonValue(m_allowed, json[QString("allowed")]);
+    m_allowed_isValid = ::hm:slurm:client::fromJsonValue(m_allowed, json[QString("allowed")]);
     m_allowed_isSet = !json[QString("allowed")].isNull() && m_allowed_isValid;
 
-    m_deny_isValid = ::OpenAPI::fromJsonValue(m_deny, json[QString("deny")]);
+    m_deny_isValid = ::hm:slurm:client::fromJsonValue(m_deny, json[QString("deny")]);
     m_deny_isSet = !json[QString("deny")].isNull() && m_deny_isValid;
 
-    m_assigned_isValid = ::OpenAPI::fromJsonValue(m_assigned, json[QString("assigned")]);
+    m_assigned_isValid = ::hm:slurm:client::fromJsonValue(m_assigned, json[QString("assigned")]);
     m_assigned_isSet = !json[QString("assigned")].isNull() && m_assigned_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_39_partition_info_qos::asJson() const {
 QJsonObject OAIV0_0_39_partition_info_qos::asJsonObject() const {
     QJsonObject obj;
     if (m_allowed_isSet) {
-        obj.insert(QString("allowed"), ::OpenAPI::toJsonValue(m_allowed));
+        obj.insert(QString("allowed"), ::hm:slurm:client::toJsonValue(m_allowed));
     }
     if (m_deny_isSet) {
-        obj.insert(QString("deny"), ::OpenAPI::toJsonValue(m_deny));
+        obj.insert(QString("deny"), ::hm:slurm:client::toJsonValue(m_deny));
     }
     if (m_assigned_isSet) {
-        obj.insert(QString("assigned"), ::OpenAPI::toJsonValue(m_assigned));
+        obj.insert(QString("assigned"), ::hm:slurm:client::toJsonValue(m_assigned));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_39_partition_info_qos::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

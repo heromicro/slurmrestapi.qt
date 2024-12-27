@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_min_tres::OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_min_tres(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_min_tres::fromJson
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_min_tres::fromJsonObject(QJsonObject json) {
 
-    m_per_isValid = ::OpenAPI::fromJsonValue(m_per, json[QString("per")]);
+    m_per_isValid = ::hm:slurm:client::fromJsonValue(m_per, json[QString("per")]);
     m_per_isSet = !json[QString("per")].isNull() && m_per_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_min_tres::asJso
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_min_tres::asJsonObject() const {
     QJsonObject obj;
     if (m_per.isSet()) {
-        obj.insert(QString("per"), ::OpenAPI::toJsonValue(m_per));
+        obj.insert(QString("per"), ::hm:slurm:client::toJsonValue(m_per));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_min_tres::isValid(
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

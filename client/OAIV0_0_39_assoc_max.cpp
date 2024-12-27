@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_assoc_max::OAIV0_0_39_assoc_max(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_39_assoc_max::fromJson(QString jsonString) {
 
 void OAIV0_0_39_assoc_max::fromJsonObject(QJsonObject json) {
 
-    m_jobs_isValid = ::OpenAPI::fromJsonValue(m_jobs, json[QString("jobs")]);
+    m_jobs_isValid = ::hm:slurm:client::fromJsonValue(m_jobs, json[QString("jobs")]);
     m_jobs_isSet = !json[QString("jobs")].isNull() && m_jobs_isValid;
 
-    m_tres_isValid = ::OpenAPI::fromJsonValue(m_tres, json[QString("tres")]);
+    m_tres_isValid = ::hm:slurm:client::fromJsonValue(m_tres, json[QString("tres")]);
     m_tres_isSet = !json[QString("tres")].isNull() && m_tres_isValid;
 
-    m_per_isValid = ::OpenAPI::fromJsonValue(m_per, json[QString("per")]);
+    m_per_isValid = ::hm:slurm:client::fromJsonValue(m_per, json[QString("per")]);
     m_per_isSet = !json[QString("per")].isNull() && m_per_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_39_assoc_max::asJson() const {
 QJsonObject OAIV0_0_39_assoc_max::asJsonObject() const {
     QJsonObject obj;
     if (m_jobs.isSet()) {
-        obj.insert(QString("jobs"), ::OpenAPI::toJsonValue(m_jobs));
+        obj.insert(QString("jobs"), ::hm:slurm:client::toJsonValue(m_jobs));
     }
     if (m_tres.isSet()) {
-        obj.insert(QString("tres"), ::OpenAPI::toJsonValue(m_tres));
+        obj.insert(QString("tres"), ::hm:slurm:client::toJsonValue(m_tres));
     }
     if (m_per.isSet()) {
-        obj.insert(QString("per"), ::OpenAPI::toJsonValue(m_per));
+        obj.insert(QString("per"), ::hm:slurm:client::toJsonValue(m_per));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_39_assoc_max::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

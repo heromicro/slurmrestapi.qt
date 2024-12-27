@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_step_tres_requested::OAIV0_0_39_step_tres_requested(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_39_step_tres_requested::fromJson(QString jsonString) {
 
 void OAIV0_0_39_step_tres_requested::fromJsonObject(QJsonObject json) {
 
-    m_max_isValid = ::OpenAPI::fromJsonValue(m_max, json[QString("max")]);
+    m_max_isValid = ::hm:slurm:client::fromJsonValue(m_max, json[QString("max")]);
     m_max_isSet = !json[QString("max")].isNull() && m_max_isValid;
 
-    m_min_isValid = ::OpenAPI::fromJsonValue(m_min, json[QString("min")]);
+    m_min_isValid = ::hm:slurm:client::fromJsonValue(m_min, json[QString("min")]);
     m_min_isSet = !json[QString("min")].isNull() && m_min_isValid;
 
-    m_average_isValid = ::OpenAPI::fromJsonValue(m_average, json[QString("average")]);
+    m_average_isValid = ::hm:slurm:client::fromJsonValue(m_average, json[QString("average")]);
     m_average_isSet = !json[QString("average")].isNull() && m_average_isValid;
 
-    m_total_isValid = ::OpenAPI::fromJsonValue(m_total, json[QString("total")]);
+    m_total_isValid = ::hm:slurm:client::fromJsonValue(m_total, json[QString("total")]);
     m_total_isSet = !json[QString("total")].isNull() && m_total_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_39_step_tres_requested::asJson() const {
 QJsonObject OAIV0_0_39_step_tres_requested::asJsonObject() const {
     QJsonObject obj;
     if (m_max.size() > 0) {
-        obj.insert(QString("max"), ::OpenAPI::toJsonValue(m_max));
+        obj.insert(QString("max"), ::hm:slurm:client::toJsonValue(m_max));
     }
     if (m_min.size() > 0) {
-        obj.insert(QString("min"), ::OpenAPI::toJsonValue(m_min));
+        obj.insert(QString("min"), ::hm:slurm:client::toJsonValue(m_min));
     }
     if (m_average.size() > 0) {
-        obj.insert(QString("average"), ::OpenAPI::toJsonValue(m_average));
+        obj.insert(QString("average"), ::hm:slurm:client::toJsonValue(m_average));
     }
     if (m_total.size() > 0) {
-        obj.insert(QString("total"), ::OpenAPI::toJsonValue(m_total));
+        obj.insert(QString("total"), ::hm:slurm:client::toJsonValue(m_total));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_39_step_tres_requested::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

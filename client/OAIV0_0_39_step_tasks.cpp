@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_step_tasks::OAIV0_0_39_step_tasks(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_39_step_tasks::fromJson(QString jsonString) {
 
 void OAIV0_0_39_step_tasks::fromJsonObject(QJsonObject json) {
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_39_step_tasks::asJson() const {
 QJsonObject OAIV0_0_39_step_tasks::asJsonObject() const {
     QJsonObject obj;
     if (m_count_isSet) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_39_step_tasks::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

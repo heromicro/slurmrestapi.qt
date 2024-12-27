@@ -29,7 +29,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_uint64_no_val;
 class OAIV0_0_40_step_time_system;
 class OAIV0_0_40_step_time_total;
@@ -116,8 +116,8 @@ private:
     bool m_user_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_step_time)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_step_time)
 
 #endif // OAIV0_0_40_step_time_H

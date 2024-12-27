@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_cron_entry::OAIV0_0_40_cron_entry(QString json) {
     this->initializeModel();
@@ -71,31 +71,31 @@ void OAIV0_0_40_cron_entry::fromJson(QString jsonString) {
 
 void OAIV0_0_40_cron_entry::fromJsonObject(QJsonObject json) {
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 
-    m_minute_isValid = ::OpenAPI::fromJsonValue(m_minute, json[QString("minute")]);
+    m_minute_isValid = ::hm:slurm:client::fromJsonValue(m_minute, json[QString("minute")]);
     m_minute_isSet = !json[QString("minute")].isNull() && m_minute_isValid;
 
-    m_hour_isValid = ::OpenAPI::fromJsonValue(m_hour, json[QString("hour")]);
+    m_hour_isValid = ::hm:slurm:client::fromJsonValue(m_hour, json[QString("hour")]);
     m_hour_isSet = !json[QString("hour")].isNull() && m_hour_isValid;
 
-    m_day_of_month_isValid = ::OpenAPI::fromJsonValue(m_day_of_month, json[QString("day_of_month")]);
+    m_day_of_month_isValid = ::hm:slurm:client::fromJsonValue(m_day_of_month, json[QString("day_of_month")]);
     m_day_of_month_isSet = !json[QString("day_of_month")].isNull() && m_day_of_month_isValid;
 
-    m_month_isValid = ::OpenAPI::fromJsonValue(m_month, json[QString("month")]);
+    m_month_isValid = ::hm:slurm:client::fromJsonValue(m_month, json[QString("month")]);
     m_month_isSet = !json[QString("month")].isNull() && m_month_isValid;
 
-    m_day_of_week_isValid = ::OpenAPI::fromJsonValue(m_day_of_week, json[QString("day_of_week")]);
+    m_day_of_week_isValid = ::hm:slurm:client::fromJsonValue(m_day_of_week, json[QString("day_of_week")]);
     m_day_of_week_isSet = !json[QString("day_of_week")].isNull() && m_day_of_week_isValid;
 
-    m_specification_isValid = ::OpenAPI::fromJsonValue(m_specification, json[QString("specification")]);
+    m_specification_isValid = ::hm:slurm:client::fromJsonValue(m_specification, json[QString("specification")]);
     m_specification_isSet = !json[QString("specification")].isNull() && m_specification_isValid;
 
-    m_command_isValid = ::OpenAPI::fromJsonValue(m_command, json[QString("command")]);
+    m_command_isValid = ::hm:slurm:client::fromJsonValue(m_command, json[QString("command")]);
     m_command_isSet = !json[QString("command")].isNull() && m_command_isValid;
 
-    m_line_isValid = ::OpenAPI::fromJsonValue(m_line, json[QString("line")]);
+    m_line_isValid = ::hm:slurm:client::fromJsonValue(m_line, json[QString("line")]);
     m_line_isSet = !json[QString("line")].isNull() && m_line_isValid;
 }
 
@@ -109,31 +109,31 @@ QString OAIV0_0_40_cron_entry::asJson() const {
 QJsonObject OAIV0_0_40_cron_entry::asJsonObject() const {
     QJsonObject obj;
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     if (m_minute_isSet) {
-        obj.insert(QString("minute"), ::OpenAPI::toJsonValue(m_minute));
+        obj.insert(QString("minute"), ::hm:slurm:client::toJsonValue(m_minute));
     }
     if (m_hour_isSet) {
-        obj.insert(QString("hour"), ::OpenAPI::toJsonValue(m_hour));
+        obj.insert(QString("hour"), ::hm:slurm:client::toJsonValue(m_hour));
     }
     if (m_day_of_month_isSet) {
-        obj.insert(QString("day_of_month"), ::OpenAPI::toJsonValue(m_day_of_month));
+        obj.insert(QString("day_of_month"), ::hm:slurm:client::toJsonValue(m_day_of_month));
     }
     if (m_month_isSet) {
-        obj.insert(QString("month"), ::OpenAPI::toJsonValue(m_month));
+        obj.insert(QString("month"), ::hm:slurm:client::toJsonValue(m_month));
     }
     if (m_day_of_week_isSet) {
-        obj.insert(QString("day_of_week"), ::OpenAPI::toJsonValue(m_day_of_week));
+        obj.insert(QString("day_of_week"), ::hm:slurm:client::toJsonValue(m_day_of_week));
     }
     if (m_specification_isSet) {
-        obj.insert(QString("specification"), ::OpenAPI::toJsonValue(m_specification));
+        obj.insert(QString("specification"), ::hm:slurm:client::toJsonValue(m_specification));
     }
     if (m_command_isSet) {
-        obj.insert(QString("command"), ::OpenAPI::toJsonValue(m_command));
+        obj.insert(QString("command"), ::hm:slurm:client::toJsonValue(m_command));
     }
     if (m_line.isSet()) {
-        obj.insert(QString("line"), ::OpenAPI::toJsonValue(m_line));
+        obj.insert(QString("line"), ::hm:slurm:client::toJsonValue(m_line));
     }
     return obj;
 }
@@ -338,4 +338,4 @@ bool OAIV0_0_40_cron_entry::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

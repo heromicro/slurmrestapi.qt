@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_accounting::OAIV0_0_39_accounting(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_39_accounting::fromJson(QString jsonString) {
 
 void OAIV0_0_39_accounting::fromJsonObject(QJsonObject json) {
 
-    m_allocated_isValid = ::OpenAPI::fromJsonValue(m_allocated, json[QString("allocated")]);
+    m_allocated_isValid = ::hm:slurm:client::fromJsonValue(m_allocated, json[QString("allocated")]);
     m_allocated_isSet = !json[QString("allocated")].isNull() && m_allocated_isValid;
 
-    m_id_isValid = ::OpenAPI::fromJsonValue(m_id, json[QString("id")]);
+    m_id_isValid = ::hm:slurm:client::fromJsonValue(m_id, json[QString("id")]);
     m_id_isSet = !json[QString("id")].isNull() && m_id_isValid;
 
-    m_start_isValid = ::OpenAPI::fromJsonValue(m_start, json[QString("start")]);
+    m_start_isValid = ::hm:slurm:client::fromJsonValue(m_start, json[QString("start")]);
     m_start_isSet = !json[QString("start")].isNull() && m_start_isValid;
 
-    m_tres_isValid = ::OpenAPI::fromJsonValue(m_tres, json[QString("TRES")]);
+    m_tres_isValid = ::hm:slurm:client::fromJsonValue(m_tres, json[QString("TRES")]);
     m_tres_isSet = !json[QString("TRES")].isNull() && m_tres_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_39_accounting::asJson() const {
 QJsonObject OAIV0_0_39_accounting::asJsonObject() const {
     QJsonObject obj;
     if (m_allocated.isSet()) {
-        obj.insert(QString("allocated"), ::OpenAPI::toJsonValue(m_allocated));
+        obj.insert(QString("allocated"), ::hm:slurm:client::toJsonValue(m_allocated));
     }
     if (m_id_isSet) {
-        obj.insert(QString("id"), ::OpenAPI::toJsonValue(m_id));
+        obj.insert(QString("id"), ::hm:slurm:client::toJsonValue(m_id));
     }
     if (m_start_isSet) {
-        obj.insert(QString("start"), ::OpenAPI::toJsonValue(m_start));
+        obj.insert(QString("start"), ::hm:slurm:client::toJsonValue(m_start));
     }
     if (m_tres.isSet()) {
-        obj.insert(QString("TRES"), ::OpenAPI::toJsonValue(m_tres));
+        obj.insert(QString("TRES"), ::hm:slurm:client::toJsonValue(m_tres));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_39_accounting::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

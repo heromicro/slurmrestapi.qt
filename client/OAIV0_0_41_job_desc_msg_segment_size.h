@@ -25,7 +25,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_41_job_desc_msg_segment_size : public OAIObject {
 public:
@@ -72,8 +72,8 @@ private:
     bool m_number_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_job_desc_msg_segment_size)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_job_desc_msg_segment_size)
 
 #endif // OAIV0_0_41_job_desc_msg_segment_size_H

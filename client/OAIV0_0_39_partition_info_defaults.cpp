@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_partition_info_defaults::OAIV0_0_39_partition_info_defaults(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_39_partition_info_defaults::fromJson(QString jsonString) {
 
 void OAIV0_0_39_partition_info_defaults::fromJsonObject(QJsonObject json) {
 
-    m_memory_per_cpu_isValid = ::OpenAPI::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
+    m_memory_per_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
     m_memory_per_cpu_isSet = !json[QString("memory_per_cpu")].isNull() && m_memory_per_cpu_isValid;
 
-    m_time_isValid = ::OpenAPI::fromJsonValue(m_time, json[QString("time")]);
+    m_time_isValid = ::hm:slurm:client::fromJsonValue(m_time, json[QString("time")]);
     m_time_isSet = !json[QString("time")].isNull() && m_time_isValid;
 
-    m_job_isValid = ::OpenAPI::fromJsonValue(m_job, json[QString("job")]);
+    m_job_isValid = ::hm:slurm:client::fromJsonValue(m_job, json[QString("job")]);
     m_job_isSet = !json[QString("job")].isNull() && m_job_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_39_partition_info_defaults::asJson() const {
 QJsonObject OAIV0_0_39_partition_info_defaults::asJsonObject() const {
     QJsonObject obj;
     if (m_memory_per_cpu_isSet) {
-        obj.insert(QString("memory_per_cpu"), ::OpenAPI::toJsonValue(m_memory_per_cpu));
+        obj.insert(QString("memory_per_cpu"), ::hm:slurm:client::toJsonValue(m_memory_per_cpu));
     }
     if (m_time.isSet()) {
-        obj.insert(QString("time"), ::OpenAPI::toJsonValue(m_time));
+        obj.insert(QString("time"), ::hm:slurm:client::toJsonValue(m_time));
     }
     if (m_job_isSet) {
-        obj.insert(QString("job"), ::OpenAPI::toJsonValue(m_job));
+        obj.insert(QString("job"), ::hm:slurm:client::toJsonValue(m_job));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_39_partition_info_defaults::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

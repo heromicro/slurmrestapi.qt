@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_accounts_add_cond_resp::OAIV0_0_41_openapi_accounts_add_cond_resp(QString json) {
     this->initializeModel();
@@ -59,19 +59,19 @@ void OAIV0_0_41_openapi_accounts_add_cond_resp::fromJson(QString jsonString) {
 
 void OAIV0_0_41_openapi_accounts_add_cond_resp::fromJsonObject(QJsonObject json) {
 
-    m_association_condition_isValid = ::OpenAPI::fromJsonValue(m_association_condition, json[QString("association_condition")]);
+    m_association_condition_isValid = ::hm:slurm:client::fromJsonValue(m_association_condition, json[QString("association_condition")]);
     m_association_condition_isSet = !json[QString("association_condition")].isNull() && m_association_condition_isValid;
 
-    m_account_isValid = ::OpenAPI::fromJsonValue(m_account, json[QString("account")]);
+    m_account_isValid = ::hm:slurm:client::fromJsonValue(m_account, json[QString("account")]);
     m_account_isSet = !json[QString("account")].isNull() && m_account_isValid;
 
-    m_meta_isValid = ::OpenAPI::fromJsonValue(m_meta, json[QString("meta")]);
+    m_meta_isValid = ::hm:slurm:client::fromJsonValue(m_meta, json[QString("meta")]);
     m_meta_isSet = !json[QString("meta")].isNull() && m_meta_isValid;
 
-    m_errors_isValid = ::OpenAPI::fromJsonValue(m_errors, json[QString("errors")]);
+    m_errors_isValid = ::hm:slurm:client::fromJsonValue(m_errors, json[QString("errors")]);
     m_errors_isSet = !json[QString("errors")].isNull() && m_errors_isValid;
 
-    m_warnings_isValid = ::OpenAPI::fromJsonValue(m_warnings, json[QString("warnings")]);
+    m_warnings_isValid = ::hm:slurm:client::fromJsonValue(m_warnings, json[QString("warnings")]);
     m_warnings_isSet = !json[QString("warnings")].isNull() && m_warnings_isValid;
 }
 
@@ -85,19 +85,19 @@ QString OAIV0_0_41_openapi_accounts_add_cond_resp::asJson() const {
 QJsonObject OAIV0_0_41_openapi_accounts_add_cond_resp::asJsonObject() const {
     QJsonObject obj;
     if (m_association_condition.isSet()) {
-        obj.insert(QString("association_condition"), ::OpenAPI::toJsonValue(m_association_condition));
+        obj.insert(QString("association_condition"), ::hm:slurm:client::toJsonValue(m_association_condition));
     }
     if (m_account.isSet()) {
-        obj.insert(QString("account"), ::OpenAPI::toJsonValue(m_account));
+        obj.insert(QString("account"), ::hm:slurm:client::toJsonValue(m_account));
     }
     if (m_meta.isSet()) {
-        obj.insert(QString("meta"), ::OpenAPI::toJsonValue(m_meta));
+        obj.insert(QString("meta"), ::hm:slurm:client::toJsonValue(m_meta));
     }
     if (m_errors.size() > 0) {
-        obj.insert(QString("errors"), ::OpenAPI::toJsonValue(m_errors));
+        obj.insert(QString("errors"), ::hm:slurm:client::toJsonValue(m_errors));
     }
     if (m_warnings.size() > 0) {
-        obj.insert(QString("warnings"), ::OpenAPI::toJsonValue(m_warnings));
+        obj.insert(QString("warnings"), ::hm:slurm:client::toJsonValue(m_warnings));
     }
     return obj;
 }
@@ -218,4 +218,4 @@ bool OAIV0_0_41_openapi_accounts_add_cond_resp::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

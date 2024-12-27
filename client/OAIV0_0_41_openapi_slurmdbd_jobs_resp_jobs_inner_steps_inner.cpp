@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner::OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner(QString json) {
     this->initializeModel();
@@ -80,40 +80,40 @@ void OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner::fromJson(QStr
 
 void OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner::fromJsonObject(QJsonObject json) {
 
-    m_time_isValid = ::OpenAPI::fromJsonValue(m_time, json[QString("time")]);
+    m_time_isValid = ::hm:slurm:client::fromJsonValue(m_time, json[QString("time")]);
     m_time_isSet = !json[QString("time")].isNull() && m_time_isValid;
 
-    m_exit_code_isValid = ::OpenAPI::fromJsonValue(m_exit_code, json[QString("exit_code")]);
+    m_exit_code_isValid = ::hm:slurm:client::fromJsonValue(m_exit_code, json[QString("exit_code")]);
     m_exit_code_isSet = !json[QString("exit_code")].isNull() && m_exit_code_isValid;
 
-    m_nodes_isValid = ::OpenAPI::fromJsonValue(m_nodes, json[QString("nodes")]);
+    m_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_nodes, json[QString("nodes")]);
     m_nodes_isSet = !json[QString("nodes")].isNull() && m_nodes_isValid;
 
-    m_tasks_isValid = ::OpenAPI::fromJsonValue(m_tasks, json[QString("tasks")]);
+    m_tasks_isValid = ::hm:slurm:client::fromJsonValue(m_tasks, json[QString("tasks")]);
     m_tasks_isSet = !json[QString("tasks")].isNull() && m_tasks_isValid;
 
-    m_pid_isValid = ::OpenAPI::fromJsonValue(m_pid, json[QString("pid")]);
+    m_pid_isValid = ::hm:slurm:client::fromJsonValue(m_pid, json[QString("pid")]);
     m_pid_isSet = !json[QString("pid")].isNull() && m_pid_isValid;
 
-    m_cpu_isValid = ::OpenAPI::fromJsonValue(m_cpu, json[QString("CPU")]);
+    m_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_cpu, json[QString("CPU")]);
     m_cpu_isSet = !json[QString("CPU")].isNull() && m_cpu_isValid;
 
-    m_kill_request_user_isValid = ::OpenAPI::fromJsonValue(m_kill_request_user, json[QString("kill_request_user")]);
+    m_kill_request_user_isValid = ::hm:slurm:client::fromJsonValue(m_kill_request_user, json[QString("kill_request_user")]);
     m_kill_request_user_isSet = !json[QString("kill_request_user")].isNull() && m_kill_request_user_isValid;
 
-    m_state_isValid = ::OpenAPI::fromJsonValue(m_state, json[QString("state")]);
+    m_state_isValid = ::hm:slurm:client::fromJsonValue(m_state, json[QString("state")]);
     m_state_isSet = !json[QString("state")].isNull() && m_state_isValid;
 
-    m_statistics_isValid = ::OpenAPI::fromJsonValue(m_statistics, json[QString("statistics")]);
+    m_statistics_isValid = ::hm:slurm:client::fromJsonValue(m_statistics, json[QString("statistics")]);
     m_statistics_isSet = !json[QString("statistics")].isNull() && m_statistics_isValid;
 
-    m_step_isValid = ::OpenAPI::fromJsonValue(m_step, json[QString("step")]);
+    m_step_isValid = ::hm:slurm:client::fromJsonValue(m_step, json[QString("step")]);
     m_step_isSet = !json[QString("step")].isNull() && m_step_isValid;
 
-    m_task_isValid = ::OpenAPI::fromJsonValue(m_task, json[QString("task")]);
+    m_task_isValid = ::hm:slurm:client::fromJsonValue(m_task, json[QString("task")]);
     m_task_isSet = !json[QString("task")].isNull() && m_task_isValid;
 
-    m_tres_isValid = ::OpenAPI::fromJsonValue(m_tres, json[QString("tres")]);
+    m_tres_isValid = ::hm:slurm:client::fromJsonValue(m_tres, json[QString("tres")]);
     m_tres_isSet = !json[QString("tres")].isNull() && m_tres_isValid;
 }
 
@@ -127,40 +127,40 @@ QString OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner::asJson() c
 QJsonObject OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_time.isSet()) {
-        obj.insert(QString("time"), ::OpenAPI::toJsonValue(m_time));
+        obj.insert(QString("time"), ::hm:slurm:client::toJsonValue(m_time));
     }
     if (m_exit_code.isSet()) {
-        obj.insert(QString("exit_code"), ::OpenAPI::toJsonValue(m_exit_code));
+        obj.insert(QString("exit_code"), ::hm:slurm:client::toJsonValue(m_exit_code));
     }
     if (m_nodes.isSet()) {
-        obj.insert(QString("nodes"), ::OpenAPI::toJsonValue(m_nodes));
+        obj.insert(QString("nodes"), ::hm:slurm:client::toJsonValue(m_nodes));
     }
     if (m_tasks.isSet()) {
-        obj.insert(QString("tasks"), ::OpenAPI::toJsonValue(m_tasks));
+        obj.insert(QString("tasks"), ::hm:slurm:client::toJsonValue(m_tasks));
     }
     if (m_pid_isSet) {
-        obj.insert(QString("pid"), ::OpenAPI::toJsonValue(m_pid));
+        obj.insert(QString("pid"), ::hm:slurm:client::toJsonValue(m_pid));
     }
     if (m_cpu.isSet()) {
-        obj.insert(QString("CPU"), ::OpenAPI::toJsonValue(m_cpu));
+        obj.insert(QString("CPU"), ::hm:slurm:client::toJsonValue(m_cpu));
     }
     if (m_kill_request_user_isSet) {
-        obj.insert(QString("kill_request_user"), ::OpenAPI::toJsonValue(m_kill_request_user));
+        obj.insert(QString("kill_request_user"), ::hm:slurm:client::toJsonValue(m_kill_request_user));
     }
     if (m_state.size() > 0) {
-        obj.insert(QString("state"), ::OpenAPI::toJsonValue(m_state));
+        obj.insert(QString("state"), ::hm:slurm:client::toJsonValue(m_state));
     }
     if (m_statistics.isSet()) {
-        obj.insert(QString("statistics"), ::OpenAPI::toJsonValue(m_statistics));
+        obj.insert(QString("statistics"), ::hm:slurm:client::toJsonValue(m_statistics));
     }
     if (m_step.isSet()) {
-        obj.insert(QString("step"), ::OpenAPI::toJsonValue(m_step));
+        obj.insert(QString("step"), ::hm:slurm:client::toJsonValue(m_step));
     }
     if (m_task.isSet()) {
-        obj.insert(QString("task"), ::OpenAPI::toJsonValue(m_task));
+        obj.insert(QString("task"), ::hm:slurm:client::toJsonValue(m_task));
     }
     if (m_tres.isSet()) {
-        obj.insert(QString("tres"), ::OpenAPI::toJsonValue(m_tres));
+        obj.insert(QString("tres"), ::hm:slurm:client::toJsonValue(m_tres));
     }
     return obj;
 }
@@ -428,4 +428,4 @@ bool OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner::isValid() con
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

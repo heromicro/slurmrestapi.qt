@@ -30,7 +30,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_controller_ping;
 class OAIV0_0_40_openapi_meta;
 class OAIV0_0_40_openapi_error;
@@ -90,8 +90,8 @@ private:
     bool m_warnings_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_openapi_ping_array_resp)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_openapi_ping_array_resp)
 
 #endif // OAIV0_0_40_openapi_ping_array_resp_H

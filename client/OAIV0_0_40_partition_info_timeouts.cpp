@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_partition_info_timeouts::OAIV0_0_40_partition_info_timeouts(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_partition_info_timeouts::fromJson(QString jsonString) {
 
 void OAIV0_0_40_partition_info_timeouts::fromJsonObject(QJsonObject json) {
 
-    m_resume_isValid = ::OpenAPI::fromJsonValue(m_resume, json[QString("resume")]);
+    m_resume_isValid = ::hm:slurm:client::fromJsonValue(m_resume, json[QString("resume")]);
     m_resume_isSet = !json[QString("resume")].isNull() && m_resume_isValid;
 
-    m_suspend_isValid = ::OpenAPI::fromJsonValue(m_suspend, json[QString("suspend")]);
+    m_suspend_isValid = ::hm:slurm:client::fromJsonValue(m_suspend, json[QString("suspend")]);
     m_suspend_isSet = !json[QString("suspend")].isNull() && m_suspend_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_partition_info_timeouts::asJson() const {
 QJsonObject OAIV0_0_40_partition_info_timeouts::asJsonObject() const {
     QJsonObject obj;
     if (m_resume.isSet()) {
-        obj.insert(QString("resume"), ::OpenAPI::toJsonValue(m_resume));
+        obj.insert(QString("resume"), ::hm:slurm:client::toJsonValue(m_resume));
     }
     if (m_suspend.isSet()) {
-        obj.insert(QString("suspend"), ::OpenAPI::toJsonValue(m_suspend));
+        obj.insert(QString("suspend"), ::hm:slurm:client::toJsonValue(m_suspend));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_partition_info_timeouts::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

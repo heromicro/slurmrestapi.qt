@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_message_type_inner_average_time;
 
 class OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_user_inner : public OAIObject {
@@ -93,8 +93,8 @@ private:
     bool m_average_time_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_user_inner)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_user_inner)
 
 #endif // OAIV0_0_41_openapi_diag_resp_statistics_rpcs_by_user_inner_H

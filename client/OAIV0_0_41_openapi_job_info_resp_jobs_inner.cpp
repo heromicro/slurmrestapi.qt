@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_info_resp_jobs_inner::OAIV0_0_41_openapi_job_info_resp_jobs_inner(QString json) {
     this->initializeModel();
@@ -434,394 +434,394 @@ void OAIV0_0_41_openapi_job_info_resp_jobs_inner::fromJson(QString jsonString) {
 
 void OAIV0_0_41_openapi_job_info_resp_jobs_inner::fromJsonObject(QJsonObject json) {
 
-    m_account_isValid = ::OpenAPI::fromJsonValue(m_account, json[QString("account")]);
+    m_account_isValid = ::hm:slurm:client::fromJsonValue(m_account, json[QString("account")]);
     m_account_isSet = !json[QString("account")].isNull() && m_account_isValid;
 
-    m_accrue_time_isValid = ::OpenAPI::fromJsonValue(m_accrue_time, json[QString("accrue_time")]);
+    m_accrue_time_isValid = ::hm:slurm:client::fromJsonValue(m_accrue_time, json[QString("accrue_time")]);
     m_accrue_time_isSet = !json[QString("accrue_time")].isNull() && m_accrue_time_isValid;
 
-    m_admin_comment_isValid = ::OpenAPI::fromJsonValue(m_admin_comment, json[QString("admin_comment")]);
+    m_admin_comment_isValid = ::hm:slurm:client::fromJsonValue(m_admin_comment, json[QString("admin_comment")]);
     m_admin_comment_isSet = !json[QString("admin_comment")].isNull() && m_admin_comment_isValid;
 
-    m_allocating_node_isValid = ::OpenAPI::fromJsonValue(m_allocating_node, json[QString("allocating_node")]);
+    m_allocating_node_isValid = ::hm:slurm:client::fromJsonValue(m_allocating_node, json[QString("allocating_node")]);
     m_allocating_node_isSet = !json[QString("allocating_node")].isNull() && m_allocating_node_isValid;
 
-    m_array_job_id_isValid = ::OpenAPI::fromJsonValue(m_array_job_id, json[QString("array_job_id")]);
+    m_array_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_array_job_id, json[QString("array_job_id")]);
     m_array_job_id_isSet = !json[QString("array_job_id")].isNull() && m_array_job_id_isValid;
 
-    m_array_task_id_isValid = ::OpenAPI::fromJsonValue(m_array_task_id, json[QString("array_task_id")]);
+    m_array_task_id_isValid = ::hm:slurm:client::fromJsonValue(m_array_task_id, json[QString("array_task_id")]);
     m_array_task_id_isSet = !json[QString("array_task_id")].isNull() && m_array_task_id_isValid;
 
-    m_array_max_tasks_isValid = ::OpenAPI::fromJsonValue(m_array_max_tasks, json[QString("array_max_tasks")]);
+    m_array_max_tasks_isValid = ::hm:slurm:client::fromJsonValue(m_array_max_tasks, json[QString("array_max_tasks")]);
     m_array_max_tasks_isSet = !json[QString("array_max_tasks")].isNull() && m_array_max_tasks_isValid;
 
-    m_array_task_string_isValid = ::OpenAPI::fromJsonValue(m_array_task_string, json[QString("array_task_string")]);
+    m_array_task_string_isValid = ::hm:slurm:client::fromJsonValue(m_array_task_string, json[QString("array_task_string")]);
     m_array_task_string_isSet = !json[QString("array_task_string")].isNull() && m_array_task_string_isValid;
 
-    m_association_id_isValid = ::OpenAPI::fromJsonValue(m_association_id, json[QString("association_id")]);
+    m_association_id_isValid = ::hm:slurm:client::fromJsonValue(m_association_id, json[QString("association_id")]);
     m_association_id_isSet = !json[QString("association_id")].isNull() && m_association_id_isValid;
 
-    m_batch_features_isValid = ::OpenAPI::fromJsonValue(m_batch_features, json[QString("batch_features")]);
+    m_batch_features_isValid = ::hm:slurm:client::fromJsonValue(m_batch_features, json[QString("batch_features")]);
     m_batch_features_isSet = !json[QString("batch_features")].isNull() && m_batch_features_isValid;
 
-    m_batch_flag_isValid = ::OpenAPI::fromJsonValue(m_batch_flag, json[QString("batch_flag")]);
+    m_batch_flag_isValid = ::hm:slurm:client::fromJsonValue(m_batch_flag, json[QString("batch_flag")]);
     m_batch_flag_isSet = !json[QString("batch_flag")].isNull() && m_batch_flag_isValid;
 
-    m_batch_host_isValid = ::OpenAPI::fromJsonValue(m_batch_host, json[QString("batch_host")]);
+    m_batch_host_isValid = ::hm:slurm:client::fromJsonValue(m_batch_host, json[QString("batch_host")]);
     m_batch_host_isSet = !json[QString("batch_host")].isNull() && m_batch_host_isValid;
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 
-    m_burst_buffer_isValid = ::OpenAPI::fromJsonValue(m_burst_buffer, json[QString("burst_buffer")]);
+    m_burst_buffer_isValid = ::hm:slurm:client::fromJsonValue(m_burst_buffer, json[QString("burst_buffer")]);
     m_burst_buffer_isSet = !json[QString("burst_buffer")].isNull() && m_burst_buffer_isValid;
 
-    m_burst_buffer_state_isValid = ::OpenAPI::fromJsonValue(m_burst_buffer_state, json[QString("burst_buffer_state")]);
+    m_burst_buffer_state_isValid = ::hm:slurm:client::fromJsonValue(m_burst_buffer_state, json[QString("burst_buffer_state")]);
     m_burst_buffer_state_isSet = !json[QString("burst_buffer_state")].isNull() && m_burst_buffer_state_isValid;
 
-    m_cluster_isValid = ::OpenAPI::fromJsonValue(m_cluster, json[QString("cluster")]);
+    m_cluster_isValid = ::hm:slurm:client::fromJsonValue(m_cluster, json[QString("cluster")]);
     m_cluster_isSet = !json[QString("cluster")].isNull() && m_cluster_isValid;
 
-    m_cluster_features_isValid = ::OpenAPI::fromJsonValue(m_cluster_features, json[QString("cluster_features")]);
+    m_cluster_features_isValid = ::hm:slurm:client::fromJsonValue(m_cluster_features, json[QString("cluster_features")]);
     m_cluster_features_isSet = !json[QString("cluster_features")].isNull() && m_cluster_features_isValid;
 
-    m_command_isValid = ::OpenAPI::fromJsonValue(m_command, json[QString("command")]);
+    m_command_isValid = ::hm:slurm:client::fromJsonValue(m_command, json[QString("command")]);
     m_command_isSet = !json[QString("command")].isNull() && m_command_isValid;
 
-    m_comment_isValid = ::OpenAPI::fromJsonValue(m_comment, json[QString("comment")]);
+    m_comment_isValid = ::hm:slurm:client::fromJsonValue(m_comment, json[QString("comment")]);
     m_comment_isSet = !json[QString("comment")].isNull() && m_comment_isValid;
 
-    m_container_isValid = ::OpenAPI::fromJsonValue(m_container, json[QString("container")]);
+    m_container_isValid = ::hm:slurm:client::fromJsonValue(m_container, json[QString("container")]);
     m_container_isSet = !json[QString("container")].isNull() && m_container_isValid;
 
-    m_container_id_isValid = ::OpenAPI::fromJsonValue(m_container_id, json[QString("container_id")]);
+    m_container_id_isValid = ::hm:slurm:client::fromJsonValue(m_container_id, json[QString("container_id")]);
     m_container_id_isSet = !json[QString("container_id")].isNull() && m_container_id_isValid;
 
-    m_contiguous_isValid = ::OpenAPI::fromJsonValue(m_contiguous, json[QString("contiguous")]);
+    m_contiguous_isValid = ::hm:slurm:client::fromJsonValue(m_contiguous, json[QString("contiguous")]);
     m_contiguous_isSet = !json[QString("contiguous")].isNull() && m_contiguous_isValid;
 
-    m_core_spec_isValid = ::OpenAPI::fromJsonValue(m_core_spec, json[QString("core_spec")]);
+    m_core_spec_isValid = ::hm:slurm:client::fromJsonValue(m_core_spec, json[QString("core_spec")]);
     m_core_spec_isSet = !json[QString("core_spec")].isNull() && m_core_spec_isValid;
 
-    m_thread_spec_isValid = ::OpenAPI::fromJsonValue(m_thread_spec, json[QString("thread_spec")]);
+    m_thread_spec_isValid = ::hm:slurm:client::fromJsonValue(m_thread_spec, json[QString("thread_spec")]);
     m_thread_spec_isSet = !json[QString("thread_spec")].isNull() && m_thread_spec_isValid;
 
-    m_cores_per_socket_isValid = ::OpenAPI::fromJsonValue(m_cores_per_socket, json[QString("cores_per_socket")]);
+    m_cores_per_socket_isValid = ::hm:slurm:client::fromJsonValue(m_cores_per_socket, json[QString("cores_per_socket")]);
     m_cores_per_socket_isSet = !json[QString("cores_per_socket")].isNull() && m_cores_per_socket_isValid;
 
-    m_billable_tres_isValid = ::OpenAPI::fromJsonValue(m_billable_tres, json[QString("billable_tres")]);
+    m_billable_tres_isValid = ::hm:slurm:client::fromJsonValue(m_billable_tres, json[QString("billable_tres")]);
     m_billable_tres_isSet = !json[QString("billable_tres")].isNull() && m_billable_tres_isValid;
 
-    m_cpus_per_task_isValid = ::OpenAPI::fromJsonValue(m_cpus_per_task, json[QString("cpus_per_task")]);
+    m_cpus_per_task_isValid = ::hm:slurm:client::fromJsonValue(m_cpus_per_task, json[QString("cpus_per_task")]);
     m_cpus_per_task_isSet = !json[QString("cpus_per_task")].isNull() && m_cpus_per_task_isValid;
 
-    m_cpu_frequency_minimum_isValid = ::OpenAPI::fromJsonValue(m_cpu_frequency_minimum, json[QString("cpu_frequency_minimum")]);
+    m_cpu_frequency_minimum_isValid = ::hm:slurm:client::fromJsonValue(m_cpu_frequency_minimum, json[QString("cpu_frequency_minimum")]);
     m_cpu_frequency_minimum_isSet = !json[QString("cpu_frequency_minimum")].isNull() && m_cpu_frequency_minimum_isValid;
 
-    m_cpu_frequency_maximum_isValid = ::OpenAPI::fromJsonValue(m_cpu_frequency_maximum, json[QString("cpu_frequency_maximum")]);
+    m_cpu_frequency_maximum_isValid = ::hm:slurm:client::fromJsonValue(m_cpu_frequency_maximum, json[QString("cpu_frequency_maximum")]);
     m_cpu_frequency_maximum_isSet = !json[QString("cpu_frequency_maximum")].isNull() && m_cpu_frequency_maximum_isValid;
 
-    m_cpu_frequency_governor_isValid = ::OpenAPI::fromJsonValue(m_cpu_frequency_governor, json[QString("cpu_frequency_governor")]);
+    m_cpu_frequency_governor_isValid = ::hm:slurm:client::fromJsonValue(m_cpu_frequency_governor, json[QString("cpu_frequency_governor")]);
     m_cpu_frequency_governor_isSet = !json[QString("cpu_frequency_governor")].isNull() && m_cpu_frequency_governor_isValid;
 
-    m_cpus_per_tres_isValid = ::OpenAPI::fromJsonValue(m_cpus_per_tres, json[QString("cpus_per_tres")]);
+    m_cpus_per_tres_isValid = ::hm:slurm:client::fromJsonValue(m_cpus_per_tres, json[QString("cpus_per_tres")]);
     m_cpus_per_tres_isSet = !json[QString("cpus_per_tres")].isNull() && m_cpus_per_tres_isValid;
 
-    m_cron_isValid = ::OpenAPI::fromJsonValue(m_cron, json[QString("cron")]);
+    m_cron_isValid = ::hm:slurm:client::fromJsonValue(m_cron, json[QString("cron")]);
     m_cron_isSet = !json[QString("cron")].isNull() && m_cron_isValid;
 
-    m_deadline_isValid = ::OpenAPI::fromJsonValue(m_deadline, json[QString("deadline")]);
+    m_deadline_isValid = ::hm:slurm:client::fromJsonValue(m_deadline, json[QString("deadline")]);
     m_deadline_isSet = !json[QString("deadline")].isNull() && m_deadline_isValid;
 
-    m_delay_boot_isValid = ::OpenAPI::fromJsonValue(m_delay_boot, json[QString("delay_boot")]);
+    m_delay_boot_isValid = ::hm:slurm:client::fromJsonValue(m_delay_boot, json[QString("delay_boot")]);
     m_delay_boot_isSet = !json[QString("delay_boot")].isNull() && m_delay_boot_isValid;
 
-    m_dependency_isValid = ::OpenAPI::fromJsonValue(m_dependency, json[QString("dependency")]);
+    m_dependency_isValid = ::hm:slurm:client::fromJsonValue(m_dependency, json[QString("dependency")]);
     m_dependency_isSet = !json[QString("dependency")].isNull() && m_dependency_isValid;
 
-    m_derived_exit_code_isValid = ::OpenAPI::fromJsonValue(m_derived_exit_code, json[QString("derived_exit_code")]);
+    m_derived_exit_code_isValid = ::hm:slurm:client::fromJsonValue(m_derived_exit_code, json[QString("derived_exit_code")]);
     m_derived_exit_code_isSet = !json[QString("derived_exit_code")].isNull() && m_derived_exit_code_isValid;
 
-    m_eligible_time_isValid = ::OpenAPI::fromJsonValue(m_eligible_time, json[QString("eligible_time")]);
+    m_eligible_time_isValid = ::hm:slurm:client::fromJsonValue(m_eligible_time, json[QString("eligible_time")]);
     m_eligible_time_isSet = !json[QString("eligible_time")].isNull() && m_eligible_time_isValid;
 
-    m_end_time_isValid = ::OpenAPI::fromJsonValue(m_end_time, json[QString("end_time")]);
+    m_end_time_isValid = ::hm:slurm:client::fromJsonValue(m_end_time, json[QString("end_time")]);
     m_end_time_isSet = !json[QString("end_time")].isNull() && m_end_time_isValid;
 
-    m_excluded_nodes_isValid = ::OpenAPI::fromJsonValue(m_excluded_nodes, json[QString("excluded_nodes")]);
+    m_excluded_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_excluded_nodes, json[QString("excluded_nodes")]);
     m_excluded_nodes_isSet = !json[QString("excluded_nodes")].isNull() && m_excluded_nodes_isValid;
 
-    m_exit_code_isValid = ::OpenAPI::fromJsonValue(m_exit_code, json[QString("exit_code")]);
+    m_exit_code_isValid = ::hm:slurm:client::fromJsonValue(m_exit_code, json[QString("exit_code")]);
     m_exit_code_isSet = !json[QString("exit_code")].isNull() && m_exit_code_isValid;
 
-    m_extra_isValid = ::OpenAPI::fromJsonValue(m_extra, json[QString("extra")]);
+    m_extra_isValid = ::hm:slurm:client::fromJsonValue(m_extra, json[QString("extra")]);
     m_extra_isSet = !json[QString("extra")].isNull() && m_extra_isValid;
 
-    m_failed_node_isValid = ::OpenAPI::fromJsonValue(m_failed_node, json[QString("failed_node")]);
+    m_failed_node_isValid = ::hm:slurm:client::fromJsonValue(m_failed_node, json[QString("failed_node")]);
     m_failed_node_isSet = !json[QString("failed_node")].isNull() && m_failed_node_isValid;
 
-    m_features_isValid = ::OpenAPI::fromJsonValue(m_features, json[QString("features")]);
+    m_features_isValid = ::hm:slurm:client::fromJsonValue(m_features, json[QString("features")]);
     m_features_isSet = !json[QString("features")].isNull() && m_features_isValid;
 
-    m_federation_origin_isValid = ::OpenAPI::fromJsonValue(m_federation_origin, json[QString("federation_origin")]);
+    m_federation_origin_isValid = ::hm:slurm:client::fromJsonValue(m_federation_origin, json[QString("federation_origin")]);
     m_federation_origin_isSet = !json[QString("federation_origin")].isNull() && m_federation_origin_isValid;
 
-    m_federation_siblings_active_isValid = ::OpenAPI::fromJsonValue(m_federation_siblings_active, json[QString("federation_siblings_active")]);
+    m_federation_siblings_active_isValid = ::hm:slurm:client::fromJsonValue(m_federation_siblings_active, json[QString("federation_siblings_active")]);
     m_federation_siblings_active_isSet = !json[QString("federation_siblings_active")].isNull() && m_federation_siblings_active_isValid;
 
-    m_federation_siblings_viable_isValid = ::OpenAPI::fromJsonValue(m_federation_siblings_viable, json[QString("federation_siblings_viable")]);
+    m_federation_siblings_viable_isValid = ::hm:slurm:client::fromJsonValue(m_federation_siblings_viable, json[QString("federation_siblings_viable")]);
     m_federation_siblings_viable_isSet = !json[QString("federation_siblings_viable")].isNull() && m_federation_siblings_viable_isValid;
 
-    m_gres_detail_isValid = ::OpenAPI::fromJsonValue(m_gres_detail, json[QString("gres_detail")]);
+    m_gres_detail_isValid = ::hm:slurm:client::fromJsonValue(m_gres_detail, json[QString("gres_detail")]);
     m_gres_detail_isSet = !json[QString("gres_detail")].isNull() && m_gres_detail_isValid;
 
-    m_group_id_isValid = ::OpenAPI::fromJsonValue(m_group_id, json[QString("group_id")]);
+    m_group_id_isValid = ::hm:slurm:client::fromJsonValue(m_group_id, json[QString("group_id")]);
     m_group_id_isSet = !json[QString("group_id")].isNull() && m_group_id_isValid;
 
-    m_group_name_isValid = ::OpenAPI::fromJsonValue(m_group_name, json[QString("group_name")]);
+    m_group_name_isValid = ::hm:slurm:client::fromJsonValue(m_group_name, json[QString("group_name")]);
     m_group_name_isSet = !json[QString("group_name")].isNull() && m_group_name_isValid;
 
-    m_het_job_id_isValid = ::OpenAPI::fromJsonValue(m_het_job_id, json[QString("het_job_id")]);
+    m_het_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_het_job_id, json[QString("het_job_id")]);
     m_het_job_id_isSet = !json[QString("het_job_id")].isNull() && m_het_job_id_isValid;
 
-    m_het_job_id_set_isValid = ::OpenAPI::fromJsonValue(m_het_job_id_set, json[QString("het_job_id_set")]);
+    m_het_job_id_set_isValid = ::hm:slurm:client::fromJsonValue(m_het_job_id_set, json[QString("het_job_id_set")]);
     m_het_job_id_set_isSet = !json[QString("het_job_id_set")].isNull() && m_het_job_id_set_isValid;
 
-    m_het_job_offset_isValid = ::OpenAPI::fromJsonValue(m_het_job_offset, json[QString("het_job_offset")]);
+    m_het_job_offset_isValid = ::hm:slurm:client::fromJsonValue(m_het_job_offset, json[QString("het_job_offset")]);
     m_het_job_offset_isSet = !json[QString("het_job_offset")].isNull() && m_het_job_offset_isValid;
 
-    m_job_id_isValid = ::OpenAPI::fromJsonValue(m_job_id, json[QString("job_id")]);
+    m_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_job_id, json[QString("job_id")]);
     m_job_id_isSet = !json[QString("job_id")].isNull() && m_job_id_isValid;
 
-    m_job_resources_isValid = ::OpenAPI::fromJsonValue(m_job_resources, json[QString("job_resources")]);
+    m_job_resources_isValid = ::hm:slurm:client::fromJsonValue(m_job_resources, json[QString("job_resources")]);
     m_job_resources_isSet = !json[QString("job_resources")].isNull() && m_job_resources_isValid;
 
-    m_job_size_str_isValid = ::OpenAPI::fromJsonValue(m_job_size_str, json[QString("job_size_str")]);
+    m_job_size_str_isValid = ::hm:slurm:client::fromJsonValue(m_job_size_str, json[QString("job_size_str")]);
     m_job_size_str_isSet = !json[QString("job_size_str")].isNull() && m_job_size_str_isValid;
 
-    m_job_state_isValid = ::OpenAPI::fromJsonValue(m_job_state, json[QString("job_state")]);
+    m_job_state_isValid = ::hm:slurm:client::fromJsonValue(m_job_state, json[QString("job_state")]);
     m_job_state_isSet = !json[QString("job_state")].isNull() && m_job_state_isValid;
 
-    m_last_sched_evaluation_isValid = ::OpenAPI::fromJsonValue(m_last_sched_evaluation, json[QString("last_sched_evaluation")]);
+    m_last_sched_evaluation_isValid = ::hm:slurm:client::fromJsonValue(m_last_sched_evaluation, json[QString("last_sched_evaluation")]);
     m_last_sched_evaluation_isSet = !json[QString("last_sched_evaluation")].isNull() && m_last_sched_evaluation_isValid;
 
-    m_licenses_isValid = ::OpenAPI::fromJsonValue(m_licenses, json[QString("licenses")]);
+    m_licenses_isValid = ::hm:slurm:client::fromJsonValue(m_licenses, json[QString("licenses")]);
     m_licenses_isSet = !json[QString("licenses")].isNull() && m_licenses_isValid;
 
-    m_mail_type_isValid = ::OpenAPI::fromJsonValue(m_mail_type, json[QString("mail_type")]);
+    m_mail_type_isValid = ::hm:slurm:client::fromJsonValue(m_mail_type, json[QString("mail_type")]);
     m_mail_type_isSet = !json[QString("mail_type")].isNull() && m_mail_type_isValid;
 
-    m_mail_user_isValid = ::OpenAPI::fromJsonValue(m_mail_user, json[QString("mail_user")]);
+    m_mail_user_isValid = ::hm:slurm:client::fromJsonValue(m_mail_user, json[QString("mail_user")]);
     m_mail_user_isSet = !json[QString("mail_user")].isNull() && m_mail_user_isValid;
 
-    m_max_cpus_isValid = ::OpenAPI::fromJsonValue(m_max_cpus, json[QString("max_cpus")]);
+    m_max_cpus_isValid = ::hm:slurm:client::fromJsonValue(m_max_cpus, json[QString("max_cpus")]);
     m_max_cpus_isSet = !json[QString("max_cpus")].isNull() && m_max_cpus_isValid;
 
-    m_max_nodes_isValid = ::OpenAPI::fromJsonValue(m_max_nodes, json[QString("max_nodes")]);
+    m_max_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_max_nodes, json[QString("max_nodes")]);
     m_max_nodes_isSet = !json[QString("max_nodes")].isNull() && m_max_nodes_isValid;
 
-    m_mcs_label_isValid = ::OpenAPI::fromJsonValue(m_mcs_label, json[QString("mcs_label")]);
+    m_mcs_label_isValid = ::hm:slurm:client::fromJsonValue(m_mcs_label, json[QString("mcs_label")]);
     m_mcs_label_isSet = !json[QString("mcs_label")].isNull() && m_mcs_label_isValid;
 
-    m_memory_per_tres_isValid = ::OpenAPI::fromJsonValue(m_memory_per_tres, json[QString("memory_per_tres")]);
+    m_memory_per_tres_isValid = ::hm:slurm:client::fromJsonValue(m_memory_per_tres, json[QString("memory_per_tres")]);
     m_memory_per_tres_isSet = !json[QString("memory_per_tres")].isNull() && m_memory_per_tres_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 
-    m_network_isValid = ::OpenAPI::fromJsonValue(m_network, json[QString("network")]);
+    m_network_isValid = ::hm:slurm:client::fromJsonValue(m_network, json[QString("network")]);
     m_network_isSet = !json[QString("network")].isNull() && m_network_isValid;
 
-    m_nodes_isValid = ::OpenAPI::fromJsonValue(m_nodes, json[QString("nodes")]);
+    m_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_nodes, json[QString("nodes")]);
     m_nodes_isSet = !json[QString("nodes")].isNull() && m_nodes_isValid;
 
-    m_nice_isValid = ::OpenAPI::fromJsonValue(m_nice, json[QString("nice")]);
+    m_nice_isValid = ::hm:slurm:client::fromJsonValue(m_nice, json[QString("nice")]);
     m_nice_isSet = !json[QString("nice")].isNull() && m_nice_isValid;
 
-    m_tasks_per_core_isValid = ::OpenAPI::fromJsonValue(m_tasks_per_core, json[QString("tasks_per_core")]);
+    m_tasks_per_core_isValid = ::hm:slurm:client::fromJsonValue(m_tasks_per_core, json[QString("tasks_per_core")]);
     m_tasks_per_core_isSet = !json[QString("tasks_per_core")].isNull() && m_tasks_per_core_isValid;
 
-    m_tasks_per_tres_isValid = ::OpenAPI::fromJsonValue(m_tasks_per_tres, json[QString("tasks_per_tres")]);
+    m_tasks_per_tres_isValid = ::hm:slurm:client::fromJsonValue(m_tasks_per_tres, json[QString("tasks_per_tres")]);
     m_tasks_per_tres_isSet = !json[QString("tasks_per_tres")].isNull() && m_tasks_per_tres_isValid;
 
-    m_tasks_per_node_isValid = ::OpenAPI::fromJsonValue(m_tasks_per_node, json[QString("tasks_per_node")]);
+    m_tasks_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_tasks_per_node, json[QString("tasks_per_node")]);
     m_tasks_per_node_isSet = !json[QString("tasks_per_node")].isNull() && m_tasks_per_node_isValid;
 
-    m_tasks_per_socket_isValid = ::OpenAPI::fromJsonValue(m_tasks_per_socket, json[QString("tasks_per_socket")]);
+    m_tasks_per_socket_isValid = ::hm:slurm:client::fromJsonValue(m_tasks_per_socket, json[QString("tasks_per_socket")]);
     m_tasks_per_socket_isSet = !json[QString("tasks_per_socket")].isNull() && m_tasks_per_socket_isValid;
 
-    m_tasks_per_board_isValid = ::OpenAPI::fromJsonValue(m_tasks_per_board, json[QString("tasks_per_board")]);
+    m_tasks_per_board_isValid = ::hm:slurm:client::fromJsonValue(m_tasks_per_board, json[QString("tasks_per_board")]);
     m_tasks_per_board_isSet = !json[QString("tasks_per_board")].isNull() && m_tasks_per_board_isValid;
 
-    m_cpus_isValid = ::OpenAPI::fromJsonValue(m_cpus, json[QString("cpus")]);
+    m_cpus_isValid = ::hm:slurm:client::fromJsonValue(m_cpus, json[QString("cpus")]);
     m_cpus_isSet = !json[QString("cpus")].isNull() && m_cpus_isValid;
 
-    m_node_count_isValid = ::OpenAPI::fromJsonValue(m_node_count, json[QString("node_count")]);
+    m_node_count_isValid = ::hm:slurm:client::fromJsonValue(m_node_count, json[QString("node_count")]);
     m_node_count_isSet = !json[QString("node_count")].isNull() && m_node_count_isValid;
 
-    m_tasks_isValid = ::OpenAPI::fromJsonValue(m_tasks, json[QString("tasks")]);
+    m_tasks_isValid = ::hm:slurm:client::fromJsonValue(m_tasks, json[QString("tasks")]);
     m_tasks_isSet = !json[QString("tasks")].isNull() && m_tasks_isValid;
 
-    m_partition_isValid = ::OpenAPI::fromJsonValue(m_partition, json[QString("partition")]);
+    m_partition_isValid = ::hm:slurm:client::fromJsonValue(m_partition, json[QString("partition")]);
     m_partition_isSet = !json[QString("partition")].isNull() && m_partition_isValid;
 
-    m_prefer_isValid = ::OpenAPI::fromJsonValue(m_prefer, json[QString("prefer")]);
+    m_prefer_isValid = ::hm:slurm:client::fromJsonValue(m_prefer, json[QString("prefer")]);
     m_prefer_isSet = !json[QString("prefer")].isNull() && m_prefer_isValid;
 
-    m_memory_per_cpu_isValid = ::OpenAPI::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
+    m_memory_per_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_memory_per_cpu, json[QString("memory_per_cpu")]);
     m_memory_per_cpu_isSet = !json[QString("memory_per_cpu")].isNull() && m_memory_per_cpu_isValid;
 
-    m_memory_per_node_isValid = ::OpenAPI::fromJsonValue(m_memory_per_node, json[QString("memory_per_node")]);
+    m_memory_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_memory_per_node, json[QString("memory_per_node")]);
     m_memory_per_node_isSet = !json[QString("memory_per_node")].isNull() && m_memory_per_node_isValid;
 
-    m_minimum_cpus_per_node_isValid = ::OpenAPI::fromJsonValue(m_minimum_cpus_per_node, json[QString("minimum_cpus_per_node")]);
+    m_minimum_cpus_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_minimum_cpus_per_node, json[QString("minimum_cpus_per_node")]);
     m_minimum_cpus_per_node_isSet = !json[QString("minimum_cpus_per_node")].isNull() && m_minimum_cpus_per_node_isValid;
 
-    m_minimum_tmp_disk_per_node_isValid = ::OpenAPI::fromJsonValue(m_minimum_tmp_disk_per_node, json[QString("minimum_tmp_disk_per_node")]);
+    m_minimum_tmp_disk_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_minimum_tmp_disk_per_node, json[QString("minimum_tmp_disk_per_node")]);
     m_minimum_tmp_disk_per_node_isSet = !json[QString("minimum_tmp_disk_per_node")].isNull() && m_minimum_tmp_disk_per_node_isValid;
 
-    m_power_isValid = ::OpenAPI::fromJsonValue(m_power, json[QString("power")]);
+    m_power_isValid = ::hm:slurm:client::fromJsonValue(m_power, json[QString("power")]);
     m_power_isSet = !json[QString("power")].isNull() && m_power_isValid;
 
-    m_preempt_time_isValid = ::OpenAPI::fromJsonValue(m_preempt_time, json[QString("preempt_time")]);
+    m_preempt_time_isValid = ::hm:slurm:client::fromJsonValue(m_preempt_time, json[QString("preempt_time")]);
     m_preempt_time_isSet = !json[QString("preempt_time")].isNull() && m_preempt_time_isValid;
 
-    m_preemptable_time_isValid = ::OpenAPI::fromJsonValue(m_preemptable_time, json[QString("preemptable_time")]);
+    m_preemptable_time_isValid = ::hm:slurm:client::fromJsonValue(m_preemptable_time, json[QString("preemptable_time")]);
     m_preemptable_time_isSet = !json[QString("preemptable_time")].isNull() && m_preemptable_time_isValid;
 
-    m_pre_sus_time_isValid = ::OpenAPI::fromJsonValue(m_pre_sus_time, json[QString("pre_sus_time")]);
+    m_pre_sus_time_isValid = ::hm:slurm:client::fromJsonValue(m_pre_sus_time, json[QString("pre_sus_time")]);
     m_pre_sus_time_isSet = !json[QString("pre_sus_time")].isNull() && m_pre_sus_time_isValid;
 
-    m_hold_isValid = ::OpenAPI::fromJsonValue(m_hold, json[QString("hold")]);
+    m_hold_isValid = ::hm:slurm:client::fromJsonValue(m_hold, json[QString("hold")]);
     m_hold_isSet = !json[QString("hold")].isNull() && m_hold_isValid;
 
-    m_priority_isValid = ::OpenAPI::fromJsonValue(m_priority, json[QString("priority")]);
+    m_priority_isValid = ::hm:slurm:client::fromJsonValue(m_priority, json[QString("priority")]);
     m_priority_isSet = !json[QString("priority")].isNull() && m_priority_isValid;
 
-    m_profile_isValid = ::OpenAPI::fromJsonValue(m_profile, json[QString("profile")]);
+    m_profile_isValid = ::hm:slurm:client::fromJsonValue(m_profile, json[QString("profile")]);
     m_profile_isSet = !json[QString("profile")].isNull() && m_profile_isValid;
 
-    m_qos_isValid = ::OpenAPI::fromJsonValue(m_qos, json[QString("qos")]);
+    m_qos_isValid = ::hm:slurm:client::fromJsonValue(m_qos, json[QString("qos")]);
     m_qos_isSet = !json[QString("qos")].isNull() && m_qos_isValid;
 
-    m_reboot_isValid = ::OpenAPI::fromJsonValue(m_reboot, json[QString("reboot")]);
+    m_reboot_isValid = ::hm:slurm:client::fromJsonValue(m_reboot, json[QString("reboot")]);
     m_reboot_isSet = !json[QString("reboot")].isNull() && m_reboot_isValid;
 
-    m_required_nodes_isValid = ::OpenAPI::fromJsonValue(m_required_nodes, json[QString("required_nodes")]);
+    m_required_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_required_nodes, json[QString("required_nodes")]);
     m_required_nodes_isSet = !json[QString("required_nodes")].isNull() && m_required_nodes_isValid;
 
-    m_minimum_switches_isValid = ::OpenAPI::fromJsonValue(m_minimum_switches, json[QString("minimum_switches")]);
+    m_minimum_switches_isValid = ::hm:slurm:client::fromJsonValue(m_minimum_switches, json[QString("minimum_switches")]);
     m_minimum_switches_isSet = !json[QString("minimum_switches")].isNull() && m_minimum_switches_isValid;
 
-    m_requeue_isValid = ::OpenAPI::fromJsonValue(m_requeue, json[QString("requeue")]);
+    m_requeue_isValid = ::hm:slurm:client::fromJsonValue(m_requeue, json[QString("requeue")]);
     m_requeue_isSet = !json[QString("requeue")].isNull() && m_requeue_isValid;
 
-    m_resize_time_isValid = ::OpenAPI::fromJsonValue(m_resize_time, json[QString("resize_time")]);
+    m_resize_time_isValid = ::hm:slurm:client::fromJsonValue(m_resize_time, json[QString("resize_time")]);
     m_resize_time_isSet = !json[QString("resize_time")].isNull() && m_resize_time_isValid;
 
-    m_restart_cnt_isValid = ::OpenAPI::fromJsonValue(m_restart_cnt, json[QString("restart_cnt")]);
+    m_restart_cnt_isValid = ::hm:slurm:client::fromJsonValue(m_restart_cnt, json[QString("restart_cnt")]);
     m_restart_cnt_isSet = !json[QString("restart_cnt")].isNull() && m_restart_cnt_isValid;
 
-    m_resv_name_isValid = ::OpenAPI::fromJsonValue(m_resv_name, json[QString("resv_name")]);
+    m_resv_name_isValid = ::hm:slurm:client::fromJsonValue(m_resv_name, json[QString("resv_name")]);
     m_resv_name_isSet = !json[QString("resv_name")].isNull() && m_resv_name_isValid;
 
-    m_scheduled_nodes_isValid = ::OpenAPI::fromJsonValue(m_scheduled_nodes, json[QString("scheduled_nodes")]);
+    m_scheduled_nodes_isValid = ::hm:slurm:client::fromJsonValue(m_scheduled_nodes, json[QString("scheduled_nodes")]);
     m_scheduled_nodes_isSet = !json[QString("scheduled_nodes")].isNull() && m_scheduled_nodes_isValid;
 
-    m_selinux_context_isValid = ::OpenAPI::fromJsonValue(m_selinux_context, json[QString("selinux_context")]);
+    m_selinux_context_isValid = ::hm:slurm:client::fromJsonValue(m_selinux_context, json[QString("selinux_context")]);
     m_selinux_context_isSet = !json[QString("selinux_context")].isNull() && m_selinux_context_isValid;
 
-    m_shared_isValid = ::OpenAPI::fromJsonValue(m_shared, json[QString("shared")]);
+    m_shared_isValid = ::hm:slurm:client::fromJsonValue(m_shared, json[QString("shared")]);
     m_shared_isSet = !json[QString("shared")].isNull() && m_shared_isValid;
 
-    m_exclusive_isValid = ::OpenAPI::fromJsonValue(m_exclusive, json[QString("exclusive")]);
+    m_exclusive_isValid = ::hm:slurm:client::fromJsonValue(m_exclusive, json[QString("exclusive")]);
     m_exclusive_isSet = !json[QString("exclusive")].isNull() && m_exclusive_isValid;
 
-    m_oversubscribe_isValid = ::OpenAPI::fromJsonValue(m_oversubscribe, json[QString("oversubscribe")]);
+    m_oversubscribe_isValid = ::hm:slurm:client::fromJsonValue(m_oversubscribe, json[QString("oversubscribe")]);
     m_oversubscribe_isSet = !json[QString("oversubscribe")].isNull() && m_oversubscribe_isValid;
 
-    m_show_flags_isValid = ::OpenAPI::fromJsonValue(m_show_flags, json[QString("show_flags")]);
+    m_show_flags_isValid = ::hm:slurm:client::fromJsonValue(m_show_flags, json[QString("show_flags")]);
     m_show_flags_isSet = !json[QString("show_flags")].isNull() && m_show_flags_isValid;
 
-    m_sockets_per_board_isValid = ::OpenAPI::fromJsonValue(m_sockets_per_board, json[QString("sockets_per_board")]);
+    m_sockets_per_board_isValid = ::hm:slurm:client::fromJsonValue(m_sockets_per_board, json[QString("sockets_per_board")]);
     m_sockets_per_board_isSet = !json[QString("sockets_per_board")].isNull() && m_sockets_per_board_isValid;
 
-    m_sockets_per_node_isValid = ::OpenAPI::fromJsonValue(m_sockets_per_node, json[QString("sockets_per_node")]);
+    m_sockets_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_sockets_per_node, json[QString("sockets_per_node")]);
     m_sockets_per_node_isSet = !json[QString("sockets_per_node")].isNull() && m_sockets_per_node_isValid;
 
-    m_start_time_isValid = ::OpenAPI::fromJsonValue(m_start_time, json[QString("start_time")]);
+    m_start_time_isValid = ::hm:slurm:client::fromJsonValue(m_start_time, json[QString("start_time")]);
     m_start_time_isSet = !json[QString("start_time")].isNull() && m_start_time_isValid;
 
-    m_state_description_isValid = ::OpenAPI::fromJsonValue(m_state_description, json[QString("state_description")]);
+    m_state_description_isValid = ::hm:slurm:client::fromJsonValue(m_state_description, json[QString("state_description")]);
     m_state_description_isSet = !json[QString("state_description")].isNull() && m_state_description_isValid;
 
-    m_state_reason_isValid = ::OpenAPI::fromJsonValue(m_state_reason, json[QString("state_reason")]);
+    m_state_reason_isValid = ::hm:slurm:client::fromJsonValue(m_state_reason, json[QString("state_reason")]);
     m_state_reason_isSet = !json[QString("state_reason")].isNull() && m_state_reason_isValid;
 
-    m_standard_error_isValid = ::OpenAPI::fromJsonValue(m_standard_error, json[QString("standard_error")]);
+    m_standard_error_isValid = ::hm:slurm:client::fromJsonValue(m_standard_error, json[QString("standard_error")]);
     m_standard_error_isSet = !json[QString("standard_error")].isNull() && m_standard_error_isValid;
 
-    m_standard_input_isValid = ::OpenAPI::fromJsonValue(m_standard_input, json[QString("standard_input")]);
+    m_standard_input_isValid = ::hm:slurm:client::fromJsonValue(m_standard_input, json[QString("standard_input")]);
     m_standard_input_isSet = !json[QString("standard_input")].isNull() && m_standard_input_isValid;
 
-    m_standard_output_isValid = ::OpenAPI::fromJsonValue(m_standard_output, json[QString("standard_output")]);
+    m_standard_output_isValid = ::hm:slurm:client::fromJsonValue(m_standard_output, json[QString("standard_output")]);
     m_standard_output_isSet = !json[QString("standard_output")].isNull() && m_standard_output_isValid;
 
-    m_submit_time_isValid = ::OpenAPI::fromJsonValue(m_submit_time, json[QString("submit_time")]);
+    m_submit_time_isValid = ::hm:slurm:client::fromJsonValue(m_submit_time, json[QString("submit_time")]);
     m_submit_time_isSet = !json[QString("submit_time")].isNull() && m_submit_time_isValid;
 
-    m_suspend_time_isValid = ::OpenAPI::fromJsonValue(m_suspend_time, json[QString("suspend_time")]);
+    m_suspend_time_isValid = ::hm:slurm:client::fromJsonValue(m_suspend_time, json[QString("suspend_time")]);
     m_suspend_time_isSet = !json[QString("suspend_time")].isNull() && m_suspend_time_isValid;
 
-    m_system_comment_isValid = ::OpenAPI::fromJsonValue(m_system_comment, json[QString("system_comment")]);
+    m_system_comment_isValid = ::hm:slurm:client::fromJsonValue(m_system_comment, json[QString("system_comment")]);
     m_system_comment_isSet = !json[QString("system_comment")].isNull() && m_system_comment_isValid;
 
-    m_time_limit_isValid = ::OpenAPI::fromJsonValue(m_time_limit, json[QString("time_limit")]);
+    m_time_limit_isValid = ::hm:slurm:client::fromJsonValue(m_time_limit, json[QString("time_limit")]);
     m_time_limit_isSet = !json[QString("time_limit")].isNull() && m_time_limit_isValid;
 
-    m_time_minimum_isValid = ::OpenAPI::fromJsonValue(m_time_minimum, json[QString("time_minimum")]);
+    m_time_minimum_isValid = ::hm:slurm:client::fromJsonValue(m_time_minimum, json[QString("time_minimum")]);
     m_time_minimum_isSet = !json[QString("time_minimum")].isNull() && m_time_minimum_isValid;
 
-    m_threads_per_core_isValid = ::OpenAPI::fromJsonValue(m_threads_per_core, json[QString("threads_per_core")]);
+    m_threads_per_core_isValid = ::hm:slurm:client::fromJsonValue(m_threads_per_core, json[QString("threads_per_core")]);
     m_threads_per_core_isSet = !json[QString("threads_per_core")].isNull() && m_threads_per_core_isValid;
 
-    m_tres_bind_isValid = ::OpenAPI::fromJsonValue(m_tres_bind, json[QString("tres_bind")]);
+    m_tres_bind_isValid = ::hm:slurm:client::fromJsonValue(m_tres_bind, json[QString("tres_bind")]);
     m_tres_bind_isSet = !json[QString("tres_bind")].isNull() && m_tres_bind_isValid;
 
-    m_tres_freq_isValid = ::OpenAPI::fromJsonValue(m_tres_freq, json[QString("tres_freq")]);
+    m_tres_freq_isValid = ::hm:slurm:client::fromJsonValue(m_tres_freq, json[QString("tres_freq")]);
     m_tres_freq_isSet = !json[QString("tres_freq")].isNull() && m_tres_freq_isValid;
 
-    m_tres_per_job_isValid = ::OpenAPI::fromJsonValue(m_tres_per_job, json[QString("tres_per_job")]);
+    m_tres_per_job_isValid = ::hm:slurm:client::fromJsonValue(m_tres_per_job, json[QString("tres_per_job")]);
     m_tres_per_job_isSet = !json[QString("tres_per_job")].isNull() && m_tres_per_job_isValid;
 
-    m_tres_per_node_isValid = ::OpenAPI::fromJsonValue(m_tres_per_node, json[QString("tres_per_node")]);
+    m_tres_per_node_isValid = ::hm:slurm:client::fromJsonValue(m_tres_per_node, json[QString("tres_per_node")]);
     m_tres_per_node_isSet = !json[QString("tres_per_node")].isNull() && m_tres_per_node_isValid;
 
-    m_tres_per_socket_isValid = ::OpenAPI::fromJsonValue(m_tres_per_socket, json[QString("tres_per_socket")]);
+    m_tres_per_socket_isValid = ::hm:slurm:client::fromJsonValue(m_tres_per_socket, json[QString("tres_per_socket")]);
     m_tres_per_socket_isSet = !json[QString("tres_per_socket")].isNull() && m_tres_per_socket_isValid;
 
-    m_tres_per_task_isValid = ::OpenAPI::fromJsonValue(m_tres_per_task, json[QString("tres_per_task")]);
+    m_tres_per_task_isValid = ::hm:slurm:client::fromJsonValue(m_tres_per_task, json[QString("tres_per_task")]);
     m_tres_per_task_isSet = !json[QString("tres_per_task")].isNull() && m_tres_per_task_isValid;
 
-    m_tres_req_str_isValid = ::OpenAPI::fromJsonValue(m_tres_req_str, json[QString("tres_req_str")]);
+    m_tres_req_str_isValid = ::hm:slurm:client::fromJsonValue(m_tres_req_str, json[QString("tres_req_str")]);
     m_tres_req_str_isSet = !json[QString("tres_req_str")].isNull() && m_tres_req_str_isValid;
 
-    m_tres_alloc_str_isValid = ::OpenAPI::fromJsonValue(m_tres_alloc_str, json[QString("tres_alloc_str")]);
+    m_tres_alloc_str_isValid = ::hm:slurm:client::fromJsonValue(m_tres_alloc_str, json[QString("tres_alloc_str")]);
     m_tres_alloc_str_isSet = !json[QString("tres_alloc_str")].isNull() && m_tres_alloc_str_isValid;
 
-    m_user_id_isValid = ::OpenAPI::fromJsonValue(m_user_id, json[QString("user_id")]);
+    m_user_id_isValid = ::hm:slurm:client::fromJsonValue(m_user_id, json[QString("user_id")]);
     m_user_id_isSet = !json[QString("user_id")].isNull() && m_user_id_isValid;
 
-    m_user_name_isValid = ::OpenAPI::fromJsonValue(m_user_name, json[QString("user_name")]);
+    m_user_name_isValid = ::hm:slurm:client::fromJsonValue(m_user_name, json[QString("user_name")]);
     m_user_name_isSet = !json[QString("user_name")].isNull() && m_user_name_isValid;
 
-    m_maximum_switch_wait_time_isValid = ::OpenAPI::fromJsonValue(m_maximum_switch_wait_time, json[QString("maximum_switch_wait_time")]);
+    m_maximum_switch_wait_time_isValid = ::hm:slurm:client::fromJsonValue(m_maximum_switch_wait_time, json[QString("maximum_switch_wait_time")]);
     m_maximum_switch_wait_time_isSet = !json[QString("maximum_switch_wait_time")].isNull() && m_maximum_switch_wait_time_isValid;
 
-    m_wckey_isValid = ::OpenAPI::fromJsonValue(m_wckey, json[QString("wckey")]);
+    m_wckey_isValid = ::hm:slurm:client::fromJsonValue(m_wckey, json[QString("wckey")]);
     m_wckey_isSet = !json[QString("wckey")].isNull() && m_wckey_isValid;
 
-    m_current_working_directory_isValid = ::OpenAPI::fromJsonValue(m_current_working_directory, json[QString("current_working_directory")]);
+    m_current_working_directory_isValid = ::hm:slurm:client::fromJsonValue(m_current_working_directory, json[QString("current_working_directory")]);
     m_current_working_directory_isSet = !json[QString("current_working_directory")].isNull() && m_current_working_directory_isValid;
 }
 
@@ -835,394 +835,394 @@ QString OAIV0_0_41_openapi_job_info_resp_jobs_inner::asJson() const {
 QJsonObject OAIV0_0_41_openapi_job_info_resp_jobs_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_account_isSet) {
-        obj.insert(QString("account"), ::OpenAPI::toJsonValue(m_account));
+        obj.insert(QString("account"), ::hm:slurm:client::toJsonValue(m_account));
     }
     if (m_accrue_time.isSet()) {
-        obj.insert(QString("accrue_time"), ::OpenAPI::toJsonValue(m_accrue_time));
+        obj.insert(QString("accrue_time"), ::hm:slurm:client::toJsonValue(m_accrue_time));
     }
     if (m_admin_comment_isSet) {
-        obj.insert(QString("admin_comment"), ::OpenAPI::toJsonValue(m_admin_comment));
+        obj.insert(QString("admin_comment"), ::hm:slurm:client::toJsonValue(m_admin_comment));
     }
     if (m_allocating_node_isSet) {
-        obj.insert(QString("allocating_node"), ::OpenAPI::toJsonValue(m_allocating_node));
+        obj.insert(QString("allocating_node"), ::hm:slurm:client::toJsonValue(m_allocating_node));
     }
     if (m_array_job_id.isSet()) {
-        obj.insert(QString("array_job_id"), ::OpenAPI::toJsonValue(m_array_job_id));
+        obj.insert(QString("array_job_id"), ::hm:slurm:client::toJsonValue(m_array_job_id));
     }
     if (m_array_task_id.isSet()) {
-        obj.insert(QString("array_task_id"), ::OpenAPI::toJsonValue(m_array_task_id));
+        obj.insert(QString("array_task_id"), ::hm:slurm:client::toJsonValue(m_array_task_id));
     }
     if (m_array_max_tasks.isSet()) {
-        obj.insert(QString("array_max_tasks"), ::OpenAPI::toJsonValue(m_array_max_tasks));
+        obj.insert(QString("array_max_tasks"), ::hm:slurm:client::toJsonValue(m_array_max_tasks));
     }
     if (m_array_task_string_isSet) {
-        obj.insert(QString("array_task_string"), ::OpenAPI::toJsonValue(m_array_task_string));
+        obj.insert(QString("array_task_string"), ::hm:slurm:client::toJsonValue(m_array_task_string));
     }
     if (m_association_id_isSet) {
-        obj.insert(QString("association_id"), ::OpenAPI::toJsonValue(m_association_id));
+        obj.insert(QString("association_id"), ::hm:slurm:client::toJsonValue(m_association_id));
     }
     if (m_batch_features_isSet) {
-        obj.insert(QString("batch_features"), ::OpenAPI::toJsonValue(m_batch_features));
+        obj.insert(QString("batch_features"), ::hm:slurm:client::toJsonValue(m_batch_features));
     }
     if (m_batch_flag_isSet) {
-        obj.insert(QString("batch_flag"), ::OpenAPI::toJsonValue(m_batch_flag));
+        obj.insert(QString("batch_flag"), ::hm:slurm:client::toJsonValue(m_batch_flag));
     }
     if (m_batch_host_isSet) {
-        obj.insert(QString("batch_host"), ::OpenAPI::toJsonValue(m_batch_host));
+        obj.insert(QString("batch_host"), ::hm:slurm:client::toJsonValue(m_batch_host));
     }
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     if (m_burst_buffer_isSet) {
-        obj.insert(QString("burst_buffer"), ::OpenAPI::toJsonValue(m_burst_buffer));
+        obj.insert(QString("burst_buffer"), ::hm:slurm:client::toJsonValue(m_burst_buffer));
     }
     if (m_burst_buffer_state_isSet) {
-        obj.insert(QString("burst_buffer_state"), ::OpenAPI::toJsonValue(m_burst_buffer_state));
+        obj.insert(QString("burst_buffer_state"), ::hm:slurm:client::toJsonValue(m_burst_buffer_state));
     }
     if (m_cluster_isSet) {
-        obj.insert(QString("cluster"), ::OpenAPI::toJsonValue(m_cluster));
+        obj.insert(QString("cluster"), ::hm:slurm:client::toJsonValue(m_cluster));
     }
     if (m_cluster_features_isSet) {
-        obj.insert(QString("cluster_features"), ::OpenAPI::toJsonValue(m_cluster_features));
+        obj.insert(QString("cluster_features"), ::hm:slurm:client::toJsonValue(m_cluster_features));
     }
     if (m_command_isSet) {
-        obj.insert(QString("command"), ::OpenAPI::toJsonValue(m_command));
+        obj.insert(QString("command"), ::hm:slurm:client::toJsonValue(m_command));
     }
     if (m_comment_isSet) {
-        obj.insert(QString("comment"), ::OpenAPI::toJsonValue(m_comment));
+        obj.insert(QString("comment"), ::hm:slurm:client::toJsonValue(m_comment));
     }
     if (m_container_isSet) {
-        obj.insert(QString("container"), ::OpenAPI::toJsonValue(m_container));
+        obj.insert(QString("container"), ::hm:slurm:client::toJsonValue(m_container));
     }
     if (m_container_id_isSet) {
-        obj.insert(QString("container_id"), ::OpenAPI::toJsonValue(m_container_id));
+        obj.insert(QString("container_id"), ::hm:slurm:client::toJsonValue(m_container_id));
     }
     if (m_contiguous_isSet) {
-        obj.insert(QString("contiguous"), ::OpenAPI::toJsonValue(m_contiguous));
+        obj.insert(QString("contiguous"), ::hm:slurm:client::toJsonValue(m_contiguous));
     }
     if (m_core_spec_isSet) {
-        obj.insert(QString("core_spec"), ::OpenAPI::toJsonValue(m_core_spec));
+        obj.insert(QString("core_spec"), ::hm:slurm:client::toJsonValue(m_core_spec));
     }
     if (m_thread_spec_isSet) {
-        obj.insert(QString("thread_spec"), ::OpenAPI::toJsonValue(m_thread_spec));
+        obj.insert(QString("thread_spec"), ::hm:slurm:client::toJsonValue(m_thread_spec));
     }
     if (m_cores_per_socket.isSet()) {
-        obj.insert(QString("cores_per_socket"), ::OpenAPI::toJsonValue(m_cores_per_socket));
+        obj.insert(QString("cores_per_socket"), ::hm:slurm:client::toJsonValue(m_cores_per_socket));
     }
     if (m_billable_tres.isSet()) {
-        obj.insert(QString("billable_tres"), ::OpenAPI::toJsonValue(m_billable_tres));
+        obj.insert(QString("billable_tres"), ::hm:slurm:client::toJsonValue(m_billable_tres));
     }
     if (m_cpus_per_task.isSet()) {
-        obj.insert(QString("cpus_per_task"), ::OpenAPI::toJsonValue(m_cpus_per_task));
+        obj.insert(QString("cpus_per_task"), ::hm:slurm:client::toJsonValue(m_cpus_per_task));
     }
     if (m_cpu_frequency_minimum.isSet()) {
-        obj.insert(QString("cpu_frequency_minimum"), ::OpenAPI::toJsonValue(m_cpu_frequency_minimum));
+        obj.insert(QString("cpu_frequency_minimum"), ::hm:slurm:client::toJsonValue(m_cpu_frequency_minimum));
     }
     if (m_cpu_frequency_maximum.isSet()) {
-        obj.insert(QString("cpu_frequency_maximum"), ::OpenAPI::toJsonValue(m_cpu_frequency_maximum));
+        obj.insert(QString("cpu_frequency_maximum"), ::hm:slurm:client::toJsonValue(m_cpu_frequency_maximum));
     }
     if (m_cpu_frequency_governor.isSet()) {
-        obj.insert(QString("cpu_frequency_governor"), ::OpenAPI::toJsonValue(m_cpu_frequency_governor));
+        obj.insert(QString("cpu_frequency_governor"), ::hm:slurm:client::toJsonValue(m_cpu_frequency_governor));
     }
     if (m_cpus_per_tres_isSet) {
-        obj.insert(QString("cpus_per_tres"), ::OpenAPI::toJsonValue(m_cpus_per_tres));
+        obj.insert(QString("cpus_per_tres"), ::hm:slurm:client::toJsonValue(m_cpus_per_tres));
     }
     if (m_cron_isSet) {
-        obj.insert(QString("cron"), ::OpenAPI::toJsonValue(m_cron));
+        obj.insert(QString("cron"), ::hm:slurm:client::toJsonValue(m_cron));
     }
     if (m_deadline.isSet()) {
-        obj.insert(QString("deadline"), ::OpenAPI::toJsonValue(m_deadline));
+        obj.insert(QString("deadline"), ::hm:slurm:client::toJsonValue(m_deadline));
     }
     if (m_delay_boot.isSet()) {
-        obj.insert(QString("delay_boot"), ::OpenAPI::toJsonValue(m_delay_boot));
+        obj.insert(QString("delay_boot"), ::hm:slurm:client::toJsonValue(m_delay_boot));
     }
     if (m_dependency_isSet) {
-        obj.insert(QString("dependency"), ::OpenAPI::toJsonValue(m_dependency));
+        obj.insert(QString("dependency"), ::hm:slurm:client::toJsonValue(m_dependency));
     }
     if (m_derived_exit_code.isSet()) {
-        obj.insert(QString("derived_exit_code"), ::OpenAPI::toJsonValue(m_derived_exit_code));
+        obj.insert(QString("derived_exit_code"), ::hm:slurm:client::toJsonValue(m_derived_exit_code));
     }
     if (m_eligible_time.isSet()) {
-        obj.insert(QString("eligible_time"), ::OpenAPI::toJsonValue(m_eligible_time));
+        obj.insert(QString("eligible_time"), ::hm:slurm:client::toJsonValue(m_eligible_time));
     }
     if (m_end_time.isSet()) {
-        obj.insert(QString("end_time"), ::OpenAPI::toJsonValue(m_end_time));
+        obj.insert(QString("end_time"), ::hm:slurm:client::toJsonValue(m_end_time));
     }
     if (m_excluded_nodes_isSet) {
-        obj.insert(QString("excluded_nodes"), ::OpenAPI::toJsonValue(m_excluded_nodes));
+        obj.insert(QString("excluded_nodes"), ::hm:slurm:client::toJsonValue(m_excluded_nodes));
     }
     if (m_exit_code.isSet()) {
-        obj.insert(QString("exit_code"), ::OpenAPI::toJsonValue(m_exit_code));
+        obj.insert(QString("exit_code"), ::hm:slurm:client::toJsonValue(m_exit_code));
     }
     if (m_extra_isSet) {
-        obj.insert(QString("extra"), ::OpenAPI::toJsonValue(m_extra));
+        obj.insert(QString("extra"), ::hm:slurm:client::toJsonValue(m_extra));
     }
     if (m_failed_node_isSet) {
-        obj.insert(QString("failed_node"), ::OpenAPI::toJsonValue(m_failed_node));
+        obj.insert(QString("failed_node"), ::hm:slurm:client::toJsonValue(m_failed_node));
     }
     if (m_features_isSet) {
-        obj.insert(QString("features"), ::OpenAPI::toJsonValue(m_features));
+        obj.insert(QString("features"), ::hm:slurm:client::toJsonValue(m_features));
     }
     if (m_federation_origin_isSet) {
-        obj.insert(QString("federation_origin"), ::OpenAPI::toJsonValue(m_federation_origin));
+        obj.insert(QString("federation_origin"), ::hm:slurm:client::toJsonValue(m_federation_origin));
     }
     if (m_federation_siblings_active_isSet) {
-        obj.insert(QString("federation_siblings_active"), ::OpenAPI::toJsonValue(m_federation_siblings_active));
+        obj.insert(QString("federation_siblings_active"), ::hm:slurm:client::toJsonValue(m_federation_siblings_active));
     }
     if (m_federation_siblings_viable_isSet) {
-        obj.insert(QString("federation_siblings_viable"), ::OpenAPI::toJsonValue(m_federation_siblings_viable));
+        obj.insert(QString("federation_siblings_viable"), ::hm:slurm:client::toJsonValue(m_federation_siblings_viable));
     }
     if (m_gres_detail.size() > 0) {
-        obj.insert(QString("gres_detail"), ::OpenAPI::toJsonValue(m_gres_detail));
+        obj.insert(QString("gres_detail"), ::hm:slurm:client::toJsonValue(m_gres_detail));
     }
     if (m_group_id_isSet) {
-        obj.insert(QString("group_id"), ::OpenAPI::toJsonValue(m_group_id));
+        obj.insert(QString("group_id"), ::hm:slurm:client::toJsonValue(m_group_id));
     }
     if (m_group_name_isSet) {
-        obj.insert(QString("group_name"), ::OpenAPI::toJsonValue(m_group_name));
+        obj.insert(QString("group_name"), ::hm:slurm:client::toJsonValue(m_group_name));
     }
     if (m_het_job_id.isSet()) {
-        obj.insert(QString("het_job_id"), ::OpenAPI::toJsonValue(m_het_job_id));
+        obj.insert(QString("het_job_id"), ::hm:slurm:client::toJsonValue(m_het_job_id));
     }
     if (m_het_job_id_set_isSet) {
-        obj.insert(QString("het_job_id_set"), ::OpenAPI::toJsonValue(m_het_job_id_set));
+        obj.insert(QString("het_job_id_set"), ::hm:slurm:client::toJsonValue(m_het_job_id_set));
     }
     if (m_het_job_offset.isSet()) {
-        obj.insert(QString("het_job_offset"), ::OpenAPI::toJsonValue(m_het_job_offset));
+        obj.insert(QString("het_job_offset"), ::hm:slurm:client::toJsonValue(m_het_job_offset));
     }
     if (m_job_id_isSet) {
-        obj.insert(QString("job_id"), ::OpenAPI::toJsonValue(m_job_id));
+        obj.insert(QString("job_id"), ::hm:slurm:client::toJsonValue(m_job_id));
     }
     if (m_job_resources.isSet()) {
-        obj.insert(QString("job_resources"), ::OpenAPI::toJsonValue(m_job_resources));
+        obj.insert(QString("job_resources"), ::hm:slurm:client::toJsonValue(m_job_resources));
     }
     if (m_job_size_str.size() > 0) {
-        obj.insert(QString("job_size_str"), ::OpenAPI::toJsonValue(m_job_size_str));
+        obj.insert(QString("job_size_str"), ::hm:slurm:client::toJsonValue(m_job_size_str));
     }
     if (m_job_state.size() > 0) {
-        obj.insert(QString("job_state"), ::OpenAPI::toJsonValue(m_job_state));
+        obj.insert(QString("job_state"), ::hm:slurm:client::toJsonValue(m_job_state));
     }
     if (m_last_sched_evaluation.isSet()) {
-        obj.insert(QString("last_sched_evaluation"), ::OpenAPI::toJsonValue(m_last_sched_evaluation));
+        obj.insert(QString("last_sched_evaluation"), ::hm:slurm:client::toJsonValue(m_last_sched_evaluation));
     }
     if (m_licenses_isSet) {
-        obj.insert(QString("licenses"), ::OpenAPI::toJsonValue(m_licenses));
+        obj.insert(QString("licenses"), ::hm:slurm:client::toJsonValue(m_licenses));
     }
     if (m_mail_type.size() > 0) {
-        obj.insert(QString("mail_type"), ::OpenAPI::toJsonValue(m_mail_type));
+        obj.insert(QString("mail_type"), ::hm:slurm:client::toJsonValue(m_mail_type));
     }
     if (m_mail_user_isSet) {
-        obj.insert(QString("mail_user"), ::OpenAPI::toJsonValue(m_mail_user));
+        obj.insert(QString("mail_user"), ::hm:slurm:client::toJsonValue(m_mail_user));
     }
     if (m_max_cpus.isSet()) {
-        obj.insert(QString("max_cpus"), ::OpenAPI::toJsonValue(m_max_cpus));
+        obj.insert(QString("max_cpus"), ::hm:slurm:client::toJsonValue(m_max_cpus));
     }
     if (m_max_nodes.isSet()) {
-        obj.insert(QString("max_nodes"), ::OpenAPI::toJsonValue(m_max_nodes));
+        obj.insert(QString("max_nodes"), ::hm:slurm:client::toJsonValue(m_max_nodes));
     }
     if (m_mcs_label_isSet) {
-        obj.insert(QString("mcs_label"), ::OpenAPI::toJsonValue(m_mcs_label));
+        obj.insert(QString("mcs_label"), ::hm:slurm:client::toJsonValue(m_mcs_label));
     }
     if (m_memory_per_tres_isSet) {
-        obj.insert(QString("memory_per_tres"), ::OpenAPI::toJsonValue(m_memory_per_tres));
+        obj.insert(QString("memory_per_tres"), ::hm:slurm:client::toJsonValue(m_memory_per_tres));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     if (m_network_isSet) {
-        obj.insert(QString("network"), ::OpenAPI::toJsonValue(m_network));
+        obj.insert(QString("network"), ::hm:slurm:client::toJsonValue(m_network));
     }
     if (m_nodes_isSet) {
-        obj.insert(QString("nodes"), ::OpenAPI::toJsonValue(m_nodes));
+        obj.insert(QString("nodes"), ::hm:slurm:client::toJsonValue(m_nodes));
     }
     if (m_nice_isSet) {
-        obj.insert(QString("nice"), ::OpenAPI::toJsonValue(m_nice));
+        obj.insert(QString("nice"), ::hm:slurm:client::toJsonValue(m_nice));
     }
     if (m_tasks_per_core.isSet()) {
-        obj.insert(QString("tasks_per_core"), ::OpenAPI::toJsonValue(m_tasks_per_core));
+        obj.insert(QString("tasks_per_core"), ::hm:slurm:client::toJsonValue(m_tasks_per_core));
     }
     if (m_tasks_per_tres.isSet()) {
-        obj.insert(QString("tasks_per_tres"), ::OpenAPI::toJsonValue(m_tasks_per_tres));
+        obj.insert(QString("tasks_per_tres"), ::hm:slurm:client::toJsonValue(m_tasks_per_tres));
     }
     if (m_tasks_per_node.isSet()) {
-        obj.insert(QString("tasks_per_node"), ::OpenAPI::toJsonValue(m_tasks_per_node));
+        obj.insert(QString("tasks_per_node"), ::hm:slurm:client::toJsonValue(m_tasks_per_node));
     }
     if (m_tasks_per_socket.isSet()) {
-        obj.insert(QString("tasks_per_socket"), ::OpenAPI::toJsonValue(m_tasks_per_socket));
+        obj.insert(QString("tasks_per_socket"), ::hm:slurm:client::toJsonValue(m_tasks_per_socket));
     }
     if (m_tasks_per_board.isSet()) {
-        obj.insert(QString("tasks_per_board"), ::OpenAPI::toJsonValue(m_tasks_per_board));
+        obj.insert(QString("tasks_per_board"), ::hm:slurm:client::toJsonValue(m_tasks_per_board));
     }
     if (m_cpus.isSet()) {
-        obj.insert(QString("cpus"), ::OpenAPI::toJsonValue(m_cpus));
+        obj.insert(QString("cpus"), ::hm:slurm:client::toJsonValue(m_cpus));
     }
     if (m_node_count.isSet()) {
-        obj.insert(QString("node_count"), ::OpenAPI::toJsonValue(m_node_count));
+        obj.insert(QString("node_count"), ::hm:slurm:client::toJsonValue(m_node_count));
     }
     if (m_tasks.isSet()) {
-        obj.insert(QString("tasks"), ::OpenAPI::toJsonValue(m_tasks));
+        obj.insert(QString("tasks"), ::hm:slurm:client::toJsonValue(m_tasks));
     }
     if (m_partition_isSet) {
-        obj.insert(QString("partition"), ::OpenAPI::toJsonValue(m_partition));
+        obj.insert(QString("partition"), ::hm:slurm:client::toJsonValue(m_partition));
     }
     if (m_prefer_isSet) {
-        obj.insert(QString("prefer"), ::OpenAPI::toJsonValue(m_prefer));
+        obj.insert(QString("prefer"), ::hm:slurm:client::toJsonValue(m_prefer));
     }
     if (m_memory_per_cpu.isSet()) {
-        obj.insert(QString("memory_per_cpu"), ::OpenAPI::toJsonValue(m_memory_per_cpu));
+        obj.insert(QString("memory_per_cpu"), ::hm:slurm:client::toJsonValue(m_memory_per_cpu));
     }
     if (m_memory_per_node.isSet()) {
-        obj.insert(QString("memory_per_node"), ::OpenAPI::toJsonValue(m_memory_per_node));
+        obj.insert(QString("memory_per_node"), ::hm:slurm:client::toJsonValue(m_memory_per_node));
     }
     if (m_minimum_cpus_per_node.isSet()) {
-        obj.insert(QString("minimum_cpus_per_node"), ::OpenAPI::toJsonValue(m_minimum_cpus_per_node));
+        obj.insert(QString("minimum_cpus_per_node"), ::hm:slurm:client::toJsonValue(m_minimum_cpus_per_node));
     }
     if (m_minimum_tmp_disk_per_node.isSet()) {
-        obj.insert(QString("minimum_tmp_disk_per_node"), ::OpenAPI::toJsonValue(m_minimum_tmp_disk_per_node));
+        obj.insert(QString("minimum_tmp_disk_per_node"), ::hm:slurm:client::toJsonValue(m_minimum_tmp_disk_per_node));
     }
     if (m_power.isSet()) {
-        obj.insert(QString("power"), ::OpenAPI::toJsonValue(m_power));
+        obj.insert(QString("power"), ::hm:slurm:client::toJsonValue(m_power));
     }
     if (m_preempt_time.isSet()) {
-        obj.insert(QString("preempt_time"), ::OpenAPI::toJsonValue(m_preempt_time));
+        obj.insert(QString("preempt_time"), ::hm:slurm:client::toJsonValue(m_preempt_time));
     }
     if (m_preemptable_time.isSet()) {
-        obj.insert(QString("preemptable_time"), ::OpenAPI::toJsonValue(m_preemptable_time));
+        obj.insert(QString("preemptable_time"), ::hm:slurm:client::toJsonValue(m_preemptable_time));
     }
     if (m_pre_sus_time.isSet()) {
-        obj.insert(QString("pre_sus_time"), ::OpenAPI::toJsonValue(m_pre_sus_time));
+        obj.insert(QString("pre_sus_time"), ::hm:slurm:client::toJsonValue(m_pre_sus_time));
     }
     if (m_hold_isSet) {
-        obj.insert(QString("hold"), ::OpenAPI::toJsonValue(m_hold));
+        obj.insert(QString("hold"), ::hm:slurm:client::toJsonValue(m_hold));
     }
     if (m_priority.isSet()) {
-        obj.insert(QString("priority"), ::OpenAPI::toJsonValue(m_priority));
+        obj.insert(QString("priority"), ::hm:slurm:client::toJsonValue(m_priority));
     }
     if (m_profile.size() > 0) {
-        obj.insert(QString("profile"), ::OpenAPI::toJsonValue(m_profile));
+        obj.insert(QString("profile"), ::hm:slurm:client::toJsonValue(m_profile));
     }
     if (m_qos_isSet) {
-        obj.insert(QString("qos"), ::OpenAPI::toJsonValue(m_qos));
+        obj.insert(QString("qos"), ::hm:slurm:client::toJsonValue(m_qos));
     }
     if (m_reboot_isSet) {
-        obj.insert(QString("reboot"), ::OpenAPI::toJsonValue(m_reboot));
+        obj.insert(QString("reboot"), ::hm:slurm:client::toJsonValue(m_reboot));
     }
     if (m_required_nodes_isSet) {
-        obj.insert(QString("required_nodes"), ::OpenAPI::toJsonValue(m_required_nodes));
+        obj.insert(QString("required_nodes"), ::hm:slurm:client::toJsonValue(m_required_nodes));
     }
     if (m_minimum_switches_isSet) {
-        obj.insert(QString("minimum_switches"), ::OpenAPI::toJsonValue(m_minimum_switches));
+        obj.insert(QString("minimum_switches"), ::hm:slurm:client::toJsonValue(m_minimum_switches));
     }
     if (m_requeue_isSet) {
-        obj.insert(QString("requeue"), ::OpenAPI::toJsonValue(m_requeue));
+        obj.insert(QString("requeue"), ::hm:slurm:client::toJsonValue(m_requeue));
     }
     if (m_resize_time.isSet()) {
-        obj.insert(QString("resize_time"), ::OpenAPI::toJsonValue(m_resize_time));
+        obj.insert(QString("resize_time"), ::hm:slurm:client::toJsonValue(m_resize_time));
     }
     if (m_restart_cnt_isSet) {
-        obj.insert(QString("restart_cnt"), ::OpenAPI::toJsonValue(m_restart_cnt));
+        obj.insert(QString("restart_cnt"), ::hm:slurm:client::toJsonValue(m_restart_cnt));
     }
     if (m_resv_name_isSet) {
-        obj.insert(QString("resv_name"), ::OpenAPI::toJsonValue(m_resv_name));
+        obj.insert(QString("resv_name"), ::hm:slurm:client::toJsonValue(m_resv_name));
     }
     if (m_scheduled_nodes_isSet) {
-        obj.insert(QString("scheduled_nodes"), ::OpenAPI::toJsonValue(m_scheduled_nodes));
+        obj.insert(QString("scheduled_nodes"), ::hm:slurm:client::toJsonValue(m_scheduled_nodes));
     }
     if (m_selinux_context_isSet) {
-        obj.insert(QString("selinux_context"), ::OpenAPI::toJsonValue(m_selinux_context));
+        obj.insert(QString("selinux_context"), ::hm:slurm:client::toJsonValue(m_selinux_context));
     }
     if (m_shared.size() > 0) {
-        obj.insert(QString("shared"), ::OpenAPI::toJsonValue(m_shared));
+        obj.insert(QString("shared"), ::hm:slurm:client::toJsonValue(m_shared));
     }
     if (m_exclusive.size() > 0) {
-        obj.insert(QString("exclusive"), ::OpenAPI::toJsonValue(m_exclusive));
+        obj.insert(QString("exclusive"), ::hm:slurm:client::toJsonValue(m_exclusive));
     }
     if (m_oversubscribe_isSet) {
-        obj.insert(QString("oversubscribe"), ::OpenAPI::toJsonValue(m_oversubscribe));
+        obj.insert(QString("oversubscribe"), ::hm:slurm:client::toJsonValue(m_oversubscribe));
     }
     if (m_show_flags.size() > 0) {
-        obj.insert(QString("show_flags"), ::OpenAPI::toJsonValue(m_show_flags));
+        obj.insert(QString("show_flags"), ::hm:slurm:client::toJsonValue(m_show_flags));
     }
     if (m_sockets_per_board_isSet) {
-        obj.insert(QString("sockets_per_board"), ::OpenAPI::toJsonValue(m_sockets_per_board));
+        obj.insert(QString("sockets_per_board"), ::hm:slurm:client::toJsonValue(m_sockets_per_board));
     }
     if (m_sockets_per_node.isSet()) {
-        obj.insert(QString("sockets_per_node"), ::OpenAPI::toJsonValue(m_sockets_per_node));
+        obj.insert(QString("sockets_per_node"), ::hm:slurm:client::toJsonValue(m_sockets_per_node));
     }
     if (m_start_time.isSet()) {
-        obj.insert(QString("start_time"), ::OpenAPI::toJsonValue(m_start_time));
+        obj.insert(QString("start_time"), ::hm:slurm:client::toJsonValue(m_start_time));
     }
     if (m_state_description_isSet) {
-        obj.insert(QString("state_description"), ::OpenAPI::toJsonValue(m_state_description));
+        obj.insert(QString("state_description"), ::hm:slurm:client::toJsonValue(m_state_description));
     }
     if (m_state_reason_isSet) {
-        obj.insert(QString("state_reason"), ::OpenAPI::toJsonValue(m_state_reason));
+        obj.insert(QString("state_reason"), ::hm:slurm:client::toJsonValue(m_state_reason));
     }
     if (m_standard_error_isSet) {
-        obj.insert(QString("standard_error"), ::OpenAPI::toJsonValue(m_standard_error));
+        obj.insert(QString("standard_error"), ::hm:slurm:client::toJsonValue(m_standard_error));
     }
     if (m_standard_input_isSet) {
-        obj.insert(QString("standard_input"), ::OpenAPI::toJsonValue(m_standard_input));
+        obj.insert(QString("standard_input"), ::hm:slurm:client::toJsonValue(m_standard_input));
     }
     if (m_standard_output_isSet) {
-        obj.insert(QString("standard_output"), ::OpenAPI::toJsonValue(m_standard_output));
+        obj.insert(QString("standard_output"), ::hm:slurm:client::toJsonValue(m_standard_output));
     }
     if (m_submit_time.isSet()) {
-        obj.insert(QString("submit_time"), ::OpenAPI::toJsonValue(m_submit_time));
+        obj.insert(QString("submit_time"), ::hm:slurm:client::toJsonValue(m_submit_time));
     }
     if (m_suspend_time.isSet()) {
-        obj.insert(QString("suspend_time"), ::OpenAPI::toJsonValue(m_suspend_time));
+        obj.insert(QString("suspend_time"), ::hm:slurm:client::toJsonValue(m_suspend_time));
     }
     if (m_system_comment_isSet) {
-        obj.insert(QString("system_comment"), ::OpenAPI::toJsonValue(m_system_comment));
+        obj.insert(QString("system_comment"), ::hm:slurm:client::toJsonValue(m_system_comment));
     }
     if (m_time_limit.isSet()) {
-        obj.insert(QString("time_limit"), ::OpenAPI::toJsonValue(m_time_limit));
+        obj.insert(QString("time_limit"), ::hm:slurm:client::toJsonValue(m_time_limit));
     }
     if (m_time_minimum.isSet()) {
-        obj.insert(QString("time_minimum"), ::OpenAPI::toJsonValue(m_time_minimum));
+        obj.insert(QString("time_minimum"), ::hm:slurm:client::toJsonValue(m_time_minimum));
     }
     if (m_threads_per_core.isSet()) {
-        obj.insert(QString("threads_per_core"), ::OpenAPI::toJsonValue(m_threads_per_core));
+        obj.insert(QString("threads_per_core"), ::hm:slurm:client::toJsonValue(m_threads_per_core));
     }
     if (m_tres_bind_isSet) {
-        obj.insert(QString("tres_bind"), ::OpenAPI::toJsonValue(m_tres_bind));
+        obj.insert(QString("tres_bind"), ::hm:slurm:client::toJsonValue(m_tres_bind));
     }
     if (m_tres_freq_isSet) {
-        obj.insert(QString("tres_freq"), ::OpenAPI::toJsonValue(m_tres_freq));
+        obj.insert(QString("tres_freq"), ::hm:slurm:client::toJsonValue(m_tres_freq));
     }
     if (m_tres_per_job_isSet) {
-        obj.insert(QString("tres_per_job"), ::OpenAPI::toJsonValue(m_tres_per_job));
+        obj.insert(QString("tres_per_job"), ::hm:slurm:client::toJsonValue(m_tres_per_job));
     }
     if (m_tres_per_node_isSet) {
-        obj.insert(QString("tres_per_node"), ::OpenAPI::toJsonValue(m_tres_per_node));
+        obj.insert(QString("tres_per_node"), ::hm:slurm:client::toJsonValue(m_tres_per_node));
     }
     if (m_tres_per_socket_isSet) {
-        obj.insert(QString("tres_per_socket"), ::OpenAPI::toJsonValue(m_tres_per_socket));
+        obj.insert(QString("tres_per_socket"), ::hm:slurm:client::toJsonValue(m_tres_per_socket));
     }
     if (m_tres_per_task_isSet) {
-        obj.insert(QString("tres_per_task"), ::OpenAPI::toJsonValue(m_tres_per_task));
+        obj.insert(QString("tres_per_task"), ::hm:slurm:client::toJsonValue(m_tres_per_task));
     }
     if (m_tres_req_str_isSet) {
-        obj.insert(QString("tres_req_str"), ::OpenAPI::toJsonValue(m_tres_req_str));
+        obj.insert(QString("tres_req_str"), ::hm:slurm:client::toJsonValue(m_tres_req_str));
     }
     if (m_tres_alloc_str_isSet) {
-        obj.insert(QString("tres_alloc_str"), ::OpenAPI::toJsonValue(m_tres_alloc_str));
+        obj.insert(QString("tres_alloc_str"), ::hm:slurm:client::toJsonValue(m_tres_alloc_str));
     }
     if (m_user_id_isSet) {
-        obj.insert(QString("user_id"), ::OpenAPI::toJsonValue(m_user_id));
+        obj.insert(QString("user_id"), ::hm:slurm:client::toJsonValue(m_user_id));
     }
     if (m_user_name_isSet) {
-        obj.insert(QString("user_name"), ::OpenAPI::toJsonValue(m_user_name));
+        obj.insert(QString("user_name"), ::hm:slurm:client::toJsonValue(m_user_name));
     }
     if (m_maximum_switch_wait_time_isSet) {
-        obj.insert(QString("maximum_switch_wait_time"), ::OpenAPI::toJsonValue(m_maximum_switch_wait_time));
+        obj.insert(QString("maximum_switch_wait_time"), ::hm:slurm:client::toJsonValue(m_maximum_switch_wait_time));
     }
     if (m_wckey_isSet) {
-        obj.insert(QString("wckey"), ::OpenAPI::toJsonValue(m_wckey));
+        obj.insert(QString("wckey"), ::hm:slurm:client::toJsonValue(m_wckey));
     }
     if (m_current_working_directory_isSet) {
-        obj.insert(QString("current_working_directory"), ::OpenAPI::toJsonValue(m_current_working_directory));
+        obj.insert(QString("current_working_directory"), ::hm:slurm:client::toJsonValue(m_current_working_directory));
     }
     return obj;
 }
@@ -3968,4 +3968,4 @@ bool OAIV0_0_41_openapi_job_info_resp_jobs_inner::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

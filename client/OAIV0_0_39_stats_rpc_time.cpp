@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_stats_rpc_time::OAIV0_0_39_stats_rpc_time(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_39_stats_rpc_time::fromJson(QString jsonString) {
 
 void OAIV0_0_39_stats_rpc_time::fromJsonObject(QJsonObject json) {
 
-    m_average_isValid = ::OpenAPI::fromJsonValue(m_average, json[QString("average")]);
+    m_average_isValid = ::hm:slurm:client::fromJsonValue(m_average, json[QString("average")]);
     m_average_isSet = !json[QString("average")].isNull() && m_average_isValid;
 
-    m_total_isValid = ::OpenAPI::fromJsonValue(m_total, json[QString("total")]);
+    m_total_isValid = ::hm:slurm:client::fromJsonValue(m_total, json[QString("total")]);
     m_total_isSet = !json[QString("total")].isNull() && m_total_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_39_stats_rpc_time::asJson() const {
 QJsonObject OAIV0_0_39_stats_rpc_time::asJsonObject() const {
     QJsonObject obj;
     if (m_average_isSet) {
-        obj.insert(QString("average"), ::OpenAPI::toJsonValue(m_average));
+        obj.insert(QString("average"), ::hm:slurm:client::toJsonValue(m_average));
     }
     if (m_total_isSet) {
-        obj.insert(QString("total"), ::OpenAPI::toJsonValue(m_total));
+        obj.insert(QString("total"), ::hm:slurm:client::toJsonValue(m_total));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_39_stats_rpc_time::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

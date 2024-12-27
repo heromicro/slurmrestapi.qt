@@ -28,7 +28,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_job_desc_msg;
 
 class OAIV0_0_39_job_submission : public OAIObject {
@@ -76,8 +76,8 @@ private:
     bool m_jobs_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_job_submission)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_job_submission)
 
 #endif // OAIV0_0_39_job_submission_H

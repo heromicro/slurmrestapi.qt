@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_kill_jobs_resp_job_error::OAIV0_0_40_kill_jobs_resp_job_error(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_kill_jobs_resp_job_error::fromJson(QString jsonString) {
 
 void OAIV0_0_40_kill_jobs_resp_job_error::fromJsonObject(QJsonObject json) {
 
-    m_string_isValid = ::OpenAPI::fromJsonValue(m_string, json[QString("string")]);
+    m_string_isValid = ::hm:slurm:client::fromJsonValue(m_string, json[QString("string")]);
     m_string_isSet = !json[QString("string")].isNull() && m_string_isValid;
 
-    m_code_isValid = ::OpenAPI::fromJsonValue(m_code, json[QString("code")]);
+    m_code_isValid = ::hm:slurm:client::fromJsonValue(m_code, json[QString("code")]);
     m_code_isSet = !json[QString("code")].isNull() && m_code_isValid;
 
-    m_message_isValid = ::OpenAPI::fromJsonValue(m_message, json[QString("message")]);
+    m_message_isValid = ::hm:slurm:client::fromJsonValue(m_message, json[QString("message")]);
     m_message_isSet = !json[QString("message")].isNull() && m_message_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_kill_jobs_resp_job_error::asJson() const {
 QJsonObject OAIV0_0_40_kill_jobs_resp_job_error::asJsonObject() const {
     QJsonObject obj;
     if (m_string_isSet) {
-        obj.insert(QString("string"), ::OpenAPI::toJsonValue(m_string));
+        obj.insert(QString("string"), ::hm:slurm:client::toJsonValue(m_string));
     }
     if (m_code_isSet) {
-        obj.insert(QString("code"), ::OpenAPI::toJsonValue(m_code));
+        obj.insert(QString("code"), ::hm:slurm:client::toJsonValue(m_code));
     }
     if (m_message_isSet) {
-        obj.insert(QString("message"), ::OpenAPI::toJsonValue(m_message));
+        obj.insert(QString("message"), ::hm:slurm:client::toJsonValue(m_message));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_kill_jobs_resp_job_error::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

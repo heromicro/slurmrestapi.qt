@@ -28,7 +28,7 @@
 #include "OAIHttpFileElement.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 bool setDateTimeFormat(const QString &format);
 bool setDateTimeFormat(const Qt::DateFormat &format);
@@ -283,6 +283,6 @@ public:
     }
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
 #endif // OAI_HELPERS_H

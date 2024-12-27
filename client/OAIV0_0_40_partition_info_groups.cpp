@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_partition_info_groups::OAIV0_0_40_partition_info_groups(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_40_partition_info_groups::fromJson(QString jsonString) {
 
 void OAIV0_0_40_partition_info_groups::fromJsonObject(QJsonObject json) {
 
-    m_allowed_isValid = ::OpenAPI::fromJsonValue(m_allowed, json[QString("allowed")]);
+    m_allowed_isValid = ::hm:slurm:client::fromJsonValue(m_allowed, json[QString("allowed")]);
     m_allowed_isSet = !json[QString("allowed")].isNull() && m_allowed_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_40_partition_info_groups::asJson() const {
 QJsonObject OAIV0_0_40_partition_info_groups::asJsonObject() const {
     QJsonObject obj;
     if (m_allowed_isSet) {
-        obj.insert(QString("allowed"), ::OpenAPI::toJsonValue(m_allowed));
+        obj.insert(QString("allowed"), ::hm:slurm:client::toJsonValue(m_allowed));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_40_partition_info_groups::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

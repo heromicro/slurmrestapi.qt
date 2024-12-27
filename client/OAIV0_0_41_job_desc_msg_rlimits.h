@@ -35,7 +35,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_job_desc_msg_rlimits_cpu;
 class OAIV0_0_41_job_desc_msg_rlimits_fsize;
 class OAIV0_0_41_job_desc_msg_rlimits_data;
@@ -155,8 +155,8 @@ private:
     bool m_as_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_job_desc_msg_rlimits)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_job_desc_msg_rlimits)
 
 #endif // OAIV0_0_41_job_desc_msg_rlimits_H

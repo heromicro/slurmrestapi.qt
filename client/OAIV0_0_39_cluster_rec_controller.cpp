@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_cluster_rec_controller::OAIV0_0_39_cluster_rec_controller(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_39_cluster_rec_controller::fromJson(QString jsonString) {
 
 void OAIV0_0_39_cluster_rec_controller::fromJsonObject(QJsonObject json) {
 
-    m_host_isValid = ::OpenAPI::fromJsonValue(m_host, json[QString("host")]);
+    m_host_isValid = ::hm:slurm:client::fromJsonValue(m_host, json[QString("host")]);
     m_host_isSet = !json[QString("host")].isNull() && m_host_isValid;
 
-    m_port_isValid = ::OpenAPI::fromJsonValue(m_port, json[QString("port")]);
+    m_port_isValid = ::hm:slurm:client::fromJsonValue(m_port, json[QString("port")]);
     m_port_isSet = !json[QString("port")].isNull() && m_port_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_39_cluster_rec_controller::asJson() const {
 QJsonObject OAIV0_0_39_cluster_rec_controller::asJsonObject() const {
     QJsonObject obj;
     if (m_host_isSet) {
-        obj.insert(QString("host"), ::OpenAPI::toJsonValue(m_host));
+        obj.insert(QString("host"), ::hm:slurm:client::toJsonValue(m_host));
     }
     if (m_port_isSet) {
-        obj.insert(QString("port"), ::OpenAPI::toJsonValue(m_port));
+        obj.insert(QString("port"), ::hm:slurm:client::toJsonValue(m_port));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_39_cluster_rec_controller::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

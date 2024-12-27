@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_assoc_short;
 
 class OAIV0_0_40_cluster_rec_associations : public OAIObject {
@@ -56,8 +56,8 @@ private:
     bool m_root_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_cluster_rec_associations)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_cluster_rec_associations)
 
 #endif // OAIV0_0_40_cluster_rec_associations_H

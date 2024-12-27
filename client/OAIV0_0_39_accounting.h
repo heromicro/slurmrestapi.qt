@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_accounting_allocated;
 class OAIV0_0_39_tres;
 
@@ -85,8 +85,8 @@ private:
     bool m_tres_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_accounting)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_accounting)
 
 #endif // OAIV0_0_39_accounting_H

@@ -29,7 +29,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs_count;
 class OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs_accruing;
 class OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_jobs_per_submitted;
@@ -89,8 +89,8 @@ private:
     bool m_wall_clock_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_jobs_per)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_jobs_per)
 
 #endif // OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_jobs_per_H

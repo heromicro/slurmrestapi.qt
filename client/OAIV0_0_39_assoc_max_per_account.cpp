@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_assoc_max_per_account::OAIV0_0_39_assoc_max_per_account(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_39_assoc_max_per_account::fromJson(QString jsonString) {
 
 void OAIV0_0_39_assoc_max_per_account::fromJsonObject(QJsonObject json) {
 
-    m_wall_clock_isValid = ::OpenAPI::fromJsonValue(m_wall_clock, json[QString("wall_clock")]);
+    m_wall_clock_isValid = ::hm:slurm:client::fromJsonValue(m_wall_clock, json[QString("wall_clock")]);
     m_wall_clock_isSet = !json[QString("wall_clock")].isNull() && m_wall_clock_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_39_assoc_max_per_account::asJson() const {
 QJsonObject OAIV0_0_39_assoc_max_per_account::asJsonObject() const {
     QJsonObject obj;
     if (m_wall_clock.isSet()) {
-        obj.insert(QString("wall_clock"), ::OpenAPI::toJsonValue(m_wall_clock));
+        obj.insert(QString("wall_clock"), ::hm:slurm:client::toJsonValue(m_wall_clock));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_39_assoc_max_per_account::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

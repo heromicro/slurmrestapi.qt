@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_wckey_tag::OAIV0_0_39_wckey_tag(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_39_wckey_tag::fromJson(QString jsonString) {
 
 void OAIV0_0_39_wckey_tag::fromJsonObject(QJsonObject json) {
 
-    m_wckey_isValid = ::OpenAPI::fromJsonValue(m_wckey, json[QString("wckey")]);
+    m_wckey_isValid = ::hm:slurm:client::fromJsonValue(m_wckey, json[QString("wckey")]);
     m_wckey_isSet = !json[QString("wckey")].isNull() && m_wckey_isValid;
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_39_wckey_tag::asJson() const {
 QJsonObject OAIV0_0_39_wckey_tag::asJsonObject() const {
     QJsonObject obj;
     if (m_wckey_isSet) {
-        obj.insert(QString("wckey"), ::OpenAPI::toJsonValue(m_wckey));
+        obj.insert(QString("wckey"), ::hm:slurm:client::toJsonValue(m_wckey));
     }
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_39_wckey_tag::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

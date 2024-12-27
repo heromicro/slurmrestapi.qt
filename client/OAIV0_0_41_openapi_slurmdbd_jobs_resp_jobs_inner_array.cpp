@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_array::OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_array(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_array::fromJson(QString js
 
 void OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_array::fromJsonObject(QJsonObject json) {
 
-    m_job_id_isValid = ::OpenAPI::fromJsonValue(m_job_id, json[QString("job_id")]);
+    m_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_job_id, json[QString("job_id")]);
     m_job_id_isSet = !json[QString("job_id")].isNull() && m_job_id_isValid;
 
-    m_limits_isValid = ::OpenAPI::fromJsonValue(m_limits, json[QString("limits")]);
+    m_limits_isValid = ::hm:slurm:client::fromJsonValue(m_limits, json[QString("limits")]);
     m_limits_isSet = !json[QString("limits")].isNull() && m_limits_isValid;
 
-    m_task_id_isValid = ::OpenAPI::fromJsonValue(m_task_id, json[QString("task_id")]);
+    m_task_id_isValid = ::hm:slurm:client::fromJsonValue(m_task_id, json[QString("task_id")]);
     m_task_id_isSet = !json[QString("task_id")].isNull() && m_task_id_isValid;
 
-    m_task_isValid = ::OpenAPI::fromJsonValue(m_task, json[QString("task")]);
+    m_task_isValid = ::hm:slurm:client::fromJsonValue(m_task, json[QString("task")]);
     m_task_isSet = !json[QString("task")].isNull() && m_task_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_array::asJson() const {
 QJsonObject OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_array::asJsonObject() const {
     QJsonObject obj;
     if (m_job_id_isSet) {
-        obj.insert(QString("job_id"), ::OpenAPI::toJsonValue(m_job_id));
+        obj.insert(QString("job_id"), ::hm:slurm:client::toJsonValue(m_job_id));
     }
     if (m_limits.isSet()) {
-        obj.insert(QString("limits"), ::OpenAPI::toJsonValue(m_limits));
+        obj.insert(QString("limits"), ::hm:slurm:client::toJsonValue(m_limits));
     }
     if (m_task_id.isSet()) {
-        obj.insert(QString("task_id"), ::OpenAPI::toJsonValue(m_task_id));
+        obj.insert(QString("task_id"), ::hm:slurm:client::toJsonValue(m_task_id));
     }
     if (m_task_isSet) {
-        obj.insert(QString("task"), ::OpenAPI::toJsonValue(m_task));
+        obj.insert(QString("task"), ::hm:slurm:client::toJsonValue(m_task));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_array::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

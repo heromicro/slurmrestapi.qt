@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_wall_clock::OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_wall_clock(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_wall_clock::fr
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_wall_clock::fromJsonObject(QJsonObject json) {
 
-    m_per_isValid = ::OpenAPI::fromJsonValue(m_per, json[QString("per")]);
+    m_per_isValid = ::hm:slurm:client::fromJsonValue(m_per, json[QString("per")]);
     m_per_isSet = !json[QString("per")].isNull() && m_per_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_wall_clock:
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_wall_clock::asJsonObject() const {
     QJsonObject obj;
     if (m_per.isSet()) {
-        obj.insert(QString("per"), ::OpenAPI::toJsonValue(m_per));
+        obj.insert(QString("per"), ::hm:slurm:client::toJsonValue(m_per));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_wall_clock::is
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_assoc_usage::OAIV0_0_39_assoc_usage(QString json) {
     this->initializeModel();
@@ -80,40 +80,40 @@ void OAIV0_0_39_assoc_usage::fromJson(QString jsonString) {
 
 void OAIV0_0_39_assoc_usage::fromJsonObject(QJsonObject json) {
 
-    m_accrue_job_count_isValid = ::OpenAPI::fromJsonValue(m_accrue_job_count, json[QString("accrue_job_count")]);
+    m_accrue_job_count_isValid = ::hm:slurm:client::fromJsonValue(m_accrue_job_count, json[QString("accrue_job_count")]);
     m_accrue_job_count_isSet = !json[QString("accrue_job_count")].isNull() && m_accrue_job_count_isValid;
 
-    m_group_used_wallclock_isValid = ::OpenAPI::fromJsonValue(m_group_used_wallclock, json[QString("group_used_wallclock")]);
+    m_group_used_wallclock_isValid = ::hm:slurm:client::fromJsonValue(m_group_used_wallclock, json[QString("group_used_wallclock")]);
     m_group_used_wallclock_isSet = !json[QString("group_used_wallclock")].isNull() && m_group_used_wallclock_isValid;
 
-    m_fairshare_factor_isValid = ::OpenAPI::fromJsonValue(m_fairshare_factor, json[QString("fairshare_factor")]);
+    m_fairshare_factor_isValid = ::hm:slurm:client::fromJsonValue(m_fairshare_factor, json[QString("fairshare_factor")]);
     m_fairshare_factor_isSet = !json[QString("fairshare_factor")].isNull() && m_fairshare_factor_isValid;
 
-    m_fairshare_shares_isValid = ::OpenAPI::fromJsonValue(m_fairshare_shares, json[QString("fairshare_shares")]);
+    m_fairshare_shares_isValid = ::hm:slurm:client::fromJsonValue(m_fairshare_shares, json[QString("fairshare_shares")]);
     m_fairshare_shares_isSet = !json[QString("fairshare_shares")].isNull() && m_fairshare_shares_isValid;
 
-    m_normalized_priority_isValid = ::OpenAPI::fromJsonValue(m_normalized_priority, json[QString("normalized_priority")]);
+    m_normalized_priority_isValid = ::hm:slurm:client::fromJsonValue(m_normalized_priority, json[QString("normalized_priority")]);
     m_normalized_priority_isSet = !json[QString("normalized_priority")].isNull() && m_normalized_priority_isValid;
 
-    m_normalized_shares_isValid = ::OpenAPI::fromJsonValue(m_normalized_shares, json[QString("normalized_shares")]);
+    m_normalized_shares_isValid = ::hm:slurm:client::fromJsonValue(m_normalized_shares, json[QString("normalized_shares")]);
     m_normalized_shares_isSet = !json[QString("normalized_shares")].isNull() && m_normalized_shares_isValid;
 
-    m_effective_normalized_usage_isValid = ::OpenAPI::fromJsonValue(m_effective_normalized_usage, json[QString("effective_normalized_usage")]);
+    m_effective_normalized_usage_isValid = ::hm:slurm:client::fromJsonValue(m_effective_normalized_usage, json[QString("effective_normalized_usage")]);
     m_effective_normalized_usage_isSet = !json[QString("effective_normalized_usage")].isNull() && m_effective_normalized_usage_isValid;
 
-    m_normalized_usage_isValid = ::OpenAPI::fromJsonValue(m_normalized_usage, json[QString("normalized_usage")]);
+    m_normalized_usage_isValid = ::hm:slurm:client::fromJsonValue(m_normalized_usage, json[QString("normalized_usage")]);
     m_normalized_usage_isSet = !json[QString("normalized_usage")].isNull() && m_normalized_usage_isValid;
 
-    m_raw_usage_isValid = ::OpenAPI::fromJsonValue(m_raw_usage, json[QString("raw_usage")]);
+    m_raw_usage_isValid = ::hm:slurm:client::fromJsonValue(m_raw_usage, json[QString("raw_usage")]);
     m_raw_usage_isSet = !json[QString("raw_usage")].isNull() && m_raw_usage_isValid;
 
-    m_active_jobs_isValid = ::OpenAPI::fromJsonValue(m_active_jobs, json[QString("active_jobs")]);
+    m_active_jobs_isValid = ::hm:slurm:client::fromJsonValue(m_active_jobs, json[QString("active_jobs")]);
     m_active_jobs_isSet = !json[QString("active_jobs")].isNull() && m_active_jobs_isValid;
 
-    m_job_count_isValid = ::OpenAPI::fromJsonValue(m_job_count, json[QString("job_count")]);
+    m_job_count_isValid = ::hm:slurm:client::fromJsonValue(m_job_count, json[QString("job_count")]);
     m_job_count_isSet = !json[QString("job_count")].isNull() && m_job_count_isValid;
 
-    m_fairshare_level_isValid = ::OpenAPI::fromJsonValue(m_fairshare_level, json[QString("fairshare_level")]);
+    m_fairshare_level_isValid = ::hm:slurm:client::fromJsonValue(m_fairshare_level, json[QString("fairshare_level")]);
     m_fairshare_level_isSet = !json[QString("fairshare_level")].isNull() && m_fairshare_level_isValid;
 }
 
@@ -127,40 +127,40 @@ QString OAIV0_0_39_assoc_usage::asJson() const {
 QJsonObject OAIV0_0_39_assoc_usage::asJsonObject() const {
     QJsonObject obj;
     if (m_accrue_job_count_isSet) {
-        obj.insert(QString("accrue_job_count"), ::OpenAPI::toJsonValue(m_accrue_job_count));
+        obj.insert(QString("accrue_job_count"), ::hm:slurm:client::toJsonValue(m_accrue_job_count));
     }
     if (m_group_used_wallclock_isSet) {
-        obj.insert(QString("group_used_wallclock"), ::OpenAPI::toJsonValue(m_group_used_wallclock));
+        obj.insert(QString("group_used_wallclock"), ::hm:slurm:client::toJsonValue(m_group_used_wallclock));
     }
     if (m_fairshare_factor_isSet) {
-        obj.insert(QString("fairshare_factor"), ::OpenAPI::toJsonValue(m_fairshare_factor));
+        obj.insert(QString("fairshare_factor"), ::hm:slurm:client::toJsonValue(m_fairshare_factor));
     }
     if (m_fairshare_shares_isSet) {
-        obj.insert(QString("fairshare_shares"), ::OpenAPI::toJsonValue(m_fairshare_shares));
+        obj.insert(QString("fairshare_shares"), ::hm:slurm:client::toJsonValue(m_fairshare_shares));
     }
     if (m_normalized_priority_isSet) {
-        obj.insert(QString("normalized_priority"), ::OpenAPI::toJsonValue(m_normalized_priority));
+        obj.insert(QString("normalized_priority"), ::hm:slurm:client::toJsonValue(m_normalized_priority));
     }
     if (m_normalized_shares_isSet) {
-        obj.insert(QString("normalized_shares"), ::OpenAPI::toJsonValue(m_normalized_shares));
+        obj.insert(QString("normalized_shares"), ::hm:slurm:client::toJsonValue(m_normalized_shares));
     }
     if (m_effective_normalized_usage_isSet) {
-        obj.insert(QString("effective_normalized_usage"), ::OpenAPI::toJsonValue(m_effective_normalized_usage));
+        obj.insert(QString("effective_normalized_usage"), ::hm:slurm:client::toJsonValue(m_effective_normalized_usage));
     }
     if (m_normalized_usage_isSet) {
-        obj.insert(QString("normalized_usage"), ::OpenAPI::toJsonValue(m_normalized_usage));
+        obj.insert(QString("normalized_usage"), ::hm:slurm:client::toJsonValue(m_normalized_usage));
     }
     if (m_raw_usage_isSet) {
-        obj.insert(QString("raw_usage"), ::OpenAPI::toJsonValue(m_raw_usage));
+        obj.insert(QString("raw_usage"), ::hm:slurm:client::toJsonValue(m_raw_usage));
     }
     if (m_active_jobs_isSet) {
-        obj.insert(QString("active_jobs"), ::OpenAPI::toJsonValue(m_active_jobs));
+        obj.insert(QString("active_jobs"), ::hm:slurm:client::toJsonValue(m_active_jobs));
     }
     if (m_job_count_isSet) {
-        obj.insert(QString("job_count"), ::OpenAPI::toJsonValue(m_job_count));
+        obj.insert(QString("job_count"), ::hm:slurm:client::toJsonValue(m_job_count));
     }
     if (m_fairshare_level_isSet) {
-        obj.insert(QString("fairshare_level"), ::OpenAPI::toJsonValue(m_fairshare_level));
+        obj.insert(QString("fairshare_level"), ::hm:slurm:client::toJsonValue(m_fairshare_level));
     }
     return obj;
 }
@@ -428,4 +428,4 @@ bool OAIV0_0_39_assoc_usage::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

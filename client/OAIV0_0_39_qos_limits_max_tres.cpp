@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_qos_limits_max_tres::OAIV0_0_39_qos_limits_max_tres(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_39_qos_limits_max_tres::fromJson(QString jsonString) {
 
 void OAIV0_0_39_qos_limits_max_tres::fromJsonObject(QJsonObject json) {
 
-    m_total_isValid = ::OpenAPI::fromJsonValue(m_total, json[QString("total")]);
+    m_total_isValid = ::hm:slurm:client::fromJsonValue(m_total, json[QString("total")]);
     m_total_isSet = !json[QString("total")].isNull() && m_total_isValid;
 
-    m_minutes_isValid = ::OpenAPI::fromJsonValue(m_minutes, json[QString("minutes")]);
+    m_minutes_isValid = ::hm:slurm:client::fromJsonValue(m_minutes, json[QString("minutes")]);
     m_minutes_isSet = !json[QString("minutes")].isNull() && m_minutes_isValid;
 
-    m_per_isValid = ::OpenAPI::fromJsonValue(m_per, json[QString("per")]);
+    m_per_isValid = ::hm:slurm:client::fromJsonValue(m_per, json[QString("per")]);
     m_per_isSet = !json[QString("per")].isNull() && m_per_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_39_qos_limits_max_tres::asJson() const {
 QJsonObject OAIV0_0_39_qos_limits_max_tres::asJsonObject() const {
     QJsonObject obj;
     if (m_total.size() > 0) {
-        obj.insert(QString("total"), ::OpenAPI::toJsonValue(m_total));
+        obj.insert(QString("total"), ::hm:slurm:client::toJsonValue(m_total));
     }
     if (m_minutes.isSet()) {
-        obj.insert(QString("minutes"), ::OpenAPI::toJsonValue(m_minutes));
+        obj.insert(QString("minutes"), ::hm:slurm:client::toJsonValue(m_minutes));
     }
     if (m_per.isSet()) {
-        obj.insert(QString("per"), ::OpenAPI::toJsonValue(m_per));
+        obj.insert(QString("per"), ::hm:slurm:client::toJsonValue(m_per));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_39_qos_limits_max_tres::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

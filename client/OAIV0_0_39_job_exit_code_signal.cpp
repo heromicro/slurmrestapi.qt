@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_job_exit_code_signal::OAIV0_0_39_job_exit_code_signal(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_39_job_exit_code_signal::fromJson(QString jsonString) {
 
 void OAIV0_0_39_job_exit_code_signal::fromJsonObject(QJsonObject json) {
 
-    m_signal_id_isValid = ::OpenAPI::fromJsonValue(m_signal_id, json[QString("signal_id")]);
+    m_signal_id_isValid = ::hm:slurm:client::fromJsonValue(m_signal_id, json[QString("signal_id")]);
     m_signal_id_isSet = !json[QString("signal_id")].isNull() && m_signal_id_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_39_job_exit_code_signal::asJson() const {
 QJsonObject OAIV0_0_39_job_exit_code_signal::asJsonObject() const {
     QJsonObject obj;
     if (m_signal_id_isSet) {
-        obj.insert(QString("signal_id"), ::OpenAPI::toJsonValue(m_signal_id));
+        obj.insert(QString("signal_id"), ::hm:slurm:client::toJsonValue(m_signal_id));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_39_job_exit_code_signal::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

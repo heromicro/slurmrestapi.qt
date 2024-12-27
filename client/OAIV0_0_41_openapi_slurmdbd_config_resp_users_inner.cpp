@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_users_inner::OAIV0_0_41_openapi_slurmdbd_config_resp_users_inner(QString json) {
     this->initializeModel();
@@ -68,28 +68,28 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_users_inner::fromJson(QString jsonS
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_users_inner::fromJsonObject(QJsonObject json) {
 
-    m_administrator_level_isValid = ::OpenAPI::fromJsonValue(m_administrator_level, json[QString("administrator_level")]);
+    m_administrator_level_isValid = ::hm:slurm:client::fromJsonValue(m_administrator_level, json[QString("administrator_level")]);
     m_administrator_level_isSet = !json[QString("administrator_level")].isNull() && m_administrator_level_isValid;
 
-    m_associations_isValid = ::OpenAPI::fromJsonValue(m_associations, json[QString("associations")]);
+    m_associations_isValid = ::hm:slurm:client::fromJsonValue(m_associations, json[QString("associations")]);
     m_associations_isSet = !json[QString("associations")].isNull() && m_associations_isValid;
 
-    m_coordinators_isValid = ::OpenAPI::fromJsonValue(m_coordinators, json[QString("coordinators")]);
+    m_coordinators_isValid = ::hm:slurm:client::fromJsonValue(m_coordinators, json[QString("coordinators")]);
     m_coordinators_isSet = !json[QString("coordinators")].isNull() && m_coordinators_isValid;
 
-    m_r_default_isValid = ::OpenAPI::fromJsonValue(m_r_default, json[QString("default")]);
+    m_r_default_isValid = ::hm:slurm:client::fromJsonValue(m_r_default, json[QString("default")]);
     m_r_default_isSet = !json[QString("default")].isNull() && m_r_default_isValid;
 
-    m_flags_isValid = ::OpenAPI::fromJsonValue(m_flags, json[QString("flags")]);
+    m_flags_isValid = ::hm:slurm:client::fromJsonValue(m_flags, json[QString("flags")]);
     m_flags_isSet = !json[QString("flags")].isNull() && m_flags_isValid;
 
-    m_name_isValid = ::OpenAPI::fromJsonValue(m_name, json[QString("name")]);
+    m_name_isValid = ::hm:slurm:client::fromJsonValue(m_name, json[QString("name")]);
     m_name_isSet = !json[QString("name")].isNull() && m_name_isValid;
 
-    m_old_name_isValid = ::OpenAPI::fromJsonValue(m_old_name, json[QString("old_name")]);
+    m_old_name_isValid = ::hm:slurm:client::fromJsonValue(m_old_name, json[QString("old_name")]);
     m_old_name_isSet = !json[QString("old_name")].isNull() && m_old_name_isValid;
 
-    m_wckeys_isValid = ::OpenAPI::fromJsonValue(m_wckeys, json[QString("wckeys")]);
+    m_wckeys_isValid = ::hm:slurm:client::fromJsonValue(m_wckeys, json[QString("wckeys")]);
     m_wckeys_isSet = !json[QString("wckeys")].isNull() && m_wckeys_isValid;
 }
 
@@ -103,28 +103,28 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_users_inner::asJson() const {
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_users_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_administrator_level.size() > 0) {
-        obj.insert(QString("administrator_level"), ::OpenAPI::toJsonValue(m_administrator_level));
+        obj.insert(QString("administrator_level"), ::hm:slurm:client::toJsonValue(m_administrator_level));
     }
     if (m_associations.size() > 0) {
-        obj.insert(QString("associations"), ::OpenAPI::toJsonValue(m_associations));
+        obj.insert(QString("associations"), ::hm:slurm:client::toJsonValue(m_associations));
     }
     if (m_coordinators.size() > 0) {
-        obj.insert(QString("coordinators"), ::OpenAPI::toJsonValue(m_coordinators));
+        obj.insert(QString("coordinators"), ::hm:slurm:client::toJsonValue(m_coordinators));
     }
     if (m_r_default.isSet()) {
-        obj.insert(QString("default"), ::OpenAPI::toJsonValue(m_r_default));
+        obj.insert(QString("default"), ::hm:slurm:client::toJsonValue(m_r_default));
     }
     if (m_flags.size() > 0) {
-        obj.insert(QString("flags"), ::OpenAPI::toJsonValue(m_flags));
+        obj.insert(QString("flags"), ::hm:slurm:client::toJsonValue(m_flags));
     }
     if (m_name_isSet) {
-        obj.insert(QString("name"), ::OpenAPI::toJsonValue(m_name));
+        obj.insert(QString("name"), ::hm:slurm:client::toJsonValue(m_name));
     }
     if (m_old_name_isSet) {
-        obj.insert(QString("old_name"), ::OpenAPI::toJsonValue(m_old_name));
+        obj.insert(QString("old_name"), ::hm:slurm:client::toJsonValue(m_old_name));
     }
     if (m_wckeys.size() > 0) {
-        obj.insert(QString("wckeys"), ::OpenAPI::toJsonValue(m_wckeys));
+        obj.insert(QString("wckeys"), ::hm:slurm:client::toJsonValue(m_wckeys));
     }
     return obj;
 }
@@ -308,4 +308,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_users_inner::isValid() const {
     return m_name_isValid && true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

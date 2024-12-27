@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_per::OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_per(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_per::fromJso
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_per::fromJsonObject(QJsonObject json) {
 
-    m_account_isValid = ::OpenAPI::fromJsonValue(m_account, json[QString("account")]);
+    m_account_isValid = ::hm:slurm:client::fromJsonValue(m_account, json[QString("account")]);
     m_account_isSet = !json[QString("account")].isNull() && m_account_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_per::asJs
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_per::asJsonObject() const {
     QJsonObject obj;
     if (m_account.isSet()) {
-        obj.insert(QString("account"), ::OpenAPI::toJsonValue(m_account));
+        obj.insert(QString("account"), ::hm:slurm:client::toJsonValue(m_account));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_per::isValid
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

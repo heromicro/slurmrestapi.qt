@@ -31,7 +31,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_uint32_no_val;
 class OAIV0_0_39_uint64_no_val;
 class OAIV0_0_39_acct_gather_energy;
@@ -531,8 +531,8 @@ private:
     bool m_version_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_node)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_node)
 
 #endif // OAIV0_0_39_node_H

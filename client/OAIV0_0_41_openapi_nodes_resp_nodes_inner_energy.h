@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_nodes_resp_nodes_inner_energy_current_watts;
 
 class OAIV0_0_41_openapi_nodes_resp_nodes_inner_energy : public OAIObject {
@@ -101,8 +101,8 @@ private:
     bool m_last_collected_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_nodes_resp_nodes_inner_energy)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_nodes_resp_nodes_inner_energy)
 
 #endif // OAIV0_0_41_openapi_nodes_resp_nodes_inner_energy_H

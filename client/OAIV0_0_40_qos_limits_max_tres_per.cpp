@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_qos_limits_max_tres_per::OAIV0_0_40_qos_limits_max_tres_per(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_40_qos_limits_max_tres_per::fromJson(QString jsonString) {
 
 void OAIV0_0_40_qos_limits_max_tres_per::fromJsonObject(QJsonObject json) {
 
-    m_account_isValid = ::OpenAPI::fromJsonValue(m_account, json[QString("account")]);
+    m_account_isValid = ::hm:slurm:client::fromJsonValue(m_account, json[QString("account")]);
     m_account_isSet = !json[QString("account")].isNull() && m_account_isValid;
 
-    m_job_isValid = ::OpenAPI::fromJsonValue(m_job, json[QString("job")]);
+    m_job_isValid = ::hm:slurm:client::fromJsonValue(m_job, json[QString("job")]);
     m_job_isSet = !json[QString("job")].isNull() && m_job_isValid;
 
-    m_node_isValid = ::OpenAPI::fromJsonValue(m_node, json[QString("node")]);
+    m_node_isValid = ::hm:slurm:client::fromJsonValue(m_node, json[QString("node")]);
     m_node_isSet = !json[QString("node")].isNull() && m_node_isValid;
 
-    m_user_isValid = ::OpenAPI::fromJsonValue(m_user, json[QString("user")]);
+    m_user_isValid = ::hm:slurm:client::fromJsonValue(m_user, json[QString("user")]);
     m_user_isSet = !json[QString("user")].isNull() && m_user_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_40_qos_limits_max_tres_per::asJson() const {
 QJsonObject OAIV0_0_40_qos_limits_max_tres_per::asJsonObject() const {
     QJsonObject obj;
     if (m_account.size() > 0) {
-        obj.insert(QString("account"), ::OpenAPI::toJsonValue(m_account));
+        obj.insert(QString("account"), ::hm:slurm:client::toJsonValue(m_account));
     }
     if (m_job.size() > 0) {
-        obj.insert(QString("job"), ::OpenAPI::toJsonValue(m_job));
+        obj.insert(QString("job"), ::hm:slurm:client::toJsonValue(m_job));
     }
     if (m_node.size() > 0) {
-        obj.insert(QString("node"), ::OpenAPI::toJsonValue(m_node));
+        obj.insert(QString("node"), ::hm:slurm:client::toJsonValue(m_node));
     }
     if (m_user.size() > 0) {
-        obj.insert(QString("user"), ::OpenAPI::toJsonValue(m_user));
+        obj.insert(QString("user"), ::hm:slurm:client::toJsonValue(m_user));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_40_qos_limits_max_tres_per::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

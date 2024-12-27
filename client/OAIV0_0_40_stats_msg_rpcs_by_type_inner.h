@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_40_stats_msg_rpcs_by_type_inner : public OAIObject {
 public:
@@ -91,8 +91,8 @@ private:
     bool m_total_time_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_stats_msg_rpcs_by_type_inner)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_stats_msg_rpcs_by_type_inner)
 
 #endif // OAIV0_0_40_stats_msg_rpcs_by_type_inner_H

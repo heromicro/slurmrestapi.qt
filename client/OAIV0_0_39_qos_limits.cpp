@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_qos_limits::OAIV0_0_39_qos_limits(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_39_qos_limits::fromJson(QString jsonString) {
 
 void OAIV0_0_39_qos_limits::fromJsonObject(QJsonObject json) {
 
-    m_grace_time_isValid = ::OpenAPI::fromJsonValue(m_grace_time, json[QString("grace_time")]);
+    m_grace_time_isValid = ::hm:slurm:client::fromJsonValue(m_grace_time, json[QString("grace_time")]);
     m_grace_time_isSet = !json[QString("grace_time")].isNull() && m_grace_time_isValid;
 
-    m_max_isValid = ::OpenAPI::fromJsonValue(m_max, json[QString("max")]);
+    m_max_isValid = ::hm:slurm:client::fromJsonValue(m_max, json[QString("max")]);
     m_max_isSet = !json[QString("max")].isNull() && m_max_isValid;
 
-    m_factor_isValid = ::OpenAPI::fromJsonValue(m_factor, json[QString("factor")]);
+    m_factor_isValid = ::hm:slurm:client::fromJsonValue(m_factor, json[QString("factor")]);
     m_factor_isSet = !json[QString("factor")].isNull() && m_factor_isValid;
 
-    m_min_isValid = ::OpenAPI::fromJsonValue(m_min, json[QString("min")]);
+    m_min_isValid = ::hm:slurm:client::fromJsonValue(m_min, json[QString("min")]);
     m_min_isSet = !json[QString("min")].isNull() && m_min_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_39_qos_limits::asJson() const {
 QJsonObject OAIV0_0_39_qos_limits::asJsonObject() const {
     QJsonObject obj;
     if (m_grace_time.isSet()) {
-        obj.insert(QString("grace_time"), ::OpenAPI::toJsonValue(m_grace_time));
+        obj.insert(QString("grace_time"), ::hm:slurm:client::toJsonValue(m_grace_time));
     }
     if (m_max.isSet()) {
-        obj.insert(QString("max"), ::OpenAPI::toJsonValue(m_max));
+        obj.insert(QString("max"), ::hm:slurm:client::toJsonValue(m_max));
     }
     if (m_factor_isSet) {
-        obj.insert(QString("factor"), ::OpenAPI::toJsonValue(m_factor));
+        obj.insert(QString("factor"), ::hm:slurm:client::toJsonValue(m_factor));
     }
     if (m_min.isSet()) {
-        obj.insert(QString("min"), ::OpenAPI::toJsonValue(m_min));
+        obj.insert(QString("min"), ::hm:slurm:client::toJsonValue(m_min));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_39_qos_limits::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

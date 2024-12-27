@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_job_array_response_msg_inner::OAIV0_0_39_job_array_response_msg_inner(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_39_job_array_response_msg_inner::fromJson(QString jsonString) {
 
 void OAIV0_0_39_job_array_response_msg_inner::fromJsonObject(QJsonObject json) {
 
-    m_job_id_isValid = ::OpenAPI::fromJsonValue(m_job_id, json[QString("job_id")]);
+    m_job_id_isValid = ::hm:slurm:client::fromJsonValue(m_job_id, json[QString("job_id")]);
     m_job_id_isSet = !json[QString("job_id")].isNull() && m_job_id_isValid;
 
-    m_error_code_isValid = ::OpenAPI::fromJsonValue(m_error_code, json[QString("error_code")]);
+    m_error_code_isValid = ::hm:slurm:client::fromJsonValue(m_error_code, json[QString("error_code")]);
     m_error_code_isSet = !json[QString("error_code")].isNull() && m_error_code_isValid;
 
-    m_error_isValid = ::OpenAPI::fromJsonValue(m_error, json[QString("error")]);
+    m_error_isValid = ::hm:slurm:client::fromJsonValue(m_error, json[QString("error")]);
     m_error_isSet = !json[QString("error")].isNull() && m_error_isValid;
 
-    m_why_isValid = ::OpenAPI::fromJsonValue(m_why, json[QString("why")]);
+    m_why_isValid = ::hm:slurm:client::fromJsonValue(m_why, json[QString("why")]);
     m_why_isSet = !json[QString("why")].isNull() && m_why_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_39_job_array_response_msg_inner::asJson() const {
 QJsonObject OAIV0_0_39_job_array_response_msg_inner::asJsonObject() const {
     QJsonObject obj;
     if (m_job_id_isSet) {
-        obj.insert(QString("job_id"), ::OpenAPI::toJsonValue(m_job_id));
+        obj.insert(QString("job_id"), ::hm:slurm:client::toJsonValue(m_job_id));
     }
     if (m_error_code_isSet) {
-        obj.insert(QString("error_code"), ::OpenAPI::toJsonValue(m_error_code));
+        obj.insert(QString("error_code"), ::hm:slurm:client::toJsonValue(m_error_code));
     }
     if (m_error_isSet) {
-        obj.insert(QString("error"), ::OpenAPI::toJsonValue(m_error));
+        obj.insert(QString("error"), ::hm:slurm:client::toJsonValue(m_error));
     }
     if (m_why_isSet) {
-        obj.insert(QString("why"), ::OpenAPI::toJsonValue(m_why));
+        obj.insert(QString("why"), ::hm:slurm:client::toJsonValue(m_why));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_39_job_array_response_msg_inner::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

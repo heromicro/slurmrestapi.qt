@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_step_tres::OAIV0_0_40_step_tres(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_step_tres::fromJson(QString jsonString) {
 
 void OAIV0_0_40_step_tres::fromJsonObject(QJsonObject json) {
 
-    m_requested_isValid = ::OpenAPI::fromJsonValue(m_requested, json[QString("requested")]);
+    m_requested_isValid = ::hm:slurm:client::fromJsonValue(m_requested, json[QString("requested")]);
     m_requested_isSet = !json[QString("requested")].isNull() && m_requested_isValid;
 
-    m_consumed_isValid = ::OpenAPI::fromJsonValue(m_consumed, json[QString("consumed")]);
+    m_consumed_isValid = ::hm:slurm:client::fromJsonValue(m_consumed, json[QString("consumed")]);
     m_consumed_isSet = !json[QString("consumed")].isNull() && m_consumed_isValid;
 
-    m_allocated_isValid = ::OpenAPI::fromJsonValue(m_allocated, json[QString("allocated")]);
+    m_allocated_isValid = ::hm:slurm:client::fromJsonValue(m_allocated, json[QString("allocated")]);
     m_allocated_isSet = !json[QString("allocated")].isNull() && m_allocated_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_step_tres::asJson() const {
 QJsonObject OAIV0_0_40_step_tres::asJsonObject() const {
     QJsonObject obj;
     if (m_requested.isSet()) {
-        obj.insert(QString("requested"), ::OpenAPI::toJsonValue(m_requested));
+        obj.insert(QString("requested"), ::hm:slurm:client::toJsonValue(m_requested));
     }
     if (m_consumed.isSet()) {
-        obj.insert(QString("consumed"), ::OpenAPI::toJsonValue(m_consumed));
+        obj.insert(QString("consumed"), ::hm:slurm:client::toJsonValue(m_consumed));
     }
     if (m_allocated.size() > 0) {
-        obj.insert(QString("allocated"), ::OpenAPI::toJsonValue(m_allocated));
+        obj.insert(QString("allocated"), ::hm:slurm:client::toJsonValue(m_allocated));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_step_tres::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

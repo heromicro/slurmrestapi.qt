@@ -28,7 +28,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_assoc_max_jobs;
 class OAIV0_0_40_assoc_max_tres;
 class OAIV0_0_40_assoc_max_per;
@@ -78,8 +78,8 @@ private:
     bool m_per_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_assoc_max)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_assoc_max)
 
 #endif // OAIV0_0_40_assoc_max_H

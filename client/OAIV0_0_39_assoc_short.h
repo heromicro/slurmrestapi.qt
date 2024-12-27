@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_39_assoc_short : public OAIObject {
 public:
@@ -82,8 +82,8 @@ private:
     bool m_user_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_assoc_short)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_assoc_short)
 
 #endif // OAIV0_0_39_assoc_short_H

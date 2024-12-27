@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes::OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes(QString json) {
     this->initializeModel();
@@ -59,19 +59,19 @@ void OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes::fromJson(Q
 
 void OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes::fromJsonObject(QJsonObject json) {
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 
-    m_select_type_isValid = ::OpenAPI::fromJsonValue(m_select_type, json[QString("select_type")]);
+    m_select_type_isValid = ::hm:slurm:client::fromJsonValue(m_select_type, json[QString("select_type")]);
     m_select_type_isSet = !json[QString("select_type")].isNull() && m_select_type_isValid;
 
-    m_list_isValid = ::OpenAPI::fromJsonValue(m_list, json[QString("list")]);
+    m_list_isValid = ::hm:slurm:client::fromJsonValue(m_list, json[QString("list")]);
     m_list_isSet = !json[QString("list")].isNull() && m_list_isValid;
 
-    m_whole_isValid = ::OpenAPI::fromJsonValue(m_whole, json[QString("whole")]);
+    m_whole_isValid = ::hm:slurm:client::fromJsonValue(m_whole, json[QString("whole")]);
     m_whole_isSet = !json[QString("whole")].isNull() && m_whole_isValid;
 
-    m_allocation_isValid = ::OpenAPI::fromJsonValue(m_allocation, json[QString("allocation")]);
+    m_allocation_isValid = ::hm:slurm:client::fromJsonValue(m_allocation, json[QString("allocation")]);
     m_allocation_isSet = !json[QString("allocation")].isNull() && m_allocation_isValid;
 }
 
@@ -85,19 +85,19 @@ QString OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes::asJson(
 QJsonObject OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes::asJsonObject() const {
     QJsonObject obj;
     if (m_count_isSet) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     if (m_select_type.size() > 0) {
-        obj.insert(QString("select_type"), ::OpenAPI::toJsonValue(m_select_type));
+        obj.insert(QString("select_type"), ::hm:slurm:client::toJsonValue(m_select_type));
     }
     if (m_list_isSet) {
-        obj.insert(QString("list"), ::OpenAPI::toJsonValue(m_list));
+        obj.insert(QString("list"), ::hm:slurm:client::toJsonValue(m_list));
     }
     if (m_whole_isSet) {
-        obj.insert(QString("whole"), ::OpenAPI::toJsonValue(m_whole));
+        obj.insert(QString("whole"), ::hm:slurm:client::toJsonValue(m_whole));
     }
     if (m_allocation.size() > 0) {
-        obj.insert(QString("allocation"), ::OpenAPI::toJsonValue(m_allocation));
+        obj.insert(QString("allocation"), ::hm:slurm:client::toJsonValue(m_allocation));
     }
     return obj;
 }
@@ -218,4 +218,4 @@ bool OAIV0_0_41_openapi_job_info_resp_jobs_inner_job_resources_nodes::isValid() 
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

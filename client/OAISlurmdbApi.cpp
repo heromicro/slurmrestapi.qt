@@ -15,7 +15,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAISlurmdbApi::OAISlurmdbApi(const int timeOut)
     : _timeOut(timeOut),
@@ -375,7 +375,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAccount(const QString &account_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "account_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"account_name"+pathSuffix : pathPrefix;
-        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(account_name)));
+        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -444,7 +444,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAccountCallback(OAIHttpRequestWorker *work
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &default_qos, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &parent_account, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_raw_qos, const ::OpenAPI::OptionalParam<QString> &with_sub_accts, const ::OpenAPI::OptionalParam<QString> &without_parent_info, const ::OpenAPI::OptionalParam<QString> &without_parent_limits) {
+void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &default_qos, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &parent_account, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_raw_qos, const ::hm:slurm:client::OptionalParam<QString> &with_sub_accts, const ::hm:slurm:client::OptionalParam<QString> &without_parent_info, const ::hm:slurm:client::OptionalParam<QString> &without_parent_limits) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040DeleteAssociation"][_serverIndices.value("slurmdbV0040DeleteAssociation")].URL()+"/slurmdb/v0.0.40/association/");
     
     if (_apiKeys.contains("user")) {
@@ -472,7 +472,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -487,7 +487,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (default_qos.hasValue())
     {
@@ -502,7 +502,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_qos.stringValue())));
     }
     if (format.hasValue())
     {
@@ -517,7 +517,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -532,7 +532,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -547,7 +547,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (parent_account.hasValue())
     {
@@ -562,7 +562,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(parent_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(parent_account.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -577,7 +577,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -592,7 +592,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -607,7 +607,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -622,7 +622,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -637,7 +637,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -652,7 +652,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -667,7 +667,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_raw_qos.hasValue())
     {
@@ -682,7 +682,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_raw_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_raw_qos.stringValue())));
     }
     if (with_sub_accts.hasValue())
     {
@@ -697,7 +697,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_sub_accts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_sub_accts.stringValue())));
     }
     if (without_parent_info.hasValue())
     {
@@ -712,7 +712,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_info.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_info.stringValue())));
     }
     if (without_parent_limits.hasValue())
     {
@@ -727,7 +727,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_limits.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_limits.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -796,7 +796,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociationCallback(OAIHttpRequestWorker *
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &default_qos, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &parent_account, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_raw_qos, const ::OpenAPI::OptionalParam<QString> &with_sub_accts, const ::OpenAPI::OptionalParam<QString> &without_parent_info, const ::OpenAPI::OptionalParam<QString> &without_parent_limits) {
+void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &default_qos, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &parent_account, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_raw_qos, const ::hm:slurm:client::OptionalParam<QString> &with_sub_accts, const ::hm:slurm:client::OptionalParam<QString> &without_parent_info, const ::hm:slurm:client::OptionalParam<QString> &without_parent_limits) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040DeleteAssociations"][_serverIndices.value("slurmdbV0040DeleteAssociations")].URL()+"/slurmdb/v0.0.40/associations/");
     
     if (_apiKeys.contains("user")) {
@@ -824,7 +824,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -839,7 +839,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (default_qos.hasValue())
     {
@@ -854,7 +854,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_qos.stringValue())));
     }
     if (format.hasValue())
     {
@@ -869,7 +869,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -884,7 +884,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -899,7 +899,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (parent_account.hasValue())
     {
@@ -914,7 +914,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(parent_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(parent_account.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -929,7 +929,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -944,7 +944,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -959,7 +959,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -974,7 +974,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -989,7 +989,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -1004,7 +1004,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -1019,7 +1019,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_raw_qos.hasValue())
     {
@@ -1034,7 +1034,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_raw_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_raw_qos.stringValue())));
     }
     if (with_sub_accts.hasValue())
     {
@@ -1049,7 +1049,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_sub_accts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_sub_accts.stringValue())));
     }
     if (without_parent_info.hasValue())
     {
@@ -1064,7 +1064,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_info.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_info.stringValue())));
     }
     if (without_parent_limits.hasValue())
     {
@@ -1079,7 +1079,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_limits.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_limits.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1148,7 +1148,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteAssociationsCallback(OAIHttpRequestWorker 
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const ::OpenAPI::OptionalParam<QString> &classification, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &federation, const ::OpenAPI::OptionalParam<QString> &flags, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &rpc_version, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_usage) {
+void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const ::hm:slurm:client::OptionalParam<QString> &classification, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &federation, const ::hm:slurm:client::OptionalParam<QString> &flags, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &rpc_version, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_usage) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040DeleteCluster"][_serverIndices.value("slurmdbV0040DeleteCluster")].URL()+"/slurmdb/v0.0.40/cluster/{cluster_name}");
     
     if (_apiKeys.contains("user")) {
@@ -1174,7 +1174,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "cluster_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"cluster_name"+pathSuffix : pathPrefix;
-        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster_name)));
+        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (classification.hasValue())
@@ -1190,7 +1190,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("classification")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(classification.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("classification")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(classification.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -1205,7 +1205,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (federation.hasValue())
     {
@@ -1220,7 +1220,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("federation")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(federation.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("federation")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(federation.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -1235,7 +1235,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     if (format.hasValue())
     {
@@ -1250,7 +1250,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (rpc_version.hasValue())
     {
@@ -1265,7 +1265,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("rpc_version")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(rpc_version.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("rpc_version")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(rpc_version.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -1280,7 +1280,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -1295,7 +1295,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -1310,7 +1310,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -1325,7 +1325,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1420,7 +1420,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteSingleQos(const QString &qos) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "qos", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"qos"+pathSuffix : pathPrefix;
-        fullPath.replace(qosPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos)));
+        fullPath.replace(qosPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1515,7 +1515,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteUser(const QString &name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"name"+pathSuffix : pathPrefix;
-        fullPath.replace(namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(name)));
+        fullPath.replace(namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1610,7 +1610,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteWckey(const QString &id) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"id"+pathSuffix : pathPrefix;
-        fullPath.replace(idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(id)));
+        fullPath.replace(idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1679,7 +1679,7 @@ void OAISlurmdbApi::slurmdbV0040DeleteWckeyCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetAccount(const QString &account_name, const ::OpenAPI::OptionalParam<QString> &with_assocs, const ::OpenAPI::OptionalParam<QString> &with_coords, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0040GetAccount(const QString &account_name, const ::hm:slurm:client::OptionalParam<QString> &with_assocs, const ::hm:slurm:client::OptionalParam<QString> &with_coords, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetAccount"][_serverIndices.value("slurmdbV0040GetAccount")].URL()+"/slurmdb/v0.0.40/account/{account_name}");
     
     if (_apiKeys.contains("user")) {
@@ -1705,7 +1705,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccount(const QString &account_name, const ::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "account_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"account_name"+pathSuffix : pathPrefix;
-        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(account_name)));
+        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_assocs.hasValue())
@@ -1721,7 +1721,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccount(const QString &account_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_assocs.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_assocs.stringValue())));
     }
     if (with_coords.hasValue())
     {
@@ -1736,7 +1736,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccount(const QString &account_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_coords.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -1751,7 +1751,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccount(const QString &account_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1820,7 +1820,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccountCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetAccounts(const ::OpenAPI::OptionalParam<QString> &description, const ::OpenAPI::OptionalParam<QString> &with_assocs, const ::OpenAPI::OptionalParam<QString> &with_coords, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0040GetAccounts(const ::hm:slurm:client::OptionalParam<QString> &description, const ::hm:slurm:client::OptionalParam<QString> &with_assocs, const ::hm:slurm:client::OptionalParam<QString> &with_coords, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetAccounts"][_serverIndices.value("slurmdbV0040GetAccounts")].URL()+"/slurmdb/v0.0.40/accounts/");
     
     if (_apiKeys.contains("user")) {
@@ -1848,7 +1848,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(description.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(description.stringValue())));
     }
     if (with_assocs.hasValue())
     {
@@ -1863,7 +1863,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_assocs.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_assocs.stringValue())));
     }
     if (with_coords.hasValue())
     {
@@ -1878,7 +1878,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_coords.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -1893,7 +1893,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -1962,7 +1962,7 @@ void OAISlurmdbApi::slurmdbV0040GetAccountsCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &default_qos, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &parent_account, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_raw_qos, const ::OpenAPI::OptionalParam<QString> &with_sub_accts, const ::OpenAPI::OptionalParam<QString> &without_parent_info, const ::OpenAPI::OptionalParam<QString> &without_parent_limits) {
+void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &default_qos, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &parent_account, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_raw_qos, const ::hm:slurm:client::OptionalParam<QString> &with_sub_accts, const ::hm:slurm:client::OptionalParam<QString> &without_parent_info, const ::hm:slurm:client::OptionalParam<QString> &without_parent_limits) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetAssociation"][_serverIndices.value("slurmdbV0040GetAssociation")].URL()+"/slurmdb/v0.0.40/association/");
     
     if (_apiKeys.contains("user")) {
@@ -1990,7 +1990,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -2005,7 +2005,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (default_qos.hasValue())
     {
@@ -2020,7 +2020,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_qos.stringValue())));
     }
     if (format.hasValue())
     {
@@ -2035,7 +2035,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -2050,7 +2050,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -2065,7 +2065,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (parent_account.hasValue())
     {
@@ -2080,7 +2080,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(parent_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(parent_account.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -2095,7 +2095,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -2110,7 +2110,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -2125,7 +2125,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -2140,7 +2140,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -2155,7 +2155,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -2170,7 +2170,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -2185,7 +2185,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_raw_qos.hasValue())
     {
@@ -2200,7 +2200,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_raw_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_raw_qos.stringValue())));
     }
     if (with_sub_accts.hasValue())
     {
@@ -2215,7 +2215,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_sub_accts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_sub_accts.stringValue())));
     }
     if (without_parent_info.hasValue())
     {
@@ -2230,7 +2230,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_info.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_info.stringValue())));
     }
     if (without_parent_limits.hasValue())
     {
@@ -2245,7 +2245,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_limits.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_limits.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2314,7 +2314,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociationCallback(OAIHttpRequestWorker *wor
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &default_qos, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &parent_account, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_raw_qos, const ::OpenAPI::OptionalParam<QString> &with_sub_accts, const ::OpenAPI::OptionalParam<QString> &without_parent_info, const ::OpenAPI::OptionalParam<QString> &without_parent_limits) {
+void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &default_qos, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &parent_account, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_raw_qos, const ::hm:slurm:client::OptionalParam<QString> &with_sub_accts, const ::hm:slurm:client::OptionalParam<QString> &without_parent_info, const ::hm:slurm:client::OptionalParam<QString> &without_parent_limits) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetAssociations"][_serverIndices.value("slurmdbV0040GetAssociations")].URL()+"/slurmdb/v0.0.40/associations/");
     
     if (_apiKeys.contains("user")) {
@@ -2342,7 +2342,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -2357,7 +2357,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (default_qos.hasValue())
     {
@@ -2372,7 +2372,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_qos.stringValue())));
     }
     if (format.hasValue())
     {
@@ -2387,7 +2387,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -2402,7 +2402,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -2417,7 +2417,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (parent_account.hasValue())
     {
@@ -2432,7 +2432,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(parent_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(parent_account.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -2447,7 +2447,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -2462,7 +2462,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -2477,7 +2477,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -2492,7 +2492,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -2507,7 +2507,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -2522,7 +2522,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -2537,7 +2537,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_raw_qos.hasValue())
     {
@@ -2552,7 +2552,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_raw_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_raw_qos.stringValue())));
     }
     if (with_sub_accts.hasValue())
     {
@@ -2567,7 +2567,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_sub_accts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_sub_accts.stringValue())));
     }
     if (without_parent_info.hasValue())
     {
@@ -2582,7 +2582,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_info.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_info.stringValue())));
     }
     if (without_parent_limits.hasValue())
     {
@@ -2597,7 +2597,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_limits.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_limits.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2666,7 +2666,7 @@ void OAISlurmdbApi::slurmdbV0040GetAssociationsCallback(OAIHttpRequestWorker *wo
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::OpenAPI::OptionalParam<QString> &classification, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &federation, const ::OpenAPI::OptionalParam<QString> &flags, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &rpc_version, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_usage) {
+void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::hm:slurm:client::OptionalParam<QString> &classification, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &federation, const ::hm:slurm:client::OptionalParam<QString> &flags, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &rpc_version, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_usage) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetCluster"][_serverIndices.value("slurmdbV0040GetCluster")].URL()+"/slurmdb/v0.0.40/cluster/{cluster_name}");
     
     if (_apiKeys.contains("user")) {
@@ -2692,7 +2692,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "cluster_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"cluster_name"+pathSuffix : pathPrefix;
-        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster_name)));
+        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (classification.hasValue())
@@ -2708,7 +2708,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("classification")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(classification.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("classification")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(classification.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -2723,7 +2723,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (federation.hasValue())
     {
@@ -2738,7 +2738,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("federation")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(federation.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("federation")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(federation.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -2753,7 +2753,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     if (format.hasValue())
     {
@@ -2768,7 +2768,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (rpc_version.hasValue())
     {
@@ -2783,7 +2783,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("rpc_version")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(rpc_version.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("rpc_version")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(rpc_version.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -2798,7 +2798,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -2813,7 +2813,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -2828,7 +2828,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -2843,7 +2843,7 @@ void OAISlurmdbApi::slurmdbV0040GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -2912,7 +2912,7 @@ void OAISlurmdbApi::slurmdbV0040GetClusterCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetClusters(const ::OpenAPI::OptionalParam<QString> &update_time) {
+void OAISlurmdbApi::slurmdbV0040GetClusters(const ::hm:slurm:client::OptionalParam<QString> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetClusters"][_serverIndices.value("slurmdbV0040GetClusters")].URL()+"/slurmdb/v0.0.40/clusters/");
     
     if (_apiKeys.contains("user")) {
@@ -2940,7 +2940,7 @@ void OAISlurmdbApi::slurmdbV0040GetClusters(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3171,7 +3171,7 @@ void OAISlurmdbApi::slurmdbV0040GetDiagCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &extra, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &instance_id, const ::OpenAPI::OptionalParam<QString> &instance_type, const ::OpenAPI::OptionalParam<QString> &node_list, const ::OpenAPI::OptionalParam<QString> &time_end, const ::OpenAPI::OptionalParam<QString> &time_start) {
+void OAISlurmdbApi::slurmdbV0040GetInstance(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &extra, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &instance_id, const ::hm:slurm:client::OptionalParam<QString> &instance_type, const ::hm:slurm:client::OptionalParam<QString> &node_list, const ::hm:slurm:client::OptionalParam<QString> &time_end, const ::hm:slurm:client::OptionalParam<QString> &time_start) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetInstance"][_serverIndices.value("slurmdbV0040GetInstance")].URL()+"/slurmdb/v0.0.40/instance/");
     
     if (_apiKeys.contains("user")) {
@@ -3199,7 +3199,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (extra.hasValue())
     {
@@ -3214,7 +3214,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("extra")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(extra.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("extra")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(extra.stringValue())));
     }
     if (format.hasValue())
     {
@@ -3229,7 +3229,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (instance_id.hasValue())
     {
@@ -3244,7 +3244,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("instance_id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(instance_id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("instance_id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(instance_id.stringValue())));
     }
     if (instance_type.hasValue())
     {
@@ -3259,7 +3259,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("instance_type")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(instance_type.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("instance_type")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(instance_type.stringValue())));
     }
     if (node_list.hasValue())
     {
@@ -3274,7 +3274,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("node_list")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_list.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("node_list")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_list.stringValue())));
     }
     if (time_end.hasValue())
     {
@@ -3289,7 +3289,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("time_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(time_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("time_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(time_end.stringValue())));
     }
     if (time_start.hasValue())
     {
@@ -3304,7 +3304,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("time_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(time_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("time_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(time_start.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3373,7 +3373,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstanceCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &extra, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &instance_id, const ::OpenAPI::OptionalParam<QString> &instance_type, const ::OpenAPI::OptionalParam<QString> &node_list, const ::OpenAPI::OptionalParam<QString> &time_end, const ::OpenAPI::OptionalParam<QString> &time_start) {
+void OAISlurmdbApi::slurmdbV0040GetInstances(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &extra, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &instance_id, const ::hm:slurm:client::OptionalParam<QString> &instance_type, const ::hm:slurm:client::OptionalParam<QString> &node_list, const ::hm:slurm:client::OptionalParam<QString> &time_end, const ::hm:slurm:client::OptionalParam<QString> &time_start) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetInstances"][_serverIndices.value("slurmdbV0040GetInstances")].URL()+"/slurmdb/v0.0.40/instances/");
     
     if (_apiKeys.contains("user")) {
@@ -3401,7 +3401,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (extra.hasValue())
     {
@@ -3416,7 +3416,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("extra")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(extra.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("extra")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(extra.stringValue())));
     }
     if (format.hasValue())
     {
@@ -3431,7 +3431,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (instance_id.hasValue())
     {
@@ -3446,7 +3446,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("instance_id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(instance_id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("instance_id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(instance_id.stringValue())));
     }
     if (instance_type.hasValue())
     {
@@ -3461,7 +3461,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("instance_type")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(instance_type.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("instance_type")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(instance_type.stringValue())));
     }
     if (node_list.hasValue())
     {
@@ -3476,7 +3476,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("node_list")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_list.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("node_list")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_list.stringValue())));
     }
     if (time_end.hasValue())
     {
@@ -3491,7 +3491,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("time_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(time_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("time_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(time_end.stringValue())));
     }
     if (time_start.hasValue())
     {
@@ -3506,7 +3506,7 @@ void OAISlurmdbApi::slurmdbV0040GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("time_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(time_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("time_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(time_start.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3601,7 +3601,7 @@ void OAISlurmdbApi::slurmdbV0040GetJob(const QString &job_id) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -3670,7 +3670,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &association, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &constraints, const ::OpenAPI::OptionalParam<QString> &cpus_max, const ::OpenAPI::OptionalParam<QString> &cpus_min, const ::OpenAPI::OptionalParam<QString> &scheduler_unset, const ::OpenAPI::OptionalParam<QString> &scheduled_on_submit, const ::OpenAPI::OptionalParam<QString> &scheduled_by_main, const ::OpenAPI::OptionalParam<QString> &scheduled_by_backfill, const ::OpenAPI::OptionalParam<QString> &job_started, const ::OpenAPI::OptionalParam<QString> &exit_code, const ::OpenAPI::OptionalParam<QString> &show_duplicates, const ::OpenAPI::OptionalParam<QString> &skip_steps, const ::OpenAPI::OptionalParam<QString> &disable_truncate_usage_time, const ::OpenAPI::OptionalParam<QString> &whole_hetjob, const ::OpenAPI::OptionalParam<QString> &disable_whole_hetjob, const ::OpenAPI::OptionalParam<QString> &disable_wait_for_result, const ::OpenAPI::OptionalParam<QString> &usage_time_as_submit_time, const ::OpenAPI::OptionalParam<QString> &show_batch_script, const ::OpenAPI::OptionalParam<QString> &show_job_environment, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &groups, const ::OpenAPI::OptionalParam<QString> &job_name, const ::OpenAPI::OptionalParam<QString> &nodes_max, const ::OpenAPI::OptionalParam<QString> &nodes_min, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &reason, const ::OpenAPI::OptionalParam<QString> &reservation, const ::OpenAPI::OptionalParam<QString> &reservation_id, const ::OpenAPI::OptionalParam<QString> &state, const ::OpenAPI::OptionalParam<QString> &step, const ::OpenAPI::OptionalParam<QString> &timelimit_max, const ::OpenAPI::OptionalParam<QString> &timelimit_min, const ::OpenAPI::OptionalParam<QString> &end_time, const ::OpenAPI::OptionalParam<QString> &start_time, const ::OpenAPI::OptionalParam<QString> &submit_time, const ::OpenAPI::OptionalParam<QString> &node, const ::OpenAPI::OptionalParam<QString> &users, const ::OpenAPI::OptionalParam<QString> &wckey) {
+void OAISlurmdbApi::slurmdbV0040GetJobs(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &association, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &constraints, const ::hm:slurm:client::OptionalParam<QString> &cpus_max, const ::hm:slurm:client::OptionalParam<QString> &cpus_min, const ::hm:slurm:client::OptionalParam<QString> &scheduler_unset, const ::hm:slurm:client::OptionalParam<QString> &scheduled_on_submit, const ::hm:slurm:client::OptionalParam<QString> &scheduled_by_main, const ::hm:slurm:client::OptionalParam<QString> &scheduled_by_backfill, const ::hm:slurm:client::OptionalParam<QString> &job_started, const ::hm:slurm:client::OptionalParam<QString> &exit_code, const ::hm:slurm:client::OptionalParam<QString> &show_duplicates, const ::hm:slurm:client::OptionalParam<QString> &skip_steps, const ::hm:slurm:client::OptionalParam<QString> &disable_truncate_usage_time, const ::hm:slurm:client::OptionalParam<QString> &whole_hetjob, const ::hm:slurm:client::OptionalParam<QString> &disable_whole_hetjob, const ::hm:slurm:client::OptionalParam<QString> &disable_wait_for_result, const ::hm:slurm:client::OptionalParam<QString> &usage_time_as_submit_time, const ::hm:slurm:client::OptionalParam<QString> &show_batch_script, const ::hm:slurm:client::OptionalParam<QString> &show_job_environment, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &groups, const ::hm:slurm:client::OptionalParam<QString> &job_name, const ::hm:slurm:client::OptionalParam<QString> &nodes_max, const ::hm:slurm:client::OptionalParam<QString> &nodes_min, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &reason, const ::hm:slurm:client::OptionalParam<QString> &reservation, const ::hm:slurm:client::OptionalParam<QString> &reservation_id, const ::hm:slurm:client::OptionalParam<QString> &state, const ::hm:slurm:client::OptionalParam<QString> &step, const ::hm:slurm:client::OptionalParam<QString> &timelimit_max, const ::hm:slurm:client::OptionalParam<QString> &timelimit_min, const ::hm:slurm:client::OptionalParam<QString> &end_time, const ::hm:slurm:client::OptionalParam<QString> &start_time, const ::hm:slurm:client::OptionalParam<QString> &submit_time, const ::hm:slurm:client::OptionalParam<QString> &node, const ::hm:slurm:client::OptionalParam<QString> &users, const ::hm:slurm:client::OptionalParam<QString> &wckey) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetJobs"][_serverIndices.value("slurmdbV0040GetJobs")].URL()+"/slurmdb/v0.0.40/jobs/");
     
     if (_apiKeys.contains("user")) {
@@ -3698,7 +3698,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (association.hasValue())
     {
@@ -3713,7 +3713,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("association")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(association.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("association")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(association.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -3728,7 +3728,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (constraints.hasValue())
     {
@@ -3743,7 +3743,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("constraints")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(constraints.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("constraints")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(constraints.stringValue())));
     }
     if (cpus_max.hasValue())
     {
@@ -3758,7 +3758,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cpus_max")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cpus_max.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cpus_max")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cpus_max.stringValue())));
     }
     if (cpus_min.hasValue())
     {
@@ -3773,7 +3773,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cpus_min")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cpus_min.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cpus_min")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cpus_min.stringValue())));
     }
     if (scheduler_unset.hasValue())
     {
@@ -3788,7 +3788,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("scheduler_unset")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(scheduler_unset.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("scheduler_unset")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(scheduler_unset.stringValue())));
     }
     if (scheduled_on_submit.hasValue())
     {
@@ -3803,7 +3803,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("scheduled_on_submit")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(scheduled_on_submit.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("scheduled_on_submit")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(scheduled_on_submit.stringValue())));
     }
     if (scheduled_by_main.hasValue())
     {
@@ -3818,7 +3818,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("scheduled_by_main")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(scheduled_by_main.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("scheduled_by_main")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(scheduled_by_main.stringValue())));
     }
     if (scheduled_by_backfill.hasValue())
     {
@@ -3833,7 +3833,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("scheduled_by_backfill")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(scheduled_by_backfill.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("scheduled_by_backfill")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(scheduled_by_backfill.stringValue())));
     }
     if (job_started.hasValue())
     {
@@ -3848,7 +3848,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("job_started")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_started.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("job_started")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_started.stringValue())));
     }
     if (exit_code.hasValue())
     {
@@ -3863,7 +3863,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("exit_code")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(exit_code.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("exit_code")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(exit_code.stringValue())));
     }
     if (show_duplicates.hasValue())
     {
@@ -3878,7 +3878,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("show_duplicates")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(show_duplicates.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("show_duplicates")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(show_duplicates.stringValue())));
     }
     if (skip_steps.hasValue())
     {
@@ -3893,7 +3893,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("skip_steps")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(skip_steps.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("skip_steps")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(skip_steps.stringValue())));
     }
     if (disable_truncate_usage_time.hasValue())
     {
@@ -3908,7 +3908,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("disable_truncate_usage_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(disable_truncate_usage_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("disable_truncate_usage_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(disable_truncate_usage_time.stringValue())));
     }
     if (whole_hetjob.hasValue())
     {
@@ -3923,7 +3923,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("whole_hetjob")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(whole_hetjob.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("whole_hetjob")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(whole_hetjob.stringValue())));
     }
     if (disable_whole_hetjob.hasValue())
     {
@@ -3938,7 +3938,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("disable_whole_hetjob")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(disable_whole_hetjob.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("disable_whole_hetjob")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(disable_whole_hetjob.stringValue())));
     }
     if (disable_wait_for_result.hasValue())
     {
@@ -3953,7 +3953,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("disable_wait_for_result")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(disable_wait_for_result.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("disable_wait_for_result")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(disable_wait_for_result.stringValue())));
     }
     if (usage_time_as_submit_time.hasValue())
     {
@@ -3968,7 +3968,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_time_as_submit_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_time_as_submit_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_time_as_submit_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_time_as_submit_time.stringValue())));
     }
     if (show_batch_script.hasValue())
     {
@@ -3983,7 +3983,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("show_batch_script")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(show_batch_script.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("show_batch_script")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(show_batch_script.stringValue())));
     }
     if (show_job_environment.hasValue())
     {
@@ -3998,7 +3998,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("show_job_environment")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(show_job_environment.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("show_job_environment")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(show_job_environment.stringValue())));
     }
     if (format.hasValue())
     {
@@ -4013,7 +4013,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (groups.hasValue())
     {
@@ -4028,7 +4028,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("groups")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(groups.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("groups")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(groups.stringValue())));
     }
     if (job_name.hasValue())
     {
@@ -4043,7 +4043,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("job_name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("job_name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_name.stringValue())));
     }
     if (nodes_max.hasValue())
     {
@@ -4058,7 +4058,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("nodes_max")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(nodes_max.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("nodes_max")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(nodes_max.stringValue())));
     }
     if (nodes_min.hasValue())
     {
@@ -4073,7 +4073,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("nodes_min")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(nodes_min.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("nodes_min")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(nodes_min.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -4088,7 +4088,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -4103,7 +4103,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (reason.hasValue())
     {
@@ -4118,7 +4118,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("reason")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(reason.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("reason")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reason.stringValue())));
     }
     if (reservation.hasValue())
     {
@@ -4133,7 +4133,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("reservation")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(reservation.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("reservation")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reservation.stringValue())));
     }
     if (reservation_id.hasValue())
     {
@@ -4148,7 +4148,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("reservation_id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(reservation_id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("reservation_id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reservation_id.stringValue())));
     }
     if (state.hasValue())
     {
@@ -4163,7 +4163,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("state")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(state.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("state")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(state.stringValue())));
     }
     if (step.hasValue())
     {
@@ -4178,7 +4178,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("step")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(step.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("step")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(step.stringValue())));
     }
     if (timelimit_max.hasValue())
     {
@@ -4193,7 +4193,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("timelimit_max")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(timelimit_max.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("timelimit_max")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(timelimit_max.stringValue())));
     }
     if (timelimit_min.hasValue())
     {
@@ -4208,7 +4208,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("timelimit_min")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(timelimit_min.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("timelimit_min")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(timelimit_min.stringValue())));
     }
     if (end_time.hasValue())
     {
@@ -4223,7 +4223,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("end_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(end_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("end_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(end_time.stringValue())));
     }
     if (start_time.hasValue())
     {
@@ -4238,7 +4238,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("start_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(start_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("start_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(start_time.stringValue())));
     }
     if (submit_time.hasValue())
     {
@@ -4253,7 +4253,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("submit_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(submit_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("submit_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(submit_time.stringValue())));
     }
     if (node.hasValue())
     {
@@ -4268,7 +4268,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("node")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(node.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("node")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node.stringValue())));
     }
     if (users.hasValue())
     {
@@ -4283,7 +4283,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(users.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(users.stringValue())));
     }
     if (wckey.hasValue())
     {
@@ -4298,7 +4298,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(wckey.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(wckey.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4367,7 +4367,7 @@ void OAISlurmdbApi::slurmdbV0040GetJobsCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetQos(const ::OpenAPI::OptionalParam<QString> &description, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &name, const ::OpenAPI::OptionalParam<QString> &preempt_mode, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0040GetQos(const ::hm:slurm:client::OptionalParam<QString> &description, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &name, const ::hm:slurm:client::OptionalParam<QString> &preempt_mode, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetQos"][_serverIndices.value("slurmdbV0040GetQos")].URL()+"/slurmdb/v0.0.40/qos/");
     
     if (_apiKeys.contains("user")) {
@@ -4395,7 +4395,7 @@ void OAISlurmdbApi::slurmdbV0040GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(description.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(description.stringValue())));
     }
     if (id.hasValue())
     {
@@ -4410,7 +4410,7 @@ void OAISlurmdbApi::slurmdbV0040GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (format.hasValue())
     {
@@ -4425,7 +4425,7 @@ void OAISlurmdbApi::slurmdbV0040GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (name.hasValue())
     {
@@ -4440,7 +4440,7 @@ void OAISlurmdbApi::slurmdbV0040GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name.stringValue())));
     }
     if (preempt_mode.hasValue())
     {
@@ -4455,7 +4455,7 @@ void OAISlurmdbApi::slurmdbV0040GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("preempt_mode")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(preempt_mode.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("preempt_mode")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(preempt_mode.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -4470,7 +4470,7 @@ void OAISlurmdbApi::slurmdbV0040GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4539,7 +4539,7 @@ void OAISlurmdbApi::slurmdbV0040GetQosCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetSingleQos(const QString &qos, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0040GetSingleQos(const QString &qos, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetSingleQos"][_serverIndices.value("slurmdbV0040GetSingleQos")].URL()+"/slurmdb/v0.0.40/qos/{qos}");
     
     if (_apiKeys.contains("user")) {
@@ -4565,7 +4565,7 @@ void OAISlurmdbApi::slurmdbV0040GetSingleQos(const QString &qos, const ::OpenAPI
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "qos", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"qos"+pathSuffix : pathPrefix;
-        fullPath.replace(qosPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos)));
+        fullPath.replace(qosPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_deleted.hasValue())
@@ -4581,7 +4581,7 @@ void OAISlurmdbApi::slurmdbV0040GetSingleQos(const QString &qos, const ::OpenAPI
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4731,7 +4731,7 @@ void OAISlurmdbApi::slurmdbV0040GetTresCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetUser(const QString &name, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_assocs, const ::OpenAPI::OptionalParam<QString> &with_coords, const ::OpenAPI::OptionalParam<QString> &with_wckeys) {
+void OAISlurmdbApi::slurmdbV0040GetUser(const QString &name, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_assocs, const ::hm:slurm:client::OptionalParam<QString> &with_coords, const ::hm:slurm:client::OptionalParam<QString> &with_wckeys) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetUser"][_serverIndices.value("slurmdbV0040GetUser")].URL()+"/slurmdb/v0.0.40/user/{name}");
     
     if (_apiKeys.contains("user")) {
@@ -4757,7 +4757,7 @@ void OAISlurmdbApi::slurmdbV0040GetUser(const QString &name, const ::OpenAPI::Op
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"name"+pathSuffix : pathPrefix;
-        fullPath.replace(namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(name)));
+        fullPath.replace(namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_deleted.hasValue())
@@ -4773,7 +4773,7 @@ void OAISlurmdbApi::slurmdbV0040GetUser(const QString &name, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_assocs.hasValue())
     {
@@ -4788,7 +4788,7 @@ void OAISlurmdbApi::slurmdbV0040GetUser(const QString &name, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_assocs.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_assocs.stringValue())));
     }
     if (with_coords.hasValue())
     {
@@ -4803,7 +4803,7 @@ void OAISlurmdbApi::slurmdbV0040GetUser(const QString &name, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_coords.stringValue())));
     }
     if (with_wckeys.hasValue())
     {
@@ -4818,7 +4818,7 @@ void OAISlurmdbApi::slurmdbV0040GetUser(const QString &name, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_wckeys")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_wckeys.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_wckeys")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_wckeys.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -4887,7 +4887,7 @@ void OAISlurmdbApi::slurmdbV0040GetUserCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString> &admin_level, const ::OpenAPI::OptionalParam<QString> &default_account, const ::OpenAPI::OptionalParam<QString> &default_wckey, const ::OpenAPI::OptionalParam<QString> &with_assocs, const ::OpenAPI::OptionalParam<QString> &with_coords, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_wckeys, const ::OpenAPI::OptionalParam<QString> &without_defaults) {
+void OAISlurmdbApi::slurmdbV0040GetUsers(const ::hm:slurm:client::OptionalParam<QString> &admin_level, const ::hm:slurm:client::OptionalParam<QString> &default_account, const ::hm:slurm:client::OptionalParam<QString> &default_wckey, const ::hm:slurm:client::OptionalParam<QString> &with_assocs, const ::hm:slurm:client::OptionalParam<QString> &with_coords, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_wckeys, const ::hm:slurm:client::OptionalParam<QString> &without_defaults) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetUsers"][_serverIndices.value("slurmdbV0040GetUsers")].URL()+"/slurmdb/v0.0.40/users/");
     
     if (_apiKeys.contains("user")) {
@@ -4915,7 +4915,7 @@ void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("admin_level")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(admin_level.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("admin_level")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(admin_level.stringValue())));
     }
     if (default_account.hasValue())
     {
@@ -4930,7 +4930,7 @@ void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_account.stringValue())));
     }
     if (default_wckey.hasValue())
     {
@@ -4945,7 +4945,7 @@ void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_wckey.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_wckey.stringValue())));
     }
     if (with_assocs.hasValue())
     {
@@ -4960,7 +4960,7 @@ void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_assocs.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_assocs.stringValue())));
     }
     if (with_coords.hasValue())
     {
@@ -4975,7 +4975,7 @@ void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_coords.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -4990,7 +4990,7 @@ void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_wckeys.hasValue())
     {
@@ -5005,7 +5005,7 @@ void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_wckeys")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_wckeys.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_wckeys")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_wckeys.stringValue())));
     }
     if (without_defaults.hasValue())
     {
@@ -5020,7 +5020,7 @@ void OAISlurmdbApi::slurmdbV0040GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_defaults.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5115,7 +5115,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckey(const QString &id) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"id"+pathSuffix : pathPrefix;
-        fullPath.replace(idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(id)));
+        fullPath.replace(idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5184,7 +5184,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeyCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &name, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &name, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040GetWckeys"][_serverIndices.value("slurmdbV0040GetWckeys")].URL()+"/slurmdb/v0.0.40/wckeys/");
     
     if (_apiKeys.contains("user")) {
@@ -5212,7 +5212,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (format.hasValue())
     {
@@ -5227,7 +5227,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -5242,7 +5242,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (name.hasValue())
     {
@@ -5257,7 +5257,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -5272,7 +5272,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -5287,7 +5287,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -5302,7 +5302,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -5317,7 +5317,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -5332,7 +5332,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -5347,7 +5347,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5416,7 +5416,7 @@ void OAISlurmdbApi::slurmdbV0040GetWckeysCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostAccounts(const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_accounts_resp> &oaiv0_0_40_openapi_accounts_resp) {
+void OAISlurmdbApi::slurmdbV0040PostAccounts(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_accounts_resp> &oaiv0_0_40_openapi_accounts_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostAccounts"][_serverIndices.value("slurmdbV0040PostAccounts")].URL()+"/slurmdb/v0.0.40/accounts/");
     
     if (_apiKeys.contains("user")) {
@@ -5502,7 +5502,7 @@ void OAISlurmdbApi::slurmdbV0040PostAccountsCallback(OAIHttpRequestWorker *worke
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostAccountsAssociation(const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_accounts_add_cond_resp> &oaiv0_0_40_openapi_accounts_add_cond_resp) {
+void OAISlurmdbApi::slurmdbV0040PostAccountsAssociation(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_accounts_add_cond_resp> &oaiv0_0_40_openapi_accounts_add_cond_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostAccountsAssociation"][_serverIndices.value("slurmdbV0040PostAccountsAssociation")].URL()+"/slurmdb/v0.0.40/accounts_association/");
     
     if (_apiKeys.contains("user")) {
@@ -5588,7 +5588,7 @@ void OAISlurmdbApi::slurmdbV0040PostAccountsAssociationCallback(OAIHttpRequestWo
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostAssociations(const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_assocs_resp> &oaiv0_0_40_openapi_assocs_resp) {
+void OAISlurmdbApi::slurmdbV0040PostAssociations(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_assocs_resp> &oaiv0_0_40_openapi_assocs_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostAssociations"][_serverIndices.value("slurmdbV0040PostAssociations")].URL()+"/slurmdb/v0.0.40/associations/");
     
     if (_apiKeys.contains("user")) {
@@ -5674,7 +5674,7 @@ void OAISlurmdbApi::slurmdbV0040PostAssociationsCallback(OAIHttpRequestWorker *w
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostClusters(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_clusters_resp> &oaiv0_0_40_openapi_clusters_resp) {
+void OAISlurmdbApi::slurmdbV0040PostClusters(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_clusters_resp> &oaiv0_0_40_openapi_clusters_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostClusters"][_serverIndices.value("slurmdbV0040PostClusters")].URL()+"/slurmdb/v0.0.40/clusters/");
     
     if (_apiKeys.contains("user")) {
@@ -5702,7 +5702,7 @@ void OAISlurmdbApi::slurmdbV0040PostClusters(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -5776,7 +5776,7 @@ void OAISlurmdbApi::slurmdbV0040PostClustersCallback(OAIHttpRequestWorker *worke
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostConfig(const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_slurmdbd_config_resp> &oaiv0_0_40_openapi_slurmdbd_config_resp) {
+void OAISlurmdbApi::slurmdbV0040PostConfig(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_slurmdbd_config_resp> &oaiv0_0_40_openapi_slurmdbd_config_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostConfig"][_serverIndices.value("slurmdbV0040PostConfig")].URL()+"/slurmdb/v0.0.40/config");
     
     if (_apiKeys.contains("user")) {
@@ -5862,7 +5862,7 @@ void OAISlurmdbApi::slurmdbV0040PostConfigCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostQos(const ::OpenAPI::OptionalParam<QString> &description, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &name, const ::OpenAPI::OptionalParam<QString> &preempt_mode, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_slurmdbd_qos_resp> &oaiv0_0_40_openapi_slurmdbd_qos_resp) {
+void OAISlurmdbApi::slurmdbV0040PostQos(const ::hm:slurm:client::OptionalParam<QString> &description, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &name, const ::hm:slurm:client::OptionalParam<QString> &preempt_mode, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_slurmdbd_qos_resp> &oaiv0_0_40_openapi_slurmdbd_qos_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostQos"][_serverIndices.value("slurmdbV0040PostQos")].URL()+"/slurmdb/v0.0.40/qos/");
     
     if (_apiKeys.contains("user")) {
@@ -5890,7 +5890,7 @@ void OAISlurmdbApi::slurmdbV0040PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(description.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(description.stringValue())));
     }
     if (id.hasValue())
     {
@@ -5905,7 +5905,7 @@ void OAISlurmdbApi::slurmdbV0040PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (format.hasValue())
     {
@@ -5920,7 +5920,7 @@ void OAISlurmdbApi::slurmdbV0040PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (name.hasValue())
     {
@@ -5935,7 +5935,7 @@ void OAISlurmdbApi::slurmdbV0040PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name.stringValue())));
     }
     if (preempt_mode.hasValue())
     {
@@ -5950,7 +5950,7 @@ void OAISlurmdbApi::slurmdbV0040PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("preempt_mode")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(preempt_mode.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("preempt_mode")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(preempt_mode.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -5965,7 +5965,7 @@ void OAISlurmdbApi::slurmdbV0040PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6039,7 +6039,7 @@ void OAISlurmdbApi::slurmdbV0040PostQosCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostTres(const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_tres_resp> &oaiv0_0_40_openapi_tres_resp) {
+void OAISlurmdbApi::slurmdbV0040PostTres(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_tres_resp> &oaiv0_0_40_openapi_tres_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostTres"][_serverIndices.value("slurmdbV0040PostTres")].URL()+"/slurmdb/v0.0.40/tres/");
     
     if (_apiKeys.contains("user")) {
@@ -6125,7 +6125,7 @@ void OAISlurmdbApi::slurmdbV0040PostTresCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostUsers(const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_users_resp> &oaiv0_0_40_openapi_users_resp) {
+void OAISlurmdbApi::slurmdbV0040PostUsers(const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_users_resp> &oaiv0_0_40_openapi_users_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostUsers"][_serverIndices.value("slurmdbV0040PostUsers")].URL()+"/slurmdb/v0.0.40/users/");
     
     if (_apiKeys.contains("user")) {
@@ -6211,7 +6211,7 @@ void OAISlurmdbApi::slurmdbV0040PostUsersCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostUsersAssociation(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags, const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_users_add_cond_resp> &oaiv0_0_40_openapi_users_add_cond_resp) {
+void OAISlurmdbApi::slurmdbV0040PostUsersAssociation(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags, const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_users_add_cond_resp> &oaiv0_0_40_openapi_users_add_cond_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostUsersAssociation"][_serverIndices.value("slurmdbV0040PostUsersAssociation")].URL()+"/slurmdb/v0.0.40/users_association/");
     
     if (_apiKeys.contains("user")) {
@@ -6239,7 +6239,7 @@ void OAISlurmdbApi::slurmdbV0040PostUsersAssociation(const ::OpenAPI::OptionalPa
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -6254,7 +6254,7 @@ void OAISlurmdbApi::slurmdbV0040PostUsersAssociation(const ::OpenAPI::OptionalPa
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6328,7 +6328,7 @@ void OAISlurmdbApi::slurmdbV0040PostUsersAssociationCallback(OAIHttpRequestWorke
     }
 }
 
-void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &name, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<OAIV0_0_40_openapi_wckey_resp> &oaiv0_0_40_openapi_wckey_resp) {
+void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &name, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<OAIV0_0_40_openapi_wckey_resp> &oaiv0_0_40_openapi_wckey_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0040PostWckeys"][_serverIndices.value("slurmdbV0040PostWckeys")].URL()+"/slurmdb/v0.0.40/wckeys/");
     
     if (_apiKeys.contains("user")) {
@@ -6356,7 +6356,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (format.hasValue())
     {
@@ -6371,7 +6371,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -6386,7 +6386,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (name.hasValue())
     {
@@ -6401,7 +6401,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -6416,7 +6416,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -6431,7 +6431,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -6446,7 +6446,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -6461,7 +6461,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -6476,7 +6476,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -6491,7 +6491,7 @@ void OAISlurmdbApi::slurmdbV0040PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6591,7 +6591,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAccount(const QString &account_name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "account_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"account_name"+pathSuffix : pathPrefix;
-        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(account_name)));
+        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account_name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -6660,7 +6660,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAccountCallback(OAIHttpRequestWorker *work
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &default_qos, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &parent_account, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_raw_qos, const ::OpenAPI::OptionalParam<QString> &with_sub_accts, const ::OpenAPI::OptionalParam<QString> &without_parent_info, const ::OpenAPI::OptionalParam<QString> &without_parent_limits) {
+void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &default_qos, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &parent_account, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_raw_qos, const ::hm:slurm:client::OptionalParam<QString> &with_sub_accts, const ::hm:slurm:client::OptionalParam<QString> &without_parent_info, const ::hm:slurm:client::OptionalParam<QString> &without_parent_limits) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041DeleteAssociation"][_serverIndices.value("slurmdbV0041DeleteAssociation")].URL()+"/slurmdb/v0.0.41/association/");
     
     if (_apiKeys.contains("user")) {
@@ -6688,7 +6688,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -6703,7 +6703,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (default_qos.hasValue())
     {
@@ -6718,7 +6718,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_qos.stringValue())));
     }
     if (format.hasValue())
     {
@@ -6733,7 +6733,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -6748,7 +6748,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -6763,7 +6763,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (parent_account.hasValue())
     {
@@ -6778,7 +6778,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(parent_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(parent_account.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -6793,7 +6793,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -6808,7 +6808,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -6823,7 +6823,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -6838,7 +6838,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -6853,7 +6853,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -6868,7 +6868,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -6883,7 +6883,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_raw_qos.hasValue())
     {
@@ -6898,7 +6898,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_raw_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_raw_qos.stringValue())));
     }
     if (with_sub_accts.hasValue())
     {
@@ -6913,7 +6913,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_sub_accts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_sub_accts.stringValue())));
     }
     if (without_parent_info.hasValue())
     {
@@ -6928,7 +6928,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_info.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_info.stringValue())));
     }
     if (without_parent_limits.hasValue())
     {
@@ -6943,7 +6943,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociation(const ::OpenAPI::OptionalParam
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_limits.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_limits.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7012,7 +7012,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociationCallback(OAIHttpRequestWorker *
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &default_qos, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &parent_account, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_raw_qos, const ::OpenAPI::OptionalParam<QString> &with_sub_accts, const ::OpenAPI::OptionalParam<QString> &without_parent_info, const ::OpenAPI::OptionalParam<QString> &without_parent_limits) {
+void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &default_qos, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &parent_account, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_raw_qos, const ::hm:slurm:client::OptionalParam<QString> &with_sub_accts, const ::hm:slurm:client::OptionalParam<QString> &without_parent_info, const ::hm:slurm:client::OptionalParam<QString> &without_parent_limits) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041DeleteAssociations"][_serverIndices.value("slurmdbV0041DeleteAssociations")].URL()+"/slurmdb/v0.0.41/associations/");
     
     if (_apiKeys.contains("user")) {
@@ -7040,7 +7040,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -7055,7 +7055,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (default_qos.hasValue())
     {
@@ -7070,7 +7070,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_qos.stringValue())));
     }
     if (format.hasValue())
     {
@@ -7085,7 +7085,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -7100,7 +7100,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -7115,7 +7115,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (parent_account.hasValue())
     {
@@ -7130,7 +7130,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(parent_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(parent_account.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -7145,7 +7145,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -7160,7 +7160,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -7175,7 +7175,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -7190,7 +7190,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -7205,7 +7205,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -7220,7 +7220,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -7235,7 +7235,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_raw_qos.hasValue())
     {
@@ -7250,7 +7250,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_raw_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_raw_qos.stringValue())));
     }
     if (with_sub_accts.hasValue())
     {
@@ -7265,7 +7265,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_sub_accts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_sub_accts.stringValue())));
     }
     if (without_parent_info.hasValue())
     {
@@ -7280,7 +7280,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_info.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_info.stringValue())));
     }
     if (without_parent_limits.hasValue())
     {
@@ -7295,7 +7295,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociations(const ::OpenAPI::OptionalPara
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_limits.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_limits.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7364,7 +7364,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteAssociationsCallback(OAIHttpRequestWorker 
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const ::OpenAPI::OptionalParam<QString> &classification, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &federation, const ::OpenAPI::OptionalParam<QString> &flags, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &rpc_version, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_usage) {
+void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const ::hm:slurm:client::OptionalParam<QString> &classification, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &federation, const ::hm:slurm:client::OptionalParam<QString> &flags, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &rpc_version, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_usage) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041DeleteCluster"][_serverIndices.value("slurmdbV0041DeleteCluster")].URL()+"/slurmdb/v0.0.41/cluster/{cluster_name}");
     
     if (_apiKeys.contains("user")) {
@@ -7390,7 +7390,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "cluster_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"cluster_name"+pathSuffix : pathPrefix;
-        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster_name)));
+        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (classification.hasValue())
@@ -7406,7 +7406,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("classification")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(classification.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("classification")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(classification.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -7421,7 +7421,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (federation.hasValue())
     {
@@ -7436,7 +7436,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("federation")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(federation.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("federation")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(federation.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -7451,7 +7451,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     if (format.hasValue())
     {
@@ -7466,7 +7466,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (rpc_version.hasValue())
     {
@@ -7481,7 +7481,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("rpc_version")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(rpc_version.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("rpc_version")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(rpc_version.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -7496,7 +7496,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -7511,7 +7511,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -7526,7 +7526,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -7541,7 +7541,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteCluster(const QString &cluster_name, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7636,7 +7636,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteSingleQos(const QString &qos) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "qos", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"qos"+pathSuffix : pathPrefix;
-        fullPath.replace(qosPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos)));
+        fullPath.replace(qosPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7731,7 +7731,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteUser(const QString &name) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"name"+pathSuffix : pathPrefix;
-        fullPath.replace(namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(name)));
+        fullPath.replace(namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7826,7 +7826,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteWckey(const QString &id) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"id"+pathSuffix : pathPrefix;
-        fullPath.replace(idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(id)));
+        fullPath.replace(idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -7895,7 +7895,7 @@ void OAISlurmdbApi::slurmdbV0041DeleteWckeyCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetAccount(const QString &account_name, const ::OpenAPI::OptionalParam<QString> &with_assocs, const ::OpenAPI::OptionalParam<QString> &with_coords, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0041GetAccount(const QString &account_name, const ::hm:slurm:client::OptionalParam<QString> &with_assocs, const ::hm:slurm:client::OptionalParam<QString> &with_coords, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetAccount"][_serverIndices.value("slurmdbV0041GetAccount")].URL()+"/slurmdb/v0.0.41/account/{account_name}");
     
     if (_apiKeys.contains("user")) {
@@ -7921,7 +7921,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccount(const QString &account_name, const ::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "account_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"account_name"+pathSuffix : pathPrefix;
-        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(account_name)));
+        fullPath.replace(account_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_assocs.hasValue())
@@ -7937,7 +7937,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccount(const QString &account_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_assocs.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_assocs.stringValue())));
     }
     if (with_coords.hasValue())
     {
@@ -7952,7 +7952,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccount(const QString &account_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_coords.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -7967,7 +7967,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccount(const QString &account_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8036,7 +8036,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccountCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetAccounts(const ::OpenAPI::OptionalParam<QString> &description, const ::OpenAPI::OptionalParam<QString> &deleted, const ::OpenAPI::OptionalParam<QString> &with_associations, const ::OpenAPI::OptionalParam<QString> &with_coordinators, const ::OpenAPI::OptionalParam<QString> &no_users_are_coords, const ::OpenAPI::OptionalParam<QString> &users_are_coords) {
+void OAISlurmdbApi::slurmdbV0041GetAccounts(const ::hm:slurm:client::OptionalParam<QString> &description, const ::hm:slurm:client::OptionalParam<QString> &deleted, const ::hm:slurm:client::OptionalParam<QString> &with_associations, const ::hm:slurm:client::OptionalParam<QString> &with_coordinators, const ::hm:slurm:client::OptionalParam<QString> &no_users_are_coords, const ::hm:slurm:client::OptionalParam<QString> &users_are_coords) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetAccounts"][_serverIndices.value("slurmdbV0041GetAccounts")].URL()+"/slurmdb/v0.0.41/accounts/");
     
     if (_apiKeys.contains("user")) {
@@ -8064,7 +8064,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(description.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(description.stringValue())));
     }
     if (deleted.hasValue())
     {
@@ -8079,7 +8079,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("DELETED")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("DELETED")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(deleted.stringValue())));
     }
     if (with_associations.hasValue())
     {
@@ -8094,7 +8094,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("WithAssociations")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_associations.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("WithAssociations")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_associations.stringValue())));
     }
     if (with_coordinators.hasValue())
     {
@@ -8109,7 +8109,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("WithCoordinators")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_coordinators.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("WithCoordinators")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_coordinators.stringValue())));
     }
     if (no_users_are_coords.hasValue())
     {
@@ -8124,7 +8124,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("NoUsersAreCoords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(no_users_are_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("NoUsersAreCoords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(no_users_are_coords.stringValue())));
     }
     if (users_are_coords.hasValue())
     {
@@ -8139,7 +8139,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccounts(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("UsersAreCoords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(users_are_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("UsersAreCoords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(users_are_coords.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8208,7 +8208,7 @@ void OAISlurmdbApi::slurmdbV0041GetAccountsCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &default_qos, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &parent_account, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_raw_qos, const ::OpenAPI::OptionalParam<QString> &with_sub_accts, const ::OpenAPI::OptionalParam<QString> &without_parent_info, const ::OpenAPI::OptionalParam<QString> &without_parent_limits) {
+void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &default_qos, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &parent_account, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_raw_qos, const ::hm:slurm:client::OptionalParam<QString> &with_sub_accts, const ::hm:slurm:client::OptionalParam<QString> &without_parent_info, const ::hm:slurm:client::OptionalParam<QString> &without_parent_limits) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetAssociation"][_serverIndices.value("slurmdbV0041GetAssociation")].URL()+"/slurmdb/v0.0.41/association/");
     
     if (_apiKeys.contains("user")) {
@@ -8236,7 +8236,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -8251,7 +8251,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (default_qos.hasValue())
     {
@@ -8266,7 +8266,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_qos.stringValue())));
     }
     if (format.hasValue())
     {
@@ -8281,7 +8281,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -8296,7 +8296,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -8311,7 +8311,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (parent_account.hasValue())
     {
@@ -8326,7 +8326,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(parent_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(parent_account.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -8341,7 +8341,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -8356,7 +8356,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -8371,7 +8371,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -8386,7 +8386,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -8401,7 +8401,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -8416,7 +8416,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -8431,7 +8431,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_raw_qos.hasValue())
     {
@@ -8446,7 +8446,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_raw_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_raw_qos.stringValue())));
     }
     if (with_sub_accts.hasValue())
     {
@@ -8461,7 +8461,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_sub_accts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_sub_accts.stringValue())));
     }
     if (without_parent_info.hasValue())
     {
@@ -8476,7 +8476,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_info.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_info.stringValue())));
     }
     if (without_parent_limits.hasValue())
     {
@@ -8491,7 +8491,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociation(const ::OpenAPI::OptionalParam<QS
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_limits.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_limits.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8560,7 +8560,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociationCallback(OAIHttpRequestWorker *wor
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &default_qos, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &parent_account, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_raw_qos, const ::OpenAPI::OptionalParam<QString> &with_sub_accts, const ::OpenAPI::OptionalParam<QString> &without_parent_info, const ::OpenAPI::OptionalParam<QString> &without_parent_limits) {
+void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &default_qos, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &parent_account, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_raw_qos, const ::hm:slurm:client::OptionalParam<QString> &with_sub_accts, const ::hm:slurm:client::OptionalParam<QString> &without_parent_info, const ::hm:slurm:client::OptionalParam<QString> &without_parent_limits) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetAssociations"][_serverIndices.value("slurmdbV0041GetAssociations")].URL()+"/slurmdb/v0.0.41/associations/");
     
     if (_apiKeys.contains("user")) {
@@ -8588,7 +8588,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -8603,7 +8603,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (default_qos.hasValue())
     {
@@ -8618,7 +8618,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_qos.stringValue())));
     }
     if (format.hasValue())
     {
@@ -8633,7 +8633,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -8648,7 +8648,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -8663,7 +8663,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (parent_account.hasValue())
     {
@@ -8678,7 +8678,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(parent_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("parent_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(parent_account.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -8693,7 +8693,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -8708,7 +8708,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -8723,7 +8723,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -8738,7 +8738,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -8753,7 +8753,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -8768,7 +8768,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -8783,7 +8783,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_raw_qos.hasValue())
     {
@@ -8798,7 +8798,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_raw_qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_raw_qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_raw_qos.stringValue())));
     }
     if (with_sub_accts.hasValue())
     {
@@ -8813,7 +8813,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_sub_accts.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_sub_accts")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_sub_accts.stringValue())));
     }
     if (without_parent_info.hasValue())
     {
@@ -8828,7 +8828,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_info.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_info")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_info.stringValue())));
     }
     if (without_parent_limits.hasValue())
     {
@@ -8843,7 +8843,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociations(const ::OpenAPI::OptionalParam<Q
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_parent_limits.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_parent_limits")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_parent_limits.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -8912,7 +8912,7 @@ void OAISlurmdbApi::slurmdbV0041GetAssociationsCallback(OAIHttpRequestWorker *wo
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::OpenAPI::OptionalParam<QString> &classification, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &federation, const ::OpenAPI::OptionalParam<QString> &flags, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &rpc_version, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_usage) {
+void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::hm:slurm:client::OptionalParam<QString> &classification, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &federation, const ::hm:slurm:client::OptionalParam<QString> &flags, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &rpc_version, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_usage) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetCluster"][_serverIndices.value("slurmdbV0041GetCluster")].URL()+"/slurmdb/v0.0.41/cluster/{cluster_name}");
     
     if (_apiKeys.contains("user")) {
@@ -8938,7 +8938,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "cluster_name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"cluster_name"+pathSuffix : pathPrefix;
-        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster_name)));
+        fullPath.replace(cluster_namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster_name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (classification.hasValue())
@@ -8954,7 +8954,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("classification")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(classification.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("classification")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(classification.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -8969,7 +8969,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (federation.hasValue())
     {
@@ -8984,7 +8984,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("federation")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(federation.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("federation")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(federation.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -8999,7 +8999,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     if (format.hasValue())
     {
@@ -9014,7 +9014,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (rpc_version.hasValue())
     {
@@ -9029,7 +9029,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("rpc_version")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(rpc_version.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("rpc_version")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(rpc_version.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -9044,7 +9044,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -9059,7 +9059,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -9074,7 +9074,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -9089,7 +9089,7 @@ void OAISlurmdbApi::slurmdbV0041GetCluster(const QString &cluster_name, const ::
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -9158,7 +9158,7 @@ void OAISlurmdbApi::slurmdbV0041GetClusterCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetClusters(const ::OpenAPI::OptionalParam<QString> &update_time) {
+void OAISlurmdbApi::slurmdbV0041GetClusters(const ::hm:slurm:client::OptionalParam<QString> &update_time) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetClusters"][_serverIndices.value("slurmdbV0041GetClusters")].URL()+"/slurmdb/v0.0.41/clusters/");
     
     if (_apiKeys.contains("user")) {
@@ -9186,7 +9186,7 @@ void OAISlurmdbApi::slurmdbV0041GetClusters(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -9417,7 +9417,7 @@ void OAISlurmdbApi::slurmdbV0041GetDiagCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &extra, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &instance_id, const ::OpenAPI::OptionalParam<QString> &instance_type, const ::OpenAPI::OptionalParam<QString> &node_list, const ::OpenAPI::OptionalParam<QString> &time_end, const ::OpenAPI::OptionalParam<QString> &time_start) {
+void OAISlurmdbApi::slurmdbV0041GetInstance(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &extra, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &instance_id, const ::hm:slurm:client::OptionalParam<QString> &instance_type, const ::hm:slurm:client::OptionalParam<QString> &node_list, const ::hm:slurm:client::OptionalParam<QString> &time_end, const ::hm:slurm:client::OptionalParam<QString> &time_start) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetInstance"][_serverIndices.value("slurmdbV0041GetInstance")].URL()+"/slurmdb/v0.0.41/instance/");
     
     if (_apiKeys.contains("user")) {
@@ -9445,7 +9445,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (extra.hasValue())
     {
@@ -9460,7 +9460,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("extra")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(extra.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("extra")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(extra.stringValue())));
     }
     if (format.hasValue())
     {
@@ -9475,7 +9475,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (instance_id.hasValue())
     {
@@ -9490,7 +9490,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("instance_id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(instance_id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("instance_id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(instance_id.stringValue())));
     }
     if (instance_type.hasValue())
     {
@@ -9505,7 +9505,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("instance_type")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(instance_type.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("instance_type")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(instance_type.stringValue())));
     }
     if (node_list.hasValue())
     {
@@ -9520,7 +9520,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("node_list")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_list.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("node_list")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_list.stringValue())));
     }
     if (time_end.hasValue())
     {
@@ -9535,7 +9535,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("time_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(time_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("time_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(time_end.stringValue())));
     }
     if (time_start.hasValue())
     {
@@ -9550,7 +9550,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstance(const ::OpenAPI::OptionalParam<QStri
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("time_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(time_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("time_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(time_start.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -9619,7 +9619,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstanceCallback(OAIHttpRequestWorker *worker
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &extra, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &instance_id, const ::OpenAPI::OptionalParam<QString> &instance_type, const ::OpenAPI::OptionalParam<QString> &node_list, const ::OpenAPI::OptionalParam<QString> &time_end, const ::OpenAPI::OptionalParam<QString> &time_start) {
+void OAISlurmdbApi::slurmdbV0041GetInstances(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &extra, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &instance_id, const ::hm:slurm:client::OptionalParam<QString> &instance_type, const ::hm:slurm:client::OptionalParam<QString> &node_list, const ::hm:slurm:client::OptionalParam<QString> &time_end, const ::hm:slurm:client::OptionalParam<QString> &time_start) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetInstances"][_serverIndices.value("slurmdbV0041GetInstances")].URL()+"/slurmdb/v0.0.41/instances/");
     
     if (_apiKeys.contains("user")) {
@@ -9647,7 +9647,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (extra.hasValue())
     {
@@ -9662,7 +9662,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("extra")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(extra.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("extra")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(extra.stringValue())));
     }
     if (format.hasValue())
     {
@@ -9677,7 +9677,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (instance_id.hasValue())
     {
@@ -9692,7 +9692,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("instance_id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(instance_id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("instance_id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(instance_id.stringValue())));
     }
     if (instance_type.hasValue())
     {
@@ -9707,7 +9707,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("instance_type")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(instance_type.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("instance_type")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(instance_type.stringValue())));
     }
     if (node_list.hasValue())
     {
@@ -9722,7 +9722,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("node_list")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(node_list.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("node_list")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node_list.stringValue())));
     }
     if (time_end.hasValue())
     {
@@ -9737,7 +9737,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("time_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(time_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("time_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(time_end.stringValue())));
     }
     if (time_start.hasValue())
     {
@@ -9752,7 +9752,7 @@ void OAISlurmdbApi::slurmdbV0041GetInstances(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("time_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(time_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("time_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(time_start.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -9847,7 +9847,7 @@ void OAISlurmdbApi::slurmdbV0041GetJob(const QString &job_id) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "job_id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"job_id"+pathSuffix : pathPrefix;
-        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_id)));
+        fullPath.replace(job_idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -9916,7 +9916,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> &account, const ::OpenAPI::OptionalParam<QString> &association, const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &constraints, const ::OpenAPI::OptionalParam<QString> &scheduler_unset, const ::OpenAPI::OptionalParam<QString> &scheduled_on_submit, const ::OpenAPI::OptionalParam<QString> &scheduled_by_main, const ::OpenAPI::OptionalParam<QString> &scheduled_by_backfill, const ::OpenAPI::OptionalParam<QString> &job_started, const ::OpenAPI::OptionalParam<QString> &exit_code, const ::OpenAPI::OptionalParam<QString> &show_duplicates, const ::OpenAPI::OptionalParam<QString> &skip_steps, const ::OpenAPI::OptionalParam<QString> &disable_truncate_usage_time, const ::OpenAPI::OptionalParam<QString> &whole_hetjob, const ::OpenAPI::OptionalParam<QString> &disable_whole_hetjob, const ::OpenAPI::OptionalParam<QString> &disable_wait_for_result, const ::OpenAPI::OptionalParam<QString> &usage_time_as_submit_time, const ::OpenAPI::OptionalParam<QString> &show_batch_script, const ::OpenAPI::OptionalParam<QString> &show_job_environment, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &groups, const ::OpenAPI::OptionalParam<QString> &job_name, const ::OpenAPI::OptionalParam<QString> &partition, const ::OpenAPI::OptionalParam<QString> &qos, const ::OpenAPI::OptionalParam<QString> &reason, const ::OpenAPI::OptionalParam<QString> &reservation, const ::OpenAPI::OptionalParam<QString> &reservation_id, const ::OpenAPI::OptionalParam<QString> &state, const ::OpenAPI::OptionalParam<QString> &step, const ::OpenAPI::OptionalParam<QString> &end_time, const ::OpenAPI::OptionalParam<QString> &start_time, const ::OpenAPI::OptionalParam<QString> &node, const ::OpenAPI::OptionalParam<QString> &users, const ::OpenAPI::OptionalParam<QString> &wckey) {
+void OAISlurmdbApi::slurmdbV0041GetJobs(const ::hm:slurm:client::OptionalParam<QString> &account, const ::hm:slurm:client::OptionalParam<QString> &association, const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &constraints, const ::hm:slurm:client::OptionalParam<QString> &scheduler_unset, const ::hm:slurm:client::OptionalParam<QString> &scheduled_on_submit, const ::hm:slurm:client::OptionalParam<QString> &scheduled_by_main, const ::hm:slurm:client::OptionalParam<QString> &scheduled_by_backfill, const ::hm:slurm:client::OptionalParam<QString> &job_started, const ::hm:slurm:client::OptionalParam<QString> &exit_code, const ::hm:slurm:client::OptionalParam<QString> &show_duplicates, const ::hm:slurm:client::OptionalParam<QString> &skip_steps, const ::hm:slurm:client::OptionalParam<QString> &disable_truncate_usage_time, const ::hm:slurm:client::OptionalParam<QString> &whole_hetjob, const ::hm:slurm:client::OptionalParam<QString> &disable_whole_hetjob, const ::hm:slurm:client::OptionalParam<QString> &disable_wait_for_result, const ::hm:slurm:client::OptionalParam<QString> &usage_time_as_submit_time, const ::hm:slurm:client::OptionalParam<QString> &show_batch_script, const ::hm:slurm:client::OptionalParam<QString> &show_job_environment, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &groups, const ::hm:slurm:client::OptionalParam<QString> &job_name, const ::hm:slurm:client::OptionalParam<QString> &partition, const ::hm:slurm:client::OptionalParam<QString> &qos, const ::hm:slurm:client::OptionalParam<QString> &reason, const ::hm:slurm:client::OptionalParam<QString> &reservation, const ::hm:slurm:client::OptionalParam<QString> &reservation_id, const ::hm:slurm:client::OptionalParam<QString> &state, const ::hm:slurm:client::OptionalParam<QString> &step, const ::hm:slurm:client::OptionalParam<QString> &end_time, const ::hm:slurm:client::OptionalParam<QString> &start_time, const ::hm:slurm:client::OptionalParam<QString> &node, const ::hm:slurm:client::OptionalParam<QString> &users, const ::hm:slurm:client::OptionalParam<QString> &wckey) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetJobs"][_serverIndices.value("slurmdbV0041GetJobs")].URL()+"/slurmdb/v0.0.41/jobs/");
     
     if (_apiKeys.contains("user")) {
@@ -9944,7 +9944,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(account.stringValue())));
     }
     if (association.hasValue())
     {
@@ -9959,7 +9959,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("association")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(association.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("association")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(association.stringValue())));
     }
     if (cluster.hasValue())
     {
@@ -9974,7 +9974,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (constraints.hasValue())
     {
@@ -9989,7 +9989,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("constraints")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(constraints.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("constraints")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(constraints.stringValue())));
     }
     if (scheduler_unset.hasValue())
     {
@@ -10004,7 +10004,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("scheduler_unset")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(scheduler_unset.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("scheduler_unset")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(scheduler_unset.stringValue())));
     }
     if (scheduled_on_submit.hasValue())
     {
@@ -10019,7 +10019,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("scheduled_on_submit")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(scheduled_on_submit.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("scheduled_on_submit")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(scheduled_on_submit.stringValue())));
     }
     if (scheduled_by_main.hasValue())
     {
@@ -10034,7 +10034,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("scheduled_by_main")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(scheduled_by_main.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("scheduled_by_main")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(scheduled_by_main.stringValue())));
     }
     if (scheduled_by_backfill.hasValue())
     {
@@ -10049,7 +10049,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("scheduled_by_backfill")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(scheduled_by_backfill.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("scheduled_by_backfill")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(scheduled_by_backfill.stringValue())));
     }
     if (job_started.hasValue())
     {
@@ -10064,7 +10064,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("job_started")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_started.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("job_started")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_started.stringValue())));
     }
     if (exit_code.hasValue())
     {
@@ -10079,7 +10079,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("exit_code")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(exit_code.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("exit_code")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(exit_code.stringValue())));
     }
     if (show_duplicates.hasValue())
     {
@@ -10094,7 +10094,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("show_duplicates")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(show_duplicates.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("show_duplicates")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(show_duplicates.stringValue())));
     }
     if (skip_steps.hasValue())
     {
@@ -10109,7 +10109,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("skip_steps")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(skip_steps.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("skip_steps")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(skip_steps.stringValue())));
     }
     if (disable_truncate_usage_time.hasValue())
     {
@@ -10124,7 +10124,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("disable_truncate_usage_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(disable_truncate_usage_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("disable_truncate_usage_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(disable_truncate_usage_time.stringValue())));
     }
     if (whole_hetjob.hasValue())
     {
@@ -10139,7 +10139,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("whole_hetjob")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(whole_hetjob.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("whole_hetjob")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(whole_hetjob.stringValue())));
     }
     if (disable_whole_hetjob.hasValue())
     {
@@ -10154,7 +10154,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("disable_whole_hetjob")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(disable_whole_hetjob.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("disable_whole_hetjob")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(disable_whole_hetjob.stringValue())));
     }
     if (disable_wait_for_result.hasValue())
     {
@@ -10169,7 +10169,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("disable_wait_for_result")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(disable_wait_for_result.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("disable_wait_for_result")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(disable_wait_for_result.stringValue())));
     }
     if (usage_time_as_submit_time.hasValue())
     {
@@ -10184,7 +10184,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_time_as_submit_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_time_as_submit_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_time_as_submit_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_time_as_submit_time.stringValue())));
     }
     if (show_batch_script.hasValue())
     {
@@ -10199,7 +10199,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("show_batch_script")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(show_batch_script.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("show_batch_script")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(show_batch_script.stringValue())));
     }
     if (show_job_environment.hasValue())
     {
@@ -10214,7 +10214,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("show_job_environment")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(show_job_environment.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("show_job_environment")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(show_job_environment.stringValue())));
     }
     if (format.hasValue())
     {
@@ -10229,7 +10229,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (groups.hasValue())
     {
@@ -10244,7 +10244,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("groups")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(groups.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("groups")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(groups.stringValue())));
     }
     if (job_name.hasValue())
     {
@@ -10259,7 +10259,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("job_name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(job_name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("job_name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(job_name.stringValue())));
     }
     if (partition.hasValue())
     {
@@ -10274,7 +10274,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(partition.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("partition")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(partition.stringValue())));
     }
     if (qos.hasValue())
     {
@@ -10289,7 +10289,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("qos")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos.stringValue())));
     }
     if (reason.hasValue())
     {
@@ -10304,7 +10304,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("reason")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(reason.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("reason")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reason.stringValue())));
     }
     if (reservation.hasValue())
     {
@@ -10319,7 +10319,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("reservation")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(reservation.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("reservation")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reservation.stringValue())));
     }
     if (reservation_id.hasValue())
     {
@@ -10334,7 +10334,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("reservation_id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(reservation_id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("reservation_id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(reservation_id.stringValue())));
     }
     if (state.hasValue())
     {
@@ -10349,7 +10349,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("state")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(state.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("state")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(state.stringValue())));
     }
     if (step.hasValue())
     {
@@ -10364,7 +10364,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("step")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(step.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("step")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(step.stringValue())));
     }
     if (end_time.hasValue())
     {
@@ -10379,7 +10379,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("end_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(end_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("end_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(end_time.stringValue())));
     }
     if (start_time.hasValue())
     {
@@ -10394,7 +10394,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("start_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(start_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("start_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(start_time.stringValue())));
     }
     if (node.hasValue())
     {
@@ -10409,7 +10409,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("node")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(node.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("node")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(node.stringValue())));
     }
     if (users.hasValue())
     {
@@ -10424,7 +10424,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(users.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("users")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(users.stringValue())));
     }
     if (wckey.hasValue())
     {
@@ -10439,7 +10439,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobs(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(wckey.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(wckey.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -10508,7 +10508,7 @@ void OAISlurmdbApi::slurmdbV0041GetJobsCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetQos(const ::OpenAPI::OptionalParam<QString> &description, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &name, const ::OpenAPI::OptionalParam<QString> &preempt_mode, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0041GetQos(const ::hm:slurm:client::OptionalParam<QString> &description, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &name, const ::hm:slurm:client::OptionalParam<QString> &preempt_mode, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetQos"][_serverIndices.value("slurmdbV0041GetQos")].URL()+"/slurmdb/v0.0.41/qos/");
     
     if (_apiKeys.contains("user")) {
@@ -10536,7 +10536,7 @@ void OAISlurmdbApi::slurmdbV0041GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(description.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(description.stringValue())));
     }
     if (id.hasValue())
     {
@@ -10551,7 +10551,7 @@ void OAISlurmdbApi::slurmdbV0041GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (format.hasValue())
     {
@@ -10566,7 +10566,7 @@ void OAISlurmdbApi::slurmdbV0041GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (name.hasValue())
     {
@@ -10581,7 +10581,7 @@ void OAISlurmdbApi::slurmdbV0041GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name.stringValue())));
     }
     if (preempt_mode.hasValue())
     {
@@ -10596,7 +10596,7 @@ void OAISlurmdbApi::slurmdbV0041GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("preempt_mode")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(preempt_mode.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("preempt_mode")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(preempt_mode.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -10611,7 +10611,7 @@ void OAISlurmdbApi::slurmdbV0041GetQos(const ::OpenAPI::OptionalParam<QString> &
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -10680,7 +10680,7 @@ void OAISlurmdbApi::slurmdbV0041GetQosCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetSingleQos(const QString &qos, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0041GetSingleQos(const QString &qos, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetSingleQos"][_serverIndices.value("slurmdbV0041GetSingleQos")].URL()+"/slurmdb/v0.0.41/qos/{qos}");
     
     if (_apiKeys.contains("user")) {
@@ -10706,7 +10706,7 @@ void OAISlurmdbApi::slurmdbV0041GetSingleQos(const QString &qos, const ::OpenAPI
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "qos", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"qos"+pathSuffix : pathPrefix;
-        fullPath.replace(qosPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(qos)));
+        fullPath.replace(qosPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(qos)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_deleted.hasValue())
@@ -10722,7 +10722,7 @@ void OAISlurmdbApi::slurmdbV0041GetSingleQos(const QString &qos, const ::OpenAPI
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -10872,7 +10872,7 @@ void OAISlurmdbApi::slurmdbV0041GetTresCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetUser(const QString &name, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_assocs, const ::OpenAPI::OptionalParam<QString> &with_coords, const ::OpenAPI::OptionalParam<QString> &with_wckeys) {
+void OAISlurmdbApi::slurmdbV0041GetUser(const QString &name, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_assocs, const ::hm:slurm:client::OptionalParam<QString> &with_coords, const ::hm:slurm:client::OptionalParam<QString> &with_wckeys) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetUser"][_serverIndices.value("slurmdbV0041GetUser")].URL()+"/slurmdb/v0.0.41/user/{name}");
     
     if (_apiKeys.contains("user")) {
@@ -10898,7 +10898,7 @@ void OAISlurmdbApi::slurmdbV0041GetUser(const QString &name, const ::OpenAPI::Op
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "name", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"name"+pathSuffix : pathPrefix;
-        fullPath.replace(namePathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(name)));
+        fullPath.replace(namePathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name)));
     }
     QString queryPrefix, querySuffix, queryDelimiter, queryStyle;
     if (with_deleted.hasValue())
@@ -10914,7 +10914,7 @@ void OAISlurmdbApi::slurmdbV0041GetUser(const QString &name, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_assocs.hasValue())
     {
@@ -10929,7 +10929,7 @@ void OAISlurmdbApi::slurmdbV0041GetUser(const QString &name, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_assocs.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_assocs.stringValue())));
     }
     if (with_coords.hasValue())
     {
@@ -10944,7 +10944,7 @@ void OAISlurmdbApi::slurmdbV0041GetUser(const QString &name, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_coords.stringValue())));
     }
     if (with_wckeys.hasValue())
     {
@@ -10959,7 +10959,7 @@ void OAISlurmdbApi::slurmdbV0041GetUser(const QString &name, const ::OpenAPI::Op
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_wckeys")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_wckeys.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_wckeys")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_wckeys.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -11028,7 +11028,7 @@ void OAISlurmdbApi::slurmdbV0041GetUserCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString> &admin_level, const ::OpenAPI::OptionalParam<QString> &default_account, const ::OpenAPI::OptionalParam<QString> &default_wckey, const ::OpenAPI::OptionalParam<QString> &with_assocs, const ::OpenAPI::OptionalParam<QString> &with_coords, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<QString> &with_wckeys, const ::OpenAPI::OptionalParam<QString> &without_defaults) {
+void OAISlurmdbApi::slurmdbV0041GetUsers(const ::hm:slurm:client::OptionalParam<QString> &admin_level, const ::hm:slurm:client::OptionalParam<QString> &default_account, const ::hm:slurm:client::OptionalParam<QString> &default_wckey, const ::hm:slurm:client::OptionalParam<QString> &with_assocs, const ::hm:slurm:client::OptionalParam<QString> &with_coords, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<QString> &with_wckeys, const ::hm:slurm:client::OptionalParam<QString> &without_defaults) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetUsers"][_serverIndices.value("slurmdbV0041GetUsers")].URL()+"/slurmdb/v0.0.41/users/");
     
     if (_apiKeys.contains("user")) {
@@ -11056,7 +11056,7 @@ void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("admin_level")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(admin_level.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("admin_level")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(admin_level.stringValue())));
     }
     if (default_account.hasValue())
     {
@@ -11071,7 +11071,7 @@ void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_account")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_account.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_account")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_account.stringValue())));
     }
     if (default_wckey.hasValue())
     {
@@ -11086,7 +11086,7 @@ void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("default_wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(default_wckey.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("default_wckey")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(default_wckey.stringValue())));
     }
     if (with_assocs.hasValue())
     {
@@ -11101,7 +11101,7 @@ void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_assocs.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_assocs")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_assocs.stringValue())));
     }
     if (with_coords.hasValue())
     {
@@ -11116,7 +11116,7 @@ void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_coords.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_coords")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_coords.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -11131,7 +11131,7 @@ void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     if (with_wckeys.hasValue())
     {
@@ -11146,7 +11146,7 @@ void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_wckeys")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_wckeys.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_wckeys")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_wckeys.stringValue())));
     }
     if (without_defaults.hasValue())
     {
@@ -11161,7 +11161,7 @@ void OAISlurmdbApi::slurmdbV0041GetUsers(const ::OpenAPI::OptionalParam<QString>
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("without_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(without_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("without_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(without_defaults.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -11256,7 +11256,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckey(const QString &id) {
         pathSuffix = getParamStyleSuffix(pathStyle);
         pathDelimiter = getParamStyleDelimiter(pathStyle, "id", false);
         QString paramString = (pathStyle == "matrix") ? pathPrefix+"id"+pathSuffix : pathPrefix;
-        fullPath.replace(idPathParam, paramString+QUrl::toPercentEncoding(::OpenAPI::toStringValue(id)));
+        fullPath.replace(idPathParam, paramString+QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id)));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -11325,7 +11325,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeyCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &name, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted) {
+void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &name, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041GetWckeys"][_serverIndices.value("slurmdbV0041GetWckeys")].URL()+"/slurmdb/v0.0.41/wckeys/");
     
     if (_apiKeys.contains("user")) {
@@ -11353,7 +11353,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (format.hasValue())
     {
@@ -11368,7 +11368,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -11383,7 +11383,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (name.hasValue())
     {
@@ -11398,7 +11398,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -11413,7 +11413,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -11428,7 +11428,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -11443,7 +11443,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -11458,7 +11458,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -11473,7 +11473,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -11488,7 +11488,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeys(const ::OpenAPI::OptionalParam<QString
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -11557,7 +11557,7 @@ void OAISlurmdbApi::slurmdbV0041GetWckeysCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostAccounts(const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_accounts_resp> &oaiv0_0_41_openapi_accounts_resp) {
+void OAISlurmdbApi::slurmdbV0041PostAccounts(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_accounts_resp> &oaiv0_0_41_openapi_accounts_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostAccounts"][_serverIndices.value("slurmdbV0041PostAccounts")].URL()+"/slurmdb/v0.0.41/accounts/");
     
     if (_apiKeys.contains("user")) {
@@ -11643,7 +11643,7 @@ void OAISlurmdbApi::slurmdbV0041PostAccountsCallback(OAIHttpRequestWorker *worke
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostAccountsAssociation(const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_accounts_add_cond_resp> &oaiv0_0_41_openapi_accounts_add_cond_resp) {
+void OAISlurmdbApi::slurmdbV0041PostAccountsAssociation(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_accounts_add_cond_resp> &oaiv0_0_41_openapi_accounts_add_cond_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostAccountsAssociation"][_serverIndices.value("slurmdbV0041PostAccountsAssociation")].URL()+"/slurmdb/v0.0.41/accounts_association/");
     
     if (_apiKeys.contains("user")) {
@@ -11729,7 +11729,7 @@ void OAISlurmdbApi::slurmdbV0041PostAccountsAssociationCallback(OAIHttpRequestWo
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostAssociations(const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_assocs_resp> &oaiv0_0_41_openapi_assocs_resp) {
+void OAISlurmdbApi::slurmdbV0041PostAssociations(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_assocs_resp> &oaiv0_0_41_openapi_assocs_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostAssociations"][_serverIndices.value("slurmdbV0041PostAssociations")].URL()+"/slurmdb/v0.0.41/associations/");
     
     if (_apiKeys.contains("user")) {
@@ -11815,7 +11815,7 @@ void OAISlurmdbApi::slurmdbV0041PostAssociationsCallback(OAIHttpRequestWorker *w
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostClusters(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_clusters_resp> &oaiv0_0_41_openapi_clusters_resp) {
+void OAISlurmdbApi::slurmdbV0041PostClusters(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_clusters_resp> &oaiv0_0_41_openapi_clusters_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostClusters"][_serverIndices.value("slurmdbV0041PostClusters")].URL()+"/slurmdb/v0.0.41/clusters/");
     
     if (_apiKeys.contains("user")) {
@@ -11843,7 +11843,7 @@ void OAISlurmdbApi::slurmdbV0041PostClusters(const ::OpenAPI::OptionalParam<QStr
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -11917,7 +11917,7 @@ void OAISlurmdbApi::slurmdbV0041PostClustersCallback(OAIHttpRequestWorker *worke
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostConfig(const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_slurmdbd_config_resp> &oaiv0_0_41_openapi_slurmdbd_config_resp) {
+void OAISlurmdbApi::slurmdbV0041PostConfig(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_slurmdbd_config_resp> &oaiv0_0_41_openapi_slurmdbd_config_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostConfig"][_serverIndices.value("slurmdbV0041PostConfig")].URL()+"/slurmdb/v0.0.41/config");
     
     if (_apiKeys.contains("user")) {
@@ -12003,7 +12003,7 @@ void OAISlurmdbApi::slurmdbV0041PostConfigCallback(OAIHttpRequestWorker *worker)
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostQos(const ::OpenAPI::OptionalParam<QString> &description, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &name, const ::OpenAPI::OptionalParam<QString> &preempt_mode, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_slurmdbd_qos_resp> &oaiv0_0_41_openapi_slurmdbd_qos_resp) {
+void OAISlurmdbApi::slurmdbV0041PostQos(const ::hm:slurm:client::OptionalParam<QString> &description, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &name, const ::hm:slurm:client::OptionalParam<QString> &preempt_mode, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_slurmdbd_qos_resp> &oaiv0_0_41_openapi_slurmdbd_qos_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostQos"][_serverIndices.value("slurmdbV0041PostQos")].URL()+"/slurmdb/v0.0.41/qos/");
     
     if (_apiKeys.contains("user")) {
@@ -12031,7 +12031,7 @@ void OAISlurmdbApi::slurmdbV0041PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(description.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("description")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(description.stringValue())));
     }
     if (id.hasValue())
     {
@@ -12046,7 +12046,7 @@ void OAISlurmdbApi::slurmdbV0041PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (format.hasValue())
     {
@@ -12061,7 +12061,7 @@ void OAISlurmdbApi::slurmdbV0041PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (name.hasValue())
     {
@@ -12076,7 +12076,7 @@ void OAISlurmdbApi::slurmdbV0041PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name.stringValue())));
     }
     if (preempt_mode.hasValue())
     {
@@ -12091,7 +12091,7 @@ void OAISlurmdbApi::slurmdbV0041PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("preempt_mode")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(preempt_mode.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("preempt_mode")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(preempt_mode.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -12106,7 +12106,7 @@ void OAISlurmdbApi::slurmdbV0041PostQos(const ::OpenAPI::OptionalParam<QString> 
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -12180,7 +12180,7 @@ void OAISlurmdbApi::slurmdbV0041PostQosCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostTres(const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_tres_resp> &oaiv0_0_41_openapi_tres_resp) {
+void OAISlurmdbApi::slurmdbV0041PostTres(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_tres_resp> &oaiv0_0_41_openapi_tres_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostTres"][_serverIndices.value("slurmdbV0041PostTres")].URL()+"/slurmdb/v0.0.41/tres/");
     
     if (_apiKeys.contains("user")) {
@@ -12266,7 +12266,7 @@ void OAISlurmdbApi::slurmdbV0041PostTresCallback(OAIHttpRequestWorker *worker) {
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostUsers(const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_users_resp> &oaiv0_0_41_openapi_users_resp) {
+void OAISlurmdbApi::slurmdbV0041PostUsers(const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_users_resp> &oaiv0_0_41_openapi_users_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostUsers"][_serverIndices.value("slurmdbV0041PostUsers")].URL()+"/slurmdb/v0.0.41/users/");
     
     if (_apiKeys.contains("user")) {
@@ -12352,7 +12352,7 @@ void OAISlurmdbApi::slurmdbV0041PostUsersCallback(OAIHttpRequestWorker *worker) 
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostUsersAssociation(const ::OpenAPI::OptionalParam<QString> &update_time, const ::OpenAPI::OptionalParam<QString> &flags, const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_users_add_cond_resp> &oaiv0_0_41_openapi_users_add_cond_resp) {
+void OAISlurmdbApi::slurmdbV0041PostUsersAssociation(const ::hm:slurm:client::OptionalParam<QString> &update_time, const ::hm:slurm:client::OptionalParam<QString> &flags, const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_users_add_cond_resp> &oaiv0_0_41_openapi_users_add_cond_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostUsersAssociation"][_serverIndices.value("slurmdbV0041PostUsersAssociation")].URL()+"/slurmdb/v0.0.41/users_association/");
     
     if (_apiKeys.contains("user")) {
@@ -12380,7 +12380,7 @@ void OAISlurmdbApi::slurmdbV0041PostUsersAssociation(const ::OpenAPI::OptionalPa
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(update_time.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("update_time")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(update_time.stringValue())));
     }
     if (flags.hasValue())
     {
@@ -12395,7 +12395,7 @@ void OAISlurmdbApi::slurmdbV0041PostUsersAssociation(const ::OpenAPI::OptionalPa
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(flags.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("flags")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(flags.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -12469,7 +12469,7 @@ void OAISlurmdbApi::slurmdbV0041PostUsersAssociationCallback(OAIHttpRequestWorke
     }
 }
 
-void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QString> &cluster, const ::OpenAPI::OptionalParam<QString> &format, const ::OpenAPI::OptionalParam<QString> &id, const ::OpenAPI::OptionalParam<QString> &name, const ::OpenAPI::OptionalParam<QString> &only_defaults, const ::OpenAPI::OptionalParam<QString> &usage_end, const ::OpenAPI::OptionalParam<QString> &usage_start, const ::OpenAPI::OptionalParam<QString> &user, const ::OpenAPI::OptionalParam<QString> &with_usage, const ::OpenAPI::OptionalParam<QString> &with_deleted, const ::OpenAPI::OptionalParam<OAIV0_0_41_openapi_wckey_resp> &oaiv0_0_41_openapi_wckey_resp) {
+void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::hm:slurm:client::OptionalParam<QString> &cluster, const ::hm:slurm:client::OptionalParam<QString> &format, const ::hm:slurm:client::OptionalParam<QString> &id, const ::hm:slurm:client::OptionalParam<QString> &name, const ::hm:slurm:client::OptionalParam<QString> &only_defaults, const ::hm:slurm:client::OptionalParam<QString> &usage_end, const ::hm:slurm:client::OptionalParam<QString> &usage_start, const ::hm:slurm:client::OptionalParam<QString> &user, const ::hm:slurm:client::OptionalParam<QString> &with_usage, const ::hm:slurm:client::OptionalParam<QString> &with_deleted, const ::hm:slurm:client::OptionalParam<OAIV0_0_41_openapi_wckey_resp> &oaiv0_0_41_openapi_wckey_resp) {
     QString fullPath = QString(_serverConfigs["slurmdbV0041PostWckeys"][_serverIndices.value("slurmdbV0041PostWckeys")].URL()+"/slurmdb/v0.0.41/wckeys/");
     
     if (_apiKeys.contains("user")) {
@@ -12497,7 +12497,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(cluster.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("cluster")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(cluster.stringValue())));
     }
     if (format.hasValue())
     {
@@ -12512,7 +12512,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(format.stringValue())));
     }
     if (id.hasValue())
     {
@@ -12527,7 +12527,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(id.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("id")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(id.stringValue())));
     }
     if (name.hasValue())
     {
@@ -12542,7 +12542,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(name.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("name")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(name.stringValue())));
     }
     if (only_defaults.hasValue())
     {
@@ -12557,7 +12557,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(only_defaults.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("only_defaults")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(only_defaults.stringValue())));
     }
     if (usage_end.hasValue())
     {
@@ -12572,7 +12572,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_end.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_end")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_end.stringValue())));
     }
     if (usage_start.hasValue())
     {
@@ -12587,7 +12587,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(usage_start.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("usage_start")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(usage_start.stringValue())));
     }
     if (user.hasValue())
     {
@@ -12602,7 +12602,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(user.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("user")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(user.stringValue())));
     }
     if (with_usage.hasValue())
     {
@@ -12617,7 +12617,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_usage.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_usage")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_usage.stringValue())));
     }
     if (with_deleted.hasValue())
     {
@@ -12632,7 +12632,7 @@ void OAISlurmdbApi::slurmdbV0041PostWckeys(const ::OpenAPI::OptionalParam<QStrin
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(with_deleted.stringValue())));
+        fullPath.append(QUrl::toPercentEncoding("with_deleted")).append(querySuffix).append(QUrl::toPercentEncoding(::hm:slurm:client::toStringValue(with_deleted.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -12755,4 +12755,4 @@ void OAISlurmdbApi::tokenAvailable(){
         break;
     }
 }
-} // namespace OpenAPI
+} // namespace hm:slurm:client

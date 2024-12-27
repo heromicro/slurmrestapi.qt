@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_per::OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_per(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_per::fr
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_per::fromJsonObject(QJsonObject json) {
 
-    m_job_isValid = ::OpenAPI::fromJsonValue(m_job, json[QString("job")]);
+    m_job_isValid = ::hm:slurm:client::fromJsonValue(m_job, json[QString("job")]);
     m_job_isSet = !json[QString("job")].isNull() && m_job_isValid;
 
-    m_node_isValid = ::OpenAPI::fromJsonValue(m_node, json[QString("node")]);
+    m_node_isValid = ::hm:slurm:client::fromJsonValue(m_node, json[QString("node")]);
     m_node_isSet = !json[QString("node")].isNull() && m_node_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_per:
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_per::asJsonObject() const {
     QJsonObject obj;
     if (m_job.size() > 0) {
-        obj.insert(QString("job"), ::OpenAPI::toJsonValue(m_job));
+        obj.insert(QString("job"), ::hm:slurm:client::toJsonValue(m_job));
     }
     if (m_node.size() > 0) {
-        obj.insert(QString("node"), ::OpenAPI::toJsonValue(m_node));
+        obj.insert(QString("node"), ::hm:slurm:client::toJsonValue(m_node));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_associations_inner_max_tres_per::is
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

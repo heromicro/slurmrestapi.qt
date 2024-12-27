@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_job_state::OAIV0_0_39_job_state(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_39_job_state::fromJson(QString jsonString) {
 
 void OAIV0_0_39_job_state::fromJsonObject(QJsonObject json) {
 
-    m_current_isValid = ::OpenAPI::fromJsonValue(m_current, json[QString("current")]);
+    m_current_isValid = ::hm:slurm:client::fromJsonValue(m_current, json[QString("current")]);
     m_current_isSet = !json[QString("current")].isNull() && m_current_isValid;
 
-    m_reason_isValid = ::OpenAPI::fromJsonValue(m_reason, json[QString("reason")]);
+    m_reason_isValid = ::hm:slurm:client::fromJsonValue(m_reason, json[QString("reason")]);
     m_reason_isSet = !json[QString("reason")].isNull() && m_reason_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_39_job_state::asJson() const {
 QJsonObject OAIV0_0_39_job_state::asJsonObject() const {
     QJsonObject obj;
     if (m_current_isSet) {
-        obj.insert(QString("current"), ::OpenAPI::toJsonValue(m_current));
+        obj.insert(QString("current"), ::hm:slurm:client::toJsonValue(m_current));
     }
     if (m_reason_isSet) {
-        obj.insert(QString("reason"), ::OpenAPI::toJsonValue(m_reason));
+        obj.insert(QString("reason"), ::hm:slurm:client::toJsonValue(m_reason));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_39_job_state::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

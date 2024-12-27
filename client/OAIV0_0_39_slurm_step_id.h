@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_39_slurm_step_id : public OAIObject {
 public:
@@ -73,8 +73,8 @@ private:
     bool m_step_id_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_slurm_step_id)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_slurm_step_id)
 
 #endif // OAIV0_0_39_slurm_step_id_H

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs::OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs::f
 
 void OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs::fromJsonObject(QJsonObject json) {
 
-    m_accruing_isValid = ::OpenAPI::fromJsonValue(m_accruing, json[QString("accruing")]);
+    m_accruing_isValid = ::hm:slurm:client::fromJsonValue(m_accruing, json[QString("accruing")]);
     m_accruing_isSet = !json[QString("accruing")].isNull() && m_accruing_isValid;
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs
 QJsonObject OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs::asJsonObject() const {
     QJsonObject obj;
     if (m_accruing.isSet()) {
-        obj.insert(QString("accruing"), ::OpenAPI::toJsonValue(m_accruing));
+        obj.insert(QString("accruing"), ::hm:slurm:client::toJsonValue(m_accruing));
     }
     if (m_count.isSet()) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_slurmdbd_config_resp_qos_inner_limits_max_active_jobs::i
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

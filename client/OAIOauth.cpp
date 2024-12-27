@@ -1,6 +1,6 @@
 #include "OAIOauth.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 /*
  * Base class to perform oauth2 flows
@@ -342,4 +342,4 @@ void ReplyServer::read()
     Q_EMIT dataReceived(queryParams);
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

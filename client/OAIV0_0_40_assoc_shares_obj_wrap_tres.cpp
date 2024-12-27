@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_assoc_shares_obj_wrap_tres::OAIV0_0_40_assoc_shares_obj_wrap_tres(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_assoc_shares_obj_wrap_tres::fromJson(QString jsonString) {
 
 void OAIV0_0_40_assoc_shares_obj_wrap_tres::fromJsonObject(QJsonObject json) {
 
-    m_run_seconds_isValid = ::OpenAPI::fromJsonValue(m_run_seconds, json[QString("run_seconds")]);
+    m_run_seconds_isValid = ::hm:slurm:client::fromJsonValue(m_run_seconds, json[QString("run_seconds")]);
     m_run_seconds_isSet = !json[QString("run_seconds")].isNull() && m_run_seconds_isValid;
 
-    m_group_minutes_isValid = ::OpenAPI::fromJsonValue(m_group_minutes, json[QString("group_minutes")]);
+    m_group_minutes_isValid = ::hm:slurm:client::fromJsonValue(m_group_minutes, json[QString("group_minutes")]);
     m_group_minutes_isSet = !json[QString("group_minutes")].isNull() && m_group_minutes_isValid;
 
-    m_usage_isValid = ::OpenAPI::fromJsonValue(m_usage, json[QString("usage")]);
+    m_usage_isValid = ::hm:slurm:client::fromJsonValue(m_usage, json[QString("usage")]);
     m_usage_isSet = !json[QString("usage")].isNull() && m_usage_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_assoc_shares_obj_wrap_tres::asJson() const {
 QJsonObject OAIV0_0_40_assoc_shares_obj_wrap_tres::asJsonObject() const {
     QJsonObject obj;
     if (m_run_seconds.size() > 0) {
-        obj.insert(QString("run_seconds"), ::OpenAPI::toJsonValue(m_run_seconds));
+        obj.insert(QString("run_seconds"), ::hm:slurm:client::toJsonValue(m_run_seconds));
     }
     if (m_group_minutes.size() > 0) {
-        obj.insert(QString("group_minutes"), ::OpenAPI::toJsonValue(m_group_minutes));
+        obj.insert(QString("group_minutes"), ::hm:slurm:client::toJsonValue(m_group_minutes));
     }
     if (m_usage.size() > 0) {
-        obj.insert(QString("usage"), ::OpenAPI::toJsonValue(m_usage));
+        obj.insert(QString("usage"), ::hm:slurm:client::toJsonValue(m_usage));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_assoc_shares_obj_wrap_tres::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

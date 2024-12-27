@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_controller_ping::OAIV0_0_40_controller_ping(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_40_controller_ping::fromJson(QString jsonString) {
 
 void OAIV0_0_40_controller_ping::fromJsonObject(QJsonObject json) {
 
-    m_hostname_isValid = ::OpenAPI::fromJsonValue(m_hostname, json[QString("hostname")]);
+    m_hostname_isValid = ::hm:slurm:client::fromJsonValue(m_hostname, json[QString("hostname")]);
     m_hostname_isSet = !json[QString("hostname")].isNull() && m_hostname_isValid;
 
-    m_pinged_isValid = ::OpenAPI::fromJsonValue(m_pinged, json[QString("pinged")]);
+    m_pinged_isValid = ::hm:slurm:client::fromJsonValue(m_pinged, json[QString("pinged")]);
     m_pinged_isSet = !json[QString("pinged")].isNull() && m_pinged_isValid;
 
-    m_latency_isValid = ::OpenAPI::fromJsonValue(m_latency, json[QString("latency")]);
+    m_latency_isValid = ::hm:slurm:client::fromJsonValue(m_latency, json[QString("latency")]);
     m_latency_isSet = !json[QString("latency")].isNull() && m_latency_isValid;
 
-    m_mode_isValid = ::OpenAPI::fromJsonValue(m_mode, json[QString("mode")]);
+    m_mode_isValid = ::hm:slurm:client::fromJsonValue(m_mode, json[QString("mode")]);
     m_mode_isSet = !json[QString("mode")].isNull() && m_mode_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_40_controller_ping::asJson() const {
 QJsonObject OAIV0_0_40_controller_ping::asJsonObject() const {
     QJsonObject obj;
     if (m_hostname_isSet) {
-        obj.insert(QString("hostname"), ::OpenAPI::toJsonValue(m_hostname));
+        obj.insert(QString("hostname"), ::hm:slurm:client::toJsonValue(m_hostname));
     }
     if (m_pinged_isSet) {
-        obj.insert(QString("pinged"), ::OpenAPI::toJsonValue(m_pinged));
+        obj.insert(QString("pinged"), ::hm:slurm:client::toJsonValue(m_pinged));
     }
     if (m_latency_isSet) {
-        obj.insert(QString("latency"), ::OpenAPI::toJsonValue(m_latency));
+        obj.insert(QString("latency"), ::hm:slurm:client::toJsonValue(m_latency));
     }
     if (m_mode_isSet) {
-        obj.insert(QString("mode"), ::OpenAPI::toJsonValue(m_mode));
+        obj.insert(QString("mode"), ::hm:slurm:client::toJsonValue(m_mode));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_40_controller_ping::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

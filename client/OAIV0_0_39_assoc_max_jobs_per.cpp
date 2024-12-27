@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_assoc_max_jobs_per::OAIV0_0_39_assoc_max_jobs_per(QString json) {
     this->initializeModel();
@@ -56,16 +56,16 @@ void OAIV0_0_39_assoc_max_jobs_per::fromJson(QString jsonString) {
 
 void OAIV0_0_39_assoc_max_jobs_per::fromJsonObject(QJsonObject json) {
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 
-    m_accruing_isValid = ::OpenAPI::fromJsonValue(m_accruing, json[QString("accruing")]);
+    m_accruing_isValid = ::hm:slurm:client::fromJsonValue(m_accruing, json[QString("accruing")]);
     m_accruing_isSet = !json[QString("accruing")].isNull() && m_accruing_isValid;
 
-    m_submitted_isValid = ::OpenAPI::fromJsonValue(m_submitted, json[QString("submitted")]);
+    m_submitted_isValid = ::hm:slurm:client::fromJsonValue(m_submitted, json[QString("submitted")]);
     m_submitted_isSet = !json[QString("submitted")].isNull() && m_submitted_isValid;
 
-    m_wall_clock_isValid = ::OpenAPI::fromJsonValue(m_wall_clock, json[QString("wall_clock")]);
+    m_wall_clock_isValid = ::hm:slurm:client::fromJsonValue(m_wall_clock, json[QString("wall_clock")]);
     m_wall_clock_isSet = !json[QString("wall_clock")].isNull() && m_wall_clock_isValid;
 }
 
@@ -79,16 +79,16 @@ QString OAIV0_0_39_assoc_max_jobs_per::asJson() const {
 QJsonObject OAIV0_0_39_assoc_max_jobs_per::asJsonObject() const {
     QJsonObject obj;
     if (m_count.isSet()) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     if (m_accruing.isSet()) {
-        obj.insert(QString("accruing"), ::OpenAPI::toJsonValue(m_accruing));
+        obj.insert(QString("accruing"), ::hm:slurm:client::toJsonValue(m_accruing));
     }
     if (m_submitted.isSet()) {
-        obj.insert(QString("submitted"), ::OpenAPI::toJsonValue(m_submitted));
+        obj.insert(QString("submitted"), ::hm:slurm:client::toJsonValue(m_submitted));
     }
     if (m_wall_clock.isSet()) {
-        obj.insert(QString("wall_clock"), ::OpenAPI::toJsonValue(m_wall_clock));
+        obj.insert(QString("wall_clock"), ::hm:slurm:client::toJsonValue(m_wall_clock));
     }
     return obj;
 }
@@ -188,4 +188,4 @@ bool OAIV0_0_39_assoc_max_jobs_per::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

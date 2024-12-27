@@ -29,7 +29,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIDbv0_0_39_meta;
 class OAIDbv0_0_39_error;
 class OAIV0_0_39_wckey;
@@ -79,8 +79,8 @@ private:
     bool m_wckeys_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIDbv0_0_39_wckey_info)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIDbv0_0_39_wckey_info)
 
 #endif // OAIDbv0_0_39_wckey_info_H

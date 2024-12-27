@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_qos_limits_max_jobs::OAIV0_0_40_qos_limits_max_jobs(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_qos_limits_max_jobs::fromJson(QString jsonString) {
 
 void OAIV0_0_40_qos_limits_max_jobs::fromJsonObject(QJsonObject json) {
 
-    m_active_jobs_isValid = ::OpenAPI::fromJsonValue(m_active_jobs, json[QString("active_jobs")]);
+    m_active_jobs_isValid = ::hm:slurm:client::fromJsonValue(m_active_jobs, json[QString("active_jobs")]);
     m_active_jobs_isSet = !json[QString("active_jobs")].isNull() && m_active_jobs_isValid;
 
-    m_per_isValid = ::OpenAPI::fromJsonValue(m_per, json[QString("per")]);
+    m_per_isValid = ::hm:slurm:client::fromJsonValue(m_per, json[QString("per")]);
     m_per_isSet = !json[QString("per")].isNull() && m_per_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_qos_limits_max_jobs::asJson() const {
 QJsonObject OAIV0_0_40_qos_limits_max_jobs::asJsonObject() const {
     QJsonObject obj;
     if (m_active_jobs.isSet()) {
-        obj.insert(QString("active_jobs"), ::OpenAPI::toJsonValue(m_active_jobs));
+        obj.insert(QString("active_jobs"), ::hm:slurm:client::toJsonValue(m_active_jobs));
     }
     if (m_per.isSet()) {
-        obj.insert(QString("per"), ::OpenAPI::toJsonValue(m_per));
+        obj.insert(QString("per"), ::hm:slurm:client::toJsonValue(m_per));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_qos_limits_max_jobs::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

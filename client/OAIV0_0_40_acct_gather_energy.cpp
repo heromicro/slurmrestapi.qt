@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_acct_gather_energy::OAIV0_0_40_acct_gather_energy(QString json) {
     this->initializeModel();
@@ -62,22 +62,22 @@ void OAIV0_0_40_acct_gather_energy::fromJson(QString jsonString) {
 
 void OAIV0_0_40_acct_gather_energy::fromJsonObject(QJsonObject json) {
 
-    m_average_watts_isValid = ::OpenAPI::fromJsonValue(m_average_watts, json[QString("average_watts")]);
+    m_average_watts_isValid = ::hm:slurm:client::fromJsonValue(m_average_watts, json[QString("average_watts")]);
     m_average_watts_isSet = !json[QString("average_watts")].isNull() && m_average_watts_isValid;
 
-    m_base_consumed_energy_isValid = ::OpenAPI::fromJsonValue(m_base_consumed_energy, json[QString("base_consumed_energy")]);
+    m_base_consumed_energy_isValid = ::hm:slurm:client::fromJsonValue(m_base_consumed_energy, json[QString("base_consumed_energy")]);
     m_base_consumed_energy_isSet = !json[QString("base_consumed_energy")].isNull() && m_base_consumed_energy_isValid;
 
-    m_consumed_energy_isValid = ::OpenAPI::fromJsonValue(m_consumed_energy, json[QString("consumed_energy")]);
+    m_consumed_energy_isValid = ::hm:slurm:client::fromJsonValue(m_consumed_energy, json[QString("consumed_energy")]);
     m_consumed_energy_isSet = !json[QString("consumed_energy")].isNull() && m_consumed_energy_isValid;
 
-    m_current_watts_isValid = ::OpenAPI::fromJsonValue(m_current_watts, json[QString("current_watts")]);
+    m_current_watts_isValid = ::hm:slurm:client::fromJsonValue(m_current_watts, json[QString("current_watts")]);
     m_current_watts_isSet = !json[QString("current_watts")].isNull() && m_current_watts_isValid;
 
-    m_previous_consumed_energy_isValid = ::OpenAPI::fromJsonValue(m_previous_consumed_energy, json[QString("previous_consumed_energy")]);
+    m_previous_consumed_energy_isValid = ::hm:slurm:client::fromJsonValue(m_previous_consumed_energy, json[QString("previous_consumed_energy")]);
     m_previous_consumed_energy_isSet = !json[QString("previous_consumed_energy")].isNull() && m_previous_consumed_energy_isValid;
 
-    m_last_collected_isValid = ::OpenAPI::fromJsonValue(m_last_collected, json[QString("last_collected")]);
+    m_last_collected_isValid = ::hm:slurm:client::fromJsonValue(m_last_collected, json[QString("last_collected")]);
     m_last_collected_isSet = !json[QString("last_collected")].isNull() && m_last_collected_isValid;
 }
 
@@ -91,22 +91,22 @@ QString OAIV0_0_40_acct_gather_energy::asJson() const {
 QJsonObject OAIV0_0_40_acct_gather_energy::asJsonObject() const {
     QJsonObject obj;
     if (m_average_watts_isSet) {
-        obj.insert(QString("average_watts"), ::OpenAPI::toJsonValue(m_average_watts));
+        obj.insert(QString("average_watts"), ::hm:slurm:client::toJsonValue(m_average_watts));
     }
     if (m_base_consumed_energy_isSet) {
-        obj.insert(QString("base_consumed_energy"), ::OpenAPI::toJsonValue(m_base_consumed_energy));
+        obj.insert(QString("base_consumed_energy"), ::hm:slurm:client::toJsonValue(m_base_consumed_energy));
     }
     if (m_consumed_energy_isSet) {
-        obj.insert(QString("consumed_energy"), ::OpenAPI::toJsonValue(m_consumed_energy));
+        obj.insert(QString("consumed_energy"), ::hm:slurm:client::toJsonValue(m_consumed_energy));
     }
     if (m_current_watts.isSet()) {
-        obj.insert(QString("current_watts"), ::OpenAPI::toJsonValue(m_current_watts));
+        obj.insert(QString("current_watts"), ::hm:slurm:client::toJsonValue(m_current_watts));
     }
     if (m_previous_consumed_energy_isSet) {
-        obj.insert(QString("previous_consumed_energy"), ::OpenAPI::toJsonValue(m_previous_consumed_energy));
+        obj.insert(QString("previous_consumed_energy"), ::hm:slurm:client::toJsonValue(m_previous_consumed_energy));
     }
     if (m_last_collected_isSet) {
-        obj.insert(QString("last_collected"), ::OpenAPI::toJsonValue(m_last_collected));
+        obj.insert(QString("last_collected"), ::hm:slurm:client::toJsonValue(m_last_collected));
     }
     return obj;
 }
@@ -248,4 +248,4 @@ bool OAIV0_0_40_acct_gather_energy::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_40_uint64_no_val;
 
 class OAIV0_0_40_job_desc_msg_rlimits : public OAIObject {
@@ -137,8 +137,8 @@ private:
     bool m_as_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_job_desc_msg_rlimits)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_job_desc_msg_rlimits)
 
 #endif // OAIV0_0_40_job_desc_msg_rlimits_H

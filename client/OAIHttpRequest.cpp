@@ -22,7 +22,7 @@
 
 #include "OAIHttpRequest.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIHttpRequestInput::OAIHttpRequestInput() {
     initialize();
@@ -480,4 +480,4 @@ QByteArray OAIHttpRequestWorker::compress(const QByteArray& input, int level, OA
 
 QSslConfiguration *OAIHttpRequestWorker::sslDefaultConfiguration;
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

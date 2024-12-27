@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_qos;
 
 class OAIDbv0_0_39_update_qos : public OAIObject {
@@ -57,8 +57,8 @@ private:
     bool m_qos_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIDbv0_0_39_update_qos)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIDbv0_0_39_update_qos)
 
 #endif // OAIDbv0_0_39_update_qos_H

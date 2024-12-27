@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_stats_rpc::OAIV0_0_40_stats_rpc(QString json) {
     this->initializeModel();
@@ -53,13 +53,13 @@ void OAIV0_0_40_stats_rpc::fromJson(QString jsonString) {
 
 void OAIV0_0_40_stats_rpc::fromJsonObject(QJsonObject json) {
 
-    m_rpc_isValid = ::OpenAPI::fromJsonValue(m_rpc, json[QString("rpc")]);
+    m_rpc_isValid = ::hm:slurm:client::fromJsonValue(m_rpc, json[QString("rpc")]);
     m_rpc_isSet = !json[QString("rpc")].isNull() && m_rpc_isValid;
 
-    m_count_isValid = ::OpenAPI::fromJsonValue(m_count, json[QString("count")]);
+    m_count_isValid = ::hm:slurm:client::fromJsonValue(m_count, json[QString("count")]);
     m_count_isSet = !json[QString("count")].isNull() && m_count_isValid;
 
-    m_time_isValid = ::OpenAPI::fromJsonValue(m_time, json[QString("time")]);
+    m_time_isValid = ::hm:slurm:client::fromJsonValue(m_time, json[QString("time")]);
     m_time_isSet = !json[QString("time")].isNull() && m_time_isValid;
 }
 
@@ -73,13 +73,13 @@ QString OAIV0_0_40_stats_rpc::asJson() const {
 QJsonObject OAIV0_0_40_stats_rpc::asJsonObject() const {
     QJsonObject obj;
     if (m_rpc_isSet) {
-        obj.insert(QString("rpc"), ::OpenAPI::toJsonValue(m_rpc));
+        obj.insert(QString("rpc"), ::hm:slurm:client::toJsonValue(m_rpc));
     }
     if (m_count_isSet) {
-        obj.insert(QString("count"), ::OpenAPI::toJsonValue(m_count));
+        obj.insert(QString("count"), ::hm:slurm:client::toJsonValue(m_count));
     }
     if (m_time.isSet()) {
-        obj.insert(QString("time"), ::OpenAPI::toJsonValue(m_time));
+        obj.insert(QString("time"), ::hm:slurm:client::toJsonValue(m_time));
     }
     return obj;
 }
@@ -158,4 +158,4 @@ bool OAIV0_0_40_stats_rpc::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

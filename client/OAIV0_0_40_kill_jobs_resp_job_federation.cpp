@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_kill_jobs_resp_job_federation::OAIV0_0_40_kill_jobs_resp_job_federation(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_40_kill_jobs_resp_job_federation::fromJson(QString jsonString) {
 
 void OAIV0_0_40_kill_jobs_resp_job_federation::fromJsonObject(QJsonObject json) {
 
-    m_sibling_isValid = ::OpenAPI::fromJsonValue(m_sibling, json[QString("sibling")]);
+    m_sibling_isValid = ::hm:slurm:client::fromJsonValue(m_sibling, json[QString("sibling")]);
     m_sibling_isSet = !json[QString("sibling")].isNull() && m_sibling_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_40_kill_jobs_resp_job_federation::asJson() const {
 QJsonObject OAIV0_0_40_kill_jobs_resp_job_federation::asJsonObject() const {
     QJsonObject obj;
     if (m_sibling_isSet) {
-        obj.insert(QString("sibling"), ::OpenAPI::toJsonValue(m_sibling));
+        obj.insert(QString("sibling"), ::hm:slurm:client::toJsonValue(m_sibling));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_40_kill_jobs_resp_job_federation::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

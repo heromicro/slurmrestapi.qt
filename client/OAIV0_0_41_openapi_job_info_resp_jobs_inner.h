@@ -74,7 +74,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_41_openapi_job_info_resp_jobs_inner_accrue_time;
 class OAIV0_0_41_openapi_job_info_resp_jobs_inner_array_job_id;
 class OAIV0_0_41_openapi_job_info_resp_jobs_inner_array_task_id;
@@ -1311,8 +1311,8 @@ private:
     bool m_current_working_directory_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_41_openapi_job_info_resp_jobs_inner)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_41_openapi_job_info_resp_jobs_inner)
 
 #endif // OAIV0_0_41_openapi_job_info_resp_jobs_inner_H

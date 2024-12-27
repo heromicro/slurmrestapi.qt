@@ -29,7 +29,7 @@
 
 #include "OAIHttpFileElement.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 enum OAIHttpRequestVarLayout {
     NOT_SET,
@@ -106,6 +106,6 @@ private:
     QByteArray compress(const QByteArray& input, int level, OAICompressionType compressType);
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
 #endif // OAI_HTTPREQUESTWORKER_H

@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_CPU::OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_CPU(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_CPU::fromJson(
 
 void OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_CPU::fromJsonObject(QJsonObject json) {
 
-    m_requested_frequency_isValid = ::OpenAPI::fromJsonValue(m_requested_frequency, json[QString("requested_frequency")]);
+    m_requested_frequency_isValid = ::hm:slurm:client::fromJsonValue(m_requested_frequency, json[QString("requested_frequency")]);
     m_requested_frequency_isSet = !json[QString("requested_frequency")].isNull() && m_requested_frequency_isValid;
 
-    m_governor_isValid = ::OpenAPI::fromJsonValue(m_governor, json[QString("governor")]);
+    m_governor_isValid = ::hm:slurm:client::fromJsonValue(m_governor, json[QString("governor")]);
     m_governor_isSet = !json[QString("governor")].isNull() && m_governor_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_CPU::asJson
 QJsonObject OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_CPU::asJsonObject() const {
     QJsonObject obj;
     if (m_requested_frequency.isSet()) {
-        obj.insert(QString("requested_frequency"), ::OpenAPI::toJsonValue(m_requested_frequency));
+        obj.insert(QString("requested_frequency"), ::hm:slurm:client::toJsonValue(m_requested_frequency));
     }
     if (m_governor_isSet) {
-        obj.insert(QString("governor"), ::OpenAPI::toJsonValue(m_governor));
+        obj.insert(QString("governor"), ::hm:slurm:client::toJsonValue(m_governor));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_41_openapi_slurmdbd_jobs_resp_jobs_inner_steps_inner_CPU::isValid()
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

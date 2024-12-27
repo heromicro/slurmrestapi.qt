@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_assoc_shares_obj_wrap_fairshare::OAIV0_0_40_assoc_shares_obj_wrap_fairshare(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_assoc_shares_obj_wrap_fairshare::fromJson(QString jsonString) {
 
 void OAIV0_0_40_assoc_shares_obj_wrap_fairshare::fromJsonObject(QJsonObject json) {
 
-    m_factor_isValid = ::OpenAPI::fromJsonValue(m_factor, json[QString("factor")]);
+    m_factor_isValid = ::hm:slurm:client::fromJsonValue(m_factor, json[QString("factor")]);
     m_factor_isSet = !json[QString("factor")].isNull() && m_factor_isValid;
 
-    m_level_isValid = ::OpenAPI::fromJsonValue(m_level, json[QString("level")]);
+    m_level_isValid = ::hm:slurm:client::fromJsonValue(m_level, json[QString("level")]);
     m_level_isSet = !json[QString("level")].isNull() && m_level_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_assoc_shares_obj_wrap_fairshare::asJson() const {
 QJsonObject OAIV0_0_40_assoc_shares_obj_wrap_fairshare::asJsonObject() const {
     QJsonObject obj;
     if (m_factor_isSet) {
-        obj.insert(QString("factor"), ::OpenAPI::toJsonValue(m_factor));
+        obj.insert(QString("factor"), ::hm:slurm:client::toJsonValue(m_factor));
     }
     if (m_level_isSet) {
-        obj.insert(QString("level"), ::OpenAPI::toJsonValue(m_level));
+        obj.insert(QString("level"), ::hm:slurm:client::toJsonValue(m_level));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_assoc_shares_obj_wrap_fairshare::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

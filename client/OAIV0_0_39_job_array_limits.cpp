@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_job_array_limits::OAIV0_0_39_job_array_limits(QString json) {
     this->initializeModel();
@@ -47,7 +47,7 @@ void OAIV0_0_39_job_array_limits::fromJson(QString jsonString) {
 
 void OAIV0_0_39_job_array_limits::fromJsonObject(QJsonObject json) {
 
-    m_max_isValid = ::OpenAPI::fromJsonValue(m_max, json[QString("max")]);
+    m_max_isValid = ::hm:slurm:client::fromJsonValue(m_max, json[QString("max")]);
     m_max_isSet = !json[QString("max")].isNull() && m_max_isValid;
 }
 
@@ -61,7 +61,7 @@ QString OAIV0_0_39_job_array_limits::asJson() const {
 QJsonObject OAIV0_0_39_job_array_limits::asJsonObject() const {
     QJsonObject obj;
     if (m_max.isSet()) {
-        obj.insert(QString("max"), ::OpenAPI::toJsonValue(m_max));
+        obj.insert(QString("max"), ::hm:slurm:client::toJsonValue(m_max));
     }
     return obj;
 }
@@ -98,4 +98,4 @@ bool OAIV0_0_39_job_array_limits::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

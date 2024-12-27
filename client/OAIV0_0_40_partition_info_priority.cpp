@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_partition_info_priority::OAIV0_0_40_partition_info_priority(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_partition_info_priority::fromJson(QString jsonString) {
 
 void OAIV0_0_40_partition_info_priority::fromJsonObject(QJsonObject json) {
 
-    m_job_factor_isValid = ::OpenAPI::fromJsonValue(m_job_factor, json[QString("job_factor")]);
+    m_job_factor_isValid = ::hm:slurm:client::fromJsonValue(m_job_factor, json[QString("job_factor")]);
     m_job_factor_isSet = !json[QString("job_factor")].isNull() && m_job_factor_isValid;
 
-    m_tier_isValid = ::OpenAPI::fromJsonValue(m_tier, json[QString("tier")]);
+    m_tier_isValid = ::hm:slurm:client::fromJsonValue(m_tier, json[QString("tier")]);
     m_tier_isSet = !json[QString("tier")].isNull() && m_tier_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_partition_info_priority::asJson() const {
 QJsonObject OAIV0_0_40_partition_info_priority::asJsonObject() const {
     QJsonObject obj;
     if (m_job_factor_isSet) {
-        obj.insert(QString("job_factor"), ::OpenAPI::toJsonValue(m_job_factor));
+        obj.insert(QString("job_factor"), ::hm:slurm:client::toJsonValue(m_job_factor));
     }
     if (m_tier_isSet) {
-        obj.insert(QString("tier"), ::OpenAPI::toJsonValue(m_tier));
+        obj.insert(QString("tier"), ::hm:slurm:client::toJsonValue(m_tier));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_partition_info_priority::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

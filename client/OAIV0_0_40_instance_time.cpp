@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_instance_time::OAIV0_0_40_instance_time(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_instance_time::fromJson(QString jsonString) {
 
 void OAIV0_0_40_instance_time::fromJsonObject(QJsonObject json) {
 
-    m_time_end_isValid = ::OpenAPI::fromJsonValue(m_time_end, json[QString("time_end")]);
+    m_time_end_isValid = ::hm:slurm:client::fromJsonValue(m_time_end, json[QString("time_end")]);
     m_time_end_isSet = !json[QString("time_end")].isNull() && m_time_end_isValid;
 
-    m_time_start_isValid = ::OpenAPI::fromJsonValue(m_time_start, json[QString("time_start")]);
+    m_time_start_isValid = ::hm:slurm:client::fromJsonValue(m_time_start, json[QString("time_start")]);
     m_time_start_isSet = !json[QString("time_start")].isNull() && m_time_start_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_instance_time::asJson() const {
 QJsonObject OAIV0_0_40_instance_time::asJsonObject() const {
     QJsonObject obj;
     if (m_time_end_isSet) {
-        obj.insert(QString("time_end"), ::OpenAPI::toJsonValue(m_time_end));
+        obj.insert(QString("time_end"), ::hm:slurm:client::toJsonValue(m_time_end));
     }
     if (m_time_start_isSet) {
-        obj.insert(QString("time_start"), ::OpenAPI::toJsonValue(m_time_start));
+        obj.insert(QString("time_start"), ::hm:slurm:client::toJsonValue(m_time_start));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_instance_time::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

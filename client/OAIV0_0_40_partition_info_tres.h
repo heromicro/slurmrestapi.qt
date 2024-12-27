@@ -26,7 +26,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 class OAIV0_0_40_partition_info_tres : public OAIObject {
 public:
@@ -64,8 +64,8 @@ private:
     bool m_configured_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_40_partition_info_tres)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_40_partition_info_tres)
 
 #endif // OAIV0_0_40_partition_info_tres_H

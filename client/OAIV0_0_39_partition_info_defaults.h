@@ -27,7 +27,7 @@
 #include "OAIEnum.h"
 #include "OAIObject.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 class OAIV0_0_39_uint32_no_val;
 
 class OAIV0_0_39_partition_info_defaults : public OAIObject {
@@ -75,8 +75,8 @@ private:
     bool m_job_isValid;
 };
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
 
-Q_DECLARE_METATYPE(OpenAPI::OAIV0_0_39_partition_info_defaults)
+Q_DECLARE_METATYPE(hm:slurm:client::OAIV0_0_39_partition_info_defaults)
 
 #endif // OAIV0_0_39_partition_info_defaults_H

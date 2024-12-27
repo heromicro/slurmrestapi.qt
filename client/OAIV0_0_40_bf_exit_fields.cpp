@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_bf_exit_fields::OAIV0_0_40_bf_exit_fields(QString json) {
     this->initializeModel();
@@ -62,22 +62,22 @@ void OAIV0_0_40_bf_exit_fields::fromJson(QString jsonString) {
 
 void OAIV0_0_40_bf_exit_fields::fromJsonObject(QJsonObject json) {
 
-    m_end_job_queue_isValid = ::OpenAPI::fromJsonValue(m_end_job_queue, json[QString("end_job_queue")]);
+    m_end_job_queue_isValid = ::hm:slurm:client::fromJsonValue(m_end_job_queue, json[QString("end_job_queue")]);
     m_end_job_queue_isSet = !json[QString("end_job_queue")].isNull() && m_end_job_queue_isValid;
 
-    m_bf_max_job_start_isValid = ::OpenAPI::fromJsonValue(m_bf_max_job_start, json[QString("bf_max_job_start")]);
+    m_bf_max_job_start_isValid = ::hm:slurm:client::fromJsonValue(m_bf_max_job_start, json[QString("bf_max_job_start")]);
     m_bf_max_job_start_isSet = !json[QString("bf_max_job_start")].isNull() && m_bf_max_job_start_isValid;
 
-    m_bf_max_job_test_isValid = ::OpenAPI::fromJsonValue(m_bf_max_job_test, json[QString("bf_max_job_test")]);
+    m_bf_max_job_test_isValid = ::hm:slurm:client::fromJsonValue(m_bf_max_job_test, json[QString("bf_max_job_test")]);
     m_bf_max_job_test_isSet = !json[QString("bf_max_job_test")].isNull() && m_bf_max_job_test_isValid;
 
-    m_bf_max_time_isValid = ::OpenAPI::fromJsonValue(m_bf_max_time, json[QString("bf_max_time")]);
+    m_bf_max_time_isValid = ::hm:slurm:client::fromJsonValue(m_bf_max_time, json[QString("bf_max_time")]);
     m_bf_max_time_isSet = !json[QString("bf_max_time")].isNull() && m_bf_max_time_isValid;
 
-    m_bf_node_space_size_isValid = ::OpenAPI::fromJsonValue(m_bf_node_space_size, json[QString("bf_node_space_size")]);
+    m_bf_node_space_size_isValid = ::hm:slurm:client::fromJsonValue(m_bf_node_space_size, json[QString("bf_node_space_size")]);
     m_bf_node_space_size_isSet = !json[QString("bf_node_space_size")].isNull() && m_bf_node_space_size_isValid;
 
-    m_state_changed_isValid = ::OpenAPI::fromJsonValue(m_state_changed, json[QString("state_changed")]);
+    m_state_changed_isValid = ::hm:slurm:client::fromJsonValue(m_state_changed, json[QString("state_changed")]);
     m_state_changed_isSet = !json[QString("state_changed")].isNull() && m_state_changed_isValid;
 }
 
@@ -91,22 +91,22 @@ QString OAIV0_0_40_bf_exit_fields::asJson() const {
 QJsonObject OAIV0_0_40_bf_exit_fields::asJsonObject() const {
     QJsonObject obj;
     if (m_end_job_queue_isSet) {
-        obj.insert(QString("end_job_queue"), ::OpenAPI::toJsonValue(m_end_job_queue));
+        obj.insert(QString("end_job_queue"), ::hm:slurm:client::toJsonValue(m_end_job_queue));
     }
     if (m_bf_max_job_start_isSet) {
-        obj.insert(QString("bf_max_job_start"), ::OpenAPI::toJsonValue(m_bf_max_job_start));
+        obj.insert(QString("bf_max_job_start"), ::hm:slurm:client::toJsonValue(m_bf_max_job_start));
     }
     if (m_bf_max_job_test_isSet) {
-        obj.insert(QString("bf_max_job_test"), ::OpenAPI::toJsonValue(m_bf_max_job_test));
+        obj.insert(QString("bf_max_job_test"), ::hm:slurm:client::toJsonValue(m_bf_max_job_test));
     }
     if (m_bf_max_time_isSet) {
-        obj.insert(QString("bf_max_time"), ::OpenAPI::toJsonValue(m_bf_max_time));
+        obj.insert(QString("bf_max_time"), ::hm:slurm:client::toJsonValue(m_bf_max_time));
     }
     if (m_bf_node_space_size_isSet) {
-        obj.insert(QString("bf_node_space_size"), ::OpenAPI::toJsonValue(m_bf_node_space_size));
+        obj.insert(QString("bf_node_space_size"), ::hm:slurm:client::toJsonValue(m_bf_node_space_size));
     }
     if (m_state_changed_isSet) {
-        obj.insert(QString("state_changed"), ::OpenAPI::toJsonValue(m_state_changed));
+        obj.insert(QString("state_changed"), ::hm:slurm:client::toJsonValue(m_state_changed));
     }
     return obj;
 }
@@ -248,4 +248,4 @@ bool OAIV0_0_40_bf_exit_fields::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

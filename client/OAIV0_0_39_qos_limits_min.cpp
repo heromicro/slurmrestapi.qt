@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_39_qos_limits_min::OAIV0_0_39_qos_limits_min(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_39_qos_limits_min::fromJson(QString jsonString) {
 
 void OAIV0_0_39_qos_limits_min::fromJsonObject(QJsonObject json) {
 
-    m_priority_threshold_isValid = ::OpenAPI::fromJsonValue(m_priority_threshold, json[QString("priority_threshold")]);
+    m_priority_threshold_isValid = ::hm:slurm:client::fromJsonValue(m_priority_threshold, json[QString("priority_threshold")]);
     m_priority_threshold_isSet = !json[QString("priority_threshold")].isNull() && m_priority_threshold_isValid;
 
-    m_tres_isValid = ::OpenAPI::fromJsonValue(m_tres, json[QString("tres")]);
+    m_tres_isValid = ::hm:slurm:client::fromJsonValue(m_tres, json[QString("tres")]);
     m_tres_isSet = !json[QString("tres")].isNull() && m_tres_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_39_qos_limits_min::asJson() const {
 QJsonObject OAIV0_0_39_qos_limits_min::asJsonObject() const {
     QJsonObject obj;
     if (m_priority_threshold.isSet()) {
-        obj.insert(QString("priority_threshold"), ::OpenAPI::toJsonValue(m_priority_threshold));
+        obj.insert(QString("priority_threshold"), ::hm:slurm:client::toJsonValue(m_priority_threshold));
     }
     if (m_tres.isSet()) {
-        obj.insert(QString("tres"), ::OpenAPI::toJsonValue(m_tres));
+        obj.insert(QString("tres"), ::hm:slurm:client::toJsonValue(m_tres));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_39_qos_limits_min::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client

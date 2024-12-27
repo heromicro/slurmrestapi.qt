@@ -19,7 +19,7 @@
 
 #include "OAIHelpers.h"
 
-namespace OpenAPI {
+namespace hm:slurm:client {
 
 OAIV0_0_40_step_statistics::OAIV0_0_40_step_statistics(QString json) {
     this->initializeModel();
@@ -50,10 +50,10 @@ void OAIV0_0_40_step_statistics::fromJson(QString jsonString) {
 
 void OAIV0_0_40_step_statistics::fromJsonObject(QJsonObject json) {
 
-    m_cpu_isValid = ::OpenAPI::fromJsonValue(m_cpu, json[QString("CPU")]);
+    m_cpu_isValid = ::hm:slurm:client::fromJsonValue(m_cpu, json[QString("CPU")]);
     m_cpu_isSet = !json[QString("CPU")].isNull() && m_cpu_isValid;
 
-    m_energy_isValid = ::OpenAPI::fromJsonValue(m_energy, json[QString("energy")]);
+    m_energy_isValid = ::hm:slurm:client::fromJsonValue(m_energy, json[QString("energy")]);
     m_energy_isSet = !json[QString("energy")].isNull() && m_energy_isValid;
 }
 
@@ -67,10 +67,10 @@ QString OAIV0_0_40_step_statistics::asJson() const {
 QJsonObject OAIV0_0_40_step_statistics::asJsonObject() const {
     QJsonObject obj;
     if (m_cpu.isSet()) {
-        obj.insert(QString("CPU"), ::OpenAPI::toJsonValue(m_cpu));
+        obj.insert(QString("CPU"), ::hm:slurm:client::toJsonValue(m_cpu));
     }
     if (m_energy.isSet()) {
-        obj.insert(QString("energy"), ::OpenAPI::toJsonValue(m_energy));
+        obj.insert(QString("energy"), ::hm:slurm:client::toJsonValue(m_energy));
     }
     return obj;
 }
@@ -128,4 +128,4 @@ bool OAIV0_0_40_step_statistics::isValid() const {
     return true;
 }
 
-} // namespace OpenAPI
+} // namespace hm:slurm:client
